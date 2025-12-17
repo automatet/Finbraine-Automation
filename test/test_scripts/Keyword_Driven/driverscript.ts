@@ -21,6 +21,10 @@ import { Gold_Loan_Loan_Application_Tab_Page } from '../../application_component
 import { Gold_Loan_Credit_Decisioning_Page } from '../../application_components/page_methods/Gold_Loan_Credit_Decisioning_Page';
 import { Gold_Loan_Loan_Sanction_Page } from '../../application_components/page_methods/Gold_Loan_Loan_Sanction_Page';
 import { Vehicle_Loan_Salaried_Guarantor_Details_Page } from '../../application_components/page_methods/Vehicle_Loan_Salaried_Guarantor_Details_Page';
+import { Personloan_Loan_Application_Page } from '../../application_components/page_methods/Personloan_Loan_Application_Page';
+import { Personloan_Credit_Decisioning_Page } from '../../application_components/page_methods/Personloan_Credit_Decisioning_Page';
+import { Personloan_Loan_Sanction_Page } from '../../application_components/page_methods/Personloan_Loan_Sanction_Page';
+import { Co_Borrower_Page } from '../../application_components/page_methods/Co_Borrower_Page';
 
 
 export class DriverScript {
@@ -50,6 +54,10 @@ export class DriverScript {
     container.register('Gold_Loan_Credit_Decisioning_Page', new Gold_Loan_Credit_Decisioning_Page(container));
     container.register('Gold_Loan_Loan_Sanction_Page', new Gold_Loan_Loan_Sanction_Page(container));
     container.register('Vehicle_Loan_Salaried_Guarantor_Details_Page', new Vehicle_Loan_Salaried_Guarantor_Details_Page(container));
+ container.register('Personloan_Loan_Application_Page', new Personloan_Loan_Application_Page(container));
+container.register('Personloan_Credit_Decisioning_Page', new Personloan_Credit_Decisioning_Page(container));
+container.register('Personloan_Loan_Sanction_Page', new Personloan_Loan_Sanction_Page(container));
+ container.register('Co_Borrower_Page', new Co_Borrower_Page(container));
 
 
 
