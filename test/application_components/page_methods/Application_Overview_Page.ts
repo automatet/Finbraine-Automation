@@ -25,7 +25,12 @@ export class Application_Overview_Page {
   readonly Loan_Sanction_tab:Locator;
   readonly Guarantor_details_tab: Locator;
   readonly btn_Edit:Locator
+   readonly workflow_tab:Locator;
  
+   readonly application_verification_status:Locator;
+   readonly credit_decisioning_status:Locator;
+   readonly loan_sanction_status:Locator;
+ readonly co_borrowers_details_tab: Locator
   /**
    * @param {Page} page
    * @param {TestInfo} testInfo
@@ -51,6 +56,11 @@ export class Application_Overview_Page {
     this.Loan_Sanction_tab=this.page.locator('//a[normalize-space()="Loan Sanction"]');
     this.Guarantor_details_tab=this.page.locator("//a[normalize-space()='Guarantor Details']")
     this.btn_Edit=this.page.locator('//*[contains(text()," Edit")]')
+    this.application_verification_status=this.page.locator("//tr[td[1][normalize-space()='Application Verification']and td[3][normalize-space()='Completed']]")
+    this.credit_decisioning_status=this.page.locator("//tr[td[1][normalize-space()='Credit Decisioning']and td[3][normalize-space()='Completed']]")
+    this.loan_sanction_status=this.page.locator("//tr[td[1][normalize-space()='Loan Sanction']and td[3][normalize-space()='Completed']]")
+  this.workflow_tab=this.page.locator("//a[normalize-space()='Workflow']")
+    this.co_borrowers_details_tab=this.page.locator("//*[contains(text(),'Co-Borrower Details')]")
  
  }
  
@@ -79,11 +89,25 @@ async user_click_on_Edit_button(){
   
  }
  
+  async user_clicks_lnk_Coborrower_Details(){
+  await expect(this.co_borrowers_details_tab).toBeVisible();
+  await this.co_borrowers_details_tab.click();
  
+  }
+  async user_verify_application_verification_status(){
+  await expect(this.application_verification_status).toBeVisible();
+ }  
+ async user_verify_credit_decisioning_status(){
+  await expect(this.credit_decisioning_status).toBeVisible();
+ }  
  
+ async user_verify_loan_sanction_status(){
+  await expect(this.loan_sanction_status).toBeVisible();
+ }  
  
- 
- 
+ async user_click_workflow_tab(){
+  await this.workflow_tab.click()
+ }
  
  
 }
