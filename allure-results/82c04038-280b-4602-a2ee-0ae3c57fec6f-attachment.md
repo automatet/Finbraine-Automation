@@ -1,0 +1,647 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - list [ref=e4]:
+        - listitem [ref=e5]:
+          - link "" [ref=e6] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e7]: 
+      - button "CMS" [ref=e8] [cursor=pointer]
+      - menu [ref=e9]:
+        - listitem [ref=e10]:
+          - menuitem "Cases" [ref=e11] [cursor=pointer]
+        - listitem [ref=e12]:
+          - button "Reporting" [ref=e13] [cursor=pointer]
+        - listitem [ref=e14]:
+          - button "Configuration" [ref=e15] [cursor=pointer]
+      - menu [ref=e16]:
+        - listitem [ref=e17]:
+          - button "Messages 1" [ref=e18] [cursor=pointer]:
+            - img "Messages" [ref=e19]: 
+            - generic [ref=e20]: "1"
+        - listitem [ref=e21]:
+          - button "Activities" [ref=e22] [cursor=pointer]:
+            - img "Activities" [ref=e23]: 
+        - listitem [ref=e24]:
+          - button "User Administrator" [ref=e25] [cursor=pointer]:
+            - img "User" [ref=e26]
+            - text: Administrator
+  - generic [ref=e28]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - navigation [ref=e32]:
+          - listitem [ref=e33]:
+            - link "Case" [ref=e34] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e35]: / FIN0000000150
+        - search [ref=e36]
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - toolbar "Control panel toolbar" [ref=e39]:
+            - toolbar "Main actions" [ref=e41]:
+              - button "Save" [ref=e42] [cursor=pointer]
+              - button "Discard" [ref=e43] [cursor=pointer]
+          - complementary [ref=e44]
+        - generic [ref=e45]:
+          - search
+          - search "Pager" [ref=e46]:
+            - generic [ref=e47]:
+              - generic [ref=e48]: 7 / 80
+              - generic [ref=e49]:
+                - button "Previous" [ref=e50] [cursor=pointer]: 
+                - button "Next" [ref=e51] [cursor=pointer]: 
+          - toolbar "View switcher"
+    - generic [ref=e53]:
+      - generic [ref=e54]:
+        - generic [ref=e56]:
+          - radio "Approved" [checked] [disabled]
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - table [ref=e59]:
+              - rowgroup [ref=e60]:
+                - row "Case ID FIN0000000150" [ref=e61]:
+                  - cell "Case ID" [ref=e62]:
+                    - generic [ref=e63]: Case ID
+                  - cell "FIN0000000150" [ref=e64]:
+                    - generic [ref=e65]: FIN0000000150
+                - row "Applicant Mobile Number 8765432190" [ref=e66]:
+                  - cell "Applicant Mobile Number" [ref=e67]:
+                    - generic [ref=e68]: Applicant Mobile Number
+                  - cell "8765432190" [ref=e69]:
+                    - generic [ref=e70]: "8765432190"
+                - row "Applicant Name JADHAV DINESH CHANDRASHEKHAR" [ref=e71]:
+                  - cell "Applicant Name" [ref=e72]:
+                    - generic [ref=e73]: Applicant Name
+                  - cell "JADHAV DINESH CHANDRASHEKHAR" [ref=e74]:
+                    - generic [ref=e75]: JADHAV DINESH CHANDRASHEKHAR
+                - row "Profile Type Salaried" [ref=e76]:
+                  - cell "Profile Type" [ref=e77]:
+                    - generic [ref=e78]: Profile Type
+                  - cell "Salaried" [ref=e79]:
+                    - generic [ref=e80]: Salaried
+                - row "Loan Type Personal Loan" [ref=e81]:
+                  - cell "Loan Type" [ref=e82]:
+                    - generic [ref=e83]: Loan Type
+                  - cell "Personal Loan" [ref=e84]:
+                    - generic [ref=e85]: Personal Loan
+                - row "Last Updated By Administrator" [ref=e86]:
+                  - cell "Last Updated By" [ref=e87]:
+                    - generic [ref=e88]: Last Updated By
+                  - cell "Administrator" [ref=e89]:
+                    - generic [ref=e90]: Administrator
+                - row "Last Updated Date 2025-12-18" [ref=e91]:
+                  - cell "Last Updated Date" [ref=e92]:
+                    - generic [ref=e93]: Last Updated Date
+                  - cell "2025-12-18" [ref=e94]:
+                    - generic [ref=e95]: 2025-12-18
+                - row "Branch Name" [ref=e96]:
+                  - cell "Branch Name" [ref=e97]:
+                    - generic [ref=e98]: Branch Name
+                  - cell [ref=e99]
+                - row "Branch Code" [ref=e100]:
+                  - cell "Branch Code" [ref=e101]:
+                    - generic [ref=e102]: Branch Code
+                  - cell [ref=e103]
+                - row:
+                  - cell
+                  - cell
+                - row:
+                  - cell
+                  - cell
+            - table [ref=e104]:
+              - rowgroup [ref=e105]:
+                - row:
+                  - cell
+                  - cell
+                - row "Rating Score 411" [ref=e106]:
+                  - cell "Rating Score" [ref=e107]:
+                    - generic [ref=e108]: Rating Score
+                  - cell "411" [ref=e109]:
+                    - generic [ref=e110]: "411"
+                - row "Rating Grade (Scale) E" [ref=e111]:
+                  - cell "Rating Grade (Scale)" [ref=e112]:
+                    - generic [ref=e113]: Rating Grade (Scale)
+                  - cell "E" [ref=e114]:
+                    - generic [ref=e115]: E
+                - row "Credit Score 770" [ref=e116]:
+                  - cell "Credit Score" [ref=e117]:
+                    - generic [ref=e118]: Credit Score
+                  - cell "770" [ref=e119]:
+                    - generic [ref=e120]: "770"
+                - row "Application Status Green" [ref=e121]:
+                  - cell "Application Status" [ref=e122]:
+                    - generic [ref=e123]: Application Status
+                  - cell "Green" [ref=e124]:
+                    - generic [ref=e125]: Green
+                - row:
+                  - cell
+                  - cell
+                - row "Account ID 4660" [ref=e126]:
+                  - cell "Account ID" [ref=e127]:
+                    - generic [ref=e128]: Account ID
+                  - cell "4660" [ref=e129]:
+                    - generic [ref=e130]: "4660"
+                - row:
+                  - cell
+                  - cell
+                - row:
+                  - cell
+                  - cell
+                - row:
+                  - cell
+                  - cell
+                - row:
+                  - cell
+                  - cell
+          - generic [ref=e131]:
+            - list [ref=e133]:
+              - listitem [ref=e134]:
+                - tab "Workflow" [ref=e135] [cursor=pointer]
+              - listitem [ref=e136]:
+                - tab "Loan Application" [ref=e137] [cursor=pointer]
+              - listitem [ref=e138]:
+                - tab "Co-Borrower Details" [ref=e139] [cursor=pointer]
+              - listitem [ref=e140]:
+                - tab "Guarantor Details" [ref=e141] [cursor=pointer]
+              - listitem [ref=e142]:
+                - tab "Visit Report" [ref=e143] [cursor=pointer]
+              - listitem [ref=e144]:
+                - tab "Credit Decisioning" [ref=e145] [cursor=pointer]
+              - listitem [ref=e146]:
+                - tab "Loan Sanction" [active] [selected] [ref=e147] [cursor=pointer]
+              - listitem [ref=e148]:
+                - tab "KFS and APR" [ref=e149] [cursor=pointer]
+              - listitem [ref=e150]:
+                - tab "CIF Details" [ref=e151] [cursor=pointer]
+              - listitem [ref=e152]:
+                - tab "LD Doc" [ref=e153] [cursor=pointer]
+              - listitem [ref=e154]:
+                - tab "Repayment Schedule" [ref=e155] [cursor=pointer]
+            - generic [ref=e156]:
+              - text:                                                                                                                                                                                                                                                                                                                                                                                                              
+              - generic [ref=e157]:
+                - 'heading "Loan Sanction Information Loan Sanction Document :  Loan Sanction" [level=1] [ref=e158]':
+                  - generic [ref=e159]: Loan Sanction Information
+                  - text: 
+                  - generic [ref=e160]:
+                    - generic [ref=e161]: "Loan Sanction Document :"
+                    - button " Loan Sanction" [ref=e162] [cursor=pointer]:
+                      - generic [ref=e163]: 
+                      - text: Loan Sanction
+                  - text: 
+                - generic [ref=e164]:
+                  - table [ref=e165]:
+                    - rowgroup [ref=e166]:
+                      - row "Loan Amount ₹ 300,000.00" [ref=e167]:
+                        - cell "Loan Amount" [ref=e168]:
+                          - generic [ref=e169]: Loan Amount
+                        - cell "₹ 300,000.00" [ref=e170]:
+                          - generic [ref=e171]: ₹ 300,000.00
+                      - row "Loan Amount in Words Three Lakh Only" [ref=e172]:
+                        - cell "Loan Amount in Words" [ref=e173]:
+                          - generic [ref=e174]: Loan Amount in Words
+                        - cell "Three Lakh Only" [ref=e175]:
+                          - generic [ref=e176]: Three Lakh Only
+                      - row "Account Number 123456789" [ref=e177]:
+                        - cell "Account Number" [ref=e178]:
+                          - generic [ref=e179]: Account Number
+                        - cell "123456789" [ref=e180]:
+                          - generic [ref=e181]: "123456789"
+                  - table [ref=e182]:
+                    - rowgroup [ref=e183]:
+                      - row "Rate of Interest (%) 9.0" [ref=e184]:
+                        - cell "Rate of Interest (%)" [ref=e185]:
+                          - generic [ref=e186]: Rate of Interest (%)
+                        - cell "9.0" [ref=e187]:
+                          - generic [ref=e188]: "9.0"
+                      - row "Tenure (Months) 36" [ref=e189]:
+                        - cell "Tenure (Months)" [ref=e190]:
+                          - generic [ref=e191]: Tenure (Months)
+                        - cell "36" [ref=e192]:
+                          - generic [ref=e193]: "36"
+                      - row "Loan Sanction Date 12/17/2025" [ref=e194]:
+                        - cell "Loan Sanction Date" [ref=e195]:
+                          - generic [ref=e196]: Loan Sanction Date
+                        - cell "12/17/2025" [ref=e197]:
+                          - generic [ref=e198]: 12/17/2025
+                - generic [ref=e200]:
+                  - generic [ref=e201]: "Loan Sanction by HO Authority:"
+                  - table [ref=e202]:
+                    - rowgroup [ref=e203]:
+                      - row "Recommendation and Remark" [ref=e204]:
+                        - cell "Recommendation and Remark" [ref=e205]:
+                          - generic [ref=e206]: Recommendation and Remark
+                        - cell [ref=e207]
+              - text:                                                                        
+      - complementary [ref=e208]:
+        - generic [ref=e209]:
+          - button "Send message" [ref=e210] [cursor=pointer]
+          - button "Log note" [ref=e211] [cursor=pointer]
+          - button "Attachments 0" [ref=e213] [cursor=pointer]:
+            - generic [ref=e214]:
+              - generic [ref=e215]: 
+              - text: "0"
+        - generic [ref=e217]:
+          - generic [ref=e218]: Yesterday
+          - generic [ref=e219]:
+            - img "User is online" [ref=e222]: 
+            - generic [ref=e223]:
+              - paragraph [ref=e224]:
+                - text: Note by
+                - strong [ref=e225]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e227] [cursor=pointer]: 
+              - list [ref=e229]:
+                - listitem [ref=e230]: "Account Number: 123456789"
+          - generic [ref=e231]:
+            - img "User is online" [ref=e234]: 
+            - generic [ref=e235]:
+              - paragraph [ref=e236]:
+                - text: Note by
+                - strong [ref=e237]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e239] [cursor=pointer]: 
+              - list [ref=e241]:
+                - listitem [ref=e242]: "Additional Comment: good"
+          - generic [ref=e243]:
+            - img "User is online" [ref=e246]: 
+            - generic [ref=e247]:
+              - paragraph [ref=e248]:
+                - text: Note by
+                - strong [ref=e249]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e251] [cursor=pointer]: 
+              - list [ref=e253]:
+                - listitem [ref=e254]: "KYC Date: 04/10/2023"
+          - generic [ref=e255]:
+            - img "User is online" [ref=e258]: 
+            - generic [ref=e259]:
+              - paragraph [ref=e260]:
+                - text: Note by
+                - strong [ref=e261]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e263] [cursor=pointer]: 
+              - list [ref=e265]:
+                - listitem [ref=e266]: "Comment: good"
+                - listitem [ref=e267]: "Name: Priti"
+                - listitem [ref=e268]: "DOB: January 19, 2001"
+                - listitem [ref=e269]: "CTC: 500000"
+                - listitem [ref=e270]: "Credit Score: 770"
+                - listitem [ref=e271]: "Branch Remarks on CIBIL, if any: Good"
+                - listitem [ref=e272]: "Personal Score: 250"
+                - listitem [ref=e273]: "Wilful Defaulter: Yes"
+                - listitem [ref=e274]: "Settled Account: Yes"
+                - listitem [ref=e275]: "Written Account: Yes"
+                - listitem [ref=e276]: "Overdue Amount Pending: 00"
+                - listitem [ref=e277]: "Account Sold: Yes"
+                - listitem [ref=e278]: "Suit Field: Yes"
+                - listitem [ref=e279]: "Repayment Track: 00"
+          - generic [ref=e280]:
+            - img "User is online" [ref=e283]: 
+            - generic [ref=e284]:
+              - paragraph [ref=e285]:
+                - text: Note by
+                - strong [ref=e286]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e288] [cursor=pointer]: 
+              - list [ref=e290]:
+                - listitem [ref=e291]: "Residential Type: Self Owned"
+                - listitem [ref=e292]: "Same as Borrower Address: true"
+                - listitem [ref=e293]: "Current Address: HOUSE NO 465 B PINJAR LEAN AT POST LASALGAON TAL NIPHAD LASALGAON 422306"
+          - generic [ref=e294]:
+            - img "User is online" [ref=e297]: 
+            - generic [ref=e298]:
+              - paragraph [ref=e299]:
+                - text: Note by
+                - strong [ref=e300]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e302] [cursor=pointer]: 
+              - list [ref=e304]:
+                - listitem [ref=e305]: "Requested Loan Amount: 300000"
+          - generic [ref=e306]:
+            - img "User is online" [ref=e309]: 
+            - generic [ref=e310]:
+              - paragraph [ref=e311]:
+                - text: Note by
+                - strong [ref=e312]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e314] [cursor=pointer]: 
+              - list [ref=e316]:
+                - listitem [ref=e317]: "Borrower Residential Address: HOUSE NO 465 B PINJAR LEAN AT POST LASALGAON TAL NIPHAD LASALGAON 422306"
+          - generic [ref=e318]:
+            - img "User is online" [ref=e321]: 
+            - generic [ref=e322]:
+              - paragraph [ref=e323]:
+                - text: Note by
+                - strong [ref=e324]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e326] [cursor=pointer]: 
+              - list [ref=e328]:
+                - listitem [ref=e329]: "Borrower Membership Details: 203491"
+          - generic [ref=e330]:
+            - img "User is online" [ref=e333]: 
+            - generic [ref=e334]:
+              - paragraph [ref=e335]:
+                - text: Note by
+                - strong [ref=e336]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e338] [cursor=pointer]: 
+              - list [ref=e340]:
+                - listitem [ref=e341]: "Borrower Name: JADHAV DINESH CHANDRASHEKHAR"
+          - generic [ref=e342]:
+            - img "User is online" [ref=e345]: 
+            - generic [ref=e346]:
+              - paragraph [ref=e347]:
+                - text: Note by
+                - strong [ref=e348]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e350] [cursor=pointer]: 
+              - list [ref=e352]:
+                - listitem [ref=e353]: "Gender: Male"
+          - generic [ref=e354]:
+            - img "User is online" [ref=e357]: 
+            - generic [ref=e358]:
+              - paragraph [ref=e359]:
+                - text: Note by
+                - strong [ref=e360]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e362] [cursor=pointer]: 
+              - list [ref=e364]:
+                - listitem [ref=e365]: "Borrower Address: HOUSE NO 465 B PINJAR LEAN AT POST LASALGAON TAL NIPHAD LASALGAON 422306"
+          - generic [ref=e366]:
+            - img "User is online" [ref=e369]: 
+            - generic [ref=e370]:
+              - paragraph [ref=e371]:
+                - text: Note by
+                - strong [ref=e372]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e374] [cursor=pointer]: 
+              - list [ref=e376]:
+                - listitem [ref=e377]: "Borrower's Age: 43"
+                - listitem [ref=e378]: "Borrower Age: 43"
+          - generic [ref=e379]:
+            - img "User is online" [ref=e382]: 
+            - generic [ref=e383]:
+              - paragraph [ref=e384]:
+                - text: Note by
+                - strong [ref=e385]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e387] [cursor=pointer]: 
+              - list [ref=e389]:
+                - listitem [ref=e390]: "Borrower CIF Number: 693895"
+          - generic [ref=e391]:
+            - img "User is online" [ref=e394]: 
+            - generic [ref=e395]:
+              - paragraph [ref=e396]:
+                - text: Note by
+                - strong [ref=e397]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e399] [cursor=pointer]: 
+              - list [ref=e401]:
+                - listitem [ref=e402]: "Member Number: 203491"
+          - generic [ref=e403]:
+            - img "User is online" [ref=e406]: 
+            - generic [ref=e407]:
+              - paragraph [ref=e408]:
+                - text: Note by
+                - strong [ref=e409]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e411] [cursor=pointer]: 
+              - list [ref=e413]:
+                - listitem [ref=e414]: "KYC Date: 04/10/2023"
+          - generic [ref=e415]:
+            - img "User is online" [ref=e418]: 
+            - generic [ref=e419]:
+              - paragraph [ref=e420]:
+                - text: Note by
+                - strong [ref=e421]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e423] [cursor=pointer]: 
+              - list [ref=e425]:
+                - listitem [ref=e426]: "CKYC Number: 50051956430701"
+                - listitem [ref=e427]: "CKYC Number: 50051956430701"
+          - generic [ref=e428]:
+            - img "User is online" [ref=e431]: 
+            - generic [ref=e432]:
+              - paragraph [ref=e433]:
+                - text: Note by
+                - strong [ref=e434]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e436] [cursor=pointer]: 
+              - list [ref=e438]:
+                - listitem [ref=e439]: "Borrower Branch Code: 052"
+          - generic [ref=e440]:
+            - img "User is online" [ref=e443]: 
+            - generic [ref=e444]:
+              - paragraph [ref=e445]:
+                - text: Note by
+                - strong [ref=e446]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e448] [cursor=pointer]: 
+              - list [ref=e450]:
+                - listitem [ref=e451]: "Customer Name: JADHAV DINESH CHANDRASHEKHAR"
+                - listitem [ref=e452]: "Name: JADHAV DINESH CHANDRASHEKHAR"
+          - generic [ref=e453]:
+            - img "User is online" [ref=e456]: 
+            - generic [ref=e457]:
+              - paragraph [ref=e458]:
+                - text: Note by
+                - strong [ref=e459]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e461] [cursor=pointer]: 
+              - list [ref=e463]:
+                - listitem [ref=e464]: "CIF Number: 693895"
+          - generic [ref=e465]:
+            - img "User is online" [ref=e468]: 
+            - generic [ref=e469]:
+              - paragraph [ref=e470]:
+                - text: Note by
+                - strong [ref=e471]: Administrator
+                - text: "- a day ago"
+                - img "Mark as Todo" [ref=e473] [cursor=pointer]: 
+              - paragraph [ref=e475]: case.management created
+  - generic [ref=e476]:
+    - generic [ref=e477]:
+      - generic [ref=e478] [cursor=pointer]: System (14)
+      - generic [ref=e479]:
+        - link "Open in Discuss" [ref=e480] [cursor=pointer]:
+          - /url: "#"
+          - text: 
+        - link "" [ref=e481] [cursor=pointer]:
+          - /url: "#"
+    - generic [ref=e483]:
+      - generic [ref=e484]: Yesterday
+      - generic [ref=e488]:
+        - paragraph [ref=e489]:
+          - strong [ref=e490] [cursor=pointer]: System
+          - text: "- a day ago"
+          - img "Mark as Todo" [ref=e492] [cursor=pointer]: 
+        - paragraph [ref=e494]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e498]:
+        - paragraph [ref=e499]:
+          - strong [ref=e500] [cursor=pointer]: System
+          - text: "- a day ago"
+          - img "Mark as Todo" [ref=e502] [cursor=pointer]: 
+        - paragraph [ref=e504]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e508]:
+        - paragraph [ref=e509]:
+          - strong [ref=e510] [cursor=pointer]: System
+          - text: "- a day ago"
+          - img "Mark as Todo" [ref=e512] [cursor=pointer]: 
+        - paragraph [ref=e514]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e518]:
+        - paragraph [ref=e519]:
+          - strong [ref=e520] [cursor=pointer]: System
+          - text: "- a day ago"
+          - img "Mark as Todo" [ref=e522] [cursor=pointer]: 
+        - paragraph [ref=e524]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e528]:
+        - paragraph [ref=e529]:
+          - strong [ref=e530] [cursor=pointer]: System
+          - text: "- a day ago"
+          - img "Mark as Todo" [ref=e532] [cursor=pointer]: 
+        - paragraph [ref=e534]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e538]:
+        - paragraph [ref=e539]:
+          - strong [ref=e540] [cursor=pointer]: System
+          - text: "- a day ago"
+          - img "Mark as Todo" [ref=e542] [cursor=pointer]: 
+        - paragraph [ref=e544]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e548]:
+        - paragraph [ref=e549]:
+          - strong [ref=e550] [cursor=pointer]: System
+          - text: "- 18 hours ago"
+          - img "Mark as Todo" [ref=e552] [cursor=pointer]: 
+        - paragraph [ref=e554]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e558]:
+        - paragraph [ref=e559]:
+          - strong [ref=e560] [cursor=pointer]: System
+          - text: "- 18 hours ago"
+          - img "Mark as Todo" [ref=e562] [cursor=pointer]: 
+        - paragraph [ref=e564]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e568]:
+        - paragraph [ref=e569]:
+          - strong [ref=e570] [cursor=pointer]: System
+          - text: "- 18 hours ago"
+          - img "Mark as Todo" [ref=e572] [cursor=pointer]: 
+        - paragraph [ref=e574]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e578]:
+        - paragraph [ref=e579]:
+          - strong [ref=e580] [cursor=pointer]: System
+          - text: "- 18 hours ago"
+          - img "Mark as Todo" [ref=e582] [cursor=pointer]: 
+        - paragraph [ref=e584]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e588]:
+        - paragraph [ref=e589]:
+          - strong [ref=e590] [cursor=pointer]: System
+          - text: "- 18 hours ago"
+          - img "Mark as Todo" [ref=e592] [cursor=pointer]: 
+        - paragraph [ref=e594]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e598]:
+        - paragraph [ref=e599]:
+          - strong [ref=e600] [cursor=pointer]: System
+          - text: "- 18 hours ago"
+          - img "Mark as Todo" [ref=e602] [cursor=pointer]: 
+        - paragraph [ref=e604]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e608]:
+        - paragraph [ref=e609]:
+          - strong [ref=e610] [cursor=pointer]: System
+          - text: "- 17 hours ago"
+          - img "Mark as Todo" [ref=e612] [cursor=pointer]: 
+        - paragraph [ref=e614]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e615]: Today
+      - generic [ref=e619]:
+        - paragraph [ref=e620]:
+          - strong [ref=e621] [cursor=pointer]: System
+          - text: "- 4 hours ago"
+          - img "Mark as Todo" [ref=e623] [cursor=pointer]: 
+        - paragraph [ref=e625]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e629]:
+        - paragraph [ref=e630]:
+          - strong [ref=e631] [cursor=pointer]: System
+          - text: "- 4 hours ago"
+          - img "Mark as Todo" [ref=e633] [cursor=pointer]: 
+        - paragraph [ref=e635]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e639]:
+        - paragraph [ref=e640]:
+          - strong [ref=e641] [cursor=pointer]: System
+          - text: "- 4 hours ago"
+          - img "Mark as Todo" [ref=e643] [cursor=pointer]: 
+        - paragraph [ref=e645]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e649]:
+        - paragraph [ref=e650]:
+          - strong [ref=e651] [cursor=pointer]: System
+          - text: "- 3 hours ago"
+          - img "Mark as Todo" [ref=e653] [cursor=pointer]: 
+        - paragraph [ref=e655]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e659]:
+        - paragraph [ref=e660]:
+          - strong [ref=e661] [cursor=pointer]: System
+          - text: "- 3 hours ago"
+          - img "Mark as Todo" [ref=e663] [cursor=pointer]: 
+        - paragraph [ref=e665]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e669]:
+        - paragraph [ref=e670]:
+          - strong [ref=e671] [cursor=pointer]: System
+          - text: "- 11 minutes ago"
+          - img "Mark as Todo" [ref=e673] [cursor=pointer]: 
+        - paragraph [ref=e675]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e676]:
+        - generic [ref=e677]: 
+        - paragraph [ref=e680]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e684]:
+        - paragraph [ref=e685]:
+          - strong [ref=e686] [cursor=pointer]: System
+          - text: "- 9 minutes ago"
+          - img "Mark as Todo" [ref=e688] [cursor=pointer]: 
+        - paragraph [ref=e690]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e694]:
+        - paragraph [ref=e695]:
+          - strong [ref=e696] [cursor=pointer]: System
+          - text: "- 4 minutes ago"
+          - img "Mark as Todo" [ref=e698] [cursor=pointer]: 
+        - paragraph [ref=e700]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e704]:
+        - paragraph [ref=e705]:
+          - strong [ref=e706] [cursor=pointer]: System
+          - text: "- 3 minutes ago"
+          - img "Mark as Todo" [ref=e708] [cursor=pointer]: 
+        - paragraph [ref=e710]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e711]:
+        - generic [ref=e712]: 
+        - paragraph [ref=e715]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e716]:
+        - generic [ref=e717]: 
+        - paragraph [ref=e720]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e721]:
+        - generic [ref=e722]: 
+        - paragraph [ref=e725]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e726]:
+        - generic [ref=e727]: 
+        - paragraph [ref=e730]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e731]:
+        - generic [ref=e732]: 
+        - paragraph [ref=e735]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e736]:
+        - generic [ref=e737]: 
+        - paragraph [ref=e740]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e741]:
+        - generic [ref=e742]: 
+        - paragraph [ref=e745]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+      - generic [ref=e746]:
+        - generic [ref=e747]: 
+        - paragraph [ref=e750]: Your password is the default (admin)! If this system is exposed to untrusted users it is important to change it immediately for security reasons. I will keep nagging you about it!
+    - generic [ref=e751]:
+      - text: 
+      - generic [ref=e754]:
+        - textbox "Write something..." [ref=e755]
+        - textbox [disabled] [ref=e756]
+        - generic [ref=e757]:
+          - button "Emojis" [ref=e758] [cursor=pointer]: 
+          - button "Add attachment" [ref=e759] [cursor=pointer]: 
+  - status [ref=e760]
+  - status [ref=e761]
+```
