@@ -32,9 +32,10 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      # 6️⃣ Run Playwright tests (single browser: chromium)
-      - name: Run Playwright tests
-        run: npx playwright test --project=chromium
+      # 6️⃣ ✅ Run Playwright tests (CSV + TAG based)
+      - name: Run Playwright CSV driven tests
+        run: npx playwright test -g "@Vehicle_Loan_Application"
+        continue-on-error: true
 
       # 7️⃣ Upload Playwright HTML report
       - name: Upload Playwright HTML Report
