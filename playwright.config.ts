@@ -28,7 +28,9 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: process.env.CI ? [['blob'],['list'],['./nv_reporter.ts'],['html']] : [['./nv_reporter.ts'],['html']],
+  reporter: process.env.CI
+    ? [['blob'],['list'],['./nv_reporter.ts'],['html'],['allure-playwright']]
+    : [['./nv_reporter.ts'],['html'],['allure-playwright']],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -47,6 +49,10 @@ export default defineConfig({
        name: 'Google Chrome',
       use: { ...devices['Desktop Chrome'], channel: 'chrome',viewport: { width: 1920, height: 1080 },},
      },
+      {
+    name: 'chromium', // 
+    use: { ...devices['Desktop Chromium'], viewport: { width: 1920, height: 1080 } },
+  },
 
     // {
     //   name: 'firefox',
