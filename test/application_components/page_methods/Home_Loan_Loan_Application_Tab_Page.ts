@@ -1,13 +1,14 @@
-import {expect, type TestInfo } from '@playwright/test';
+import {expect, LocatorScreenshotOptions, type TestInfo } from '@playwright/test';
 import { type Locator, type Page } from 'playwright';
 import { PlaywrightFactoryActions } from '../../utilities/playwright_factory_actions_UI';
 import DataFactory from '../../utilities/data-factory';
 import * as fs from 'fs';
 import { DatabricksSQLwarehouse } from '../../utilities/databricks_sqlware';
 import { DatabricksFactoryDBFS } from '../../utilities/databricks_dbfs';
+import { Loan_Application_Tab_Page } from './Loan_Application_Tab_Page';
 
 
-export class Loan_Application_Tab_Page {
+export class Home_Loan_Loan_Application_Tab_Page {
   private page: Page;
   private testInfo: TestInfo;
   private playwrightFactory: PlaywrightFactoryActions;
@@ -22,12 +23,10 @@ export class Loan_Application_Tab_Page {
   //**Declare */
   readonly Emp_details_Add_data_btn:Locator;
   readonly Name_of_firm:Locator;
-  // readonly Address_of_firm:Locator;
-  // readonly Designation_in_the_organization:Locator;
+
   readonly joining_date:Locator;
   readonly Remark:Locator;
-  //readonly Type_of_organization:Locator;
-  //readonly select_date:Locator;
+
   readonly save_btn:Locator;
   readonly add_line_btn:Locator;
   readonly txt_id_proof_details_title: Locator;
@@ -263,6 +262,73 @@ readonly reupload_docs_btn:Locator;
  readonly loan_amount: Locator;
  readonly outstanding_amount:Locator;
  readonly emi_interest: Locator;
+ 
+
+
+
+
+ readonly business_details_add_data_btn:Locator;
+ readonly business_details_name_of_the_firm_field:Locator;
+ readonly business_details_address_of_firm_field:Locator;
+readonly business_details_type_of_ownership_field:Locator;
+readonly business_details_nature_of_business_in_details:Locator;
+readonly business_details_shop_number_field:Locator;
+readonly business_details_udyam_name_field:Locator;
+readonly business_details_number_of_year_field:Locator;
+readonly business_details_save_btn:Locator;
+readonly business_details_add_line_btn:Locator;
+readonly business_details_month_btn:Locator;
+readonly balance_sheet_year:Locator;
+readonly balance_sheet_networth:Locator;
+readonly balance_sheet_deduction_field:Locator;
+readonly business_details_verify_btn:Locator;
+readonly P_L_statement_add_data_btn:Locator;
+readonly P_L_statement_add_line_btn:Locator;
+readonly P_L_statement_add_month_field:Locator;
+readonly P_L_statement_year_field:Locator;
+readonly P_L_statement_sales_field:Locator;
+readonly P_L_statement_purchase_field:Locator;
+readonly P_L_statement_net_profit_field:Locator;
+readonly P_L_statement_interest_field:Locator;
+readonly P_L_statement_income_tax_field:Locator;
+readonly P_L_statement_other_income_tax_field:Locator;
+readonly P_L_statement_agriculture_income_field:Locator;
+readonly P_L_statement_TDS_field:Locator;
+readonly P_L_statement_save_btn:Locator;
+readonly P_L_statement_verify_btn:Locator;
+readonly P_L_statement_depreciation_field:Locator;
+readonly add_data_btn_of_computation_of_income:Locator;
+readonly add_line_btn_of_computation_of_income:Locator;
+readonly gross_income_of_computation_of_income:Locator;
+readonly less_deduction_of_computation_of_income:Locator;
+readonly net_taxable_amount_of_computation_of_income:Locator;
+readonly save_btn_of_computation_of_income:Locator;
+readonly add_data_btn_ITR_details:Locator;
+readonly verify_btn_of_computation_of_income:Locator;
+readonly add_line_btn_ITR_details:Locator;
+readonly month_btn_ITR_details:Locator;
+readonly year_btn_ITR_details:Locator;
+readonly total_income_btn_ITR_details:Locator;
+readonly total_taxes_interest_fee_btn_ITR_details:Locator;
+readonly taxes_paid_btn_ITR_details:Locator;
+readonly save_btn_ITR_details:Locator;
+readonly verify_btn_ITR_details:Locator;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   /**
    * @param {Page} page
@@ -305,8 +371,7 @@ readonly reupload_docs_btn:Locator;
     this.add_line_btn=this.page.locator('#o_field_input_1192').getByRole('button', { name: 'Add a line' })
     this.txt_id_proof_details_title=this.page.locator("//span[normalize-space()='ID Proof Details']")
     this.txt_customer_name=this.page.locator("//span[@name='customer_first_name_id_document']")
-    //this.txt_pan_number_eye_icon=this.page.locator("(//span[@name='customer_pan_document']/following::button[@name='toggle_pan_visibility'])[2]")
-    this.txt_pan_number_eye_icon = this.page.locator("//button[@name='toggle_pan_visibility' and contains(@class,'btn-link') and not(contains(@class,'o_invisible_modifier'))]");
+    this.txt_pan_number_eye_icon=this.page.locator("(//span[@name='customer_pan_document']/following::button[@name='toggle_pan_visibility'])[2]")
     this.txt_verify=this.page.getByText('Verify').first()
     this.btn_verify_checkbox=this.page.locator('span:nth-child(4) > .o_field_boolean > .custom-control-label').first()
     this.adress_proof_name = this.page.locator("//span[@name='customer_first_name_address_document']");
@@ -392,7 +457,7 @@ readonly reupload_docs_btn:Locator;
     this.added_driving_licence_no= this.page.locator("//span[@name='customer_driving_license_num']");
     this.added_issue_date= this.page.locator("//span[@name='customer_issue_date']");
     this.added_expiry_date= this.page.locator("//span[@name='customer_expiry_date']");
-    this.driving_licence_verify_btn= this.page.locator("//*[text()='Driving License']/ancestor::h1//*[text()='Verify']");
+    this.driving_licence_verify_btn= this.page.locator("//div[@name='verify_driving_license_details']");
     this.vehical_quotation_add_data_btn= this.page.locator("//button[@name='vehicle_quotation_wizard']");
     this.vehical_recipt_no= this.page.locator("//input[@name='wizard_vehicle_receipt_no']");
     this.vehical_branch_name= this.page.locator("//input[@name='wizard_branch_name']");
@@ -497,7 +562,7 @@ readonly reupload_docs_btn:Locator;
     this.txt_Cibil_Charges_in_Charge_Details = this.page.locator('//input[@name="wizard_cibil_charges"]')
 this.txt_Processing_Fee_in_Charge_Details = this.page.locator('//input[@name="wizard_processing_fees"]')
 this.txt_Valuation_Charges_in_Charge_Details  = this.page.locator('//input[@name="wizard_valuation_charges"]')  
-this.txt_Fees_Charges_in_Charge_Details= this.page.locator('//input[@name="wizard_fees_charges"]')
+this.txt_Fees_Charges_in_Charge_Details   = this.page.locator('//input[@name="wizard_fees_charges"]')
 this.txt_Details_of_Contingent_Charges_in_Charge_Details  = this.page.locator('//input[@name="wizard_contingent_charges"]')
 this.txt_Penal_Charges_for_Delayed_Payment_in_Charge_Details  = this.page.locator('//input[@name="wizard_penal_charges_percent"]')  
 this.txt_Other_Penal_Charges_inCharge_Details=  this.page.locator('//input[@name="wizard_other_penal_charges"]')
@@ -508,7 +573,7 @@ this.txt_Recovery_Overdue_Notice_Charges_in_Charge_details  = this.page.locator(
 this.txt_Cheque_ECS_Return_SIExecution_Failed_Charges_in_Charge_details=  this.page.locator('//input[@name="wizard_return_charges"]')
 this.txt_Franking_Charges_in_Charge_details=  this.page.locator('//input[@name="wizard_franking_charges"]')
 this.btn_save_in_Charge_Details = this.page.locator("//span[normalize-space()='Save']")
-this.btn_verify_in_Charge_Details = this.page.locator('//div[@name="verify_membership_details"]')
+this.btn_verify_in_Charge_Details = this.page.locator('//div[@name="verify_charges_details"]')
 
 this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bureau')])[2]")
     this.credit_bureau_verify_btn=this.page.locator("//*[text()='Credit Bureau']/ancestor::h1//*[text()='Verify']")
@@ -533,30 +598,58 @@ this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bure
     this.loan_amount=this.page.locator("//div[@name='loan_amount']//input[@type='text']")
     this.outstanding_amount=this.page.locator("//div[@name='outstanding_amount']")
     this.emi_interest=this.page.locator("//input[@name='emi_interest']")
-    this.dob_credit_bureau_field=this.page.locator("//input[@name='dob']")
-    this.upload_your_file_credit_bureau_field=this.page.locator("//*[contains(text(),'Upload your file')]/preceding::input[@name='uploaded_file']")
-
-    this.settled_account=this.page.locator("//select[@name='settled_account']")
-    this.written_account=this.page.locator("//select[@name='written_account']")
-    this.ctc_credit_bureau_field=this.page.locator("//input[@name='ctc']")
-    this.overdue_amount_pending=this.page.locator("//input[@name='overdue_amount_pending']")
-    this.credit_score=this.page.locator("//input[@name='credit_vision']")
-    this.accound_sold=this.page.locator("//select[@name='account_sold']")
-    this.branch_remarks_on_cibil=this.page.locator("//input[@name='branch_remarks_on_cibil']")
-    this.suit_field=this.page.locator("//select[@name='suit_field']")
-    this.personal_score=this.page.locator("//input[@name='personal']")
-    this.repayment_track=this.page.locator("//input[@name='credit_repayment_track']")
-    this.wilful_defaulter=this.page.locator("//select[@name='wilful_defaulter']")
-    this.add_a_line_credit_bureau_btn=this.page.locator("//*[contains(text(),'Add a line')]/ancestor::div[@name='cibil_score_data_ids']//*[contains(text(),'Add a line')]")
-    this.bank_loan_account_details=this.page.locator("//input[@name='bank_loan_accounts_details']")
-    this.loan_type_credit_bureau=this.page.locator("//input[@name='loan_type']")
-    this.ownership=this.page.locator("//input[@name='ownership']")
-    this.loan_amount=this.page.locator("//div[@name='loan_amount']//input[@type='text']")
-    this.outstanding_amount=this.page.locator("//div[@name='outstanding_amount']")
-    this.emi_interest=this.page.locator("//input[@name='emi_interest']")
 
 
-    
+    this.business_details_add_data_btn=this.page.locator('//button[@name="business_details_wizard"]')
+    this.business_details_name_of_the_firm_field=this.page.locator('//input[@name="wizard_business_name"]')
+    this.business_details_address_of_firm_field=this.page.locator('//input[@name="wizard_business_address"]')
+    this.business_details_type_of_ownership_field=this.page.locator('//select[@name="wizard_ownership"]')
+    this.business_details_nature_of_business_in_details=this.page.locator('//input[@name="wizard_nature_of_business"]') 
+    this.business_details_shop_number_field=this.page.locator('//input[@name="wizard_customer_shop_act"]')
+    this.business_details_udyam_name_field=this.page.locator('//input[@name="wizard_customer_udhayam_name"]')
+    this.business_details_number_of_year_field=this.page.locator('//input[@name="wizard_customer_no_of_year_business"]')
+    this.business_details_save_btn=this.page.locator('//button[@name="save_balance_sheet"]')
+    this.business_details_add_line_btn=this.page.locator("(//*[contains(text(),'Add a line')]/following::div[@name='business_details_ids']//*[contains(text(),'Add a line')])[2]")
+    this.business_details_month_btn=this.page.locator('//select[@name="wizard_month"]')
+    this.balance_sheet_year=this.page.locator('//select[@name="wizard_year"]')
+    this.balance_sheet_networth=this.page.locator('//input[@name="wizard_capital_networth"]')
+    this.balance_sheet_deduction_field=this.page.locator('//input[@name="wizard_deductions"]')
+    this.business_details_verify_btn=this.page.locator('//div[@name="verify_id_proof_details"]')
+    this.P_L_statement_add_data_btn=this.page.locator('//button[@name="income_details_wizard"]')
+    this.P_L_statement_add_line_btn=this.page.locator("(//*[contains(text(),'Add a line')]/following::div[@name='income_details_ids']//*[contains(text(),'Add a line')])[2]")
+    this.P_L_statement_add_month_field=this.page.locator('//select[@name="wizard_month"]')
+    this.P_L_statement_year_field=this.page.locator('//select[@name="wizard_year"]')
+    this.P_L_statement_sales_field=this.page.locator('//input[@name="wizard_sales"]')
+    this.P_L_statement_purchase_field=this.page.locator('//input[@name="wizard_purchases"]')
+    this.P_L_statement_net_profit_field=this.page.locator('//input[@name="wizard_net_profit"]')
+    this.P_L_statement_depreciation_field=this.page.locator('//input[@name="wizard_depreciation"]')
+
+    this.P_L_statement_interest_field=this.page.locator('//input[@name="wizard_interest"]')                           
+    this.P_L_statement_income_tax_field=this.page.locator('//input[@name="wizard_income_tax"]')
+    this.P_L_statement_other_income_tax_field=this.page.locator('//input[@name="wizard_other_income"]')
+    this.P_L_statement_agriculture_income_field=this.page.locator('//input[@name="wizard_agricultural_income"]')
+    this.P_L_statement_TDS_field=this.page.locator('//input[@name="wizard_tds"]')
+    this.P_L_statement_save_btn=this.page.locator('//button[@name="save_income_details_wizard"]')
+    this.add_data_btn_of_computation_of_income=this.page.locator('//button[@name="computation_income_details_wizard"]')
+    this.P_L_statement_verify_btn=this.page.locator('//div[@name="verify_p_and_l_statement_details"]')
+    this.add_line_btn_of_computation_of_income=this.page.locator("(//*[contains(text(),'Add a line')]/following::div[@name='computation_income_ids']//*[contains(text(),'Add a line')])[2]")
+    this.gross_income_of_computation_of_income=this.page.locator('//input[@name="wizard_gross_taxable_income"]')
+    this.less_deduction_of_computation_of_income=this.page.locator('//input[@name="wizard_less_deductions"]')
+    this.net_taxable_amount_of_computation_of_income=this.page.locator('//input[@name="wizard_net_taxable_income"]')
+    this.save_btn_of_computation_of_income=this.page.locator('//button[@name="save_computation_income_wizard"]')
+    this.verify_btn_of_computation_of_income=this.page.locator('//div[@name="verify_computation_income_details"]')
+    this.add_data_btn_ITR_details=this.page.locator('//button[@name="itr_business_details_wizard"]')
+    this.add_line_btn_ITR_details=this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='itr_business_details_table_ids']//*[contains(text(),'Add a line')]")
+    this.month_btn_ITR_details=this.page.locator('//select[@name="wizard_month"]')
+    this.year_btn_ITR_details=this.page.locator('//select[@name="wizard_year"]')
+    this.total_income_btn_ITR_details=this.page.locator('//input[@name="wizard_total_income"]')
+    this.total_taxes_interest_fee_btn_ITR_details=this.page.locator('//input[@name="wizard_total_taxes_interest_fee_payable"]')
+    this.taxes_paid_btn_ITR_details=this.page.locator('//input[@name="wizard_taxes_paid"]')
+    this.save_btn_ITR_details=this.page.locator('//button[@name="save_itr_business_details"]')
+    this.verify_btn_ITR_details=this.page.locator('//div[@name="verify_itr_details"]')
+     
+
+                                                                
 
 
 
@@ -572,28 +665,10 @@ async user_verify_customer_name(){
     await expect(this.txt_customer_name).toBeVisible();
 }
 
-// async user_verify_and_clicks_on_pan_number_eye_icon(){
-//   await expect(this.txt_customer_name).toBeVisible();
-//    await this.playwrightFactory.click(this.txt_pan_number_eye_icon);
-// }
-
-
-
-async user_verify_and_clicks_on_pan_number_eye_icon() {
-await expect(this.txt_customer_name).toBeVisible();
-const isDisabled = await this.txt_pan_number_eye_icon.isVisible();
-
-if (isDisabled) {
-      console.log("Eye icon is disabled → clicking to enable.");
-      await this.playwrightFactory.click(this.txt_pan_number_eye_icon);
-  }
-  else {
-      console.log("Eye icon already enabled → clicking normal eye icon.");
-      await this.playwrightFactory.click(this.txt_pan_number_eye_icon);
-  }
+async user_verify_and_clicks_on_pan_number_eye_icon(){
+  await expect(this.txt_customer_name).toBeVisible();
+   await this.playwrightFactory.click(this.txt_pan_number_eye_icon);
 }
-
-
 
 async user_verify_and_clicks_on_the_checkbox(){
   await expect(this.txt_verify).toBeVisible();
@@ -1102,8 +1177,6 @@ async user_verify_added_vehicle_remark(){
 
 
 
-
-
 async user_clicks_add_data_for_form_16(){
   await this.playwrightFactory.click(this.btn_add_data_for_form_16_details);
 }
@@ -1356,7 +1429,6 @@ await this.playwrightFactory.fill(this.name_credit_bureau_field, strname);
 }
 
 async user_select_settled_account(){
-  await this.playwrightFactory.click(this.settled_account)
 await this.settled_account.selectOption({label:'Yes'});
 }
 
@@ -1365,8 +1437,6 @@ await this.playwrightFactory.fill(this.dob_credit_bureau_field, strdob);
 }
 
 async user_select_written_account(){
-  await this.playwrightFactory.click(this.written_account)
-
 await this.written_account.selectOption({label:'Yes'});
 }
 
@@ -1383,7 +1453,6 @@ await this.playwrightFactory.fill(this.credit_score, strcreditscore);
 }
 
 async user_select_account_sold(){
-  
 await this.accound_sold.selectOption({label:'Yes'});
 }
 
@@ -1416,39 +1485,39 @@ await this.playwrightFactory.click(this.add_a_line_credit_bureau_btn);
 }
 
 async user_enters_bank_loan_account_details(strloanaccount: string){
-  await this.playwrightFactory.click(this.bank_loan_account_details)
 await this.playwrightFactory.fill(this.bank_loan_account_details, strloanaccount);
 }
 
 async user_enters_loan_type_in_credit_bureau(strloantype: string){
-  await this.playwrightFactory.click(this.loan_type_credit_bureau)
-
 await this.playwrightFactory.fill(this.loan_type_credit_bureau, strloantype);
 }
 
 async user_enters_ownership(strownership: string){
-  await this.playwrightFactory.click(this.ownership)
-
 await this.playwrightFactory.fill(this.ownership, strownership);
 }
 
 async user_enters_loan_amount(strloanamount: string){
-  await this.playwrightFactory.click(this.loan_amount)
-
 await this.playwrightFactory.fill(this.loan_amount, strloanamount);
 }
 
 async user_enters_outstanding_amount(stroutstandingamount: string){
-  await this.playwrightFactory.click(this.outstanding_amount)
-
 await this.playwrightFactory.fill(this.outstanding_amount, stroutstandingamount);
 }
 
 async user_enters_emi_interest(stremi: string){
-  await this.playwrightFactory.click(this.emi_interest)
-
 await this.playwrightFactory.fill(this.emi_interest, stremi);
 }
+
+
+async user_click_common_save_btn(){
+  await this.playwrightFactory.click(this.save_btn);
+  }
+
+
+
+
+
+
 
 
 
@@ -1460,28 +1529,187 @@ await this.page.evaluate(() => {
 window.scrollBy(1800,2000); // Scroll down
 });
 await this.page.getByRole('button', { name: 'Upload your File' }).click();
-await this.page.waitForTimeout(2500)
-await this.page.locator('input[type="file"]').nth(0).setInputFiles('ABC.pdf');
- 
- 
- 
+await this.page.waitForTimeout(10000)
+
+await this.page.locator('input[type="file"]').setInputFiles('ABC.pdf');
+
+//await this.page.getByRole('button', { name: 'Upload your file' }).click();
+//await this.page.getByRole('button', { name: 'Upload your file' }).setInputFiles('ABC.pdf');
+//await this.upload_your_file_credit_bureau_field.setInputFiles('C:/Credit_Bureau/ABC.pdf');
+}
+
+
+
+async user_click_business_details_add_data_btn(){
+  await this.playwrightFactory.click(this.business_details_add_data_btn);
+}
+async user_enters_business_details_name_of_the_firm_field(strname: string){
+  await this.playwrightFactory.fill(this.business_details_name_of_the_firm_field, strname);
+}
+
+async user_enters_business_details_address_of_the_firm_field(strname: string){
+  await this.playwrightFactory.fill(this.business_details_address_of_firm_field, strname);
+}
+
+async user_select_business_details_type_of_ownership_field(){
+  await this.business_details_type_of_ownership_field.selectOption({label:'Proprietary'});
+  }
+  async user_enters_business_details_nature_of_business_details_field(strname: string){
+    await this.playwrightFactory.fill(this.business_details_nature_of_business_in_details, strname);
+  }
+  async user_enters_business_details_shop_number_field(strname: string){
+    await this.playwrightFactory.fill(this.business_details_shop_number_field, strname);
+  }
+  async user_enters_business_details_udyam_name_field(strname: string){
+    await this.playwrightFactory.fill(this.business_details_udyam_name_field, strname);
+  }
+
+  async user_enters_business_details_number_of_year_field(strname: string){
+    await this.playwrightFactory.fill(this.business_details_number_of_year_field, strname);
+  }
+
+  async user_click_business_details_save_btn(){
+    await this.playwrightFactory.click(this.business_details_save_btn);
+  }
+  async user_click_business_details_add_line_btn(){
+    await this.playwrightFactory.click(this.business_details_add_line_btn);
+  }
+  async user_select_balance_sheet_month_field(){
+    await this.business_details_month_btn.selectOption({label:'January'});
+}
+
+async user_select_balance_sheet_year(){
+  await this.balance_sheet_year.selectOption({label:'2023'});
+}
+
+
+
+async user_enters_balance_sheet_networth(strname: string){
+  await this.playwrightFactory.fill(this.balance_sheet_networth, strname);
+}
+
+async user_enters_balance_sheet_deduction_field(strname: string){
+  await this.playwrightFactory.fill(this.balance_sheet_deduction_field, strname);
+}
+async user_click_business_details_verify_btn(){
+  await this.playwrightFactory.click(this.business_details_verify_btn);
+}
+
+async user_click_p_l_statement_add_data_btn(){
+  await this.playwrightFactory.click(this.P_L_statement_add_data_btn);
+}
+
+async user_click_p_l_statement_add_line_btn(){
+  await this.playwrightFactory.click(this.P_L_statement_add_line_btn);
+}
+async user_select_add_month_field_in_pl_statement(){
+  await this.P_L_statement_add_month_field.selectOption({label:'January'});
+}
+async user_select_year_field_in_pl_statement(){
+  await this.P_L_statement_year_field.selectOption({label:'2022'});
 }
 
 
 
 
 
+async user_enters_sales_field_in_pl_statement(strname: string){
+  await this.playwrightFactory.fill(this.P_L_statement_sales_field, strname);
+}
+async user_enters_purchase_field_in_pl_statement(strname: string){
+  await this.playwrightFactory.fill(this.P_L_statement_purchase_field, strname);
+}
+async user_enters_net_profit_field_in_pl_statement(strname: string){
+  await this.playwrightFactory.fill(this.P_L_statement_net_profit_field, strname);
+}
 
 
+async user_enters_depreciation_field_in_pl_statement(strname: string){
+  await this.playwrightFactory.fill(this.P_L_statement_depreciation_field, strname);
+}
+async user_enters_interest_field_in_pl_statement(strname: string){
+  await this.playwrightFactory.fill(this.P_L_statement_interest_field, strname);
+}
 
+async user_enters_income_tax_field_in_pl_statement(strname: string){
+  await this.playwrightFactory.fill(this.P_L_statement_income_tax_field, strname);
+}
 
+async user_enters_other_income_tax_field_in_pl_statement(strname: string){
+  await this.playwrightFactory.fill(this.P_L_statement_other_income_tax_field, strname);
 
+}
+async user_enters_agriculture_income_field_in_pl_statement(strname: string){
+  await this.playwrightFactory.fill(this.P_L_statement_agriculture_income_field, strname);
 
-
-
-
-
+}
+async user_enters_TDS_field_in_pl_statement(strname: string){
+  await this.playwrightFactory.fill(this.P_L_statement_TDS_field, strname);
 
 }
 
 
+
+
+
+async user_click_p_l_statement_save_btn(){
+  await this.playwrightFactory.click(this.P_L_statement_save_btn);
+}
+async user_click_add_data_btn_in_computation_of_income_field(){
+  await this.playwrightFactory.click(this.add_data_btn_of_computation_of_income);
+}
+async user_click_p_l_statement_verify_btn(){
+  await this.playwrightFactory.click(this.P_L_statement_verify_btn);
+}
+
+async user_click_add_line_btn_in_computation_of_income_field(){
+  await this.playwrightFactory.click(this.add_line_btn_of_computation_of_income);
+}
+
+async user_enters_gross_income_tax_field_computation_of_income_field(strname: string){
+    await this.playwrightFactory.fill(this.gross_income_of_computation_of_income, strname);
+  }
+  async user_enters_less_deduction_field_computation_of_income_field(strname: string){
+  await this.playwrightFactory.fill(this.less_deduction_of_computation_of_income, strname);
+  }
+  async user_net_taxable_income_field_computation_of_income_field(strname: string){
+    await this.playwrightFactory.fill(this.net_taxable_amount_of_computation_of_income, strname);
+  }
+  async user_click_computation_of_income_field_statement_save_btn(){
+    await this.playwrightFactory.click(this.save_btn_of_computation_of_income);
+  }
+
+  async user_click_computation_of_income_field_statement_verify_btn(){
+    await this.playwrightFactory.click(this.verify_btn_of_computation_of_income);
+  }
+
+  async user_click_add_data_btn_ITR_details(){
+    await this.playwrightFactory.click(this.add_data_btn_ITR_details);
+  }
+  async user_click_add_line_btn_ITR_details(){
+    await this.playwrightFactory.click(this.add_line_btn_ITR_details);
+  }
+
+  async user_select_ITR_details_month_field(){
+    await this.month_btn_ITR_details.selectOption({label:'January'});
+}
+async user_select_ITR_details_year_field(){
+  await this.year_btn_ITR_details.selectOption({label:'2025'});
+}
+async user_enters_income_in_ITR_details_field(strname: string){
+  await this.playwrightFactory.fill(this.total_income_btn_ITR_details, strname);
+}
+async user_enters_total_taxes_fees_in_ITR_details_field(strname: string){
+  await this.playwrightFactory.fill(this.total_taxes_interest_fee_btn_ITR_details, strname);
+}
+async user_enters_taxes_paid_in_ITR_details_field(strname: string){
+  await this.playwrightFactory.fill(this.taxes_paid_btn_ITR_details, strname);
+}
+async user_click_save_btn_ITR_details(){
+  await this.playwrightFactory.click(this.save_btn_ITR_details);
+}
+async user_click_verify_btn_ITR_details(){
+  await this.playwrightFactory.click(this.verify_btn_ITR_details);
+}
+
+}
