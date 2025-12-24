@@ -142,14 +142,15 @@ readonly txt_year_in_guarantor_financials_balance_sheet: Locator;
  readonly guarantor2_basic_information_guarantor_address:Locator;
  readonly guarantor2_basic_information_guarantor_profile_type:Locator;
 
+ readonly guarantor2_ID_proof_details_add_data_btn:Locator;
+    readonly guarantor2_first_name_id_document :Locator;    
+    readonly guarantor2_pan_name_id_document:Locator;
+    readonly save_btn_guarantor2_iddoc_details:Locator;
+    readonly eye_btn_guarantor2_pancard_disabled:Locator;
+    readonly eye_btn_guarantor2_pancard_enabled :Locator;
+
  readonly eye_btn_pancard_disabled:Locator;
  readonly eye_btn_pancard_enabled:Locator;
-
-
- readonly guarantor2_ID_proof_details_add_data_btn:Locator;
- readonly guarantor2_first_name_id_document:Locator;
- readonly guarantor2_pan_name_id_document:Locator;
- readonly save_btn_guarantor2iddoc_details:Locator;
   
   /**
    * @param {Page} page
@@ -187,12 +188,22 @@ readonly txt_year_in_guarantor_financials_balance_sheet: Locator;
     this.guarantor1_first_name_id_document=this.page.locator('//input[@name="wizard_guarantor1_first_name_id_document"]')         
     this.guarantor1_pan_name_id_document=this.page.locator('//input[@name="wizard_guarantor1_pan_document"]')
     this.save_btn_guarantor1iddoc_details=this.page.locator('//button[@name="save_guarantor1iddoc_details"]')
-    //this.eye_btn_pancard=this.page.locator('(//button[@name="toggle_guarantor1_pan_visibility"])[1]')
-    // this.eye_btn_pancard = this.page.locator("//button[@name='toggle_pan_visibility' and not(contains(@class,'o_invisible_modifier'))]");
-    // this.eye_btn_pancard_disabled = this.page.locator("//button[@name='toggle_pan_visibility' and contains(@class,'o_invisible_modifier')]");
+    
     this.eye_btn_pancard_disabled = this.page.locator("//button[@name='toggle_pan_visibility' and contains(@class,'o_invisible_modifier')]");
     
     this.eye_btn_pancard_enabled = this.page.locator("//button[@name='toggle_pan_visibility' and not(contains(@class,'o_invisible_modifier'))]");
+
+
+
+    this.guarantor2_ID_proof_details_add_data_btn=this.page.locator('//button[@name="guarantors2_id_proof_details_wizards"]')
+    this.guarantor2_first_name_id_document=this.page.locator('//input[@name="wizard_guarantor2_first_name_id_document"]')         
+    this.guarantor2_pan_name_id_document=this.page.locator('//input[@name="wizard_guarantor2_pan_document"]')
+    this.save_btn_guarantor2_iddoc_details=this.page.locator('//button[@name="save_guarantor2iddoc_details"]')
+    
+    this.eye_btn_guarantor2_pancard_disabled = this.page.locator("//button[@name='toggle_pan_visibility' and contains(@class,'o_invisible_modifier')]");
+    
+    this.eye_btn_guarantor2_pancard_enabled = this.page.locator("//button[@name='toggle_pan_visibility' and not(contains(@class,'o_invisible_modifier'))]");
+    
     
     
 
@@ -304,11 +315,6 @@ this.save_btn_ITR_details=this.page.locator('//button[@name="save_guarantor1_itr
 this.verify_btn_ITR_details=this.page.locator("//*[text()='1. Guarantor ITR Details']/ancestor::h1//*[contains(text(),'Verify')]")
     
 
-this.guarantor2_ID_proof_details_add_data_btn=this.page.locator('//button[@name="guarantors2_id_proof_details_wizards"]')
-    this.guarantor2_first_name_id_document=this.page.locator('//input[@name="wizard_guarantor2_first_name_id_document"]')         
-    this.guarantor2_pan_name_id_document=this.page.locator('//input[@name="wizard_guarantor2_pan_document"]')
-    this.save_btn_guarantor2iddoc_details=this.page.locator('//button[@name="save_guarantor2iddoc_details"]')
-
   }
   
 
@@ -332,23 +338,7 @@ async user_enter_guarantor_basic_information_guarantor_profile_type(){
 }
 
 
-async user_enter_guarantor2_basic_information_mobile_number(strnumber: string) {
-  await this.playwrightFactory.fill(this.guarantor2_basic_information_mobile_number, strnumber)
-}
-async user_enter_guarantor2_basic_information_guarantor_name(strname: string) {
-  await this.playwrightFactory.fill(this.guarantor2_basic_information_guarantor_name, strname)
-}
-    
-async user_enter_guarantor2_basic_information_date_of_birth(strname: string) {
-  await this.playwrightFactory.fill(this.guarantor2_basic_information_guarantor_date_of_birth, strname)
-}
-   
-async user_enter_guarantor2_basic_information_guarantor_address(strname: string) {
-  await this.playwrightFactory.fill(this.guarantor2_basic_information_guarantor_address, strname)
-}
-async user_enter_guarantor2_basic_information_guarantor_profile_type(){
-  await this.guarantor2_basic_information_guarantor_profile_type.selectOption({label:'Business'})
-}
+
 
 
 async user_click_add_data_button_of_guarantor_id_proof_details_field(){
@@ -730,6 +720,64 @@ async user_click_guarantor_save_btn_ITR_details(){
 }
 async user_click_guarantor_verify_btn_ITR_details(){
   await this.playwrightFactory.click(this.verify_btn_ITR_details);
+}
+
+async user_enter_guarantor2_basic_information_mobile_number(strnumber: string) {
+  await this.playwrightFactory.fill(this.guarantor2_basic_information_mobile_number, strnumber)
+}
+async user_enter_guarantor2_basic_information_guarantor_name(strname: string) {
+  await this.playwrightFactory.fill(this.guarantor2_basic_information_guarantor_name, strname)
+}
+    
+async user_enter_guarantor2_basic_information_date_of_birth(strname: string) {
+  await this.playwrightFactory.fill(this.guarantor2_basic_information_guarantor_date_of_birth, strname)
+}
+   
+async user_enter_guarantor2_basic_information_guarantor_address(strname: string) {
+  await this.playwrightFactory.fill(this.guarantor2_basic_information_guarantor_address, strname)
+}
+async user_enter_guarantor2_basic_information_guarantor_profile_type(){
+  await this.guarantor2_basic_information_guarantor_profile_type.selectOption({label:'Business'})
+}
+
+
+
+async user_click_add_data_button_of_guarantor2_id_proof_details_field(){
+  await this.guarantor2_ID_proof_details_add_data_btn.click()
+}
+async user_enter_guarantor2_first_name_id_document(strname: string) {
+  await this.playwrightFactory.fill(this.guarantor2_first_name_id_document, strname)
+}
+async user_enter_guarantor2_pan_name_id_document(strname: string) {
+  await this.playwrightFactory.fill(this.guarantor2_pan_name_id_document, strname)
+}
+async user_click_save_btn_guarantor2_iddoc_details(){
+  await this.save_btn_guarantor2_iddoc_details.click()
+}
+
+// async user_click_eye_btn_pan_card(){
+//   await this.eye_btn_pancard.click()
+//   await expect(this.eye_btn_pancard).toBeVisible();
+
+
+async user_click_eye_btn_pan_card2() {
+
+  const isDisabledVisible = await this.eye_btn_guarantor2_pancard_disabled.isVisible();
+  const isEnabledVisible = await this.eye_btn_guarantor2_pancard_enabled.isVisible();
+
+  if (isDisabledVisible) {
+      console.log("Disabled eye button is visible → clicking to enable visibility");
+      await this.playwrightFactory.click(this.eye_btn_guarantor2_pancard_disabled);
+      return;
+  }
+
+  if (isEnabledVisible) {
+      console.log("Enabled eye button is visible → clicking to disable visibility");
+      await this.playwrightFactory.click(this.eye_btn_guarantor2_pancard_enabled);
+      return;
+  }
+
+  //throw new Error("Eye button not visible in any state (enabled/disabled).");
 }
 
 

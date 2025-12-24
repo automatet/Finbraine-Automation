@@ -203,11 +203,13 @@ readonly added_comment_in_absence_of_branch_manager:Locator;
 readonly verified_btn:Locator;
 readonly reupload_docs_btn:Locator;
 
+  readonly add_data_btn_credit_bureau:Locator;
   readonly credit_bureau_title: Locator;
   readonly credit_bureau_verify_btn: Locator;
   readonly name_credit_bureau_field: Locator;
   readonly dob_credit_bureau_field: Locator;
   readonly upload_your_file_credit_bureau_field: Locator;
+  readonly credit_bureau_save_btn:Locator;
 
 
   readonly btn_add_data_for_form_16_details: Locator;
@@ -263,6 +265,9 @@ readonly reupload_docs_btn:Locator;
  readonly loan_amount: Locator;
  readonly outstanding_amount:Locator;
  readonly emi_interest: Locator;
+ readonly emp_id:Locator;
+ readonly nature_of_salaried_in_details:Locator;
+ //readonly activeTab:Locator;
 
   /**
    * @param {Page} page
@@ -298,21 +303,27 @@ readonly reupload_docs_btn:Locator;
     this.designation= this.page.locator("//select[@name='wizard_designation']");
     this.type_of_organization= this.page.locator("//select[@name='wizard_type_of_organisation']");
     this.joining_date= this.page.locator("//input[@name='wizard_since_date']");
+    this.emp_id= this.page.locator('//input[@name="wizard_employee_id_borrower"]')
+    this.nature_of_salaried_in_details= this.page.locator('//input[@name="wizard_nature_of_salaried"]')
+
     this.Remark= this.page.locator("//input[@name='wizard_remarks']");
 
 
-    this.save_btn=this.page.locator('button[name="save_salary_slip"]')
+    this.save_btn=this.page.locator("//button[normalize-space()='Save']")
     this.add_line_btn=this.page.locator('#o_field_input_1192').getByRole('button', { name: 'Add a line' })
     this.txt_id_proof_details_title=this.page.locator("//span[normalize-space()='ID Proof Details']")
     this.txt_customer_name=this.page.locator("//span[@name='customer_first_name_id_document']")
-    //this.txt_pan_number_eye_icon=this.page.locator("(//span[@name='customer_pan_document']/following::button[@name='toggle_pan_visibility'])[2]")
+    //this.txt_pan_number_eye_icon=this.page.locator("(//button[@name='toggle_pan_visibility'])[1]")
+
     this.txt_pan_number_eye_icon = this.page.locator("//button[@name='toggle_pan_visibility' and contains(@class,'btn-link') and not(contains(@class,'o_invisible_modifier'))]");
+
+
     this.txt_verify=this.page.getByText('Verify').first()
     this.btn_verify_checkbox=this.page.locator('span:nth-child(4) > .o_field_boolean > .custom-control-label').first()
     this.adress_proof_name = this.page.locator("//span[@name='customer_first_name_address_document']");
     this.adress_proof_adress= this.page.locator("//span[@name='customer_residence_address_document']");
     this.adrees_proof_dob= this.page.locator("//span[@name='customer_dob_document']");
-    this.adhaar_no= this.page.locator("//span[@name='customer_aadhaar_document']");
+    this.adhaar_no= this.page.locator("(//span[@name='customer_aadhaar_document'])[1]");
     this.adress_proof_verify_btn= this.page.locator("//*[text()='Address Proof Details']/ancestor::h1//*[contains(text(),'Verify')]");
     this.customer_name_borrower_info_field= this.page.locator("//input[@name='customer_name']");
     this.borrower_adress= this.page.locator("//input[@name='customer_borrower_address']");
@@ -320,11 +331,11 @@ readonly reupload_docs_btn:Locator;
     this.borower_current_adress= this.page.locator("//input[@name='borrower_current_address']");
     this.borrower_residential_type= this.page.locator("//select[@name='residential_type']");
     this.borowers_mobile_no= this.page.locator("//input[@name='customer_mobile_no']");
-    this.borrower_gender= this.page.locator("//select[@name='customer_gender']");
+    this.borrower_gender= this.page.locator("//select[@name='applicant_gender']");
     this.borrowers_age = this.page.locator("//input[@name='customer_borrower_age']");
     this.staff_name= this.page.locator("//input[@name='staff_name']");
     this.staff_id= this.page.locator("//input[@name='agent_id']");
-    this.requested_loan_amount= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='customer_loan_amount']");
+    this.requested_loan_amount= this.page.locator('//div[@name="customer_loan_amount"]');
     this.requested_loan_amount_in_words= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='customer_loan_amount_in_words']");
     this.loan_period= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='customer_period_in_months']");
     this.loan_perposed= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='purpose_of_loan']");
@@ -469,7 +480,7 @@ readonly reupload_docs_btn:Locator;
     this.added_branch_manager_recomendation_remark_comment_field= this.page.locator("//textarea[@name='branch_manager_recommendation']")
     this.added_name_in_absence_of_branch_manager= this.page.locator("//input[@name='loan_officer_name']")
     this.added_comment_in_absence_of_branch_manager= this.page.locator("//textarea[@name='loan_officer_comment']")
-    this.verified_btn= this.page.locator("//*[contains(text(),'VERIFIED')]")
+    this.verified_btn= this.page.locator('//button[@name="verify_data"]')
     this.reupload_docs_btn= this.page.locator("//*[contains(text(),'RE-UPLOAD DOCS')]")
 
 
@@ -484,7 +495,7 @@ readonly reupload_docs_btn:Locator;
     this.txt_PF_in_form_16_detils = this.page.locator("//input[@name='wizard_pf']")
     this.btn_Save_in_form_16_details = this.page.locator("//span[normalize-space()='Save']")
     this.btn_verify_in_Form_16= this.page.locator('//div[@name="verify_form_16_details"]')
-    this.btn_verify_in_membership_Details= this.page.locator('//div[@name="verify_membership_details"]')
+    this.btn_verify_in_membership_Details= this.page.locator("//*[text()='Membership Details']/ancestor::h1//*[text()='Verify']")
     this.btn_add_data_for_Membership_Details = this.page.locator("//button[@name='membership_details_wizard']//span[contains(text(),'Add Data')]")
     this.txt_Membership_number_in_Membership_Details = this.page.locator("//input[@name='wizard_membership_number']")
     this.txt_Name_of_shares_in_Membership_Details = this.page.locator("//input[@name='wizard_no_of_shares']")
@@ -497,7 +508,7 @@ readonly reupload_docs_btn:Locator;
     this.txt_Cibil_Charges_in_Charge_Details = this.page.locator('//input[@name="wizard_cibil_charges"]')
 this.txt_Processing_Fee_in_Charge_Details = this.page.locator('//input[@name="wizard_processing_fees"]')
 this.txt_Valuation_Charges_in_Charge_Details  = this.page.locator('//input[@name="wizard_valuation_charges"]')  
-this.txt_Fees_Charges_in_Charge_Details= this.page.locator('//input[@name="wizard_fees_charges"]')
+this.txt_Fees_Charges_in_Charge_Details   = this.page.locator('//input[@name="wizard_fees_charges"]')
 this.txt_Details_of_Contingent_Charges_in_Charge_Details  = this.page.locator('//input[@name="wizard_contingent_charges"]')
 this.txt_Penal_Charges_for_Delayed_Payment_in_Charge_Details  = this.page.locator('//input[@name="wizard_penal_charges_percent"]')  
 this.txt_Other_Penal_Charges_inCharge_Details=  this.page.locator('//input[@name="wizard_other_penal_charges"]')
@@ -508,58 +519,47 @@ this.txt_Recovery_Overdue_Notice_Charges_in_Charge_details  = this.page.locator(
 this.txt_Cheque_ECS_Return_SIExecution_Failed_Charges_in_Charge_details=  this.page.locator('//input[@name="wizard_return_charges"]')
 this.txt_Franking_Charges_in_Charge_details=  this.page.locator('//input[@name="wizard_franking_charges"]')
 this.btn_save_in_Charge_Details = this.page.locator("//span[normalize-space()='Save']")
-this.btn_verify_in_Charge_Details = this.page.locator('//div[@name="verify_membership_details"]')
+this.btn_verify_in_Charge_Details = this.page.locator("//*[text()='Charges']/ancestor::h1//*[text()='Verify']")
 
+
+this.add_data_btn_credit_bureau=this.page.locator('//button[@name="open_credit_bureau_wizard"]')
 this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bureau')])[2]")
     this.credit_bureau_verify_btn=this.page.locator("//*[text()='Credit Bureau']/ancestor::h1//*[text()='Verify']")
-    this.name_credit_bureau_field=this.page.locator("//input[@name='credit_name']")
-    this.dob_credit_bureau_field=this.page.locator("//input[@name='dob']")
+    this.name_credit_bureau_field=this.page.locator('//input[@name="wizard_credit_name"]')
+    this.dob_credit_bureau_field=this.page.locator("//input[@name='wizard_dob']")
     this.upload_your_file_credit_bureau_field=this.page.locator("//*[contains(text(),'Upload your file')]/preceding::input[@name='uploaded_file']")
-    this.settled_account=this.page.locator("//select[@name='settled_account']")
-    this.written_account=this.page.locator("//select[@name='written_account']")
-    this.ctc_credit_bureau_field=this.page.locator("//input[@name='ctc']")
-    this.overdue_amount_pending=this.page.locator("//input[@name='overdue_amount_pending']")
-    this.credit_score=this.page.locator("//input[@name='credit_vision']")
-    this.accound_sold=this.page.locator("//select[@name='account_sold']")
-    this.branch_remarks_on_cibil=this.page.locator("//input[@name='branch_remarks_on_cibil']")
-    this.suit_field=this.page.locator("//select[@name='suit_field']")
-    this.personal_score=this.page.locator("//input[@name='personal']")
-    this.repayment_track=this.page.locator("//input[@name='credit_repayment_track']")
-    this.wilful_defaulter=this.page.locator("//select[@name='wilful_defaulter']")
+    this.settled_account=this.page.locator("//select[@name='wizard_settled_account']")
+    this.written_account=this.page.locator("//select[@name='wizard_written_account']")
+    this.ctc_credit_bureau_field=this.page.locator("//input[@name='wizard_ctc']")
+    this.overdue_amount_pending=this.page.locator("//input[@name='wizard_overdue_amount_pending']")
+    this.credit_score=this.page.locator("//input[@name='wizard_credit_vision']")
+    this.accound_sold=this.page.locator("//select[@name='wizard_account_sold']")
+    this.branch_remarks_on_cibil=this.page.locator("//input[@name='wizard_branch_remarks_on_cibil']")
+    this.suit_field=this.page.locator("//select[@name='wizard_suit_field']")
+    this.personal_score=this.page.locator("//input[@name='wizard_personal']")
+    this.repayment_track=this.page.locator("//input[@name='wizard_credit_repayment_track']")
+    this.wilful_defaulter=this.page.locator("//select[@name='wizard_wilful_defaulter']")
+    this.credit_bureau_save_btn=this.page.locator('//button[@name="save_credit_bureau_wizard"]')
     this.add_a_line_credit_bureau_btn=this.page.locator("//*[contains(text(),'Add a line')]/ancestor::div[@name='cibil_score_data_ids']//*[contains(text(),'Add a line')]")
-    this.bank_loan_account_details=this.page.locator("//input[@name='bank_loan_accounts_details']")
-    this.loan_type_credit_bureau=this.page.locator("//input[@name='loan_type']")
-    this.ownership=this.page.locator("//input[@name='ownership']")
-    this.loan_amount=this.page.locator("//div[@name='loan_amount']//input[@type='text']")
-    this.outstanding_amount=this.page.locator("//div[@name='outstanding_amount']")
-    this.emi_interest=this.page.locator("//input[@name='emi_interest']")
-    this.dob_credit_bureau_field=this.page.locator("//input[@name='dob']")
-    this.upload_your_file_credit_bureau_field=this.page.locator("//*[contains(text(),'Upload your file')]/preceding::input[@name='uploaded_file']")
-
-    this.settled_account=this.page.locator("//select[@name='settled_account']")
-    this.written_account=this.page.locator("//select[@name='written_account']")
-    this.ctc_credit_bureau_field=this.page.locator("//input[@name='ctc']")
-    this.overdue_amount_pending=this.page.locator("//input[@name='overdue_amount_pending']")
-    this.credit_score=this.page.locator("//input[@name='credit_vision']")
-    this.accound_sold=this.page.locator("//select[@name='account_sold']")
-    this.branch_remarks_on_cibil=this.page.locator("//input[@name='branch_remarks_on_cibil']")
-    this.suit_field=this.page.locator("//select[@name='suit_field']")
-    this.personal_score=this.page.locator("//input[@name='personal']")
-    this.repayment_track=this.page.locator("//input[@name='credit_repayment_track']")
-    this.wilful_defaulter=this.page.locator("//select[@name='wilful_defaulter']")
-    this.add_a_line_credit_bureau_btn=this.page.locator("//*[contains(text(),'Add a line')]/ancestor::div[@name='cibil_score_data_ids']//*[contains(text(),'Add a line')]")
-    this.bank_loan_account_details=this.page.locator("//input[@name='bank_loan_accounts_details']")
-    this.loan_type_credit_bureau=this.page.locator("//input[@name='loan_type']")
-    this.ownership=this.page.locator("//input[@name='ownership']")
-    this.loan_amount=this.page.locator("//div[@name='loan_amount']//input[@type='text']")
-    this.outstanding_amount=this.page.locator("//div[@name='outstanding_amount']")
-    this.emi_interest=this.page.locator("//input[@name='emi_interest']")
+    //this.bank_loan_account_details=this.page.locator("//input[@name='bank_loan_accounts_details']")
+    //this.loan_type_credit_bureau=this.page.locator("//input[@name='loan_type']")
+    //this.activeTab = this.page.locator(".//input[@name='loan_type']");
+    //this.activeTab = this.page.locator("//div[contains(@class,'tab-pane') and contains(@class,'active')]");
 
 
-    
+    this.bank_loan_account_details = this.page.locator("(//div[contains(@class,'tab-pane') and contains(@class,'active')]//input[@name='bank_loan_accounts_details'])");
+this.loan_type_credit_bureau= this.page.locator("(//div[contains(@class,'tab-pane') and contains(@class,'active')]//input[@name='loan_type'])");
+this.ownership= this.page.locator("(//div[contains(@class,'tab-pane') and contains(@class,'active')]//input[@name='ownership'])");
+this.loan_amount= this.page.locator("(//div[contains(@class,'tab-pane') and contains(@class,'active')]//div[@name='loan_amount']//input[@type='text'])");
+this.outstanding_amount= this.page.locator("(//div[contains(@class,'tab-pane') and contains(@class,'active')]//div[@name='outstanding_amount']//input)");
+this.emi_interest= this.page.locator("(//div[contains(@class,'tab-pane') and contains(@class,'active')]//input[@name='emi_interest'])");
 
 
 
+    // this.ownership=this.page.locator("//input[@name='ownership']")
+    // this.loan_amount=this.page.locator("//div[@name='loan_amount']//input[@type='text']")
+    // this.outstanding_amount=this.page.locator("//div[@name='outstanding_amount']")
+    // this.emi_interest=this.page.locator("//input[@name='emi_interest']")
 
  }
 
@@ -572,27 +572,25 @@ async user_verify_customer_name(){
     await expect(this.txt_customer_name).toBeVisible();
 }
 
-// async user_verify_and_clicks_on_pan_number_eye_icon(){
-//   await expect(this.txt_customer_name).toBeVisible();
-//    await this.playwrightFactory.click(this.txt_pan_number_eye_icon);
-// }
 
 
+  async user_verify_and_clicks_on_pan_number_eye_icon() {
 
-async user_verify_and_clicks_on_pan_number_eye_icon() {
-await expect(this.txt_customer_name).toBeVisible();
-const isDisabled = await this.txt_pan_number_eye_icon.isVisible();
+    // Wait for the PAN field to be visible
+    await expect(this.txt_customer_name).toBeVisible();
 
-if (isDisabled) {
-      console.log("Eye icon is disabled → clicking to enable.");
-      await this.playwrightFactory.click(this.txt_pan_number_eye_icon);
-  }
-  else {
-      console.log("Eye icon already enabled → clicking normal eye icon.");
-      await this.playwrightFactory.click(this.txt_pan_number_eye_icon);
-  }
+    // Check if disabled eye icon is visible
+    const isDisabled = await this.txt_pan_number_eye_icon.isVisible();
+
+    if (isDisabled) {
+        console.log("Eye icon is disabled → clicking to enable.");
+        await this.playwrightFactory.click(this.txt_pan_number_eye_icon);
+    } 
+    else {
+        console.log("Eye icon already enabled → clicking normal eye icon.");
+        await this.playwrightFactory.click(this.txt_pan_number_eye_icon);
+    }
 }
-
 
 
 async user_verify_and_clicks_on_the_checkbox(){
@@ -626,6 +624,7 @@ async user_verify_borrower_adress(){
 }
 async user_check_same_adress_checkbox(){
   await this.playwrightFactory.click(this.same_as_borrower_adress_checkbox);
+  await expect(this.borrower_adress).not.toBeEmpty();
 }
 async user_verify_borrower_current_adress(){
   await expect(this.borower_current_adress).not.toBeEmpty();
@@ -637,7 +636,7 @@ async user_verify_borrowers_mobile_no(){
   await expect(this.borowers_mobile_no).not.toBeEmpty();
 }
 async user_verify_borrower_gender(){
-  await expect(this.borrower_gender).not.toBeEmpty();
+  await expect(this.borrower_gender).toBeVisible();
 }
 async user_verify_borrowers_age(){
   await expect(this.borrowers_age).not.toBeEmpty();
@@ -701,6 +700,14 @@ async user_select_type_of_organization() {
 async user_selectjoining_date(strJoiningdate: string) {
 await this.playwrightFactory.fill(this.joining_date, strJoiningdate)
 }
+async user_enter_emp_id(strID: string) {
+  await this.playwrightFactory.fill(this.emp_id, strID)
+  }
+  async user_enter_nature_of_salaried_in_details(strID: string) {
+    await this.playwrightFactory.fill(this.nature_of_salaried_in_details, strID)
+    }
+
+
 async user_enters_remarks(strRemark: string) {
   await this.playwrightFactory.fill(this.Remark,strRemark)
 }
@@ -841,18 +848,20 @@ async user_click_add_data_btn_for_company_id(){
 async user_enter_company_name_in_company_id_details(strName: string){
   await this.playwrightFactory.fill(this.company_name_in_company_id, strName);
 }
-async user_enter_adress_in_company_id_details(strAdress: string){
-  await this.playwrightFactory.fill(this.company_adress_in_company_id, strAdress);
+async user_verify_adress_in_company_id_details(){
+await expect(this.company_adress_in_company_id).toBeVisible()
 }
-async user_enter_company_id(strId: string){
-  await this.playwrightFactory.fill(this.company_id_in_company_id, strId);
+async user_verify_company_id(){
+  await expect(this.company_adress_in_company_id).toBeVisible()
 }
-async user_enter_employee_name_in_company_id(strName: string){
+async user_enter_employee_name_in_company_id(strName:string){
   await this.playwrightFactory.fill(this.employee_name_in_company_id,strName);
 }
-async user_enter_joining_date_in_company_id(strDate: string){
-  await this.playwrightFactory.click(this.joining_date_in_company_id);
-  await this.page.getByRole('cell', { name: '6', exact: true }).first().click();
+async user_verify_joining_date_in_company_id( ){
+  //await this.playwrightFactory.click(this.joining_date_in_company_id);
+  //await this.page.getByRole('cell', { name: '6', exact: true }).first().click();
+  await expect(this.joining_date_in_company_id).toBeVisible()
+
 }
 async user_click_save_btn(){
   await this.playwrightFactory.click(this.company_id_save_btn);
@@ -885,7 +894,7 @@ async user_enter_driving_licence_number(strDriving: string){
 }
 async user_enter_issue_date(){
   await this.playwrightFactory.click(this.issue_date);
-  await this.page.getByRole('cell', { name: '3', exact: true }).first().click();
+  await this.page.getByRole('cell', { name: '5', exact: true }).first().click();
 }
 async user_enter_expiry_date(strExpiry: string){
   await this.playwrightFactory.click(this.expiry_date);
@@ -903,7 +912,7 @@ async user_verify_added_issue_date(strDate: string){
 async user_verify_added_expiry_date(strExpiry: string){
   await expect(this.added_expiry_date).toContainText(strExpiry);
 }
-async user_click_verify_btn(){
+async user_click_verify_btn_driving_licence(){
   await this.page.waitForTimeout(1000)
   await this.playwrightFactory.click(this.driving_licence_verify_btn);
 }
@@ -1096,8 +1105,6 @@ async user_verify_added_executive_name(){
 async user_verify_added_vehicle_remark(){
   await expect(this.added_vehical_remark).toBeVisible();
 }
-
-
 
 
 
@@ -1332,16 +1339,20 @@ async user_enter_name_in_absence_of_branch_manager_field(strComment: string){
  
 async user_enter_comment_in_absence_of_branch_manager_field(strComment: string){
   await this.playwrightFactory.fill(this.added_comment_in_absence_of_branch_manager, strComment);
+  await this.page.waitForTimeout(1000)
 }
-async user_click_verified_btn(){
-  await this.playwrightFactory.click(this.verified_btn);
-}
+
  
 async user_click_reupload_docs_btn(){
   await this.playwrightFactory.click(this.reupload_docs_btn);
 }
 
 
+
+
+async user_click_add_data_btn_credit_bureau(){
+  await this.playwrightFactory.click(this.add_data_btn_credit_bureau);
+}
 
 async user_verify_credit_bureau_title(){
   await expect(this.credit_bureau_title).toBeVisible();
@@ -1356,7 +1367,6 @@ await this.playwrightFactory.fill(this.name_credit_bureau_field, strname);
 }
 
 async user_select_settled_account(){
-  await this.playwrightFactory.click(this.settled_account)
 await this.settled_account.selectOption({label:'Yes'});
 }
 
@@ -1365,8 +1375,6 @@ await this.playwrightFactory.fill(this.dob_credit_bureau_field, strdob);
 }
 
 async user_select_written_account(){
-  await this.playwrightFactory.click(this.written_account)
-
 await this.written_account.selectOption({label:'Yes'});
 }
 
@@ -1383,7 +1391,6 @@ await this.playwrightFactory.fill(this.credit_score, strcreditscore);
 }
 
 async user_select_account_sold(){
-  
 await this.accound_sold.selectOption({label:'Yes'});
 }
 
@@ -1410,48 +1417,82 @@ await this.wilful_defaulter.selectOption({label:'Yes'});
 async user_click_verify_button_for_credit_bureau(){
 await this.playwrightFactory.click(this.credit_bureau_verify_btn);
 }
+async user_click_save_button_for_credit_bureau(){
+  await this.playwrightFactory.click(this.credit_bureau_save_btn);
+  }
+
 
 async user_click_add_a_line_for_credit_bureau(){
 await this.playwrightFactory.click(this.add_a_line_credit_bureau_btn);
+await this.page.waitForTimeout(500);
 }
 
-async user_enters_bank_loan_account_details(strloanaccount: string){
-  await this.playwrightFactory.click(this.bank_loan_account_details)
+async user_enters_bank_loan_account_details(strloanaccount:string){
+  await this.playwrightFactory.click(this.bank_loan_account_details);
 await this.playwrightFactory.fill(this.bank_loan_account_details, strloanaccount);
 }
 
 async user_enters_loan_type_in_credit_bureau(strloantype: string){
-  await this.playwrightFactory.click(this.loan_type_credit_bureau)
-
+  await this.playwrightFactory.click(this.loan_type_credit_bureau);
 await this.playwrightFactory.fill(this.loan_type_credit_bureau, strloantype);
 }
 
 async user_enters_ownership(strownership: string){
-  await this.playwrightFactory.click(this.ownership)
-
+  await this.playwrightFactory.click(this.ownership);
 await this.playwrightFactory.fill(this.ownership, strownership);
 }
 
 async user_enters_loan_amount(strloanamount: string){
-  await this.playwrightFactory.click(this.loan_amount)
-
+  await this.playwrightFactory.click(this.loan_amount);
 await this.playwrightFactory.fill(this.loan_amount, strloanamount);
 }
 
 async user_enters_outstanding_amount(stroutstandingamount: string){
-  await this.playwrightFactory.click(this.outstanding_amount)
-
+  await this.playwrightFactory.click(this.outstanding_amount);
 await this.playwrightFactory.fill(this.outstanding_amount, stroutstandingamount);
 }
 
 async user_enters_emi_interest(stremi: string){
-  await this.playwrightFactory.click(this.emi_interest)
+  await this.playwrightFactory.click(this.emi_interest);
+  await this.playwrightFactory.fill(this.emi_interest, stremi);
 
-await this.playwrightFactory.fill(this.emi_interest, stremi);
+
 }
 
+// async user_click_common_save_btn(){
+//   //await this.page.waitForTimeout(1800)
+
+//   await this.playwrightFactory.click(this.save_btn);
+//   }
+
+  async user_click_verified_btn(){
+    await this.page.waitForTimeout(500)
+    await this.playwrightFactory.click(this.verified_btn);
+//await this.page.pause();
+   
+
+  }
 
 
+
+
+
+
+
+
+
+// async user_click_upload_your_file_button(){
+//   await this.page.waitForTimeout(3000);
+// await this.page.evaluate(() => {
+// window.scrollBy(1800,2000); // Scroll down
+// });
+// await this.page.getByRole('button', { name: 'Upload your File' }).click();
+// await this.page.waitForTimeout(2500)
+// await this.page.locator('input[type="file"]').nth(0).setInputFiles('ABC.pdf');
+
+
+
+// }
 
 
 async user_click_upload_your_file_button(){
@@ -1460,13 +1501,11 @@ await this.page.evaluate(() => {
 window.scrollBy(1800,2000); // Scroll down
 });
 await this.page.getByRole('button', { name: 'Upload your File' }).click();
+ await this.page.waitForTimeout(3000)
+ await this.page.locator('input[type="file"]').nth(0).setInputFiles('ABC.pdf');
 await this.page.waitForTimeout(2500)
-await this.page.locator('input[type="file"]').nth(0).setInputFiles('ABC.pdf');
- 
- 
  
 }
-
 
 
 

@@ -313,7 +313,7 @@ readonly total_taxes_interest_fee_btn_ITR_details:Locator;
 readonly taxes_paid_btn_ITR_details:Locator;
 readonly save_btn_ITR_details:Locator;
 readonly verify_btn_ITR_details:Locator;
-
+readonly verify_btn_ID_PROOF_details:Locator;
 
 
 
@@ -614,7 +614,7 @@ this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bure
     this.balance_sheet_year=this.page.locator('//select[@name="wizard_year"]')
     this.balance_sheet_networth=this.page.locator('//input[@name="wizard_capital_networth"]')
     this.balance_sheet_deduction_field=this.page.locator('//input[@name="wizard_deductions"]')
-    this.business_details_verify_btn=this.page.locator('//div[@name="verify_id_proof_details"]')
+    this.business_details_verify_btn=this.page.locator("//*[text()='Business Details']/ancestor::h1//*[text()='Verify']")
     this.P_L_statement_add_data_btn=this.page.locator('//button[@name="income_details_wizard"]')
     this.P_L_statement_add_line_btn=this.page.locator("(//*[contains(text(),'Add a line')]/following::div[@name='income_details_ids']//*[contains(text(),'Add a line')])[2]")
     this.P_L_statement_add_month_field=this.page.locator('//select[@name="wizard_month"]')
@@ -647,6 +647,8 @@ this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bure
     this.taxes_paid_btn_ITR_details=this.page.locator('//input[@name="wizard_taxes_paid"]')
     this.save_btn_ITR_details=this.page.locator('//button[@name="save_itr_business_details"]')
     this.verify_btn_ITR_details=this.page.locator('//div[@name="verify_itr_details"]')
+
+    this.verify_btn_ID_PROOF_details=this.page.locator("//*[text()='ID Proof Details']/ancestor::h1//*[text()='Verify']")
      
 
                                                                 
@@ -671,8 +673,8 @@ async user_verify_and_clicks_on_pan_number_eye_icon(){
 }
 
 async user_verify_and_clicks_on_the_checkbox(){
-  await expect(this.txt_verify).toBeVisible();
-  await this.playwrightFactory.click(this.txt_verify)
+  await expect(this.verify_btn_ID_PROOF_details).toBeVisible();
+  await this.playwrightFactory.click(this.verify_btn_ID_PROOF_details)
 }
 async user_verify_name_in_adress_proof_field(){
   await expect(this.adress_proof_name).toBeVisible();
@@ -1667,12 +1669,18 @@ async user_click_add_line_btn_in_computation_of_income_field(){
 }
 
 async user_enters_gross_income_tax_field_computation_of_income_field(strname: string){
+  await this.playwrightFactory.click(this.gross_income_of_computation_of_income);
+
     await this.playwrightFactory.fill(this.gross_income_of_computation_of_income, strname);
   }
   async user_enters_less_deduction_field_computation_of_income_field(strname: string){
+    await this.playwrightFactory.click(this.less_deduction_of_computation_of_income);
+
   await this.playwrightFactory.fill(this.less_deduction_of_computation_of_income, strname);
   }
   async user_net_taxable_income_field_computation_of_income_field(strname: string){
+    await this.playwrightFactory.click(this.net_taxable_amount_of_computation_of_income);
+
     await this.playwrightFactory.fill(this.net_taxable_amount_of_computation_of_income, strname);
   }
   async user_click_computation_of_income_field_statement_save_btn(){
