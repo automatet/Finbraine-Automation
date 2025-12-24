@@ -63,6 +63,48 @@ export class Loan_Sanction_Page {
   
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
  async verify_loan_amount_Loan_Sanction_Information(){
   await expect(this.txt_loan_amount).toBeVisible
   }
