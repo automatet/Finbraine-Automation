@@ -28,6 +28,9 @@ export class Personloan_Loan_Sanction_Page  {
   readonly Loan_Sanction_Date: Locator;
   readonly Recommendation_and_Remark: Locator;
   readonly btn_CreateAccount:Locator
+  readonly Sanction_assistant: Locator
+  readonly Assistant_Manager: Locator 
+
   /**
    * @param {Page} page
    * @param {TestInfo} testInfo
@@ -56,8 +59,8 @@ this.Tenure=this.page.locator("//div[@class='o_group outer-box']//span[@name='te
 this.Loan_Sanction_Date = this.page.locator('//div[@class="o_group outer-box"]//span[@name="loan_sanction_date"]');
 this.Recommendation_and_Remark = this.page.locator("//div[@class='o_group outer-box']//span[@name='recommendation_and_remark_section']");
 this.btn_CreateAccount = this.page.locator('//button[@name="create_lms_account"]')
- 
-
+ this.Sanction_assistant=this.page.locator('//div[@name="sanction_assistant"]')
+this.Assistant_Manager=this.page.locator("//div[@name='sanction_assistant_manager']")
 }
 
 
@@ -84,6 +87,9 @@ await expect(this.Tenure).toBeVisible
 
 async verify_loan_sanction_date__Loan_Sanction_Information(){
 await expect(this.Loan_Amount_in_Words).toBeVisible
+}
+async user_clicks_assistant(){
+  await this.Sanction_assistant.click()
 }
 async verify_Recommendation_and_remark_Loan_Sanction_by_HO_Authority(){
 await expect(this.Recommendation_and_Remark).toBeVisible
