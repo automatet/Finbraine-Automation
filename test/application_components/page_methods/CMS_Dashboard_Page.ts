@@ -80,9 +80,14 @@ await this.page.locator("//*[contains(text(),'"+strapplicationid+"')]").click();
     await this.txt_loan_type.selectOption({label:'Vehicle Loan'});
   }
 
+  // async user_select_profile_type() {
+  //   await this.txt_profile_type.selectOption({label:'Salaried Loan'});
+  // }
+
   async user_select_profile_type() {
-    await this.txt_profile_type.selectOption({label:'Salaried Loan'});
-  }
+    await this.txt_profile_type.click();
+    await this.page.locator("//a[contains(text(),'Salaried')]").click();
+    }
   async user_enter_pan_number(strpan_number: string){
     await this.playwrightFactory.fill(this.txt_pan_number, strpan_number)
   }

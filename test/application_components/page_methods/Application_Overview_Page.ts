@@ -23,14 +23,13 @@ export class Application_Overview_Page {
   readonly Loan_Application_tab:Locator;
   readonly Credit_Decision_tab:Locator;
   readonly Loan_Sanction_tab:Locator;
-  readonly Guarantor_details_tab: Locator;
   readonly btn_Edit:Locator
-   readonly workflow_tab:Locator;
- 
-   readonly application_verification_status:Locator;
-   readonly credit_decisioning_status:Locator;
-   readonly loan_sanction_status:Locator;
- readonly co_borrowers_details_tab: Locator
+  readonly application_verification_status:Locator;
+  readonly credit_decisioning_status:Locator;
+  readonly loan_sanction_status:Locator;
+  readonly workflow_tab:Locator;
+  readonly guarantor_details_tab:Locator;
+ readonly co_borrowers_details_tab:Locator;
   /**
    * @param {Page} page
    * @param {TestInfo} testInfo
@@ -54,14 +53,16 @@ export class Application_Overview_Page {
     this.Loan_Application_tab=this.page.locator("//a[normalize-space()='Loan Application']");
     this.Credit_Decision_tab=this.page.locator('//a[normalize-space()="Credit Decisioning"]');
     this.Loan_Sanction_tab=this.page.locator('//a[normalize-space()="Loan Sanction"]');
-    this.Guarantor_details_tab=this.page.locator("//a[normalize-space()='Guarantor Details']")
     this.btn_Edit=this.page.locator('//*[contains(text()," Edit")]')
+  
+
     this.application_verification_status=this.page.locator("//tr[td[1][normalize-space()='Application Verification']and td[3][normalize-space()='Completed']]")
     this.credit_decisioning_status=this.page.locator("//tr[td[1][normalize-space()='Credit Decisioning']and td[3][normalize-space()='Completed']]")
     this.loan_sanction_status=this.page.locator("//tr[td[1][normalize-space()='Loan Sanction']and td[3][normalize-space()='Completed']]")
-  this.workflow_tab=this.page.locator("//a[normalize-space()='Workflow']")
+    this.workflow_tab=this.page.locator("//a[normalize-space()='Workflow']")
+    this.guarantor_details_tab=this.page.locator("//*[contains(text(),'Guarantor Details')]")
     this.co_borrowers_details_tab=this.page.locator("//*[contains(text(),'Co-Borrower Details')]")
- 
+
  }
  
 async user_click_on_Loan_Application_tab(){
@@ -77,11 +78,6 @@ async user_click_on_Credit_Decision_tab(){
   await expect(this.Loan_Sanction_tab).toBeVisible();
   await this.Loan_Sanction_tab.click();
  }
-
- async user_click_on_guarantor_details_tab(){
-  await expect(this.Guarantor_details_tab).toBeVisible();
-  await this.Guarantor_details_tab.click();
- }
  
 async user_click_on_Edit_button(){
   await expect(this.btn_Edit).toBeVisible();
@@ -89,12 +85,7 @@ async user_click_on_Edit_button(){
   
  }
  
-  async user_clicks_lnk_Coborrower_Details(){
-  await expect(this.co_borrowers_details_tab).toBeVisible();
-  await this.co_borrowers_details_tab.click();
- 
-  }
-  async user_verify_application_verification_status(){
+ async user_verify_application_verification_status(){
   await expect(this.application_verification_status).toBeVisible();
  }  
  async user_verify_credit_decisioning_status(){
@@ -106,9 +97,21 @@ async user_click_on_Edit_button(){
  }  
  
  async user_click_workflow_tab(){
-  await this.workflow_tab.click()
+  await expect(this.workflow_tab).toBeVisible();
+  await this.workflow_tab.click();
  }
  
- 
+ async user_click_guarantor_details_tab(){
+  await expect(this.guarantor_details_tab).toBeVisible();
+  await this.guarantor_details_tab.click();
+ }
+
+ async user_click_co_borrowers_details_tab(){
+  await this.co_borrowers_details_tab.click();
+ }
+
+
+
+
 }
  
