@@ -29,6 +29,19 @@ export class Guarantor_details_page {
   readonly guarantor_basic_information_guarantor_date_of_birth:Locator;
   readonly guarantor_basic_information_guarantor_address:Locator;
   readonly guarantor_basic_information_guarantor_profile_type:Locator;
+  readonly guarantor_basic_information_guarantor_gender:Locator;
+  readonly guarantor_basic_information_guarantor_cif_number:Locator;
+  readonly guarantor_basic_information_guarantor_branch_code:Locator;
+  readonly guarantor_basic_information_guarantor_ckyc_number:Locator;
+  readonly guarantor_basic_information_guarantor_member_number:Locator;
+  readonly guarantor_basic_information_guarantor_banking_relations_with_us_field:Locator;
+  readonly guarantor_basic_information_guarantor_account_balance:Locator;
+  readonly guarantor_basic_information_guarantor_saving_current_number:Locator;
+   readonly guarantor_basic_information_guarantor_director_relative:Locator;
+readonly guarantor_basic_information_guarantor_kyc_date:Locator;
+
+
+
   readonly guarantor_ID_proof_details_add_data_btn:Locator;
   readonly guarantor1_first_name_id_document:Locator;
   readonly guarantor1_pan_name_id_document:Locator;
@@ -122,9 +135,9 @@ readonly guarantor1_bank_statement_add_data_btn: Locator;
 
 
   readonly add_data_btn_ITR_details:Locator;
-readonly add_line_btn_ITR_details:Locator;
-readonly month_btn_ITR_details:Locator;
-readonly year_btn_ITR_details:Locator;
+  readonly add_line_btn_ITR_details:Locator;
+  readonly month_btn_ITR_details:Locator;
+  readonly year_btn_ITR_details:Locator;
 readonly total_income_btn_ITR_details:Locator;
 readonly total_taxes_interest_fee_btn_ITR_details:Locator;
 readonly taxes_paid_btn_ITR_details:Locator;
@@ -149,6 +162,10 @@ readonly txt_year_in_guarantor_financials_balance_sheet: Locator;
     readonly eye_btn_guarantor2_pancard_disabled:Locator;
     readonly eye_btn_guarantor2_pancard_enabled :Locator;
 
+    readonly guarantor_basic_other_information_borrower_type_of_account_field:Locator;
+    readonly guarantor_basic_other_information_borrower_type_of_account:Locator;
+    readonly guarantor_basic_other_information_borrower_account_details:Locator;
+    readonly guarantor_basic_other_information_borrower_account_balance:Locator;
  readonly eye_btn_pancard_disabled:Locator;
  readonly eye_btn_pancard_enabled:Locator;
   
@@ -177,6 +194,18 @@ readonly txt_year_in_guarantor_financials_balance_sheet: Locator;
     this.guarantor_basic_information_guarantor_date_of_birth=this.page.locator('//input[@name="guarantor1_date_of_birth"]')
     this.guarantor_basic_information_guarantor_address=this.page.locator('//input[@name="guarantor1_address"]')
     this.guarantor_basic_information_guarantor_profile_type=this.page.locator('//select[@name="guarantor1_profile_type"]')
+    this.guarantor_basic_information_guarantor_gender=this.page.locator('//input[@name="guarantor1_gender"]')
+    this.guarantor_basic_information_guarantor_cif_number=this.page.locator('//input[@name="gurantor1_cif_no"]')
+    this.guarantor_basic_information_guarantor_branch_code=this.page.locator('//input[@name="guarantor1_cif_branch_code"]')
+    this.guarantor_basic_information_guarantor_ckyc_number=this.page.locator('//input[@name="guarantor1_ckyc_number"]')
+    this.guarantor_basic_information_guarantor_member_number=this.page.locator('//input[@name="guarantor1_member_number"]')
+    this.guarantor_basic_information_guarantor_banking_relations_with_us_field=this.page.locator('//span[@name="guarantor1_banking_relations_with_us"]')
+    this.guarantor_basic_information_guarantor_account_balance=this.page.locator('//span[@name="guarantor1_account_balance"]')
+    this.guarantor_basic_information_guarantor_saving_current_number=this.page.locator('//span[@name="guarantor1_saving_current_number"]')
+    this.guarantor_basic_information_guarantor_director_relative=this.page.locator('//select[@name="guarantor1_director_relative"]')
+    this.guarantor_basic_information_guarantor_kyc_date=this.page.locator('//input[@name="guarantor1_kyc_date"]')
+ 
+
 
     this.guarantor2_basic_information_mobile_number=this.page.locator('//input[@name="guarantor2_mobile_number"]')
     this.guarantor2_basic_information_guarantor_name=this.page.locator('//input[@name="guarantor2_name"]')
@@ -313,31 +342,71 @@ this.total_taxes_interest_fee_btn_ITR_details=this.page.locator('//input[@name="
 this.taxes_paid_btn_ITR_details=this.page.locator('//input[@name="wizard_taxes_paid"]')
 this.save_btn_ITR_details=this.page.locator('//button[@name="save_guarantor1_itr_business_details"]')
 this.verify_btn_ITR_details=this.page.locator("//*[text()='1. Guarantor ITR Details']/ancestor::h1//*[contains(text(),'Verify')]")
-    
+       
 
-  }
+this.guarantor_basic_other_information_borrower_type_of_account_field=this.page.locator("(//td[contains(@class,'o_data_cell') and @title='SBA'])[1]")
+this.guarantor_basic_other_information_borrower_type_of_account=this.page.locator('//span[@name="borrower_type_of_account"]')
+this.guarantor_basic_other_information_borrower_account_details=this.page.locator('//span[@name="borrower_account_details"]')
+this.guarantor_basic_other_information_borrower_account_balance=this.page.locator('//span[@name="borrower_account_balance"]')
+ 
+
+
+
+}
   
 
 
- async user_enter_guarantor_basic_information_mobile_number(strnumber: string) {
-  await this.playwrightFactory.fill(this.guarantor_basic_information_mobile_number, strnumber)
+ async user_verify_guarantor_basic_information_mobile_number() {
+  await expect(this.guarantor_basic_information_mobile_number).toBeVisible();
 }
-async user_enter_guarantor_basic_information_guarantor_name(strname: string) {
-  await this.playwrightFactory.fill(this.guarantor_basic_information_guarantor_name, strname)
+async user_verify_guarantor_basic_information_guarantor_name() {
+  await expect(this.guarantor_basic_information_guarantor_name).toBeVisible();
 }
+
     
-async user_enter_guarantor_basic_information_date_of_birth(strname: string) {
-  await this.playwrightFactory.fill(this.guarantor_basic_information_guarantor_date_of_birth, strname)
+async user_verify_guarantor_basic_information_date_of_birth() {
+  await expect(this.guarantor_basic_information_guarantor_date_of_birth).toBeVisible();
 }
-   
-async user_enter_guarantor_basic_information_guarantor_address(strname: string) {
-  await this.playwrightFactory.fill(this.guarantor_basic_information_guarantor_address, strname)
+
+async user_verify_guarantor_basic_information_guarantor_address() {
+  await expect(this.guarantor_basic_information_guarantor_address).toBeVisible();
 }
+
 async user_enter_guarantor_basic_information_guarantor_profile_type(){
   await this.guarantor_basic_information_guarantor_profile_type.selectOption({label:'Business'})
 }
+async user_verify_guarantor_basic_information_guarantor_gender(){
+  await expect(this.guarantor_basic_information_guarantor_gender).toBeVisible();
+}
+async user_verify_guarantor_basic_information_guarantor_cif_number(){
+  await expect(this.guarantor_basic_information_guarantor_cif_number).toBeVisible();
+}
+async user_verify_guarantor_basic_information_guarantor_branch_code(){
+  await expect(this.guarantor_basic_information_guarantor_branch_code).toBeVisible();
+}
+async user_verify_guarantor_basic_information_guarantor_ckyc_number(){
+  await expect(this.guarantor_basic_information_guarantor_ckyc_number).toBeVisible();
+}
+async user_verify_guarantor_basic_information_guarantor_member_number(){
+  await expect(this.guarantor_basic_information_guarantor_member_number).toBeVisible();
+}
+async user_verify_guarantor_basic_information_guarantor_banking_relations_with_us_field(){
+  await expect(this.guarantor_basic_information_guarantor_banking_relations_with_us_field).toBeVisible();
+}
+async user_verify_guarantor_basic_information_guarantor_account_balance(){
+  await expect(this.guarantor_basic_information_guarantor_account_balance).toBeVisible();
+}
+async user_verify_guarantor_basic_information_guarantor_saving_current_number(){
+  await expect(this.guarantor_basic_information_guarantor_saving_current_number).toBeVisible();
+}
 
-
+async user_select_guarantor_basic_information_guarantor_director_relative(){
+  await this.guarantor_basic_information_guarantor_director_relative.selectOption({label:'Yes'});
+}
+async user_verify_guarantor_basic_information_guarantor_kyc_date(){
+  await expect(this.guarantor_basic_information_guarantor_kyc_date).toBeVisible();
+}
+ 
 
 
 
@@ -721,22 +790,35 @@ async user_click_guarantor_save_btn_ITR_details(){
 async user_click_guarantor_verify_btn_ITR_details(){
   await this.playwrightFactory.click(this.verify_btn_ITR_details);
 }
+async user_click_guarantor_basic_other_information_borrower_type_of_account_field(){
+  await this.playwrightFactory.click(this.guarantor_basic_other_information_borrower_type_of_account_field);
+}
+async user_verify_guarantor_basic_other_information_borrower_type_of_account(){
+  await this.playwrightFactory.click(this.guarantor_basic_other_information_borrower_type_of_account);
+}
+async user_verify_guarantor_basic_other_information_borrower_account_details(){
+  await this.playwrightFactory.click(this.guarantor_basic_other_information_borrower_account_details);
+}
 
-async user_enter_guarantor2_basic_information_mobile_number(strnumber: string) {
+async user_verify_guarantor_basic_other_information_borrower_account_balance(){
+  await this.playwrightFactory.click(this.guarantor_basic_other_information_borrower_account_balance);
+}
+
+async user_verify_guarantor2_basic_information_mobile_number(strnumber: string) {
   await this.playwrightFactory.fill(this.guarantor2_basic_information_mobile_number, strnumber)
 }
-async user_enter_guarantor2_basic_information_guarantor_name(strname: string) {
+async user_verify_guarantor2_basic_information_guarantor_name(strname: string) {
   await this.playwrightFactory.fill(this.guarantor2_basic_information_guarantor_name, strname)
 }
     
-async user_enter_guarantor2_basic_information_date_of_birth(strname: string) {
+async user_verify_guarantor2_basic_information_date_of_birth(strname: string) {
   await this.playwrightFactory.fill(this.guarantor2_basic_information_guarantor_date_of_birth, strname)
 }
    
-async user_enter_guarantor2_basic_information_guarantor_address(strname: string) {
+async user_verify_guarantor2_basic_information_guarantor_address(strname: string) {
   await this.playwrightFactory.fill(this.guarantor2_basic_information_guarantor_address, strname)
 }
-async user_enter_guarantor2_basic_information_guarantor_profile_type(){
+async user_verify_guarantor2_basic_information_guarantor_profile_type(){
   await this.guarantor2_basic_information_guarantor_profile_type.selectOption({label:'Business'})
 }
 
