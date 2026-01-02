@@ -153,6 +153,7 @@ export class Loan_Application_Tab_Page {
   readonly added_vehical_recipet_no: Locator;
   readonly added_vehical_branch_name: Locator;
   readonly added_vehical_contact_no: Locator;
+  readonly year_of_manufacture_date:Locator;
   readonly added_distributer_name: Locator;
   readonly added_distributer_address: Locator;
   readonly added_vehical_name: Locator;
@@ -240,6 +241,7 @@ readonly reupload_docs_btn:Locator;
  readonly txt_Recovery_Overdue_Notice_Charges_in_Charge_details: Locator;    
  readonly txt_Cheque_ECS_Return_SIExecution_Failed_Charges_in_Charge_details: Locator;  
  readonly txt_Franking_Charges_in_Charge_details: Locator;
+ readonly txt_Percent_Processing_Fee_in_Charge_Details:Locator;
  readonly btn_save_in_Charge_Details: Locator;
  readonly btn_verify_in_Form_16: Locator;
  readonly btn_verify_in_membership_Details:Locator;
@@ -252,6 +254,7 @@ readonly reupload_docs_btn:Locator;
  readonly ctc_credit_bureau_field: Locator;
  readonly overdue_amount_pending: Locator;
  readonly credit_score: Locator;
+ readonly cibil_date:Locator;
  readonly accound_sold: Locator;
  readonly branch_remarks_on_cibil: Locator;
  readonly suit_field: Locator;
@@ -413,6 +416,7 @@ readonly reupload_docs_btn:Locator;
     this.vehical_name= this.page.locator("//input[@name='wizard_vehicle_name']");
     this.make_of_vehical= this.page.locator("//input[@name='wizard_vehicle_model']");
     this.quoatation_date= this.page.locator("//input[@name='wizard_quotation_date']");
+    this.year_of_manufacture_date= this.page.locator('//input[@name="wizard_year_of_manufacture"]')
     this.ex_showroom_price= this.page.locator("//input[@name='wizard_customer_exshowroom_price']");
     this.discount= this.page.locator("//input[@name='wizard_discount_on_exshowroom']");
     this.percentage_consider= this.page.locator("//input[@name='wizard_percentage_deduction']");
@@ -477,9 +481,9 @@ readonly reupload_docs_btn:Locator;
     this.added_other_income_details_save_btn= this.page.locator("//button[@name='save_other_income_wizard']")
     this.verify_other_income_details_data= this.page.locator("//div[@name='other_income_ids']")
     this.other_income_details_verify_btn= this.page.locator("//*[text()='Other Income Details']/ancestor::h1//*[contains(text(),'Verify')]")
-    this.added_branch_manager_recomendation_remark_comment_field= this.page.locator("//textarea[@name='branch_manager_recommendation']")
-    this.added_name_in_absence_of_branch_manager= this.page.locator("//input[@name='loan_officer_name']")
-    this.added_comment_in_absence_of_branch_manager= this.page.locator("//textarea[@name='loan_officer_comment']")
+    this.added_branch_manager_recomendation_remark_comment_field= this.page.locator('(//textarea[@name="branch_manager_recommendation"])[1]')
+    this.added_name_in_absence_of_branch_manager= this.page.locator("(//input[@name='loan_officer_name'])[1]")
+    this.added_comment_in_absence_of_branch_manager= this.page.locator("(//textarea[@name='loan_officer_comment'])[1]")
     this.verified_btn= this.page.locator('//button[@name="verify_data"]')
     this.reupload_docs_btn= this.page.locator("//*[contains(text(),'RE-UPLOAD DOCS')]")
 
@@ -502,11 +506,12 @@ readonly reupload_docs_btn:Locator;
     this.date_Shares_from_in_Membership_Details = this.page.locator('//input[@name="wizard_share_from"]');
     this.txt_Existing_share_amounts_in_Membership_Details = this.page.locator('//input[@name="wizard_existing_share_amt"]');
     this.txt_total_shares_required_inn_Membership_Details = this.page.locator('//input[@name="wizard_total_share_req"]');
-    this.txt_additional_shares_required_in_Membership_Details= this.page.locator('//input[@name="wizard_additional_share_req"]')
+    this.txt_additional_shares_required_in_Membership_Details= this.page.locator('//span[@name="wizard_additional_share_req"]')
     this.btn_save_in_Membership_Details = this.page.locator('//button[@name="save_membership_details"]');
     this.btn_Add_data_in_Charge_Details =this.page.locator('//button[@name="charges_details_wizard"]//span[contains(text(),"Add Data")]')
     this.txt_Cibil_Charges_in_Charge_Details = this.page.locator('//input[@name="wizard_cibil_charges"]')
 this.txt_Processing_Fee_in_Charge_Details = this.page.locator('//input[@name="wizard_processing_fees"]')
+this.txt_Percent_Processing_Fee_in_Charge_Details = this.page.locator('//input[@name="wizard_percentage"]')
 this.txt_Valuation_Charges_in_Charge_Details  = this.page.locator('//input[@name="wizard_valuation_charges"]')  
 this.txt_Fees_Charges_in_Charge_Details   = this.page.locator('//input[@name="wizard_fees_charges"]')
 this.txt_Details_of_Contingent_Charges_in_Charge_Details  = this.page.locator('//input[@name="wizard_contingent_charges"]')
@@ -533,6 +538,8 @@ this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bure
     this.ctc_credit_bureau_field=this.page.locator("//input[@name='wizard_ctc']")
     this.overdue_amount_pending=this.page.locator("//input[@name='wizard_overdue_amount_pending']")
     this.credit_score=this.page.locator("//input[@name='wizard_credit_vision']")
+    this.cibil_date=this.page.locator('//input[@name="wizard_cibil_date"]')
+
     this.accound_sold=this.page.locator("//select[@name='wizard_account_sold']")
     this.branch_remarks_on_cibil=this.page.locator("//input[@name='wizard_branch_remarks_on_cibil']")
     this.suit_field=this.page.locator("//select[@name='wizard_suit_field']")
@@ -541,15 +548,14 @@ this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bure
     this.wilful_defaulter=this.page.locator("//select[@name='wizard_wilful_defaulter']")
     this.credit_bureau_save_btn=this.page.locator('//button[@name="save_credit_bureau_wizard"]')
     this.add_a_line_credit_bureau_btn=this.page.locator("//*[contains(text(),'Add a line')]/ancestor::div[@name='cibil_score_data_ids']//*[contains(text(),'Add a line')]")
-    //this.bank_loan_account_details=this.page.locator("//input[@name='bank_loan_accounts_details']")
     //this.loan_type_credit_bureau=this.page.locator("//input[@name='loan_type']")
     //this.activeTab = this.page.locator(".//input[@name='loan_type']");
     //this.activeTab = this.page.locator("//div[contains(@class,'tab-pane') and contains(@class,'active')]");
 
 
-    this.bank_loan_account_details = this.page.locator("(//div[contains(@class,'tab-pane') and contains(@class,'active')]//input[@name='bank_loan_accounts_details'])");
-this.loan_type_credit_bureau= this.page.locator("(//div[contains(@class,'tab-pane') and contains(@class,'active')]//input[@name='loan_type'])");
-this.ownership= this.page.locator("(//div[contains(@class,'tab-pane') and contains(@class,'active')]//input[@name='ownership'])");
+    this.bank_loan_account_details = this.page.locator('//input[@name="bank_loan_accounts_details"]');
+this.loan_type_credit_bureau= this.page.locator('//input[@name="loan_type"]');
+this.ownership= this.page.locator('//input[@name="ownership"]');
 this.loan_amount= this.page.locator("(//div[contains(@class,'tab-pane') and contains(@class,'active')]//div[@name='loan_amount']//input[@type='text'])");
 this.outstanding_amount= this.page.locator("(//div[contains(@class,'tab-pane') and contains(@class,'active')]//div[@name='outstanding_amount']//input)");
 this.emi_interest= this.page.locator("(//div[contains(@class,'tab-pane') and contains(@class,'active')]//input[@name='emi_interest'])");
@@ -943,6 +949,11 @@ async user_enter_make_of_vehical(strVehical: string){
 async user_enter_quotation_date(strDate: string){
   await this.playwrightFactory.fill(this.quoatation_date, strDate);
 }
+async user_enter_year_of_manufacture_date(strDate: string){
+  await this.playwrightFactory.fill(this.year_of_manufacture_date, strDate);
+}
+
+
 async user_enter_ex_showroom_price(strPrice: string){
   await this.ex_showroom_price.clear();
   await this.playwrightFactory.fill(this.ex_showroom_price, strPrice);
@@ -1162,8 +1173,8 @@ async user_enters_Existing_share_amounts_in_Membership_Details(stramount: string
 async user_enters_total_shares_required_inn_Membership_Details(strtotal:string){
   await this.playwrightFactory.fill(this.txt_total_shares_required_inn_Membership_Details,strtotal);
 }
-async user__additional_shares_required_in_Membership_Details(stradditional: string){
-  await this.playwrightFactory.fill(this.txt_additional_shares_required_in_Membership_Details,stradditional)
+async user_verify_additional_shares_required_in_Membership_Details(){
+  await expect(this.txt_additional_shares_required_in_Membership_Details).toBeVisible()
 }
 async user_clicks_save_in_Membership_Details(){
   await this.playwrightFactory.click(this.btn_save_in_Membership_Details);
@@ -1186,7 +1197,9 @@ async user_enters_Processing_Fee_in_Charge_Details(strprocessingfee:string){
 await this.playwrightFactory.fill(this.txt_Processing_Fee_in_Charge_Details,strprocessingfee)
 }
  
- 
+async user_enters_Percent_Processing_Fee_in_Charge_Details(strprocessingfee:string){
+  await this.playwrightFactory.fill(this.txt_Percent_Processing_Fee_in_Charge_Details,strprocessingfee)
+  }
 async user_enters_txt_Valuation_Charges_in_Charge_Details(strvaluationcharge:string){
   await this.playwrightFactory.fill(this.txt_Valuation_Charges_in_Charge_Details,strvaluationcharge)
 }
@@ -1389,6 +1402,9 @@ await this.playwrightFactory.fill(this.overdue_amount_pending, stroverdue);
 async user_enters_credit_score(strcreditscore: string){
 await this.playwrightFactory.fill(this.credit_score, strcreditscore);
 }
+async user_enters_cibil_date(strcdate: string){
+  await this.playwrightFactory.fill(this.cibil_date, strcdate);
+  }
 
 async user_select_account_sold(){
 await this.accound_sold.selectOption({label:'Yes'});
@@ -1502,7 +1518,7 @@ window.scrollBy(1800,2000); // Scroll down
 });
 await this.page.getByRole('button', { name: 'Upload your File' }).click();
  await this.page.waitForTimeout(3000)
- await this.page.locator('input[type="file"]').nth(0).setInputFiles('ABC.pdf');
+ await this.page.locator('input[type="file"]').nth(0).setInputFiles('C:/Users/vaishnavee.dange/Downloads/ABC.pdf');
 await this.page.waitForTimeout(2500)
  
 }
