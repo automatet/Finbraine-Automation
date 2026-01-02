@@ -21,7 +21,7 @@ export class Login_Page {
 
   //**Declare */
   
-  readonly finbraine_vehicleloan:Locator;
+  readonly namco_community:Locator;
   readonly EmailID:Locator;
   readonly password:Locator;
   readonly Login_btn:Locator;
@@ -53,7 +53,8 @@ export class Login_Page {
 
     /******************** Page Objects ************************/
 
-  this.finbraine_vehicleloan=this.page.locator("//*[contains(text(),'finbraine_vehicleloan')]");
+
+  this.namco_community= this.page.locator("//*[contains(text(),'namco_community')]")
   this.EmailID=this.page.locator("// input[@placeholder='Email']")
   this.password=this.page.locator("// input[@placeholder='Password']")
   this.Login_btn=this.page.locator("//*[contains(text(),'Log in')]")
@@ -68,12 +69,13 @@ export class Login_Page {
 
 
 async user_launches_application() {
-let url = process.env.APP_URL || " http://4.247.133.66:8069/web/database/selector"
+let url = process.env.APP_URL || " http://4.240.123.236:8069/web/database/selector"
 await this.playwrightFactory.launchApplication(url);
 }
 
-async user_clicks_finbraine_vehicleloan_button(){
-  await this.playwrightFactory.click(this.finbraine_vehicleloan);
+  async user_clicks_namco_community_button(){
+  await this.playwrightFactory.click(this.namco_community);
+ 
 }
 
 async user_enters_emailid(strUsername: string) {

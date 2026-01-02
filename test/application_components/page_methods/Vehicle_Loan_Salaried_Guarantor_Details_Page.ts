@@ -143,6 +143,26 @@ readonly guarantors_2_address_proof_details_residence_address_document_field:Loc
 readonly guarantors_2_address_proof_details_dob_field:Locator;
 readonly save_btn_guarantors_2_address_proof_details:Locator;
 readonly verify_btn_guarantors_2_address_proof_details:Locator;
+
+//2.Guarantor Employment Details
+readonly btn_add_data_button_for_gurantor_2_employment_details: Locator;
+readonly txt_name_of_the_firm_for_gurantor_2_employment_details: Locator;
+readonly txt_address_of_the_firm_in_guarantor_2_salary_details: Locator;
+readonly designation_in_the_organiation_in_guarantor_2_salary_details: Locator;
+readonly type_of_organization_in_guarantor_2_salary_details: Locator;
+readonly joining_date_in_guarantor_2_salary_details:Locator;
+  readonly Remark_in_guarantor_2_salary_details:Locator;
+  readonly salary_details_add_line_btn_in_guarantor_2_salary_slip_details: Locator;
+  readonly salary_details_month_in_guarantor_2_salary_slip_details: Locator;
+  readonly salary_details_year_in_guarantor_2_salary_slip_details: Locator;
+  readonly gross_salary_in_guarantor_2_salary_slip_details: Locator;
+  readonly deduction_in_guarantor_2_salary_slip_details: Locator;
+  readonly net_salary_in_guarantor_2_salary_slip_details: Locator;
+  readonly salary_credited_date_in_guarantor_2_salary_slip_details: Locator;
+  readonly pf_in_guarantor_2_salary_slip_details: Locator;
+  readonly salary_slip_save_btn_in_guarantor_2_salary_slip_details: Locator;
+  readonly btn_verify_button_for_guarantor_2_employment_details: Locator;
+
  
 
 
@@ -929,20 +949,35 @@ this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bure
     this.verify_btn_guarantors_2_address_proof_details=this.page.locator('//div[@name="verify_guarantor2_address_proof_details"]')
 
 
+    //2. Guarantor Employment Details
+    this.btn_add_data_button_for_gurantor_2_employment_details=this.page.locator("//button[@name='guarantor2_salary_details_wizard']//span[contains(text(),'Add Data')]")
+    this.txt_name_of_the_firm_for_gurantor_2_employment_details=this.page.locator("//input[@name='wizard_guarantor2_company_where_employed']")
+    this.txt_address_of_the_firm_in_guarantor_2_salary_details=this.page.locator("//input[@name='wizard_guarantor2_address_of_the_firm']")
+    this.designation_in_the_organiation_in_guarantor_2_salary_details=this.page.locator("//select[@name='wizard_guarantor2_designation']")
+    this.type_of_organization_in_guarantor_2_salary_details=this.page.locator("//select[@name='wizard_guarantor2_type_of_organisation']")
+    this.joining_date_in_guarantor_2_salary_details=this.page.locator("//input[@name='wizard_guarantor2_since_date']")
+    this.Remark_in_guarantor_2_salary_details=this.page.locator("//input[@name='wizard_guarantor2_remarks']")
+    this.salary_details_add_line_btn_in_guarantor_2_salary_slip_details=this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='guarantor2_salary_details_ids']//*[contains(text(),'Add a line')]")
+    this.salary_details_month_in_guarantor_2_salary_slip_details=this.page.locator("")
+    this.salary_details_year_in_guarantor_2_salary_slip_details=this.page.locator("")
+    this.gross_salary_in_guarantor_2_salary_slip_details=this.page.locator("")
+    this.deduction_in_guarantor_2_salary_slip_details=this.page.locator("")
+    this.net_salary_in_guarantor_2_salary_slip_details=this.page.locator("")
+    this.salary_credited_date_in_guarantor_2_salary_slip_details=this.page.locator("")
+    this.pf_in_guarantor_2_salary_slip_details=this.page.locator("")
+    this.salary_slip_save_btn_in_guarantor_2_salary_slip_details=this.page.locator("")
+    this.btn_verify_button_for_guarantor_2_employment_details=this.page.locator("")
+
+
+    
+    
+    
+
+
     
 
 
  
-
-
-
-
-
-
-
-
-
-
 
 
 

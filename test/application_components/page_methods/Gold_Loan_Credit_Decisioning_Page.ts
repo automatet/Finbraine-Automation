@@ -21,6 +21,26 @@ export class Gold_Loan_Credit_Decisioning_Page {
 
   //**Declare */
 
+  readonly txt_security_details_title: Locator;
+  readonly txt_type_in_security_details: Locator;
+  readonly txt_category_in_security_details: Locator;
+  readonly txt_hallmark_in_security_details: Locator;
+  readonly txt_security_value_in_security_details: Locator;
+  readonly txt_loan_to_value_in_percentage_in_security_details: Locator;
+  readonly txt_amount_to_be_considered_in_security_details: Locator;
+  readonly txt_security_available_date_range_in_security_details: Locator;
+  readonly txt_security_ownership_details_in_security_details: Locator;
+  readonly txt_ownership_type_in_security_details: Locator;
+  readonly txt_ownership_percentage_in_security_details: Locator;
+  readonly txt_margin_in_security_details: Locator;
+
+  //Gold Valuation Details 2 Stree Dhan
+
+  readonly txt_name_in_stree_dhan: Locator;
+  readonly txt_address_in_stree_dhan: Locator;
+  readonly txt_age_in_stree_dhan: Locator;
+
+
 
 readonly txt_remarks: Locator;
 readonly txt_nominee_details_title: Locator;
@@ -198,8 +218,30 @@ readonly EMI_for_Loan_in_Loan_eligiblity : Locator;
 
 
     
-    /******************** Page Objects ************************/
+    /******************** Page Objects for gold loan credit decisioning ************************/
 
+    this.txt_security_details_title=this.page.locator("(//span[contains(text(),'Security Details')])[1]")
+    this.txt_type_in_security_details=this.page.locator("//span[@name='type_given']")
+    this.txt_category_in_security_details=this.page.locator("//span[@name='gold_category']")
+    this.txt_hallmark_in_security_details=this.page.locator("//select[@name='hallmark']")
+    this.txt_security_value_in_security_details=this.page.locator("//span[@name='security_value']")
+    this.txt_loan_to_value_in_percentage_in_security_details=this.page.locator("//span[@name='loan_to_value']")
+    this.txt_amount_to_be_considered_in_security_details=this.page.locator("//span[@name='amount_to_be_considered']")
+    this.txt_security_available_date_range_in_security_details=this.page.locator("//span[@name='security_available_date_range']")
+    this.txt_security_ownership_details_in_security_details=this.page.locator("//span[@name='security_ownership_details']")
+    this.txt_ownership_type_in_security_details=this.page.locator("(//span[@name='ownership_type'])[1]")
+    this.txt_ownership_percentage_in_security_details=this.page.locator("(//span[@name='ownership_percentage'])[1]")
+    this.txt_margin_in_security_details=this.page.locator("//span[@name='security_margin']")
+
+    //Gold Valuation Details 2 Stree Dhan
+
+    this.txt_name_in_stree_dhan=this.page.locator("")
+    this.txt_address_in_stree_dhan=this.page.locator("(//span[@name='gold_address2'])[2]")
+    this.txt_age_in_stree_dhan=this.page.locator("")
+
+
+    
+    /*******************************************************************************************/
 
     this.txt_remarks=this.page.locator("//input[@name='mpbf_remarks']")
 
@@ -360,7 +402,94 @@ readonly EMI_for_Loan_in_Loan_eligiblity : Locator;
   }
   
 
- 
+async user_verify_security_details_title(){
+  await expect(this.txt_security_details_title).toBeVisible()
+}
+
+async user_verify_type_in_security_details(){
+  await expect(this.txt_type_in_security_details).toBeVisible()
+}
+
+async user_verify_category_in_security_details(){
+  await expect(this.txt_category_in_security_details).toBeVisible()
+}
+
+async user_selects_hallmark_in_security_details(){
+await this.txt_hallmark_in_security_details.selectOption({label:'Yes'})
+}
+
+async user_verify_security_value_in_security_details(){
+  await expect(this.txt_security_value_in_security_details).toBeVisible()
+}
+
+async user_verify_loan_to_value_in_security_details(){
+  await expect(this.txt_loan_to_value_in_percentage_in_security_details).toBeVisible()
+}
+
+async user_verify_amount_to_be_considered_in_security_details(){
+  await expect(this.txt_amount_to_be_considered_in_security_details).toBeVisible()
+}
+
+async user_verify_security_available_date_range_in_security_details(){
+  await expect(this.txt_security_available_date_range_in_security_details).toBeVisible()
+}
+
+async user_verify_security_ownership_details_in_security_details(){
+  await expect(this.txt_security_ownership_details_in_security_details).toBeVisible()
+}
+
+async user_verify_ownership_type_in_security_details(){
+  await expect(this.txt_ownership_type_in_security_details).toBeVisible()
+}
+
+async user_verify_ownership_percentage_in_security_details(){
+  await expect(this.txt_ownership_percentage_in_security_details).toBeVisible()
+}
+
+async user_verify_margin_in_security_details(){
+  await expect(this.txt_margin_in_security_details).toBeVisible()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
