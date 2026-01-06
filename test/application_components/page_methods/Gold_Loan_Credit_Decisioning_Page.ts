@@ -39,6 +39,58 @@ export class Gold_Loan_Credit_Decisioning_Page {
   readonly txt_name_in_stree_dhan: Locator;
   readonly txt_address_in_stree_dhan: Locator;
   readonly txt_age_in_stree_dhan: Locator;
+  readonly txt_total_item_in_stree_dhan: Locator;
+  readonly txt_gold_gross_weight_in_grams_in_stree_dhan: Locator;
+  readonly txt_remark_in_stree_dhan: Locator;
+  readonly txt_gold_net_weight_in_stree_dhan: Locator;
+  readonly txt_date_of_valuation_in_stree_dhan: Locator;
+  readonly txt_total_valuation_amount_in_stree_dhan: Locator;
+  readonly txt_gold_valuer_name_in_stree_dhan: Locator;
+
+  //Purpose of loan 
+  readonly txt_purpose_of_loan_in_mpbf: Locator
+
+  //MPBF 
+  readonly txt_net_weight_of_gold_ornaments_in_mpbf: Locator;
+  readonly txt_ho_base_rate_per_gram_in_mpbf: Locator;
+  readonly txt_ltv_ratio_in_mpbf: Locator;
+  readonly txt_mpbf_in_mpbf: Locator;
+  readonly txt_loan_amount_demanded_in_mpbf: Locator;
+  readonly txt_maximum_sanctionable_amount_in_mpbf: Locator;
+  readonly txt_minimum_of__in_mpbf: Locator;
+  readonly txt_rounded_to_lower_hundred_in_mpbf: Locator;
+  readonly txt_sanctioned_amount_in_mpbf: Locator;
+  readonly txt_ceiling_limit_in_mpbf: Locator;
+  readonly txt_collateral_value_in_mpbf: Locator;
+  readonly txt_market_value_in_mpbf: Locator;
+  readonly txt_written_down_value_in_mpbf: Locator;
+  readonly txt_invoice_value_in_mpbf: Locator;
+  readonly txt_assessed_value_in_mpbf: Locator;
+  readonly txt_review_date_in_mpbf: Locator;
+  readonly txt_received_date_in_mpbf: Locator;
+  readonly txt_apportioned_value_in_mpbf: Locator;
+
+  //Shares And Charges
+  readonly txt_processing_fee_percentage: Locator;
+  readonly txt_gold_custody_charge: Locator;
+  readonly txt_gold_valuation_fees: Locator;
+  readonly txt_gold_audit_fees: Locator;
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -228,16 +280,72 @@ readonly EMI_for_Loan_in_Loan_eligiblity : Locator;
     this.txt_loan_to_value_in_percentage_in_security_details=this.page.locator("//span[@name='loan_to_value']")
     this.txt_amount_to_be_considered_in_security_details=this.page.locator("//span[@name='amount_to_be_considered']")
     this.txt_security_available_date_range_in_security_details=this.page.locator("//span[@name='security_available_date_range']")
-    this.txt_security_ownership_details_in_security_details=this.page.locator("//span[@name='security_ownership_details']")
+    this.txt_security_ownership_details_in_security_details=this.page.locator("(//span[@name='security_ownership_details'])[1]")
     this.txt_ownership_type_in_security_details=this.page.locator("(//span[@name='ownership_type'])[1]")
     this.txt_ownership_percentage_in_security_details=this.page.locator("(//span[@name='ownership_percentage'])[1]")
     this.txt_margin_in_security_details=this.page.locator("//span[@name='security_margin']")
 
     //Gold Valuation Details 2 Stree Dhan
 
-    this.txt_name_in_stree_dhan=this.page.locator("")
-    this.txt_address_in_stree_dhan=this.page.locator("(//span[@name='gold_address2'])[2]")
-    this.txt_age_in_stree_dhan=this.page.locator("")
+    this.txt_name_in_stree_dhan=this.page.locator("(//span[@name='gold_name'])[2]")
+    this.txt_address_in_stree_dhan=this.page.locator("(//span[@name='gold_address'])[2]")
+    this.txt_age_in_stree_dhan=this.page.locator("(//span[@name='gold_age'])[2]")
+    this.txt_total_item_in_stree_dhan=this.page.locator("(//span[@name='gold_total'])[2]")
+    this.txt_gold_gross_weight_in_grams_in_stree_dhan=this.page.locator("(//span[@name='gold_gross_weight'])[2]")
+    this.txt_remark_in_stree_dhan=this.page.locator("(//span[@name='customer_gold_remark'])[2]")
+    this.txt_gold_net_weight_in_stree_dhan=this.page.locator("(//span[@name='gold_weight_22_carat'])[2]")
+    this.txt_date_of_valuation_in_stree_dhan=this.page.locator("(//input[@name='date_of_valuation'])[2]")
+    this.txt_total_valuation_amount_in_stree_dhan=this.page.locator("(//span[@name='total_valuation_amount_rupees'])[2]")
+    this.txt_gold_valuer_name_in_stree_dhan=this.page.locator("(//span[@name='gold_valuer_name'])[2]")
+
+    //Purpose of loan
+
+    this.txt_purpose_of_loan_in_mpbf=this.page.locator("//input[@name='purpose_of_loan_mpbf']")
+
+    //MPBF
+
+    this.txt_net_weight_of_gold_ornaments_in_mpbf=this.page.locator("//span[@name='net_weight_of_gold_ornaments']")
+    this.txt_ho_base_rate_per_gram_in_mpbf=this.page.locator("//span[@name='rate_per_gram']")
+    this.txt_ltv_ratio_in_mpbf=this.page.locator("//span[@name='ltv_ratio']")
+    this.txt_mpbf_in_mpbf=this.page.locator("//span[@name='mpbf']")
+    this.txt_loan_amount_demanded_in_mpbf=this.page.locator("//span[@name='loan_amount_demanded']")
+    this.txt_maximum_sanctionable_amount_in_mpbf=this.page.locator("//div[@name='maximum_sanctionable_amount']")
+    this.txt_minimum_of__in_mpbf=this.page.locator("//span[@name='minimum_of_three']")
+    this.txt_rounded_to_lower_hundred_in_mpbf=this.page.locator("//span[@name='rounded_to_lower_hundred']")
+    this.txt_sanctioned_amount_in_mpbf=this.page.locator("//div[@name='sanctioned_amount']")
+    this.txt_ceiling_limit_in_mpbf=this.page.locator("//span[@name='ceiling_limit']")
+    this.txt_collateral_value_in_mpbf=this.page.locator("//span[@name='collateral_value']")
+    this.txt_market_value_in_mpbf=this.page.locator("//span[@name='market_value_mpbf']")
+    this.txt_written_down_value_in_mpbf=this.page.locator("//div[@name='written_down_value']")
+    this.txt_invoice_value_in_mpbf=this.page.locator("//span[@name='invoice_value']")
+    this.txt_assessed_value_in_mpbf=this.page.locator("//div[@name='assessed_value']")
+    this.txt_review_date_in_mpbf=this.page.locator("//span[@name='review_date']")
+    this.txt_received_date_in_mpbf=this.page.locator("//span[@name='received_date']")
+    this.txt_apportioned_value_in_mpbf=this.page.locator("//span[@name='apportioned_value']")
+
+    //Shares And Charges
+    this.txt_processing_fee_percentage=this.page.locator("(//span[@name='processing_percentage'])[2]")
+    this.txt_gold_custody_charge=this.page.locator("(//span[@name='gold_custody_charge'])[3]")
+    this.txt_gold_valuation_fees=this.page.locator("(//span[@name='gold_valuation_fees'])[3]")
+    this.txt_gold_audit_fees=this.page.locator("(//span[@name='gold_audit_fees'])[3]")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     
@@ -316,17 +424,18 @@ readonly EMI_for_Loan_in_Loan_eligiblity : Locator;
     this.txt_sector_code = this.page.locator('//div[@name="sector_code"]')
   // this.txt_sector_code = this.page.locator('//div[@class="o_input_dropdown"]//following::div[@name="sector_code"]')
     this.txt_occupationcode=this.page.locator('//select[@name="occupation_code"]')
-    this.txt_Purpose_of_advance = this.page.locator('//div[@name="purpose_of_advance"]')
+    this.txt_Purpose_of_advance = this.page.locator('(//div[@name="purpose_of_advance"])[2]')
    
     this.txt_Advance_type = this.page.locator('//select[@name="advance_type"]')
    
-    this.txt_weaker_code = this.page.locator('//div[@name="weaker_code"]')
+
+    this.txt_weaker_code = this.page.locator('(//div[@name="weaker_code"])[2]')
    
-    this.BorrowerCategory = this.page.locator("//span[@name='borrower_category']")
-    this.Mode_of_Advance = this.page.locator("//span[@name='mode_of_advance'][contains(text(),'Direct Finance')]")
-    this.txt_subsector_code = this.page.locator('//div[@name="subsector_code"]')
-    this.NatureofAdvance = this.page.locator('//span[@name="nature_of_advance"][contains(text(),"Secured")]')
-    this.txt_Industry_type = this.page.locator('//div[@name="industry_type"]')
+    this.BorrowerCategory = this.page.locator("(//span[@name='borrower_category'])[2]")
+    this.Mode_of_Advance = this.page.locator("(//span[@name='mode_of_advance'][contains(text(),'Direct Finance')])[2]")
+    this.txt_subsector_code = this.page.locator('(//div[@name="subsector_code"])[2]')
+    this.NatureofAdvance = this.page.locator('(//span[@name="nature_of_advance"][contains(text(),"Secured")])[2]')
+    this.txt_Industry_type = this.page.locator('(//div[@name="industry_type"])[2]')
     //loan eligibility///
     this.Gross_Income_in_Loan_eligibility = this.page.locator('//div[@class="o_group outer-box2"]//span[@name="gross_salary"]')
     this.Total_Agricultural_Income_in_Loan_eligibility = this.page.locator('//div[@class="o_group outer-box2"]//span[@name="total_agricultural_income"]')
@@ -399,8 +508,16 @@ readonly EMI_for_Loan_in_Loan_eligiblity : Locator;
 
 
 
+
+
   }
-  
+
+
+
+
+
+
+  /*********************Gold Loan Credit decisioning********************************************/
 
 async user_verify_security_details_title(){
   await expect(this.txt_security_details_title).toBeVisible()
@@ -450,6 +567,137 @@ async user_verify_margin_in_security_details(){
   await expect(this.txt_margin_in_security_details).toBeVisible()
 }
 
+async user_verify_name_in_stree_dhan_gold_valuation_details_2(){
+  await expect(this.txt_name_in_stree_dhan).toBeVisible()
+}
+
+async user_verify_address_in_stree_dhan_gold_valuation_details_2(){
+  await expect(this.txt_address_in_stree_dhan).toBeVisible()
+}
+
+async user_verify_age_in_stree_dhan_gold_valuation_details_2(){
+  await expect(this.txt_age_in_stree_dhan).toBeVisible()
+}
+
+async user_verify_total_item_in_stree_dhan_gold_valuation_details_2(){
+  await expect(this.txt_total_item_in_stree_dhan).toBeVisible()
+}
+
+async user_verify_gold_gross_weight_in_stree_dhan_gold_valuation_details_2(){
+  await expect(this.txt_gold_gross_weight_in_grams_in_stree_dhan).toBeVisible()
+}
+
+async user_verify_remark_in_stree_dhan_gold_valuation_details_2(){
+  await expect(this.txt_remark_in_stree_dhan).toBeVisible()
+}
+
+async user_verify_gold_net_weight_in_stree_dhan_gold_valuation_details_2(){
+  await expect(this.txt_gold_net_weight_in_stree_dhan).toBeVisible()
+}
+
+async user_verify_date_of_valuationin_stree_dhan_gold_valuation_details_2(){
+  await expect(this.txt_date_of_valuation_in_stree_dhan).toBeVisible()
+}
+
+async user_verify_total_valuation_amount_in_stree_dhan_gold_valuation_details_2(){
+  await expect(this.txt_total_valuation_amount_in_stree_dhan).toBeVisible()
+}
+
+async user_verify_gold_valuer_name_in_stree_dhan_gold_valuation_details_2(){
+  await expect(this.txt_gold_valuer_name_in_stree_dhan).toBeVisible()
+}
+
+async user_verify_purpose_of_loan_in_mpbf(){
+  await expect(this.txt_purpose_of_loan_in_mpbf).toBeVisible()
+}
+
+async user_verify_net_weight_of_gold_ornaments_in_mpbf(){
+  await expect(this.txt_net_weight_of_gold_ornaments_in_mpbf).toBeVisible()
+}
+
+async user_verify_ho_base_rate_per_gram_in_mpbf(){
+  await expect(this.txt_ho_base_rate_per_gram_in_mpbf).toBeVisible()
+}
+
+async user_verify_ltv_ratio_in_mpbf(){
+  await expect(this.txt_ltv_ratio_in_mpbf).toBeVisible()
+}
+
+async user_verify_mpbf_in_mpbf(){
+  await expect(this.txt_mpbf_in_mpbf).toBeVisible()
+}
+
+async user_verify_loan_amount_demanded_in_mpbf(){
+  await expect(this.txt_loan_amount_demanded_in_mpbf).toBeVisible()
+}
+
+async user_verify_maximum_sanctionable_amount_in_mpbf(){
+  await expect(this.txt_maximum_sanctionable_amount_in_mpbf).toBeVisible()
+}
+
+async user_verify_minimum_of_in_mpbf(){
+  await expect(this.txt_minimum_of__in_mpbf).toBeVisible()
+}
+
+async user_verify_rounded_to_lower_hundred_in_mpbf(){
+  await expect(this.txt_rounded_to_lower_hundred_in_mpbf).toBeVisible()
+}
+
+async user_verify_sanctioned_amount_in_mpbf(){
+  await expect(this.txt_sanctioned_amount_in_mpbf).toBeVisible()
+}
+
+async user_verify_ceiling_limit_in_mpbf(){
+  await expect(this.txt_ceiling_limit_in_mpbf).toBeVisible()
+}
+
+async user_verify_collateral_value_in_mpbf(){
+  await expect(this.txt_collateral_value_in_mpbf).toBeVisible()
+}
+
+async user_verify_market_value_in_mpbf(){
+  await expect(this.txt_market_value_in_mpbf).toBeVisible()
+}
+
+async user_verify_written_down_value_in_mpbf(){
+  await expect(this.txt_written_down_value_in_mpbf).toBeVisible()
+}
+
+async user_verify_invoice_value_in_mpbf(){
+  await expect(this.txt_invoice_value_in_mpbf).toBeVisible()
+}
+
+async user_verify_assessed_value_in_mpbf(){
+  await expect(this.txt_assessed_value_in_mpbf).toBeVisible()
+}
+
+async user_verify_review_date_in_mpbf(){
+  await expect(this.txt_review_date_in_mpbf).toBeVisible()
+}
+
+async user_verify_received_date_in_mpbf(){
+  await expect(this.txt_received_date_in_mpbf).toBeVisible()
+}
+
+async user_verify_apportioned_value_in_mpbf(){
+  await expect(this.txt_apportioned_value_in_mpbf).toBeVisible()
+}
+
+async user_verify_processing_fee_percentage_in_shares_and_charges(){
+  await expect(this.txt_processing_fee_percentage).toBeVisible()
+}
+
+async user_verify_gold_custody_charge_in_shares_and_charges(){
+  await expect(this.txt_gold_custody_charge).toBeVisible()
+}
+
+async user_verify_gold_valuation_fees_in_shares_and_charges(){
+  await expect(this.txt_gold_valuation_fees).toBeVisible()
+}
+
+async user_verify_gold_audit_fees_in_shares_and_charges(){
+  await expect(this.txt_gold_audit_fees).toBeVisible()
+}
 
 
 
@@ -494,6 +742,14 @@ async user_verify_margin_in_security_details(){
 
 
 
+
+
+
+
+
+
+
+/*************************************************************************************************/
 async user_enter_remarks(strremarks: string){
   await this.playwrightFactory.fill(this.txt_remarks, strremarks)
 }
@@ -893,13 +1149,13 @@ async user_verify_Bank_LTV_in_Collateral_Security_Details(){
 
 
 
-async user_selects_Borrower_Category_in_MIS(){
+async user_verify_Borrower_Category_in_MIS(){
 await expect(this.BorrowerCategory).toBeVisible()
 }
-async user_selects_Mode_Of_Advance_in_MIS(){
+async user_verify_Mode_Of_Advance_in_MIS(){
 await expect(this.Mode_of_Advance).toBeVisible();
 }
-async user_selects_Nature_Of_Advance_in_MIS(){
+async user_verify_Nature_Of_Advance_in_MIS(){
 await expect(this.NatureofAdvance).toBeVisible();
 }
 

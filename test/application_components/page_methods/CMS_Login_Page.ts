@@ -73,9 +73,12 @@ let url = process.env.APP_URL || " http://4.240.123.236:8069/web/database/select
 await this.playwrightFactory.launchApplication(url);
 }
 
-  async user_clicks_namco_community_button(){
+  
+
+async user_clicks_namco_community_button(){
   await this.playwrightFactory.click(this.namco_community);
- 
+  
+
 }
 
 async user_enters_emailid(strUsername: string) {

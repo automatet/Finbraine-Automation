@@ -31,6 +31,9 @@ export class Loan_Sanction_Page {
   readonly Recommendation_and_Remark: Locator;
   readonly btn_CreateAccount:Locator
 
+  
+
+
   /**
    * @param {Page} page
    * @param {TestInfo} testInfo
@@ -57,13 +60,13 @@ export class Loan_Sanction_Page {
     this.Rate_of_Interest=this.page.locator("//div[@class='o_group outer-box']//span[@name='rate_of_interest']");
     this.Tenure=this.page.locator("//div[@class='o_group outer-box']//span[@name='tenure']");
     this.Loan_Sanction_Date = this.page.locator('//div[@class="o_group outer-box"]//span[@name="loan_sanction_date"]');
-    this.Recommendation_and_Remark = this.page.locator("//div[@class='o_group outer-box']//span[@name='recommendation_and_remark_section']");
+    this.Recommendation_and_Remark = this.page.locator('//textarea[@name="recommendation_and_remark_section"]');
     this.btn_CreateAccount = this.page.locator('//button[@name="create_lms_account"]')
+
+    
  }
   
-
-
- async verify_loan_amount_Loan_Sanction_Information(){
+async verify_loan_amount_Loan_Sanction_Information(){
   await expect(this.txt_loan_amount).toBeVisible
   }
    
@@ -71,9 +74,7 @@ export class Loan_Sanction_Page {
   await expect(this.Loan_Amount_in_Words).toBeVisible
   }
    
-  async verify_Account_number__Loan_Sanction_Information(){
-  await expect(this.Account_Number).toBeVisible
-  }
+  
    
   async verify_Rate_of_interest__Loan_Sanction_Information(){
   await expect(this.Rate_of_Interest).toBeVisible
@@ -86,11 +87,11 @@ export class Loan_Sanction_Page {
   async verify_loan_sanction_date__Loan_Sanction_Information(){
   await expect(this.Loan_Amount_in_Words).toBeVisible
   }
-  async verify_Recommendation_and_remark_Loan_Sanction_by_HO_Authority(){
-  await expect(this.Recommendation_and_Remark).toBeVisible
+  async user_enter_Recommendation_and_remark_Loan_Sanction_by_HO_Authority(straccHO:string){
+    await this.Recommendation_and_Remark.fill(straccHO);
   }
 
-  async enter_Account_number__Loan_Sanction_Information(straccno:string){
+  async user_enter_Account_number_Loan_Sanction_Information(straccno:string){
     await this.Account_Number.fill(straccno);
   }
      
@@ -101,7 +102,7 @@ export class Loan_Sanction_Page {
     }
 
 
-
+    
 
 }
 

@@ -39,6 +39,8 @@ readonly adhaaar_number_in_kyc_and_due_diligence:Locator;
 
 
 readonly txt_loan_schedule_title:Locator;
+readonly txt_loan_due_date:Locator;
+readonly txt_loan_moratorium_period:Locator;
   readonly txt_product_name: Locator;
   readonly txt_total_repayment_amount: Locator;
   readonly txt_rate_of_interest: Locator;
@@ -58,6 +60,7 @@ readonly txt_loan_schedule_title:Locator;
   readonly txt_deviation_type: Locator;
   readonly txt_deviation_comment: Locator;
   readonly btn_deviation_verify_button: Locator;
+  readonly txt_additional_comment_add_line_btn: Locator;
   readonly txt_additional_comment: Locator;
   readonly btn_approve_button: Locator;
   readonly btn_reject_button: Locator;
@@ -133,7 +136,7 @@ readonly Agriculture_Income_Multiplier_in_Loan_eligibility : Locator;
 readonly Other_Income_Agriculture_in_Loan_eligibility : Locator;  
 readonly Gross_Amount_of_Existing_Deductions_in_Loan_eligibility : Locator;
 readonly Existing_Loan_EMI_in_Loan_eligibility : Locator;
-readonly Net_Amount_Available_for_New_EMI_in_Loan_eligibility : Locator;  
+// readonly Net_Amount_Available_for_New_EMI_in_Loan_eligibility : Locator;  
  
 readonly Total_Deduction_in_Loan_eligibility : Locator;
 readonly DBR_in_Loan_eligibility : Locator;
@@ -177,37 +180,43 @@ readonly EMI_for_Loan_in_Loan_eligiblity : Locator;
     this.gender_in_kyc_and_due_diligence= this.page.locator('//input[@name="kyc_customer_gender"]')
     this.borrowers_age_in_kyc_and_due_diligence= this.page.locator('//input[@name="kyc_customer_borrower_age"]')
     this.email_in_kyc_and_due_diligence= this.page.locator('//input[@name="kyc_customer_email"]')
-    this.signature_in_kyc_and_due_diligence= this.page.locator('')
+    this.signature_in_kyc_and_due_diligence= this.page.locator('//div[@class="o_group outer-box"]//input[@name="signature"]')
     this.customer_id_in_kyc_and_due_diligence= this.page.locator('//input[@name="kyc_customer_id"]')
-    this.kyc_status_in_kyc_and_due_diligence= this.page.locator('//select[@name="kyc_status"]')
-    this.kyc_status_in_kyc_and_due_diligence= this.page.locator('//option[@value="compliant"]')
+    this.kyc_status_in_kyc_and_due_diligence= this.page.locator('(//select[@name="kyc_status"])[1]')
+    //this.kyc_status_in_kyc_and_due_diligence= this.page.locator('//option[@value="compliant"]')
     this.kyc_date_in_kyc_and_due_diligence= this.page.locator("//input[@name='kyc_date_due_diligence']")
-    this.ckyc_number_in_kyc_and_due_diligence= this.page.locator("//label[@for='o_field_input_3546']")
-    this.pan_number_in_kyc_and_due_diligence= this.page.locator('//span[@name="kyc_customer_pan_document"]')
-    this.adhaaar_number_in_kyc_and_due_diligence= this.page.locator('//span[@name="kyc_customer_aadhaar_document"]')
+    this.ckyc_number_in_kyc_and_due_diligence= this.page.locator('//input[@name="ckyc_number"]')
+    this.pan_number_in_kyc_and_due_diligence= this.page.locator('(//button[@name="toggle_kyc_pan_visibility"])[1]')
+    this.adhaaar_number_in_kyc_and_due_diligence= this.page.locator('(//button[@name="toggle_kyc_aadhaar_visibility"])[1]')
 
 
-    this.txt_loan_schedule_title=this.page.locator("//div[normalize-space()='Loan Schedule']");
+    this.txt_loan_schedule_title=this.page.locator("//span[normalize-space()='Loan Schedule :']");
     this.txt_product_name=this.page.locator("//span[@name='updated_product_name']");
     this.txt_total_repayment_amount=this.page.locator("//span[@name='updated_outstanding_amount']");
-    this.txt_rate_of_interest=this.page.locator("//span[@name='updated_rate_of_interest']");
-    this.txt_maturity_date=this.page.locator("//span[@name='updated_maturity_date']");
-    this.txt_loan_amount=this.page.locator("(//span[@name='updated_loan_amount'])[1]")
-    this.txt_repayment_type=this.page.locator("//span[@name='repayment_type']")
+    this.txt_rate_of_interest=this.page.locator("//input[@name='updated_rate_of_interest']");
+    this.txt_maturity_date=this.page.locator("//span[@name='updated_maturity_date_str']");
+    this.txt_loan_amount=this.page.locator('(//div[@name="updated_loan_amount"])[1]')
+    this.txt_repayment_type=this.page.locator('//select[@name="repayment_type"]')
     this.txt_emi_amount=this.page.locator("//span[@name='emi_amount']")
-    this.txt_tenure_months=this.page.locator("(//span[@name='updated_tenure'])[2]")
+    this.txt_tenure_months=this.page.locator('//input[@name="updated_tenure"]')
     this.txt_total_interest=this.page.locator("//span[@name='total_interest']")
-    this.txt_loan_schedule_date=this.page.locator("//span[@name='loan_schedule_date']")
+    this.txt_loan_schedule_date=this.page.locator('//input[@name="loan_schedule_date_str"]')
+    this.txt_loan_due_date=this.page.locator('//input[@name="due_date"]')
+    this.txt_loan_moratorium_period=this.page.locator('//input[@name="moratorium_period"]')
+
     this.txt_loan_scrutiny_title=this.page.locator("//div[normalize-space()='Loan Scrutiny']")
     this.txt_total_quotation_amount=this.page.locator("(//span[@name='customer_quotation_amt'])[2]")
     this.txt_remaining_margin_amount=this.page.locator("//span[@name='remaining_margin_amount']")
-    this.txt_scrutiny_loan_amount=this.page.locator("(//span[@name='updated_loan_amount'])[2]")
+    this.txt_scrutiny_loan_amount=this.page.locator('(//div[@name="updated_loan_amount"])[2]')
     this.txt_scrutiny_entire_amount=this.page.locator("//span[@name='entire_amount']")
-    this.btn_deviation_type_add_a_line_button=this.page.locator("(//td[contains(@class,'o_field_x2many_list_row_add')]//a[normalize-space()='Add a line'])[2]")
+    this.btn_deviation_type_add_a_line_button=this.page.locator("(//a[normalize-space()='Add a line'])[6]")
     this.txt_deviation_type=this.page.locator("//select[@name='deviation_type']")
     this.txt_deviation_comment=this.page.locator("//textarea[@name='comment']")
     this.btn_deviation_verify_button=this.page.locator("//div[@name='verify_deviation']")
-    this.txt_additional_comment=this.page.locator("//input[@name='additional_comment']")
+    this.txt_additional_comment=this.page.locator("//div[@name='additional_comment_ids']//tr[contains(@class,'o_data_row')]//textarea[@name='comment']")
+    this.txt_additional_comment_add_line_btn=this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='additional_comment_ids']//*[contains(text(),'Add a line')]")
+
+                
     this.btn_approve_button=this.page.locator("//button[@name='approve_decision']")
     this.btn_reject_button=this.page.locator("//button[@name='reject_decision']")
 
@@ -220,11 +229,11 @@ readonly EMI_for_Loan_in_Loan_eligiblity : Locator;
     this.Security_Description_in_primarySecurityDetails = this.page.locator('//span[@name="security_description"]')
     this.txt_Security_Available_Date_Range_in_primarySecurityDetails = this.page.locator('//input[@name="security_available_date_range"]')
     this.Property_Location_in_primarySecurityDetails = this.page.locator('//span[@name="vehicle_property_location"]')
-    this.Branch_Address_in_primarySecurityDetails = this.page.locator('//span[@name="customer_vehicle_address"]')
+    this.Branch_Address_in_primarySecurityDetails = this.page.locator('(//*[contains(text(),"Branch Address")])[2]')
     this.Security_Ownership_Details_in_primarySecurityDetails = this.page.locator('//*[contains(text(),"Security Details")]/ancestor::div[@class="o_group outer-box o_invisible_modifier"]//following::table[@class="o_group o_inner_group o_group_col_6"]//span[@name="security_ownership_details"]')
-    this.Ownership_Type_in_primarySecurityDetails = this.page.locator('//*[contains(text(),"Security Details")]/ancestor::div[@class="o_group outer-box o_invisible_modifier"]//following::table[@class="o_group o_inner_group o_group_col_6"]//span[@name="ownership_type"]')
-    this.Ownership_Percentage_in_primarySecurityDetails = this.page.locator('//*[contains(text(),"Security Details")]/ancestor::div[@class="o_group outer-box o_invisible_modifier"]//following::table[@class="o_group o_inner_group o_group_col_6"]//span[@name="ownership_percentage"]')
-    this.Bank_LTV_in_primarySecurityDetails = this.page.locator('//span[@name="vehicle_bank_ltv"]')
+    this.Ownership_Type_in_primarySecurityDetails = this.page.locator('(//span[@name="ownership_type"])[2]')
+    this.Ownership_Percentage_in_primarySecurityDetails = this.page.locator('(//span[@name="ownership_percentage"])[2]')
+    this.Bank_LTV_in_primarySecurityDetails = this.page.locator('(//*[contains(text(),"Bank LTV (%)")])[2]')
     this.Margin__in_primarySecurityDetails = this.page.locator('//span[@name="vehicle_security_margin"]')
     this.Type_in_Collateral_Security_Details = this.page.locator('//span[@name="collateral_type_given"]')
     this.Category_in_Collateral_Security_Details = this.page.locator('//span[@name="collateral_vehicle_category"]')
@@ -241,58 +250,59 @@ readonly EMI_for_Loan_in_Loan_eligiblity : Locator;
     this.Market_LTV_in_Collateral_Security_Details = this.page.locator('//span[@name="collateral_market_ltv"]')
     this.Bank_LTV_in_Collateral_Security_Details = this.page.locator('//input[@name="collateral_bank_ltv"]')
     //mis//
-    this.txt_sector_code = this.page.locator('//input[@id="o_field_input_6329"]')
-  // this.txt_sector_code = this.page.locator('//div[@class="o_input_dropdown"]//following::div[@name="sector_code"]')
-    this.txt_occupationcode=this.page.locator('//select[@name="occupation_code"]')
-    this.txt_Purpose_of_advance = this.page.locator('//div[@name="purpose_of_advance"]')
+    this.txt_sector_code = this.page.locator('(//div[@name="sector_code"])[2]')
+    this.txt_occupationcode=this.page.locator('(//select[@name="occupation_code"])[2]')
+    this.txt_Purpose_of_advance = this.page.locator('(//div[@name="purpose_of_advance"])[2]')
    
     this.txt_Advance_type = this.page.locator('//select[@name="advance_type"]')
    
-    this.txt_weaker_code = this.page.locator('//div[@name="weaker_code"]')
+    this.txt_weaker_code = this.page.locator('(//div[@name="weaker_code"])[2]')
+
    
-    this.BorrowerCategory = this.page.locator("//span[@name='borrower_category']")
-    this.Mode_of_Advance = this.page.locator("//span[@name='mode_of_advance'][contains(text(),'Direct Finance')]")
-    this.txt_subsector_code = this.page.locator('//div[@name="subsector_code"]')
-    this.NatureofAdvance = this.page.locator('//span[@name="nature_of_advance"][contains(text(),"Secured")]')
-    this.txt_Industry_type = this.page.locator('//div[@name="industry_type"]')
+    this.BorrowerCategory = this.page.locator("(//span[@name='borrower_category'])[2]")
+    this.Mode_of_Advance = this.page.locator("(//span[@name='mode_of_advance'])[2]")
+    this.txt_subsector_code = this.page.locator('(//div[@name="subsector_code"])[2]')
+    this.NatureofAdvance = this.page.locator('(//span[@name="nature_of_advance"][contains(text(),"Secured")])[2]')
+    this.txt_Industry_type = this.page.locator('(//div[@name="industry_type"])[2]')
     //loan eligibility///
     this.Gross_Income_in_Loan_eligibility = this.page.locator('//div[@class="o_group outer-box2"]//span[@name="gross_salary"]')
     this.Total_Agricultural_Income_in_Loan_eligibility = this.page.locator('//div[@class="o_group outer-box2"]//span[@name="total_agricultural_income"]')
-    this.Maximum_Allowable_Deduction_in_Loan_eligibility = this.page.locator('//div[@class="o_group outer-box2"]//span[@name="maximum_allowable_deduction_percentage"]')
+    this.Maximum_Allowable_Deduction_in_Loan_eligibility = this.page.locator('//div[@class="o_group outer-box2"]//input[@name="maximum_allowable_deduction_percentage"]')
    
     this.Income_After_Maximum_Allowable_Deduction_in_Loan_eligibility = this.page.locator('//div[@class="o_group outer-box2"]//span[@name="maximum_allowable_deduction"]')
-    this.Agriculture_Income_Multiplier_in_Loan_eligibility = this.page.locator('//div[@class="o_group outer-box2"]//span[@name="other_income_multiplier"]')
+    this.Agriculture_Income_Multiplier_in_Loan_eligibility = this.page.locator('//div[@class="o_group outer-box2"]//input[@name="other_income_multiplier"]')
    
     this.Other_Income_Agriculture_in_Loan_eligibility = this.page.locator("//div[@class='o_group outer-box2']//span[@name='other_income_amount']")
-    this.Gross_Amount_of_Existing_Deductions_in_Loan_eligibility = this.page.locator("//div[@class='o_group outer-box2']//span[@name='salary_deduction']")
-    this.Existing_Loan_EMI_in_Loan_eligibility = this.page.locator("//div[@class='o_group outer-box2']//span[@name='existing_loan_emi']")
-    this.Net_Amount_Available_for_New_EMI_in_Loan_eligibility = this.page.locator("//div[@class='o_group outer-box2']//span[@name='total_amount_available_for_deduction'] ")
-    this.EMI_for_Loan_in_Loan_eligiblity = this.page.locator("//div[@class='o_group outer-box2']//span[@name='emi_of_new_loan']")
-    this.Total_Deduction_in_Loan_eligibility = this.page.locator("//div[@class='o_group outer-box2']//span[@name='total_deduction'] ")
-    this.DBR_in_Loan_eligibility = this.page.locator("//div[@class='o_group outer-box2']//span[@name='percentage_to_total_deduction']")
-    this.Total_Income_With_Existing_deduction_in_Loan_eligibility = this.page.locator("//div[@class='o_group outer-box2']//span[@name='net_salary_after_deduction']")
-    this.Percentage_of_Available_Amount_In_Gross_Income_in_Loan_eligibility = this.page.locator("//div[@class='o_group outer-box2']//span[@name='percentage_of_available_amount']")
-    this.Growth_Trend_of_Income_in_Loan_eligibility = this.page.locator("//div[@class='o_group outer-box2']//span[@name='growth_trend_of_income']")
-    this.Growth_Trend_of_Income_networth_in_Loan_eligibility = this.page.locator("//div[@class='o_group outer-box2']//span[@name='growth_trend_of_income_networth']")
-    this.As_per_Income_Loan_Availability_in_Loan_eligibility = this.page.locator("//div[@class='o_group outer-box2']//span[@name='income_Loan_Availability']")
-    this.txt_Remarks_in_Loan_eligibility = this.page.locator('//div[@class="o_group outer-box2"]//span[name="remarks"]')
+    this.Gross_Amount_of_Existing_Deductions_in_Loan_eligibility = this.page.locator("//span[@name='salary_deduction']")
+    this.Existing_Loan_EMI_in_Loan_eligibility = this.page.locator('//span[@name="total_amount_available_for_deduction"]')
+    //this.Net_Amount_Available_for_New_EMI_in_Loan_eligibility = this.page.locator("//span[@name='total_amount_available_for_deduction'] ")
+    this.EMI_for_Loan_in_Loan_eligiblity = this.page.locator("//span[@name='emi_of_new_loan']")
+    this.Total_Deduction_in_Loan_eligibility = this.page.locator("//span[@name='total_deduction'] ")
+    this.DBR_in_Loan_eligibility = this.page.locator("//span[@name='percentage_to_total_deduction']")
+    this.Total_Income_With_Existing_deduction_in_Loan_eligibility = this.page.locator("//span[@name='net_salary_after_deduction']")
+    this.Percentage_of_Available_Amount_In_Gross_Income_in_Loan_eligibility = this.page.locator("//span[@name='percentage_of_available_amount']")
+    this.Growth_Trend_of_Income_in_Loan_eligibility = this.page.locator("//span[@name='growth_trend_of_income']")
+    this.Growth_Trend_of_Income_networth_in_Loan_eligibility = this.page.locator("//span[@name='growth_trend_of_income_networth']")
+    this.As_per_Income_Loan_Availability_in_Loan_eligibility = this.page.locator("//span[@name='income_Loan_Availability']")
+    this.txt_Remarks_in_Loan_eligibility = this.page.locator('//input[@name="remarks"]')
    
    
     //shares and charges//
+  
     this.SanctionAmount_in_Shares_and_charges = this.page.locator("//span[@name='sanction_amount']")
     this.Shares_From_in_Shares_and_charges = this.page.locator("//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='share_from']")
     this.Shares_Number_in_Shares_and_charges = this.page.locator("//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='no_of_shares']")
-    this.Existing_Shares_Amount_in_Shares_and_charges = this.page.locator("//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='existing_share_amt']")
+    this.Existing_Shares_Amount_in_Shares_and_charges = this.page.locator('(//span[@name="existing_share_amt"])[3]')
     this.Total_Shares_Required_in_Shares_and_charges = this.page.locator("//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='total_share_req']")
     this.Additional_Shares_Required_in_Shares_and_charges = this.page.locator("//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='additional_share_req']")
     this.Fees_Charges_in_Shares_and_charges = this.page.locator("//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='cred_fees_charges']")
     this.Details_of_Contingent_Charges_in_Shares_and_charges = this.page.locator("//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='cred_contingent_charges']")
     this.Penal_Charges_for_Delayed_Payment_in_Shares_and_charges = this.page.locator("//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='cred_penal_charges_percent']")
     this.Other_Penal_Charges_in_Shares_and_charges = this.page.locator("//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='cred_other_penal_charges']")
-    this.Cibil_Charges__in_Shares_and_charges = this.page.locator("//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='cibil_charges']")
+    this.Cibil_Charges__in_Shares_and_charges = this.page.locator("(//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='cibil_charges'])[2]")
     this.processing_Fees_in_Shares_and_charges = this.page.locator("//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='processing_fees']")
-    this.Valuation_Charges_in_Shares_and_charges = this.page.locator("//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='valuation_charges']")
-    this.Stamp_Charges_in_Shares_and_charges = this.page.locator("//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='stamp_charges']")
+    this.Valuation_Charges_in_Shares_and_charges = this.page.locator("(//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='valuation_charges'])[2]")
+    this.Stamp_Charges_in_Shares_and_charges = this.page.locator("(//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='stamp_charges'])[2]")
     this.Foreclosure_Charges_if_applicable_in_Shares_and_charges = this.page.locator("//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='cred_foreclosure_charges']")
     this.Charges_for_Switching_Loan_Rate_Type_in_Shares_and_charges = this.page.locator("//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='cred_switching_charges']")
     this.Recovery_Overdue_Notice_Charges_in_Shares_and_charges = this.page.locator("//span[text()='Shares and Charges']/ancestor::h1[@class='outer-title']//following-sibling::div[@class='o_group outer-box']//span[@name='cred_recovery_charges']")
@@ -330,37 +340,38 @@ async user_click_credit_decisioning_tab(){
   await this.playwrightFactory.click(this.credit_decisioning_tab);
 
 }
-async user_enter_customer_name_in_kyc_and_due_diligence(strname: string){
-  await this.playwrightFactory.fill(this.customer_name_in_kyc_and_due_diligence, strname)
+async user_verify_customer_name_in_kyc_and_due_diligence(){
+  await expect(this.customer_name_in_kyc_and_due_diligence).toBeVisible()
 }
-async user_enter_borrowers_address_in_kyc_and_due_diligence(strname: string){
-  await this.playwrightFactory.fill(this.borrowers_address_in_kyc_and_due_diligence, strname)
-}
-
-async user_enter_current_address_in_kyc_and_due_diligence(strname: string){
-  await this.playwrightFactory.fill(this.current_address_in_kyc_and_due_diligence, strname)
+async user_verify_borrowers_address_in_kyc_and_due_diligence(){
+  await expect(this.borrowers_address_in_kyc_and_due_diligence).toBeVisible()
 }
 
-async user_enter_gender_in_kyc_and_due_diligence(strname: string){
-  await this.playwrightFactory.fill(this.gender_in_kyc_and_due_diligence, strname)
+async user_verify_current_address_in_kyc_and_due_diligence(){
+  await expect(this.current_address_in_kyc_and_due_diligence).toBeVisible()
 }
 
-async user_enter_email_in_kyc_and_due_diligence(strname: string){
-  await this.playwrightFactory.fill(this.gender_in_kyc_and_due_diligence, strname)
+async user_verify_gender_in_kyc_and_due_diligence(){
+  await expect(this.gender_in_kyc_and_due_diligence).toBeVisible()
+
 }
-async user_enter_signature_in_kyc_and_due_diligence(strname: string){
-  await this.playwrightFactory.fill(this.signature_in_kyc_and_due_diligence, strname)
+
+async user_enter_email_in_kyc_and_due_diligence(strnumber: string){
+  await this.playwrightFactory.fill(this.email_in_kyc_and_due_diligence, strnumber)
 }
+// async user_enter_signature_in_kyc_and_due_diligence(strname: string){
+//   await this.playwrightFactory.fill(this.signature_in_kyc_and_due_diligence, strname)
+// }
 async user_verify_customer_id_in_kyc_and_due_diligence(){
-  await expect(this.customer_id_in_kyc_and_due_diligence).toBeVisible()
+  await expect(this.gender_in_kyc_and_due_diligence).toBeVisible()
 }
 
 async user_select_ckyc_status_in_kyc_and_due_diligence(strname: string){
   await this.kyc_status_in_kyc_and_due_diligence.selectOption({label:'Compliant'});
 }
 
-async user_enter_kyc_date_in_kyc_and_due_diligence(strdate: string){
-  await this.playwrightFactory.fill(this.kyc_date_in_kyc_and_due_diligence, strdate)
+async user_verify_kyc_date_in_kyc_and_due_diligence(){
+  await expect(this.kyc_date_in_kyc_and_due_diligence).toBeVisible()
 }
 async user_verify_ckyc_number(){
   await expect(this.ckyc_number_in_kyc_and_due_diligence).toBeVisible();
@@ -410,6 +421,15 @@ async user_verify_repayment_type(){
   await expect(this.txt_repayment_type).toBeVisible();
 }
 
+async user_verify_due_date_loan_schedule(){
+  await expect(this.txt_loan_due_date).toBeVisible();
+}
+async user_enter_loan_moratorium_period_in_loan_schedule(strdate:string){
+  await this.playwrightFactory.fill(this.txt_loan_moratorium_period, strdate)
+}
+
+
+
 async user_verify_emi_amount(){
   await expect(this.txt_emi_amount).toBeVisible();
 }
@@ -450,8 +470,8 @@ async user_click_add_line_btn_for_deviations_type(){
 await this.playwrightFactory.click(this.btn_deviation_type_add_a_line_button);
 }
 
-async user_select_deviation_type(strDeviationtype: string){
-await this.txt_deviation_type.selectOption({label:strDeviationtype});
+async user_select_deviation_type(){
+await this.txt_deviation_type.selectOption({label:'Income Deviation'});
 }
 
 async user_enter_deduction_comment(strDeductioncomment: string){
@@ -461,13 +481,17 @@ await this.playwrightFactory.fill(this.txt_deviation_comment, strDeductioncommen
 async user_click_deviation_verify_button(){
 await this.playwrightFactory.click(this.btn_deviation_verify_button);
 }
-
+async user_click__additional_comment_add_line_btn(){
+await this.playwrightFactory.click(this.txt_additional_comment_add_line_btn);
+}
 async user_enters_additional_comment(strAdditionalcomment: string){
-await this.playwrightFactory.fill(this.txt_additional_comment, strAdditionalcomment);
+  await this.playwrightFactory.click(this.txt_additional_comment);
+  await this.playwrightFactory.fill(this.txt_additional_comment, strAdditionalcomment);
 }
 
 async user_click_approve_button(){
-await this.playwrightFactory.click(this.btn_approve_button);
+  await this.page.waitForTimeout(1000)
+  await this.playwrightFactory.click(this.btn_approve_button);
 }
 
 async user_click_reject_button(){
@@ -596,27 +620,45 @@ async user_verify_Bank_LTV_in_Collateral_Security_Details(){
   await expect(this.Bank_LTV_in_Collateral_Security_Details).toBeVisible
 }
  
-async user_selects_Sector_Code_in_MIS(){
-  //await this.playwrightFactory.click(this.txt_sector_code);
-await this.txt_sector_code.selectOption({label:'Priority'});
+
+  async user_selects_Sector_Code_in_MIS(){
+  await this.txt_sector_code.click();
+  //await this.txt_sector_code.selectOption({label:'Priority'})
+
+  await this.page.locator("//ul[contains(@class,'ui-menu')]//a[normalize-space(.)='Priority']").click();
+
+    }
+
+async user_verify_Occupation_Code_in_MIS(){
+await expect(this.txt_occupationcode).toBeVisible()
 }
-async user_selects_Occupation_Code_in_MIS(){
-await this.txt_occupationcode.selectOption({label:'Salaried'})
-}
+
+
 async user_selects_Purpose_Of_Advance_MIS(){
-await this.txt_Purpose_of_advance.selectOption({label:'Personal Loans'})
+await this.txt_Purpose_of_advance.click();
+await this.page.locator("//a[contains(text(),'Personal Loans')]").click();
+
 }
+
+
 async user_selects_Advance_Type_in_MIS(){
 await this.txt_Advance_type.selectOption({label:'EMI'})
 }
-async user_selects_Weaker_Code_in_MIS(){
-await this.txt_weaker_code.selectOption({label:'Weaker Section Small and Marginal Farmers'})
+
+
+async user_selects_Weaker_Code_in_MIS() {
+await this.txt_weaker_code.click();
+await this.page.locator("//a[contains(text(),'Weaker Section Small and Marginal Farmers')]").click();
 }
-async user_selects_Subsector_Code_in_MIS(){
-await this.txt_subsector_code.selectOption({label:'NON PRIORITY AGRICULTURE'})
+ async user_selects_Subsector_Code_in_MIS() {
+  await this.txt_subsector_code.click();
+  await this.page.locator("//a[contains(text(),'NON PRIORITY AGRICULTURE')]").click();
 }
+
+
+
 async user_selects_Borrower_Category_in_MIS(){
-await expect(this.BorrowerCategory).toBeVisible()
+await expect(this.BorrowerCategory).toBeVisible();
 }
 async user_selects_Mode_Of_Advance_in_MIS(){
 await expect(this.Mode_of_Advance).toBeVisible();
@@ -624,9 +666,16 @@ await expect(this.Mode_of_Advance).toBeVisible();
 async user_selects_Nature_Of_Advance_in_MIS(){
 await expect(this.NatureofAdvance).toBeVisible();
 }
-async user_selects_Industry_Type_in_MIS(){
-await this.txt_Industry_type.selectOption({label:'Engineering'})
+
+
+async user_selects_Industry_Type_in_MIS() {
+await this.txt_Industry_type.click();
+await this.page.locator("//a[contains(text(),'Engineering')]").click();
 }
+
+
+
+
  
 async Verify_Gross_Income_in_loan_eligibility(){
 await expect(this.Gross_Income_in_Loan_eligibility).not.toBeEmpty();
@@ -634,7 +683,7 @@ await expect(this.Gross_Income_in_Loan_eligibility).not.toBeEmpty();
 async Verify_Total_Agricultural_Income_in_loan_eligibility(){
 await expect(this.Total_Agricultural_Income_in_Loan_eligibility).toBeVisible();
 }
-async Verify_Maximum_Allowable_Deduction_in_loan_eligibility(){
+async Verify_Maximum_Allowable_Deduction_in_loan_eligibility_in_percentage(){
 await expect(this.Maximum_Allowable_Deduction_in_Loan_eligibility).toBeVisible();
 }
 async Verify_Income_After_Maximum_Allowable_Deduction_in_loan_eligibility(){
@@ -652,9 +701,9 @@ await expect(this.Gross_Amount_of_Existing_Deductions_in_Loan_eligibility).toBeV
 async Verify_Existing_Loan_EMI_in_loan_eligibility(){
 await expect(this.Existing_Loan_EMI_in_Loan_eligibility).toBeVisible();
 }
-async Verify_Net_Amount_Available_for_New_EMI_in_loan_eligibility(){
-await expect(this.Net_Amount_Available_for_New_EMI_in_Loan_eligibility).toBeVisible();
-}
+// async Verify_Net_Amount_Available_for_New_EMI_in_loan_eligibility(){
+// await expect(this.Net_Amount_Available_for_New_EMI_in_Loan_eligibility).toBeVisible();
+// }
 async Verify_EMI_for_Loan_in_loan_eligibility(){
 await expect(this.EMI_for_Loan_in_Loan_eligiblity).toBeVisible();
 }
@@ -682,11 +731,10 @@ await expect(this.Growth_Trend_of_Income_networth_in_Loan_eligibility).toBeVisib
 async Verify_As_per_Income_Loan_Availability_in_loan_eligibility(){
 await expect(this.As_per_Income_Loan_Availability_in_Loan_eligibility).toBeVisible();
 }
-//async Verify_Remarks_in_loan_eligibility(strremarks:string){
-//await this.playwrightFactory.fill(this.txt_Remarks_in_Loan_eligibility,strremarks)
-//}
-async Verify_Remarks_in_loan_eligibility(){
-await expect(this.txt_Remarks_in_Loan_eligibility).not.toBeEmpty()
+
+async enter_remarks_in_loan_eligibility(strmark:string){
+  await this.playwrightFactory.fill(this.txt_Remarks_in_Loan_eligibility,strmark)
+
 }  
 async Verify_Sanction_Amount_in_Shares_and_Charges(){
 await expect(this.SanctionAmount_in_Shares_and_charges).toBeVisible();
