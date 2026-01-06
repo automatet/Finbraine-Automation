@@ -245,6 +245,7 @@ readonly reupload_docs_btn:Locator;
  readonly btn_save_in_Charge_Details: Locator;
  readonly btn_verify_in_Form_16: Locator;
  readonly btn_verify_in_membership_Details:Locator;
+ readonly txt_new_checkbox_btn_membershio_details:Locator;
  readonly btn_verify_in_Charge_Details: Locator;
  readonly btn_Add_data_in_Charge_Details: Locator
 
@@ -384,7 +385,7 @@ readonly reupload_docs_btn:Locator;
     this.bank_statement_detail_cbmbc_field= this.page.locator("//input[@name='wizard_cb_mbc_ac_ecs_si']");
     this.bank_statement_save_btn= this.page.locator("//button[@name='save_bank_statement_wizard']");
     this.bank_statement_details_table= this.page.locator("//tbody[@class='ui-sortable']/ancestor::div[@name='bank_statement_details_ids']");
-    this.bank_statement_verify_btn= this.page.locator("//*[text()='Bank Statement Details']/ancestor::h1//*[text()='Verify']");
+    this.bank_statement_verify_btn= this.page.locator('//div[@name="verify_bank_statement_details"]');
     this.company_id_add_data_btn= this.page.locator("//button[@name='company_id_details_wizard']")
     this.company_name_in_company_id= this.page.locator("//input[@name='wizard_first_name_company_document']");
     this.company_adress_in_company_id= this.page.locator("//input[@name='wizard_address_details']");
@@ -476,7 +477,7 @@ readonly reupload_docs_btn:Locator;
     this.added_other_income_details_add_data_btn= this.page.locator("//button[@name='other_income_wizard']")
     this.added_other_income_details_add_line_btn= this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='other_income_ids']//*[contains(text(),'Add a line')]") 
     this.added_other_income_details_year_fields_btn= this.page.locator("//select[@name='wizard_year']")
-    this.added_other_income_details_year= this.page.locator("//select[@name='wizard_year']/option[@value='2022']")
+    this.added_other_income_details_year= this.page.locator("//select[@name='wizard_year']/option[@value='2025']")
     this.added_other_income_details_amount= this.page.locator("//input[@name='wizard_amount']")
     this.added_other_income_details_save_btn= this.page.locator("//button[@name='save_other_income_wizard']")
     this.verify_other_income_details_data= this.page.locator("//div[@name='other_income_ids']")
@@ -507,6 +508,7 @@ readonly reupload_docs_btn:Locator;
     this.txt_Existing_share_amounts_in_Membership_Details = this.page.locator('//input[@name="wizard_existing_share_amt"]');
     this.txt_total_shares_required_inn_Membership_Details = this.page.locator('//input[@name="wizard_total_share_req"]');
     this.txt_additional_shares_required_in_Membership_Details= this.page.locator('//span[@name="wizard_additional_share_req"]')
+    this.txt_new_checkbox_btn_membershio_details= this.page.locator('//div[@name="wizard_new_membership"]')
     this.btn_save_in_Membership_Details = this.page.locator('//button[@name="save_membership_details"]');
     this.btn_Add_data_in_Charge_Details =this.page.locator('//button[@name="charges_details_wizard"]//span[contains(text(),"Add Data")]')
     this.txt_Cibil_Charges_in_Charge_Details = this.page.locator('//input[@name="wizard_cibil_charges"]')
@@ -1180,6 +1182,10 @@ async user_clicks_save_in_Membership_Details(){
   await this.playwrightFactory.click(this.btn_save_in_Membership_Details);
  
 }
+async user_clicks_new_btn_checkbox_in_Membership_Details(){
+  await this.playwrightFactory.click(this.txt_new_checkbox_btn_membershio_details);
+ 
+}
 async user_clicks_verify_btn_in_Membership_Details(){
   await this.playwrightFactory.click(this.btn_verify_in_membership_Details)
  
@@ -1283,7 +1289,7 @@ async user_click_agriculture_income_add_line_btn(){
   await this.playwrightFactory.click(this.agriculture_income_add_line_btn);
 }
 async user_select_agriculture_income_year(){
-  await this.agriculture_income_year.selectOption({label:'2022'});
+  await this.agriculture_income_year.selectOption({label:'2025'});
 }
  
  
@@ -1325,7 +1331,7 @@ async user_click_income_details_add_line_btn(){
   await this.playwrightFactory.click(this.added_other_income_details_add_line_btn);
 }
 async user_click_income_details_year_field_btn(){
-  await this.added_other_income_details_year_fields_btn.selectOption({label:'2022'})
+  await this.added_other_income_details_year_fields_btn.selectOption({label:'2025'})
 }
  
  
@@ -1444,7 +1450,7 @@ await this.page.waitForTimeout(500);
 }
 
 async user_enters_bank_loan_account_details(strloanaccount:string){
-  await this.playwrightFactory.click(this.bank_loan_account_details);
+  //await this.playwrightFactory.click(this.bank_loan_account_details);
 await this.playwrightFactory.fill(this.bank_loan_account_details, strloanaccount);
 }
 
@@ -1475,11 +1481,11 @@ async user_enters_emi_interest(stremi: string){
 
 }
 
-// async user_click_common_save_btn(){
-//   //await this.page.waitForTimeout(1800)
+async user_click_common_save_btn(){
+await this.playwrightFactory.click(this.save_btn);
+await this.page.waitForTimeout(1000)
 
-//   await this.playwrightFactory.click(this.save_btn);
-//   }
+}
 
   async user_click_verified_btn(){
     await this.page.waitForTimeout(500)
