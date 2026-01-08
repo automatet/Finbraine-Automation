@@ -25,6 +25,7 @@ import { Personloan_Loan_Application_Page } from '../../application_components/p
 import { Personloan_Credit_Decisioning_Page } from '../../application_components/page_methods/Personloan_Credit_Decisioning_Page';
 import { Personloan_Loan_Sanction_Page } from '../../application_components/page_methods/Personloan_Loan_Sanction_Page';
 import { Co_Borrower_Page } from '../../application_components/page_methods/Co_Borrower_Page';
+import { Guarantor_details_page } from '../../application_components/page_methods/Guarantor_details_page';
 
 
 export class DriverScript {
@@ -58,6 +59,7 @@ export class DriverScript {
 container.register('Personloan_Credit_Decisioning_Page', new Personloan_Credit_Decisioning_Page(container));
 container.register('Personloan_Loan_Sanction_Page', new Personloan_Loan_Sanction_Page(container));
  container.register('Co_Borrower_Page', new Co_Borrower_Page(container));
+ container.register('Guarantor_details_page', new Guarantor_details_page(container));
 
 
 

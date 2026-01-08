@@ -209,12 +209,12 @@ readonly EMI_for_Loan_in_Loan_eligiblity : Locator;
     this.txt_remaining_margin_amount=this.page.locator("//span[@name='remaining_margin_amount']")
     this.txt_scrutiny_loan_amount=this.page.locator('(//div[@name="updated_loan_amount"])[2]')
     this.txt_scrutiny_entire_amount=this.page.locator("//span[@name='entire_amount']")
-    this.btn_deviation_type_add_a_line_button=this.page.locator("(//a[normalize-space()='Add a line'])[6]")
+    this.btn_deviation_type_add_a_line_button=this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='deviation_line_ids']//*[contains(text(),'Add a line')] ")
     this.txt_deviation_type=this.page.locator("//select[@name='deviation_type']")
     this.txt_deviation_comment=this.page.locator("//textarea[@name='comment']")
     this.btn_deviation_verify_button=this.page.locator("//div[@name='verify_deviation']")
-    this.txt_additional_comment=this.page.locator("//textarea[@name='comment']")
-    this.txt_additional_comment_add_line_btn=this.page.locator("(//a[normalize-space()='Add a line'])[7]")
+    this.txt_additional_comment=this.page.locator("//div[@name='additional_comment_ids']//tr[contains(@class,'o_data_row')]//textarea[@name='comment']")
+    this.txt_additional_comment_add_line_btn=this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='additional_comment_ids']//*[contains(text(),'Add a line')]")
 
                 
     this.btn_approve_button=this.page.locator("//button[@name='approve_decision']")
@@ -260,7 +260,7 @@ readonly EMI_for_Loan_in_Loan_eligiblity : Locator;
    
     this.BorrowerCategory = this.page.locator("(//span[@name='borrower_category'])[2]")
     this.Mode_of_Advance = this.page.locator("(//span[@name='mode_of_advance'])[2]")
-    this.txt_subsector_code = this.page.locator('//div[@name="subsector_code"]')
+    this.txt_subsector_code = this.page.locator('(//div[@name="subsector_code"])[2]')
     this.NatureofAdvance = this.page.locator('(//span[@name="nature_of_advance"][contains(text(),"Secured")])[2]')
     this.txt_Industry_type = this.page.locator('(//div[@name="industry_type"])[2]')
     //loan eligibility///
@@ -469,8 +469,8 @@ async user_click_add_line_btn_for_deviations_type(){
 await this.playwrightFactory.click(this.btn_deviation_type_add_a_line_button);
 }
 
-async user_select_deviation_type(strDeviationtype: string){
-await this.txt_deviation_type.selectOption({label:strDeviationtype});
+async user_select_deviation_type(){
+await this.txt_deviation_type.selectOption({label:'Income Deviation'});
 }
 
 async user_enter_deduction_comment(strDeductioncomment: string){
@@ -484,8 +484,7 @@ async user_click__additional_comment_add_line_btn(){
 await this.playwrightFactory.click(this.txt_additional_comment_add_line_btn);
 }
 async user_enters_additional_comment(strAdditionalcomment: string){
-  await this.playwrightFactory.click(this.txt_additional_comment);
-
+  //await this.playwrightFactory.click(this.txt_additional_comment);
 await this.playwrightFactory.fill(this.txt_additional_comment, strAdditionalcomment);
 }
 
