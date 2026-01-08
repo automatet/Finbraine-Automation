@@ -325,7 +325,7 @@ this.txt_Co_borrower_Number_of_Shares_in_CoBorrower_Membership_Details=this.page
 this.txt_Co_borrower_Shares_From_in_CoBorrower_Membership_Details=this.page.locator('//input[@name="wizard_coborrower_share_from"]')	
 this.txt_Co_borrower_Existing_Shares_Amount_in_CoBorrower_Membership_Details=this.page.locator('//input[@name="wizard_coborrower_existing_share_amt"]')		
 this.txt_Co_borrower_Total_Shares_Required_in_CoBorrower_Membership_Details=this.page.locator('//input[@name="wizard_coborrower_total_share_req"]')	
-this.txt_Co_borrower_Additional_Shares_Required_in_CoBorrower_Membership_Details=this.page.locator('//input[@name="wizard_coborrower_additional_share_req"]')
+this.txt_Co_borrower_Additional_Shares_Required_in_CoBorrower_Membership_Details=this.page.locator('//span[@name="wizard_coborrower_additional_share_req"]')
 this.btn_Save_in_CoBorrower_Membership_Details=this.page.locator('//button[@name="save_coborrower_membership_details"]')
 this.checkbox_verify_in_Co_Borrower_Membership_Details=this.page.locator('//div[@name="verify_coborrower_membership_details"]')
 //co-borrower Credit-bureau//  
@@ -1028,9 +1028,8 @@ async user_enters_Co_borrower_Total_Shares_Required_in_CoBorrower_Membership_Det
   await this.txt_Co_borrower_Total_Shares_Required_in_CoBorrower_Membership_Details.fill(strtotalshares)
 
 }	
-async user_enters_Co_borrower_Additional_Shares_Required_in_CoBorrower_Membership_Details(straddshares:string){
-await this.txt_Co_borrower_Additional_Shares_Required_in_CoBorrower_Membership_Details.fill(straddshares)  
-
+async user_verify_Co_borrower_Additional_Shares_Required_in_CoBorrower_Membership_Details(){
+await expect(this.txt_Co_borrower_Additional_Shares_Required_in_CoBorrower_Membership_Details).toBeVisible()
 }
 async user_clicks_Save_in_CoBorrower_Membership_Details(){
   await this.btn_Save_in_CoBorrower_Membership_Details.click()

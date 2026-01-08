@@ -641,8 +641,9 @@ async user_verify_borrower_gender(){
 async user_verify_borrowers_age(){
   await expect(this.borrowers_age).not.toBeEmpty();
 }
-async user_verify_staff_name(){
-  await expect(this.staff_name).not.toBeEmpty();
+async user_verify_staff_name(name:string){
+  
+  await this.playwrightFactory.fill(this.staff_name,name)
 }
 async user_verify_staff_id(){
   await expect(this.staff_id).not.toBeEmpty();

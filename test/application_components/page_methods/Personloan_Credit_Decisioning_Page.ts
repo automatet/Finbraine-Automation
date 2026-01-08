@@ -150,11 +150,8 @@ this.Manager=this.page.locator('')
 this.AGM=this.page.locator('')
 this.addaaline_in_additional_comment=this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='additional_comment_ids']//*[contains(text(),'Add a line')]")
 this.comment=this.page.locator("//textarea[@name='comment']")
-
-
-
-  }
-
+}
+//Loan eligibility//
 async Verify_Gross_Income_in_loan_eligibility(){
 await expect(this.Gross_Income_in_Loan_eligibility).not.toBeEmpty();
 }
@@ -236,10 +233,7 @@ await expect(this.CoBorrower_OtherIncome).toBeVisible();
 async Verify_Remarks_in_loan_eligibility(strremarks:string){
 await this.playwrightFactory.fill(this.txt_Remarks_in_Loan_eligibility,strremarks)
 }
-// async Verify_Remarks_in_loan_eligibility(){ 
-  
-// await expect(this.txt_Remarks_in_Loan_eligibility).not.toBeEmpty()
-// }  
+///Loan schedule methods//
 
 async user_verify_loan_schedule_title(){
   await expect(this.txt_loan_schedule_title).toBeVisible();
@@ -284,6 +278,7 @@ async user_verify_total_interest(){
 async user_verify_loan_schedule_date(){
   await expect(this.txt_loan_schedule_date).toBeVisible();
 }
+//Loan scrutiny///
  
 async user_verify_loan_scrutiny_title(){
   await expect(this.txt_loan_scrutiny_title).toBeVisible();
@@ -301,7 +296,7 @@ async user_verify_scrutiny_loan_amount(){
   await expect(this.txt_scrutiny_loan_amount).toBeVisible();
 }
  
-async user_verify_entire_amount(){
+async user_verify_eligible_amount_for_loan_asper_policy(){
   await expect(this.txt_scrutiny_entire_amount).toBeVisible();
 }
  
