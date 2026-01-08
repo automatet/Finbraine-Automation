@@ -849,13 +849,13 @@ async user_clicks_add_a_line_button_for_guarantor_financials_balance_sheet(){
   await this.playwrightFactory.click(this.btn_add_a_line_button_for_guarantor_financials);
 }
  
-async user_select_month_in_guarantor_financials_balance_sheet() {
-  await this.txt_month_in_guarantor_financials_balance_sheet.selectOption({label:'March'});
+async user_select_month_in_guarantor_financials_balance_sheet(strmonth:string) {
+  await this.txt_month_in_guarantor_financials_balance_sheet.selectOption({label:strmonth});
 }
  
 
-async user_select_year_in_guarantor_financials_balance_sheet() {
-  await this.txt_year_in_guarantor_financials_balance_sheet.selectOption({label:'2025'});
+async user_select_year_in_guarantor_financials_balance_sheet(stryear:string) {
+  await this.txt_year_in_guarantor_financials_balance_sheet.selectOption({label:stryear});
 }
  
 async user_enters_capital_networth_in_guarantor_balance_sheet(strcapital: string){
@@ -883,11 +883,11 @@ async user_click_btn_add_line_button_for_guarantor1_P_L_details(){
   await this.btn_add_line_button_for_guarantor1_P_L_details.click()
 }
 
-async user_select_add_month_field_in_guarantor1_pl_statement(){
-  await this.P_L_statement_add_month_field.selectOption({label:'January'});
+async user_select_add_month_field_in_guarantor1_pl_statement(strmonth:string){
+  await this.P_L_statement_add_month_field.selectOption({label:strmonth});
 }
-async user_select_year_field_in_pl_statement_guarantor1(){
-  await this.P_L_statement_year_field.selectOption({label:'2025'});
+async user_select_year_field_in_pl_statement_guarantor1(stryear:string){
+  await this.P_L_statement_year_field.selectOption({label:stryear});
 }
 
 

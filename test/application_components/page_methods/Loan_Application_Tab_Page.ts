@@ -555,7 +555,7 @@ this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bure
     //this.activeTab = this.page.locator("//div[contains(@class,'tab-pane') and contains(@class,'active')]");
 
 
-    this.bank_loan_account_details = this.page.locator('//input[@name="bank_loan_accounts_details"]');
+    this.bank_loan_account_details = this.page.locator("//input[contains(@name,'bank_loan_accounts_details')]");
 this.loan_type_credit_bureau= this.page.locator('//input[@name="loan_type"]');
 this.ownership= this.page.locator('//input[@name="ownership"]');
 this.loan_amount= this.page.locator("(//div[contains(@class,'tab-pane') and contains(@class,'active')]//div[@name='loan_amount']//input[@type='text'])");
@@ -1450,9 +1450,15 @@ await this.page.waitForTimeout(500);
 }
 
 async user_enters_bank_loan_account_details(strloanaccount:string){
-  //await this.playwrightFactory.click(this.bank_loan_account_details);
-await this.playwrightFactory.fill(this.bank_loan_account_details, strloanaccount);
+   //await this.playwrightFactory.click(this.bank_loan_account_details);
+ await this.playwrightFactory.fill(this.bank_loan_account_details,strloanaccount);
+
+
 }
+
+
+
+
 
 async user_enters_loan_type_in_credit_bureau(strloantype: string){
   await this.playwrightFactory.click(this.loan_type_credit_bureau);
