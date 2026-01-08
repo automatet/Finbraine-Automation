@@ -209,7 +209,7 @@ readonly EMI_for_Loan_in_Loan_eligiblity : Locator;
     this.txt_remaining_margin_amount=this.page.locator("//span[@name='remaining_margin_amount']")
     this.txt_scrutiny_loan_amount=this.page.locator('(//div[@name="updated_loan_amount"])[2]')
     this.txt_scrutiny_entire_amount=this.page.locator("//span[@name='entire_amount']")
-    this.btn_deviation_type_add_a_line_button=this.page.locator("(//a[normalize-space()='Add a line'])[6]")
+    this.btn_deviation_type_add_a_line_button=this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='deviation_line_ids']//*[contains(text(),'Add a line')] ")
     this.txt_deviation_type=this.page.locator("//select[@name='deviation_type']")
     this.txt_deviation_comment=this.page.locator("//textarea[@name='comment']")
     this.btn_deviation_verify_button=this.page.locator("//div[@name='verify_deviation']")
@@ -485,8 +485,10 @@ async user_click__additional_comment_add_line_btn(){
 await this.playwrightFactory.click(this.txt_additional_comment_add_line_btn);
 }
 async user_enters_additional_comment(strAdditionalcomment: string){
-  await this.playwrightFactory.click(this.txt_additional_comment);
-  await this.playwrightFactory.fill(this.txt_additional_comment, strAdditionalcomment);
+
+  //await this.playwrightFactory.click(this.txt_additional_comment);
+await this.playwrightFactory.fill(this.txt_additional_comment, strAdditionalcomment);
+
 }
 
 async user_click_approve_button(){

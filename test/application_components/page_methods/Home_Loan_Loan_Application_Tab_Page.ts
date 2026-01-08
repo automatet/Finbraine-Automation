@@ -1338,7 +1338,7 @@ async user_click_agriculture_income_add_line_btn(){
   await this.playwrightFactory.click(this.agriculture_income_add_line_btn);
 }
 async user_select_agriculture_income_year(){
-  await this.agriculture_income_year.selectOption({label:'2022'});
+  await this.agriculture_income_year.selectOption({label:'2025'});
 }
  
  
@@ -1380,7 +1380,7 @@ async user_click_income_details_add_line_btn(){
   await this.playwrightFactory.click(this.added_other_income_details_add_line_btn);
 }
 async user_click_income_details_year_field_btn(){
-  await this.added_other_income_details_year_fields_btn.selectOption({label:'2022'})
+  await this.added_other_income_details_year_fields_btn.selectOption({label:'2025'})
 }
  
  
@@ -1608,7 +1608,7 @@ async user_select_add_month_field_in_pl_statement(){
   await this.P_L_statement_add_month_field.selectOption({label:'January'});
 }
 async user_select_year_field_in_pl_statement(){
-  await this.P_L_statement_year_field.selectOption({label:'2022'});
+  await this.P_L_statement_year_field.selectOption({label:'2025'});
 }
 
 
