@@ -958,15 +958,15 @@ this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bure
     this.joining_date_in_guarantor_2_salary_details=this.page.locator("//input[@name='wizard_guarantor2_since_date']")
     this.Remark_in_guarantor_2_salary_details=this.page.locator("//input[@name='wizard_guarantor2_remarks']")
     this.salary_details_add_line_btn_in_guarantor_2_salary_slip_details=this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='guarantor2_salary_details_ids']//*[contains(text(),'Add a line')]")
-    this.salary_details_month_in_guarantor_2_salary_slip_details=this.page.locator("")
-    this.salary_details_year_in_guarantor_2_salary_slip_details=this.page.locator("")
-    this.gross_salary_in_guarantor_2_salary_slip_details=this.page.locator("")
-    this.deduction_in_guarantor_2_salary_slip_details=this.page.locator("")
-    this.net_salary_in_guarantor_2_salary_slip_details=this.page.locator("")
-    this.salary_credited_date_in_guarantor_2_salary_slip_details=this.page.locator("")
-    this.pf_in_guarantor_2_salary_slip_details=this.page.locator("")
-    this.salary_slip_save_btn_in_guarantor_2_salary_slip_details=this.page.locator("")
-    this.btn_verify_button_for_guarantor_2_employment_details=this.page.locator("")
+    this.salary_details_month_in_guarantor_2_salary_slip_details=this.page.locator("//select[@name='wizard_guarantor2_month']")
+    this.salary_details_year_in_guarantor_2_salary_slip_details=this.page.locator("//select[@name='wizard_guarantor2_year']")
+    this.gross_salary_in_guarantor_2_salary_slip_details=this.page.locator("//input[@name='wizard_guarantor2_gross_salary']")
+    this.deduction_in_guarantor_2_salary_slip_details=this.page.locator("//input[@name='wizard_guarantor2_deductions']")
+    this.net_salary_in_guarantor_2_salary_slip_details=this.page.locator("//span[@name='wizard_guarantor2_net_salary']")
+    this.salary_credited_date_in_guarantor_2_salary_slip_details=this.page.locator("//input[@name='wizard_guarantor2_salary_credited_date']")
+    this.pf_in_guarantor_2_salary_slip_details=this.page.locator("//input[@name='wizard_pf']")
+    this.salary_slip_save_btn_in_guarantor_2_salary_slip_details=this.page.locator("//button[@name='save_guarantor2_salary_slip']")
+    this.btn_verify_button_for_guarantor_2_employment_details=this.page.locator("//*[text()='2. Guarantor Employment Details']/ancestor::h1//*[text()='Verify']")
 
 
     
@@ -978,6 +978,13 @@ this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bure
 
 
  
+
+
+
+
+
+
+
 
 
 
@@ -1447,6 +1454,67 @@ async user_click_save_btn_guarantors_2_address_proof_details(){
 
 async user_click_verify_btn_guarantors_2_address_proof_details(){
   await this.verify_btn_guarantors_2_address_proof_details.click()
+}
+
+async user_clicks_add_data_button_for_guarantor_2_guarantor_employment_details(){
+  await this.playwrightFactory.click(this.btn_add_data_button_for_gurantor_2_employment_details);
+}
+
+async user_enters_name_of_the_firm_in_guarantor_2_employment_details(strfirmname: string){
+  await this.playwrightFactory.fill(this.txt_name_of_the_firm_for_gurantor_2_employment_details, strfirmname);
+}
+
+async user_enters_address_of_the_firm_in_guarantor_2_salary_details(straddresssalary: string){
+  await this.playwrightFactory.fill(this.txt_address_of_the_firm_in_guarantor_2_salary_details, straddresssalary);
+}
+
+async user_select_designation_in_the_organization_in_guarantor_2_salary_details() {
+  await this.designation_in_the_organiation_in_guarantor_2_salary_details.selectOption({label:'Executive'});
+}
+ 
+async user_select_type_of_organization_in_guarantor_2_salary_details() {
+  await this.type_of_organization_in_guarantor_2_salary_details.selectOption({label:'Private Ltd. Co.'});
+}
+ 
+async user_selectjoining_date_in_guarantor_2_salary_details(strJoiningdate: string) {
+await this.playwrightFactory.fill(this.joining_date_in_guarantor_2_salary_details, strJoiningdate)
+}
+async user_enters_remark_in_guarantor_2_salary_details(strRemark: string) {
+  await this.playwrightFactory.fill(this.Remark_in_guarantor_2_salary_details,strRemark)
+}
+
+async user_click_add_line_for_salary_detail_section_in_guarantor_2_salary_details(){
+  await this.playwrightFactory.click(this.salary_details_add_line_btn_in_guarantor_2_salary_slip_details);
+}
+async user_select_month_in_guarantor_2_salary_details(strMonth: string){
+  await this.salary_details_month_in_guarantor_2_salary_slip_details.selectOption({label:strMonth})
+}
+async user_select_year_in_guarantor_2_salary_details(strYear: string){
+  await this.salary_details_year_in_guarantor_2_salary_slip_details.selectOption({label:strYear})
+}
+async user_enter_gross_salary_in_guarantor_2_salary_details(strSalary: string){
+  await this.playwrightFactory.fill(this.gross_salary_in_guarantor_2_salary_slip_details, strSalary)
+}
+async user_enter_diduction_amount_in_guarantor_2_salary_details(strDeduction: string){
+  await this.playwrightFactory.fill(this.deduction_in_guarantor_2_salary_slip_details, strDeduction)
+}
+async user_verify_net_salary_in_guarantor_2_salary_details(strNetsalary: string){
+  await expect(this.net_salary_in_guarantor_2_salary_slip_details).toContainText(strNetsalary);
+}
+async user_enter_salary_credidate_date_in_guarantor_2_salary_details(strSalarycredidatedate: string){
+  await this.playwrightFactory.fill(this.salary_credited_date_in_guarantor_2_salary_slip_details, strSalarycredidatedate)
+}
+async user_enter_pf_in_guarantor_2_salary_details(strPF: string){
+  await this.playwrightFactory.fill(this.pf_in_guarantor_2_salary_slip_details, strPF)
+}
+ 
+async user_clicks_save_btn_in_guarantor_2_salary_details(){
+  await this.playwrightFactory.click(this.salary_slip_save_btn_in_guarantor_2_salary_slip_details);
+  await this.page.waitForTimeout(10000);
+}
+
+async user_click_verify_button_for_gurantor_2_employment_details(){
+  await this.playwrightFactory.click(this.btn_verify_button_for_guarantor_2_employment_details);
 }
 
 
