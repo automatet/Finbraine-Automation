@@ -17,13 +17,15 @@ export class Co_Borrower_Page {
   private databricks_sqlware: DatabricksSQLwarehouse;
   private databricks_dbfs: DatabricksFactoryDBFS;
 
-readonly txt_Mobile_No	:Locator
-readonly txt_Name :Locator	
-readonly txt_Dob :Locator	
-readonly txt_PermanentAddress :Locator	
-readonly txt_CurrentAddress :Locator	
-readonly drpdwn_ProfileType :Locator	
-readonly txt_Gender :Locator	
+
+
+readonly txt_Mobile_No:Locator
+readonly txt_Name :Locator
+readonly txt_Dob :Locator
+readonly txt_PermanentAddress :Locator
+readonly txt_CurrentAddress :Locator
+readonly drpdwn_ProfileType :Locator
+readonly txt_Gender :Locator
 readonly txt_ResidentialType :Locator
  readonly btn_AddData_in_Coborrower_ID_proof_details: Locator
 readonly txt_Name_in_Coborrower_ID_proof_details: Locator
@@ -31,24 +33,24 @@ readonly txt_PAN_no_in_Coborrower_ID_proof_details: Locator
 readonly btn_cancel_in_Coborrower_ID_proof_details: Locator
 readonly btn_Savein_Coborrower_ID_proof_details: Locator
 readonly btn_Verify__in_Coborrower_ID_proof_details: Locator
-readonly txt_Name_Co_Borrower_AddressProof_Details	
-readonly txt_Aadhaar_Number_Co_Borrower_AddressProof_Details	
-readonly txt_Residence_Address_Co_Borrower_AddressProof_Details	
+readonly txt_Name_Co_Borrower_AddressProof_Details
+readonly txt_Aadhaar_Number_Co_Borrower_AddressProof_Details
+readonly txt_Residence_Address_Co_Borrower_AddressProof_Details
 readonly txt_Date_of_Birth_Co_Borrower_AddressProof_Details
 readonly btn_AddData_in_Co_Borrower_AddressProof_Details: Locator
 readonly btn_save_in_Co_Borrower_AddressProof_Details:Locator
 readonly checkbox_verify_in_Co_Borrower_AddressProof_Details:Locator
  readonly btnAddData_in_coborrower_driving_license:Locator
-readonly txt_Driving_License_Number_in_coborrower_driving_license:Locator	
-readonly txt_Issue_Date_in_coborrower_driving_license:Locator	
+readonly txt_Driving_License_Number_in_coborrower_driving_license:Locator
+readonly txt_Issue_Date_in_coborrower_driving_license:Locator
 readonly txt_Expiry_Date_in_coborrower_driving_license:Locator
 readonly btn_save__in_coborrower_driving_license: Locator
 readonly checkbox_verify_in_driving_license: Locator
 readonly NameoftheFirm_coborrower_Employmentdetails: Locator
-readonly Address_Of_The_Firm_coborrower_Employmentdetails: Locator	
-readonly Designationin_the_Organisation_coborrower_Employmentdetails	: Locator
-readonly Type_of_Organisation_coborrower_Employmentdetails: Locator	
-readonly JoiningDate_coborrower_Employmentdetails: Locator	
+readonly Address_Of_The_Firm_coborrower_Employmentdetails: Locator
+readonly Designationin_the_Organisation_coborrower_Employmentdetails: Locator
+readonly Type_of_Organisation_coborrower_Employmentdetails: Locator
+readonly JoiningDate_coborrower_Employmentdetails: Locator
 readonly Remarks_coborrower_Employmentdetails: Locator
 readonly btn_adddata_Employmentdetails:Locator
 readonly btn_save_Employmentdetails: Locator
@@ -62,10 +64,10 @@ readonly Netsalary_Employmentdetails: Locator
 readonly salary_credited_date_Employmentdetails: Locator
 readonly PF_Employmentdetails: Locator
 readonly btn_add_data_coborrower_ID_details: Locator
-readonly Company_Name_coborrower_ID_details: Locator	
-readonly Address_coborrower_ID_details	: Locator
-readonly Employee_ID_coborrower_ID_details	: Locator
-readonly Employee_Name_coborrower_ID_details: Locator	
+readonly Company_Name_coborrower_ID_details: Locator
+readonly Address_coborrower_ID_details: Locator
+readonly Employee_ID_coborrower_ID_details: Locator
+readonly Employee_Name_coborrower_ID_details: Locator
 readonly Joining_Date_coborrower_ID_details: Locator
 readonly save_coborrower_ID_details: Locator
 readonly verify_coborrower_ID_details: Locator
@@ -85,28 +87,28 @@ readonly txt_Average_balance_Co_Borrower_Bank_Statement_Details: Locator
 readonly txt_CB_Co_Borrower_Bank_Statement_Details: Locator
 readonly btn_Save_Co_Borrower_Bank_Statement_Details: Locator
 readonly btn_verify_Co_Borrower_Bank_Statement_Details: Locator
-readonly Co_borrower_Membership_Number_in_CoBorrower_Membership_Details: Locator	
-readonly btn_Add_data_in_CoBorrower_Membership_Details: Locator	
-readonly txt_Co_borrower_Number_of_Shares_in_CoBorrower_Membership_Details: Locator	
-readonly txt_Co_borrower_Shares_From_in_CoBorrower_Membership_Details	: Locator
-readonly txt_Co_borrower_Existing_Shares_Amount_in_CoBorrower_Membership_Details	: Locator	
-readonly txt_Co_borrower_Total_Shares_Required_in_CoBorrower_Membership_Details	: Locator	
+readonly Co_borrower_Membership_Number_in_CoBorrower_Membership_Details: Locator
+readonly btn_Add_data_in_CoBorrower_Membership_Details: Locator
+readonly txt_Co_borrower_Number_of_Shares_in_CoBorrower_Membership_Details: Locator
+readonly txt_Co_borrower_Shares_From_in_CoBorrower_Membership_Details: Locator
+readonly txt_Co_borrower_Existing_Shares_Amount_in_CoBorrower_Membership_Details: Locator
+readonly txt_Co_borrower_Total_Shares_Required_in_CoBorrower_Membership_Details: Locator
 readonly txt_Co_borrower_Additional_Shares_Required_in_CoBorrower_Membership_Details: Locator
-readonly checkbox_verify_in_Co_Borrower_Membership_Details: Locator	
+readonly checkbox_verify_in_Co_Borrower_Membership_Details: Locator
 readonly btn_Save_in_CoBorrower_Membership_Details: Locator
 readonly save_CoBorrower_Salary_Credit_Bank_Account: Locator
-readonly txt_Name_CoBorrower_CreditBureau: Locator	
-readonly txt_DOB_CoBorrower_CreditBureau	: Locator
-readonly txt_CTC_CoBorrower_CreditBureau	: Locator
-readonly txt_CreditScore_CoBorrower_CreditBureau : Locator	
+readonly txt_Name_CoBorrower_CreditBureau: Locator
+readonly txt_DOB_CoBorrower_CreditBureau: Locator
+readonly txt_CTC_CoBorrower_CreditBureau: Locator
+readonly txt_CreditScore_CoBorrower_CreditBureau : Locator
 readonly txt_Branch_Remarks_on_CIBIL_CoBorrower_CreditBureau: Locator
-readonly txt_Personal_Score_CoBorrower_CreditBureau	: Locator
+readonly txt_Personal_Score_CoBorrower_CreditBureau: Locator
 readonly drpdwn_Wilful_Defaulter_CoBorrower_CreditBureau : Locator
-readonly drpdwn_Settled_Account_CoBorrower_CreditBureau : Locator	
-readonly drpdwn_Written_Account_CoBorrower_CreditBureau	: Locator
-readonly txt_Overdue_Amount_Pending_CoBorrower_CreditBureau	: Locator
-readonly drpdwn_Account_Sold_CoBorrower_CreditBureau : Locator	
-readonly drpdwn_Suit_Field_CoBorrower_CreditBureau	: Locator
+readonly drpdwn_Settled_Account_CoBorrower_CreditBureau : Locator
+readonly drpdwn_Written_Account_CoBorrower_CreditBureau: Locator
+readonly txt_Overdue_Amount_Pending_CoBorrower_CreditBureau: Locator
+readonly drpdwn_Account_Sold_CoBorrower_CreditBureau : Locator
+readonly drpdwn_Suit_Field_CoBorrower_CreditBureau: Locator
 readonly txt_Repayment_Track_CoBorrower_CreditBureau : Locator
 readonly btn_Add_line_CoBorrower_CreditBureau : Locator
 readonly txt_Bank_acount_details_CoBorrower_CreditBureau: Locator
@@ -175,36 +177,11 @@ readonly Coborrower_Computation_Income_Details: Locator;
  readonly Agricultural_income_coborrower_p_and_l_statement_details: Locator;
  readonly TDS_coborrower_p_and_l_statement_details: Locator;
  readonly Save_Button_coborrower_p_and_l_statement_details: Locator;
- readonly verify_coborrower_p_and_l_statement_details: Locator;
- readonly add_data_CoBorrower_Business_Certificate_Details: Locator; 
- readonly Name_of_the_Firm_CoBorrower_Business_Certificate_Details: Locator;	
- readonly Shop_Act_Udyam_Number_CoBorrower_Business_Certificate_Details: Locator;	
- readonly Name_of_Owner_CoBorrower_Business_Certificate_Details: Locator;	
- readonly Type_Of_Business_CoBorrower_Business_Certificate_Details: Locator;	
- readonly Udyam_Name_CoBorrower_Business_Certificate_Details: Locator;	
- readonly UdhyamNumber_CoBorrower_Business_Certificate_Details: Locator;	
- readonly No_of_years_CoBorrower_Business_Certificate_Details: Locator; 
- readonly save_CoBorrower_Business_Certificate_Details: Locator;
- readonly verify_CoBorrower_Business_Certificate_Details: Locator;
-  readonly add_data_button_coborrower_document_details: Locator;
-  readonly modal_header_coborrower_document_details: Locator;
-  readonly coborrower_name_coborrower_document_details: Locator;
-  readonly area_of_land_coborrower_document_details: Locator;
-  readonly type_of_agriculture_land_coborrower_document_details: Locator;
-  readonly seven_twelve_extract_ownership_coborrower_document_details: Locator;
-  readonly father_name_coborrower_document_details: Locator;
-  readonly save_btn_coborrower_document_details: Locator;
-  readonly verify_checkbox_coborrower_document_details: Locator;
-  readonly btn_coborrower1:Locator;
-  readonly btnkyc:Locator
-readonly Incomedetails:Locator
-readonly Membershipdetails:Locator
-readonly Credit_bureau: Locator
-readonly Title_name: Locator
-readonly age_in_coborrower_address: Locator
-readonly Nature_of_income: Locator
-readonly empid: Locator
-readonly btn_upload: Locator
+ readonly verify_coborrower_p_and_l_statement_details: Locator; 
+
+
+
+
     /**
    * @param {Page} page
    * @param {TestInfo} testInfo
@@ -223,24 +200,17 @@ readonly btn_upload: Locator
     this.dataFactory = container.resolve('dataFactory');
     this.databricks_sqlware = container.resolve('databricks_sqlware');
     this.databricks_dbfs = container.resolve('databricks_dbfs');
-
-    //Co-Borrower
-    this.btn_coborrower1=this.page.locator("//button[@name='action_show_coborrower_1']")
-    this.btnkyc=this.page.locator("//a[@class='nav-link active']")
-    this.Incomedetails=this.page.locator("//a[@class='nav-link'][contains(text(),'Income Details')]")
-    this.Membershipdetails=this.page.locator("//a[@class='nav-link'][contains(text(),'Membership Details')]")
-    this.Credit_bureau=this.page.locator("//a[@class='nav-link'][contains(text(),'Credit Bureau')]")
 //Co-Borrower information  
 
-this.Title_name= this.page.locator("//select[@name='coborrower1_title_name']")
+
 this.txt_Mobile_No	=this.page.locator('//input[@name="co_borrower_mobile_number"]')
 this.txt_Name =this.page.locator('//input[@name="co_borrower_name"]')	
 this.txt_Dob =this.page.locator('//input[@name="co_borrower_date_of_birth"]')	
 this.txt_PermanentAddress =this.page.locator('//input[@name="co_borrower_permanent_address"]')	
-this.txt_CurrentAddress =this.page.locator('//input[@name="coborrower1_current_address"]')	
+this.txt_CurrentAddress =this.page.locator('//input[@name="co_borrower_current_address"]')	
 this.drpdwn_ProfileType =this.page.locator	('//select[@name="coborrower_profile_type"]')
-this.txt_Gender =this.page.locator('//select[@name="coborrower1_gender"]')	
-this.txt_ResidentialType =this.page.locator('//select[@name="coborrower1_residential_type"]')
+this.txt_Gender =this.page.locator('//input[@name="coborrower_gender"]')	
+this.txt_ResidentialType =this.page.locator('//input[@name="coborrower_residential_type"]')
 
 
 //Co-borrower_ID_Proof_Details//
@@ -256,24 +226,24 @@ this.btn_AddData_in_Co_Borrower_AddressProof_Details= this.page.locator('//butto
 this.txt_Name_Co_Borrower_AddressProof_Details= this.page.locator('//input[@name="wizard_coborrower_first_name_address_document"]')
 this.txt_Aadhaar_Number_Co_Borrower_AddressProof_Details= this.page.locator('//input[@name="wizard_coborrower_aadhaar_document"]')
 this.txt_Residence_Address_Co_Borrower_AddressProof_Details= this.page.locator('//input[@name="wizard_coborrower_residence_address_document"]')
- this.txt_Date_of_Birth_Co_Borrower_AddressProof_Details= this.page.locator('//input[@name="wizard_coborrower_dob_document"]')
+this.txt_Date_of_Birth_Co_Borrower_AddressProof_Details= this.page.locator('//input[@name="wizard_coborrower_dob_document"]')
 this.btn_save_in_Co_Borrower_AddressProof_Details= this.page.locator('//button[@name="save_coborroweraddressdoc_details"]')
 this.checkbox_verify_in_Co_Borrower_AddressProof_Details=this.page.locator('//div[@name="verify_coborrower_address_proof_details"]')
-this.age_in_coborrower_address=this.page.locator("//input[@name='wizard_coborrower1_age']")
+//this.age_in_coborrower_address=this.page.locator("//input[@name='wizard_coborrower1_age']")
 //Co_borrower driving_license//
 this.btnAddData_in_coborrower_driving_license=this.page.locator('//button[@name="coborrower_driving_license_wizard"]')
-this.txt_Driving_License_Number_in_coborrower_driving_license=this.page.locator('//input[@name="wizard_driving_license_num"]')	
-this.txt_Issue_Date_in_coborrower_driving_license=this.page.locator('//input[@name="wizard_issue_date"]')	
+this.txt_Driving_License_Number_in_coborrower_driving_license=this.page.locator('//input[@name="wizard_driving_license_num"]')
+this.txt_Issue_Date_in_coborrower_driving_license=this.page.locator('//input[@name="wizard_issue_date"]')
 this.txt_Expiry_Date_in_coborrower_driving_license=this.page.locator('//input[@name="wizard_expiry_date"]')
 this.btn_save__in_coborrower_driving_license=this.page.locator('//button[@name="save_coborrower_driving_licencse"]')
 this.checkbox_verify_in_driving_license=this.page.locator('//div[@name="verify_coborrower_driving_license_details"]')
 //coborrower Employment details//
 this.btn_adddata_Employmentdetails=this.page.locator('//button[@name="coborrower_salary_details_wizard"]')
-this.NameoftheFirm_coborrower_Employmentdetails=this.page.locator('//input[@name="wizard_coborrower_company_where_employed"]')	
-this.Address_Of_The_Firm_coborrower_Employmentdetails=this.page.locator('//input[@name="wizard_coborrower_address_of_the_firm"]')	
-this.Designationin_the_Organisation_coborrower_Employmentdetails=this.page.locator('//select[@name="wizard_coborrower_designation"]')	
-this.Type_of_Organisation_coborrower_Employmentdetails	=this.page.locator('//select[@name="wizard_coborrower_type_of_organisation"]')
-this.JoiningDate_coborrower_Employmentdetails	=this.page.locator('//input[@name="wizard_coborrower_since_date"]')
+this.NameoftheFirm_coborrower_Employmentdetails=this.page.locator('//input[@name="wizard_coborrower_company_where_employed"]')
+this.Address_Of_The_Firm_coborrower_Employmentdetails=this.page.locator('//input[@name="wizard_coborrower_address_of_the_firm"]')
+this.Designationin_the_Organisation_coborrower_Employmentdetails=this.page.locator('//select[@name="wizard_coborrower_designation"]')
+this.Type_of_Organisation_coborrower_Employmentdetails      =this.page.locator('//select[@name="wizard_coborrower_type_of_organisation"]')
+this.JoiningDate_coborrower_Employmentdetails   =this.page.locator('//input[@name="wizard_coborrower_since_date"]')
 this.Remarks_coborrower_Employmentdetails=this.page.locator('//input[@name="wizard_coborrower_remarks"]')
 this.add_line_Employmentdetails=this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='coborrower_salary_details_ids']//*[contains(text(),'Add a line')]")
 this.month_Employmentdetails=this.page.locator('//select[@name="wizard_coborrower_month"]')
@@ -285,8 +255,8 @@ this.salary_credited_date_Employmentdetails=this.page.locator('//input[@name="wi
 this.PF_Employmentdetails=this.page.locator('//input[@name="wizard_pf"]')
 this.btn_save_Employmentdetails=this.page.locator('//button[@name="save_coborrower_salary_slip"]')
 this.btn_verify_Employmentdetails=this.page.locator('//div[@name="verify_coborrower_salary_slip_details"]')
-this.Nature_of_income=this.page.locator("//input[@name='wizard_coborrower_nature_of_salaried']")
-this.empid=this.page.locator("//input[@name='wizard_employee_id_coborrower']")
+// this.Nature_of_income=this.page.locator("//input[@name='wizard_coborrower_nature_of_salaried']")
+// this.empid=this.page.locator("//input[@name='wizard_employee_id_coborrower']")
 //Co-Borrower Bank Statement Details//
 
 this.btn_Addbutton_Co_Borrower_Bank_Statement_Details=this.page.locator('//button[@name="coborrower_bank_statement_wizard"]')
@@ -300,10 +270,10 @@ this.btn_Save_Co_Borrower_Bank_Statement_Details=this.page.locator('//button[@na
 this.btn_verify_Co_Borrower_Bank_Statement_Details=this.page.locator('//div[@name="verify_coborrower_bank_statement_details"]')
 //Co_borrower company Id details//
 this.btn_add_data_coborrower_ID_details=this.page.locator('//*[contains(text(),"Add a line")]/following::button[@name="coborrower_company_id_details_wizard"]')
-this.Company_Name_coborrower_ID_details=this.page.locator('//input[@name="wizard_coborrower_first_name_company_document"]')	
-this.Address_coborrower_ID_details=this.page.locator('//input[@name="wizard_coborrower_address_details"]')	
-this.Employee_ID_coborrower_ID_details=this.page.locator('//input[@name="wizard_coborrower_employee_id"]')	
-this.Employee_Name_coborrower_ID_details=this.page.locator('//input[@name="wizard_coborrower_employee_name"]')	
+this.Company_Name_coborrower_ID_details=this.page.locator('//input[@name="wizard_coborrower_first_name_company_document"]')
+this.Address_coborrower_ID_details=this.page.locator('//input[@name="wizard_coborrower_address_details"]')
+this.Employee_ID_coborrower_ID_details=this.page.locator('//input[@name="wizard_coborrower_employee_id"]')
+this.Employee_Name_coborrower_ID_details=this.page.locator('//input[@name="wizard_coborrower_employee_name"]')
 this.Joining_Date_coborrower_ID_details=this.page.locator('//input[@name="wizard_coborrower_joining_date"]')
 this.save_coborrower_ID_details=this.page.locator('//button[@name="save_coborrowercompanyiddoc_details"]')
 this.verify_coborrower_ID_details=this.page.locator('//div[@name="verify_coborrower_company_id_card_details"]')
@@ -320,27 +290,27 @@ this.save_CoBorrower_Salary_Credit_Bank_Account=this.page.locator('//button[@nam
 this.verify_CoBorrower_Salary_Credit_Bank_Account=this.page.locator('//div[@name="verify_coborrower_salary_credit_bank_details"]')
 //co-borrower_Membership_details//
 this.btn_Add_data_in_CoBorrower_Membership_Details=this.page.locator('//button[@name="coborrower_membership_details_wizard"]')
-this.Co_borrower_Membership_Number_in_CoBorrower_Membership_Details=this.page.locator('//input[@name="wizard_coborrower_membership_number"]')	
+this.Co_borrower_Membership_Number_in_CoBorrower_Membership_Details=this.page.locator('//input[@name="wizard_coborrower_membership_number"]')
 this.txt_Co_borrower_Number_of_Shares_in_CoBorrower_Membership_Details=this.page.locator('//input[@name="wizard_coborrower_no_of_shares"]')
 this.txt_Co_borrower_Shares_From_in_CoBorrower_Membership_Details=this.page.locator('//input[@name="wizard_coborrower_share_from"]')	
 this.txt_Co_borrower_Existing_Shares_Amount_in_CoBorrower_Membership_Details=this.page.locator('//input[@name="wizard_coborrower_existing_share_amt"]')		
 this.txt_Co_borrower_Total_Shares_Required_in_CoBorrower_Membership_Details=this.page.locator('//input[@name="wizard_coborrower_total_share_req"]')	
-this.txt_Co_borrower_Additional_Shares_Required_in_CoBorrower_Membership_Details=this.page.locator('//span[@name="wizard_coborrower_additional_share_req"]')
+this.txt_Co_borrower_Additional_Shares_Required_in_CoBorrower_Membership_Details=this.page.locator('//input[@name="wizard_coborrower_additional_share_req"]')
 this.btn_Save_in_CoBorrower_Membership_Details=this.page.locator('//button[@name="save_coborrower_membership_details"]')
 this.checkbox_verify_in_Co_Borrower_Membership_Details=this.page.locator('//div[@name="verify_coborrower_membership_details"]')
 //co-borrower Credit-bureau//  
-this.txt_Name_CoBorrower_CreditBureau=this.page.locator('//input[@name="coborrower_credit_name"]')	
-this.txt_DOB_CoBorrower_CreditBureau	=this.page.locator('//input[@name="coborrower_dob"]')
-this.txt_CTC_CoBorrower_CreditBureau	=this.page.locator('//input[@name="coborrower_ctc"]')
-this.txt_CreditScore_CoBorrower_CreditBureau	=this.page.locator('//input[@name="coborrower_credit_vision"]')
-this.txt_Branch_Remarks_on_CIBIL_CoBorrower_CreditBureau	=this.page.locator('//input[@name="coborrower_branch_remarks_on_cibil"]')
-this.txt_Personal_Score_CoBorrower_CreditBureau=this.page.locator('//input[@name="coborrower_personal"]')	
+this.txt_Name_CoBorrower_CreditBureau=this.page.locator('//input[@name="coborrower_credit_name"]')
+this.txt_DOB_CoBorrower_CreditBureau=this.page.locator('//input[@name="coborrower_dob"]')
+this.txt_CTC_CoBorrower_CreditBureau=this.page.locator('//input[@name="coborrower_ctc"]')
+this.txt_CreditScore_CoBorrower_CreditBureau=this.page.locator('//input[@name="coborrower_credit_vision"]')
+this.txt_Branch_Remarks_on_CIBIL_CoBorrower_CreditBureau=this.page.locator('//input[@name="coborrower_branch_remarks_on_cibil"]')
+this.txt_Personal_Score_CoBorrower_CreditBureau=this.page.locator('//input[@name="coborrower_personal"]')
 this.drpdwn_Wilful_Defaulter_CoBorrower_CreditBureau=this.page.locator('//select[@name="coborrower_wilful_defaulter"]')
-this.drpdwn_Settled_Account_CoBorrower_CreditBureau	=this.page.locator('//select[@name="coborrower_settled_account"]')
-this.drpdwn_Written_Account_CoBorrower_CreditBureau	=this.page.locator('//select[@name="coborrower_written_account"]')
-this.txt_Overdue_Amount_Pending_CoBorrower_CreditBureau=this.page.locator('//input[@name="coborrower_overdue_amount_pending"]')	
-this.drpdwn_Account_Sold_CoBorrower_CreditBureau	=this.page.locator('//select[@name="coborrower_account_sold"]')
-this.drpdwn_Suit_Field_CoBorrower_CreditBureau	=this.page.locator('//select[@name="coborrower_suit_field"]')
+this.drpdwn_Settled_Account_CoBorrower_CreditBureau=this.page.locator('//select[@name="coborrower_settled_account"]')
+this.drpdwn_Written_Account_CoBorrower_CreditBureau=this.page.locator('//select[@name="coborrower_written_account"]')
+this.txt_Overdue_Amount_Pending_CoBorrower_CreditBureau=this.page.locator('//input[@name="coborrower_overdue_amount_pending"]')
+this.drpdwn_Account_Sold_CoBorrower_CreditBureau=this.page.locator('//select[@name="coborrower_account_sold"]')
+this.drpdwn_Suit_Field_CoBorrower_CreditBureau=this.page.locator('//select[@name="coborrower_suit_field"]')
 this.txt_Repayment_Track_CoBorrower_CreditBureau =this.page.locator('//input[@name="coborrower_credit_repayment_track"]')
 this.btn_Add_line_CoBorrower_CreditBureau =this.page.locator("//*[contains(text(),'Add a line')]")
 this.txt_Bank_acount_details_CoBorrower_CreditBureau =this.page.locator('//input[@name="bank_loan_accounts_details"]')
@@ -350,69 +320,69 @@ this.txt_loan_amount_CoBorrower_CreditBureau=this.page.locator('//div[@name="loa
 this.txt_outstanding_amount_CoBorrower_CreditBureau=this.page.locator('//div[@name="outstanding_amount"]')
 this.txt_EMI_CoBorrower_CreditBureau=this.page.locator('//input[@name="emi_interest"]')
 this.add_line_CoBorrower_CreditBureau=this.page.locator("//*[contains(text(),'Add a line')]")
-this.btn_upload=this.page.locator("//button[text()='Upload your file'] ")
+//this.btn_upload=this.page.locator("//button[text()='Upload your file'] ")
 
 this.btn_verify_form16=this.page.locator("//div[@name='verify_coborrower_form_16_details']")
 
 //Agriculture Income//
 this.Coborrower_Agricultural_Income_Details = this.page.locator('//span[contains(text(), "Coborrower Agricultural Income Details")]/following::span[contains(text(), "Add Data")]').nth(0);
-  this.Add_a_line = this.page.locator('//div[@class="o_form_view o_form_nosheet o_form_editable"]//a[contains(text(),"Add a line")]');
-  this.Year_Drop_Down = this.page.locator('//div[@class="o_form_view o_form_nosheet o_form_editable"]//select[@class="o_input o_field_widget"]');
-  this.Year_Drop_Down_Value = this.page.locator('//select[@name="wizard_year"]');
-  this.Enter_Amount = this.page.locator('//div[@class="o_form_view o_form_nosheet o_form_editable"]//input[@class="o_field_char o_field_widget o_input"]');
-  this.Save_Btn = this.page.locator('//span[contains(text(),"Save")]');
+this.Add_a_line = this.page.locator('//div[@class="o_form_view o_form_nosheet o_form_editable"]//a[contains(text(),"Add a line")]');
+this.Year_Drop_Down = this.page.locator('//div[@class="o_form_view o_form_nosheet o_form_editable"]//select[@class="o_input o_field_widget"]');
+this.Year_Drop_Down_Value = this.page.locator('//select[@name="wizard_year"]');
+this.Enter_Amount = this.page.locator('//div[@class="o_form_view o_form_nosheet o_form_editable"]//input[@class="o_field_char o_field_widget o_input"]');
+this.Save_Btn = this.page.locator('//span[contains(text(),"Save")]');
 this.btn_verify_in_agricultural_income=this.page.locator("//div[@name='verify_coborrower_agricultural_income_details']")
 //other income//
 this.Coborrower_Other_Income_Details = this.page.locator('//span[contains(text(), "CoBorrower Other Income Details")]/following::span[contains(text(), "Add Data")]').nth(0);
-  this.Add_a_line_in_other_income = this.page.locator('//div[@class="o_form_view o_form_nosheet o_form_editable"]//a[contains(text(),"Add a line")]');
-  this.Month_Drop_Down = this.page.locator('//div[@class="o_form_view o_form_nosheet o_form_editable"]//select[@class="o_input o_field_widget"]');
-  this.Month_Drop_Down_Value = this.page.locator('//select[@name="wizard_year"]');
-  this.Enter_Amount_in_otherincome = this.page.locator('//div[@class="o_form_view o_form_nosheet o_form_editable"]//input[@class="o_field_char o_field_widget o_input"]');
-  this.Save_Btnin_other_income = this.page.locator('//span[contains(text(),"Save")]');
+this.Add_a_line_in_other_income = this.page.locator('//div[@class="o_form_view o_form_nosheet o_form_editable"]//a[contains(text(),"Add a line")]');
+this.Month_Drop_Down = this.page.locator('//div[@class="o_form_view o_form_nosheet o_form_editable"]//select[@class="o_input o_field_widget"]');
+this.Month_Drop_Down_Value = this.page.locator('//select[@name="wizard_year"]');
+this.Enter_Amount_in_otherincome = this.page.locator('//div[@class="o_form_view o_form_nosheet o_form_editable"]//input[@class="o_field_char o_field_widget o_input"]');
+this.Save_Btnin_other_income = this.page.locator('//span[contains(text(),"Save")]');
 this.btn_verify_other_income=this.page.locator("//div[@name='verify_coborrower_other_income_details']")
 
 
 //Business profile///
 //Business details//
- this. coborrower_business_details_wizard = this.page.locator ("//span[contains (text(),'Co-Borrower Business Details')]/following::button[@name='coborrower_business_details_wizard']");
-  this. Name_of_the_Business = this.page.locator ("//input[@name='wizard_coborrower_business_name']");
-  this. Address_Of_The_Firm = this.page.locator ("//input[@name='wizard_coborrower_business_address']");
-  this. Type_of_ownership = this.page.locator ("//input[@name='wizard_coborrower_ownership']");
-  this. Nature_of_Business_In_Detail = this.page.locator ("//input[@name='wizard_coborrower_nature_of_business']");
-  this.Add_a_Line = this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='coborrower_business_details_ids']//*[contains(text(),'Add a line')]");
- 
-  this.Select_Month = this.page.locator("//tr[@class='o_data_row o_selected_row']//select[@name='wizard_month']");
-  this.Select_Year = this.page.locator("//td[@class='o_data_cell o_field_cell o_required_modifier']//select[@name='wizard_year']");
-  this.Capital_Networth = this.page.locator("//input[@name='wizard_capital_networth']");
-  this.Deductions = this.page.locator("//input[@name='wizard_deductions']");
-  this.Save_Coborrower_Balance_Sheet = this.page.locator("//button[@name='save_coborrower_balance_sheet']");
-  this.verify_coborrower_business_details = this.page.locator ("//div[@name='verify_coborrower_balance_sheet_details']")
-  //P & L details//
-    this. coborrower_income_details_wizard = this.page.locator ("//span[contains (text(),'Co-Borrower P and L Details')]/following::button[@name='coborrower_income_details_wizard']")
-  this.Add_a_Line_coborrower_p_and_l_statement_details = this.page.locator("//div[@class='o_form_view o_form_nosheet o_form_editable']//a[contains (text(),'Add a line')]");
-  this. Select_Month_coborrower_p_and_l_statement_details = this.page.locator ("//td[@class='o_data_cell o_field_cell o_required_modifier']//select[@name='wizard_month']");
-  this.Select_Year_coborrower_p_and_l_statement_details = this.page.locator("//td[@class='o_data_cell o_field_cell o_required_modifier']//select[@name='wizard_year']");
-  this.Sales_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_sales']")
-  this.Purchases_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_purchases']")
-  this.Net_profit_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_net_profit']")
-  this.Depreciation_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_depreciation']")
-  this.Interest_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_interest']")
-  this.Income_tax_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_income_tax']")
-  this.Other_income_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_other_income']")
-  this.Agricultural_income_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_agricultural_income']")
-  this.TDS_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_tds']")
-  this.Save_Button_coborrower_p_and_l_statement_details = this.page.locator ("//button[@name='save_coborrower_income_details_wizard']")
-  this.verify_coborrower_p_and_l_statement_details = this.page.locator ("//div[@name='verify_coborrower_p_and_l_statement_details']")
- 
-  
+this. coborrower_business_details_wizard = this.page.locator ("//span[contains (text(),'Co-Borrower Business Details')]/following::button[@name='coborrower_business_details_wizard']");
+this. Name_of_the_Business = this.page.locator ("//input[@name='wizard_coborrower_business_name']");
+this. Address_Of_The_Firm = this.page.locator ("//input[@name='wizard_coborrower_business_address']");
+this. Type_of_ownership = this.page.locator ("//input[@name='wizard_coborrower_ownership']");
+this. Nature_of_Business_In_Detail = this.page.locator ("//input[@name='wizard_coborrower_nature_of_business']");
+this.Add_a_Line = this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='coborrower_business_details_ids']//*[contains(text(),'Add a line')]");
+
+this.Select_Month = this.page.locator("//tr[@class='o_data_row o_selected_row']//select[@name='wizard_month']");
+this.Select_Year = this.page.locator("//td[@class='o_data_cell o_field_cell o_required_modifier']//select[@name='wizard_year']");
+this.Capital_Networth = this.page.locator("//input[@name='wizard_capital_networth']");
+this.Deductions = this.page.locator("//input[@name='wizard_deductions']");
+this.Save_Coborrower_Balance_Sheet = this.page.locator("//button[@name='save_coborrower_balance_sheet']");
+this.verify_coborrower_business_details = this.page.locator ("//div[@name='verify_coborrower_balance_sheet_details']")
+//P & L details//
+this. coborrower_income_details_wizard = this.page.locator ("//span[contains (text(),'Co-Borrower P and L Details')]/following::button[@name='coborrower_income_details_wizard']")
+this.Add_a_Line_coborrower_p_and_l_statement_details = this.page.locator("//div[@class='o_form_view o_form_nosheet o_form_editable']//a[contains (text(),'Add a line')]");
+this. Select_Month_coborrower_p_and_l_statement_details = this.page.locator ("//td[@class='o_data_cell o_field_cell o_required_modifier']//select[@name='wizard_month']");
+this.Select_Year_coborrower_p_and_l_statement_details = this.page.locator("//td[@class='o_data_cell o_field_cell o_required_modifier']//select[@name='wizard_year']");
+this.Sales_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_sales']")
+this.Purchases_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_purchases']")
+this.Net_profit_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_net_profit']")
+this.Depreciation_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_depreciation']")
+this.Interest_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_interest']")
+this.Income_tax_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_income_tax']")
+this.Other_income_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_other_income']")
+this.Agricultural_income_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_agricultural_income']")
+this.TDS_coborrower_p_and_l_statement_details = this.page.locator("//input[@name='wizard_tds']")
+this.Save_Button_coborrower_p_and_l_statement_details = this.page.locator ("//button[@name='save_coborrower_income_details_wizard']")
+this.verify_coborrower_p_and_l_statement_details = this.page.locator ("//div[@name='verify_coborrower_p_and_l_statement_details']")
+
+
 //computation Income//
 
 this.Coborrower_Computation_Income_Details = this.page.locator('//span[contains(text(), "Co-Borrower Computation of Income")]/following::span[contains(text(), "Add Data")]').nth(0);
-  this.Add_a_line_Computation_Income_Details = this.page.locator('//div[@class="o_form_view o_form_nosheet o_form_editable"]//a[contains(text(),"Add a line")]');
-  this.Enter_Gross_Taxable_Income_Computation_Income_Details = this.page.locator('//input[@name="wizard_gross_taxable_income"]');
-  this.Enter_Less_Deductions_Computation_Income_Details = this.page.locator('//input[@name="wizard_less_deductions"]');
-  this.Enter_Net_Taxable_Income_Computation_Income_Details = this.page.locator('//input[@name="wizard_net_taxable_income"]');
-  this.Save_Btn_Computation_Income_Details = this.page.locator('//span[contains(text(),"Save")]');
+this.Add_a_line_Computation_Income_Details = this.page.locator('//div[@class="o_form_view o_form_nosheet o_form_editable"]//a[contains(text(),"Add a line")]');
+this.Enter_Gross_Taxable_Income_Computation_Income_Details = this.page.locator('//input[@name="wizard_gross_taxable_income"]');
+this.Enter_Less_Deductions_Computation_Income_Details = this.page.locator('//input[@name="wizard_less_deductions"]');
+this.Enter_Net_Taxable_Income_Computation_Income_Details = this.page.locator('//input[@name="wizard_net_taxable_income"]');
+this.Save_Btn_Computation_Income_Details = this.page.locator('//span[contains(text(),"Save")]');
 
 //ITR details//
   this.Coborrower_ITR_Details = this.page.locator('//span[contains(text(), "Co-Borrower ITR Details")]/following::span[contains(text(), "Add Data")]').nth(0);
@@ -425,50 +395,11 @@ this.Coborrower_Computation_Income_Details = this.page.locator('//span[contains(
   this.Enter_Total_TaxesCoborrower_ITR_Details = this.page.locator('//input[@name="wizard_total_taxes_interest_fee_payable"]');
   this.Enter_Taxes_PaidCoborrower_ITR_Details = this.page.locator('//input[@name="wizard_taxes_paid"]');
   this.Save_BtnCoborrower_ITR_Details = this.page.locator('//span[contains(text(),"Save")]');
-//Coborrower Business certificate details//
-
- this.add_data_CoBorrower_Business_Certificate_Details = this.page.locator('//button[@name="coborrower_business_certificate_details_wizard"]')
-this.Name_of_the_Firm_CoBorrower_Business_Certificate_Details = this.page.locator('//input[@name="wizard_coborrower_firm_name"]')
-this.Shop_Act_Udyam_Number_CoBorrower_Business_Certificate_Details = this.page.locator('//input[@name="wizard_coborrower_shop_act"]')
-this.Name_of_Owner_CoBorrower_Business_Certificate_Details	 = this.page.locator('//input[@name="wizard_coborrower_name_of_owner"]')
-this.Type_Of_Business_CoBorrower_Business_Certificate_Details = this.page.locator('//input[@name="wizard_coborrower_type_of_business"]')	
-this.Udyam_Name_CoBorrower_Business_Certificate_Details = this.page.locator('//input[@name="wizard_coborrower_udhayam_name"]')	
-this.UdhyamNumber_CoBorrower_Business_Certificate_Details = this.page.locator('//input[@name="wizard_coborrower_udhayam_no"]')	
-this.No_of_years_CoBorrower_Business_Certificate_Details  = this.page.locator('//input[@name="wizard_coborrower_no_of_year_business"]')
-this.save_CoBorrower_Business_Certificate_Details = this.page.locator('//button[@name="save_coborrowerbusinesscertificate_details"]')
-this.verify_CoBorrower_Business_Certificate_Details = this.page.locator('//div[@name="verify_coborrower_business_certificate_details"]')
-//Farmer profile//
-
- this.add_data_button_coborrower_document_details = this.page.locator("[name='coborrower_seven_twelve_wizard']");
-    this.modal_header_coborrower_document_details = this.page.locator(".modal-header");
-    this.coborrower_name_coborrower_document_details = this.page.locator("[name='coborrower_wizard_farmer_name']");
-    this.area_of_land_coborrower_document_details = this.page.locator("[name='coborrower_wizard_area_of_land']");
-    this.type_of_agriculture_land_coborrower_document_details = this.page.locator("[name='coborrower_wizard_type_of_agricultural_land']");
-    this.seven_twelve_extract_ownership_coborrower_document_details = this.page.locator("[name='coborrower_wizard_seven_twelve_ownership']");
-    this.father_name_coborrower_document_details = this.page.locator("[name='coborrower_wizard_father_name']");
-    this.save_btn_coborrower_document_details = this.page.locator("[name='save_coborrower_seventwelve_details']");
-    this.verify_checkbox_coborrower_document_details = this.page.locator("//div[@name='co_borrower_verify_land_record_details']/parent::span/label");
-}
-async user_clicks_Co_Borrower1(){
-  await this.btn_coborrower1.click()
 
 }
-async user_click_KYC_details(){
-  await this.btnkyc.click()
-}
-async user_click_Income_details(){
-  await this.Incomedetails.click()
-}
-async user_click_Membership_details(){
-  await this.Membershipdetails.click()
-}
-async user_click_Credit_bureau(){
-  await this.Credit_bureau.click()
 
-}
-async user_selects_tile_name(title:string){
-await this.Title_name.selectOption({label:title})
-}
+
+
 
   async user_enters_Mobile_No(strmobileno:string){
 await this.txt_Mobile_No.click()
@@ -477,31 +408,31 @@ await this.txt_Mobile_No.fill(strmobileno)
  async user_enters_Name(strname:string){
 await this.txt_Name.click()
 await this.txt_Name.fill(strname);
- }	
+ }
   async user_enters_Dob(strdob:string){
 await this.txt_Dob.fill(strdob)
-  } 	
+  }
   async user_enters_PermanentAddress(stradd:string){
-   await this.txt_PermanentAddress.fill(stradd) 
+   await this.txt_PermanentAddress.fill(stradd)
 
-  } 	
+  }
   async user_enters_CurrentAddress(stradd2:string){
     await this.txt_PermanentAddress.fill(stradd2)
 
-  } 	
+  }
   async user_enters_ProfileType(){
  await this.drpdwn_ProfileType.selectOption({label:'Salaried'});
   await expect(this.drpdwn_ProfileType).not.toBeEmpty();
-  } 
+  }
   async user_enters_Gender(strgender:string){
 await this.txt_Gender.click()
-await this.txt_Gender.selectOption(strgender)
+await this.txt_Gender.fill(strgender)
   } 	
   async user_enters_ResidentialType(strresty:string){
     await this.txt_ResidentialType.click()
     await this.txt_ResidentialType.selectOption(strresty)
 
-  } 
+  }
 async user_clicks_AddData_in_Coborrower_ID_proof_details(){
   await this.btn_AddData_in_Coborrower_ID_proof_details.click()
 
@@ -520,7 +451,7 @@ await this.btn_cancel_in_Coborrower_ID_proof_details.click()
 
 
 async  user_clicks_Savein_Coborrower_ID_proof_details(){
- await this.btn_cancel_in_Coborrower_ID_proof_details.click() 
+ await this.btn_cancel_in_Coborrower_ID_proof_details.click()
 
 }
 async  user_clicks_Verify__in_Coborrower_ID_proof_details(){
@@ -531,22 +462,22 @@ await this.btn_AddData_in_Co_Borrower_AddressProof_Details.click()
 }
 async user_enters_Name_Co_Borrower_AddressProof_Details(strName:string){
 await this.txt_Name_Co_Borrower_AddressProof_Details.fill(strName)
-}	
+}     
 async user_enters_Aadhaar_Number_Co_Borrower_AddressProof_Details(straadharno:string){
   await this.txt_Aadhaar_Number_Co_Borrower_AddressProof_Details.fill(straadharno)
 
-}	
+}     
 async user_enters_Residence_Address_Co_Borrower_AddressProof_Details(strresidence:string){
   await this.txt_Residence_Address_Co_Borrower_AddressProof_Details.fill(strresidence)
 
-}	
+}     
 async  user_enters_Date_of_Birth_Co_Borrower_AddressProof_Details(strDOB:string){
   await this.txt_Date_of_Birth_Co_Borrower_AddressProof_Details.fill(strDOB)
 
 }
-async user_enters_age_adressproof(age:string){
-await this.age_in_coborrower_address.fill(age)
-}
+// async user_enters_age_adressproof(age:string){
+// await this.age_in_coborrower_address.fill(age)
+// }
 async user_clicks_save__Co_Borrower_AddressProof_Details(){
 await this.btn_save_in_Co_Borrower_AddressProof_Details.click()
 }
@@ -558,12 +489,12 @@ await this.checkbox_verify_in_Co_Borrower_AddressProof_Details.click();
 await this.btnAddData_in_coborrower_driving_license.click()
  }
 async user_enters_Driving_License_Number_in_coborrower_driving_license(strdrivinglicense:string){
- await this.txt_Driving_License_Number_in_coborrower_driving_license.fill(strdrivinglicense) 
+ await this.txt_Driving_License_Number_in_coborrower_driving_license.fill(strdrivinglicense)
 
 }
 async user_enters_Issue_Date_in_coborrower_driving_license(striisuedate:string){
 await this.txt_Issue_Date_in_coborrower_driving_license.fill(striisuedate)
-}	
+}     
 async user_enters_Expiry_Date_in_coborrower_driving_license(strexpiry:string){
   await this.txt_Expiry_Date_in_coborrower_driving_license.fill(strexpiry)
 
@@ -582,22 +513,22 @@ async user_clicks_adddata_Employmentdetails(){
 }
 async user_enters_NameoftheFirm_coborrower_Employmentdetails(strfirmname:string){
   await this.NameoftheFirm_coborrower_Employmentdetails.fill(strfirmname)
-}	
+}
 async user_enters_Address_Of_The_Firm_coborrower_Employmentdetails(straddress:string){
 await this.Address_Of_The_Firm_coborrower_Employmentdetails.fill(straddress)
-}	
+}
 async user_selects_Designationin_the_Organisation_coborrower_Employmentdetails(){
  await this.Designationin_the_Organisation_coborrower_Employmentdetails.selectOption({label:'Supervisor(Manager)'});
-}	
+}
 async user_selects_Type_of_Organisation_coborrower_Employmentdetails(){
    await this.Type_of_Organisation_coborrower_Employmentdetails.selectOption({label:'Private Ltd. Co.'});
 }
-async user_enters_nature_of_salaried(salary:string){
-await this.Nature_of_income.fill(salary)
-}
-async user_enters_employeeid(id:string){
-await this.empid.fill(id)
-}
+// async user_enters_nature_of_salaried(salary:string){
+// await this.Nature_of_income.fill(salary)
+// }
+// async user_enters_employeeid(id:string){
+// await this.empid.fill(id)
+// }
 async user_enters_JoiningDate_coborrower_Employmentdetails(strdate:string){
 await this.JoiningDate_coborrower_Employmentdetails.fill(strdate)
 }
@@ -608,11 +539,11 @@ async user_clicks_add_line_Employmentdetails(){
 await this.add_line_Employmentdetails.click()  
 }
 async user_enters_month_Employmentdetails(){
- await this.month_Employmentdetails.selectOption({label:'August'}); 
+ await this.month_Employmentdetails.selectOption({label:'August'});
 }
  async user_selects_year_Employmentdetails(){
- await this.year_Employmentdetails.selectOption({label:'2025'}); 
- } 
+ await this.year_Employmentdetails.selectOption({label:'2025'});
+ }
  async  user_enters_Gross_salary_Employmentdetails(strgross:string){
 await this.Gross_salary_Employmentdetails.fill(strgross)
  }
@@ -784,38 +715,8 @@ async user_enter_taxes_paid_amountCoborrower_ITR_Details(taxes_paid: string){
  async user_clicks_on_save_buttonCoborrower_ITR_Details() {
     await this.playwrightFactory.click(this.Save_BtnCoborrower_ITR_Details);
 }
- async user_clicks_add_data_CoBorrower_Business_Certificate_Details(){
-  await this.add_data_CoBorrower_Business_Certificate_Details.click()
 
- }
-async user_enter_Name_of_the_Firm_CoBorrower_Business_Certificate_Details(strname:string){
-await this.Name_of_Owner_CoBorrower_Business_Certificate_Details.fill(strname)
 
-}
-async user_enter_Shop_Act_Udyam_Number_CoBorrower_Business_Certificate_Details(strno:string){
-await this.Shop_Act_Udyam_Number_CoBorrower_Business_Certificate_Details.fill(strno)
-}
-async user_enter_Name_of_Owner_CoBorrower_Business_Certificate_Details(strname:string){
-await this.Name_of_Owner_CoBorrower_Business_Certificate_Details.fill(strname)
-}	
-async user_enter_Type_Of_Business_CoBorrower_Business_Certificate_Details(strtype:string){
-await this.Type_Of_Business_CoBorrower_Business_Certificate_Details.fill(strtype)
-}	
-async user_enter_Udyam_Name_CoBorrower_Business_Certificate_Details(strudyam:string){
-await this.Udyam_Name_CoBorrower_Business_Certificate_Details.fill(strudyam)
-}	
-async user_enter_UdhyamNumber_CoBorrower_Business_Certificate_Details(strudyamno:string){
-await this.UdhyamNumber_CoBorrower_Business_Certificate_Details.fill(strudyamno)
-}	
-async user_enter_No_of_years_CoBorrower_Business_Certificate_Details(stryear:string){
-await this.No_of_years_CoBorrower_Business_Certificate_Details.fill(stryear)
-} 
-async user_clicks_save_CoBorrower_Business_Certificate_Details(){
-await this.save_CoBorrower_Business_Certificate_Details.click()
-}
-async user_verify_CoBorrower_Business_Certificate_Details(){
-await this.verify_CoBorrower_Business_Certificate_Details.click()
-}
 async user_clicks_Add_data_Co_Borrower_Bank_Statement_Details(){
 await this.btn_Addbutton_Co_Borrower_Bank_Statement_Details.click()
 }
@@ -857,16 +758,18 @@ async user_clicks_ADD_data_coborrower_ID_details(){
 }
 async user_enters_Company_Name_coborrower_ID_details(strname:string){
   await this.Company_Name_coborrower_ID_details.fill(strname)
+
 }	
 async user_enters_Address_coborrower_ID_details(stradd:string){
   await this.playwrightFactory.fill(this.Address_coborrower_ID_details,stradd)
+
 }	
 async user_enters_Employee_ID_coborrower_ID_details(strempid:string){
 await this.Employee_ID_coborrower_ID_details.fill(strempid)
-}	
+}     
 async user_enters_Employee_Name_coborrower_ID_details(strname:string){
 await this.Employee_Name_coborrower_ID_details.fill(strname)
-}	
+}     
 async user_enters_Joining_Date_coborrower_ID_details(strjoin:string){
 await this.Joining_Date_coborrower_ID_details.fill(strjoin)
 }
@@ -901,8 +804,8 @@ await this.accountno_CoBorrower_Salary_Credit_Bank_Account.fill(straccno)
 async user_enters_account_opening_date_CoBorrower_Salary_Credit_Bank_Account(strdate:string){
 await this.account_opening_date_CoBorrower_Salary_Credit_Bank_Account.click()
 await this.account_opening_date_CoBorrower_Salary_Credit_Bank_Account.fill(strdate)
-  
-  
+ 
+ 
 
 }
 async user_enters_type_of_account_CoBorrower_Salary_Credit_Bank_Account(){
@@ -943,7 +846,7 @@ async user_selecting_year_from_drop_down_value_coborrower_agricultural_income_de
 }
 async user_verify_agriculturefield(){
   await this.btn_verify_in_agricultural_income.click()
-} 
+}
 
  
 async user_clicks_add_button_coborrower_other_income_details(){
@@ -974,40 +877,40 @@ async user_verify_coborrower_other_income(){
   await this.btn_verify_other_income.click()
 }
 //Farmer profle//
-  async user_fill_coborrower_name(coborrower_name: string) {
-    await this.playwrightFactory.fill(this.coborrower_name_coborrower_document_details, coborrower_name);
-  }
+  // async user_fill_coborrower_name(coborrower_name: string) {
+  //   await this.playwrightFactory.fill(this.coborrower_name_coborrower_document_details, coborrower_name);
+  // }
 
-  async user_select_area_of_land(area_of_land: string) {
-    await this.playwrightFactory.selectByVisibleText(this.area_of_land_coborrower_document_details, area_of_land);
-  }
+  // async user_select_area_of_land(area_of_land: string) {
+  //   await this.playwrightFactory.selectByVisibleText(this.area_of_land_coborrower_document_details, area_of_land);
+  // }
 
-  async user_select_type_of_agriculture_land(type_of_agriculture_land: string) {
-    await this.playwrightFactory.selectByVisibleText(this.type_of_agriculture_land_coborrower_document_details, type_of_agriculture_land);
-  }
+  // async user_select_type_of_agriculture_land(type_of_agriculture_land: string) {
+  //   await this.playwrightFactory.selectByVisibleText(this.type_of_agriculture_land_coborrower_document_details, type_of_agriculture_land);
+  // }
 
-  async user_select_seven_twelve_extract_ownership(seven_twelve_extract_ownership: string) {
-    await this.playwrightFactory.selectByVisibleText(this.seven_twelve_extract_ownership_coborrower_document_details, seven_twelve_extract_ownership);
-  }
+  // async user_select_seven_twelve_extract_ownership(seven_twelve_extract_ownership: string) {
+  //   await this.playwrightFactory.selectByVisibleText(this.seven_twelve_extract_ownership_coborrower_document_details, seven_twelve_extract_ownership);
+  // }
 
-  async user_fill_father_name(father_name: string) {
-    await this.playwrightFactory.fill(this.father_name_coborrower_document_details, father_name);
-  }
+  // async user_fill_father_name(father_name: string) {
+  //   await this.playwrightFactory.fill(this.father_name_coborrower_document_details, father_name);
+  // }
 
-  async user_click_on_save_btn() {
-    await this.playwrightFactory.click(this.save_btn_coborrower_document_details);
-    await expect(this.modal_header_coborrower_document_details).toBeHidden();
-  }
+  // async user_click_on_save_btn() {
+  //   await this.playwrightFactory.click(this.save_btn_coborrower_document_details);
+  //   await expect(this.modal_header_coborrower_document_details).toBeHidden();
+  // }
 
-  async user_click_on_verify_checkbox_validation() {
-    await this.playwrightFactory.clickForce(this.verify_checkbox_coborrower_document_details);
-    await expect(this.verify_checkbox_coborrower_document_details).toBeChecked();
-  }
+  // async user_click_on_verify_checkbox_validation() {
+  //   await this.playwrightFactory.clickForce(this.verify_checkbox_coborrower_document_details);
+  //   await expect(this.verify_checkbox_coborrower_document_details).toBeChecked();
+  // }
   //Membership details//
 
 async user_clicks_Add_data_in_CoBorrower_Membership_Details(){
 await this.btn_Add_data_in_CoBorrower_Membership_Details.click()
-}	
+}
 async user_enters_Co_borrower_Membership_Number_in_CoBorrower_Membership_Details(strno:string){
 await this.Co_borrower_Membership_Number_in_CoBorrower_Membership_Details.fill(strno)
 }
@@ -1019,17 +922,18 @@ await this.txt_Co_borrower_Number_of_Shares_in_CoBorrower_Membership_Details.fil
 async user_enters_Co_borrower_Shares_From_in_CoBorrower_Membership_Details(strsharesdate:string){
 await this.txt_Co_borrower_Shares_From_in_CoBorrower_Membership_Details.fill(strsharesdate)  
 
-}	
+}
 async user_enters_Co_borrower_Existing_Shares_Amount_in_CoBorrower_Membership_Details(strexistingshares:string){
   await this.txt_Co_borrower_Existing_Shares_Amount_in_CoBorrower_Membership_Details.fill(strexistingshares)
 
-}	
+}
 async user_enters_Co_borrower_Total_Shares_Required_in_CoBorrower_Membership_Details(strtotalshares:string){
   await this.txt_Co_borrower_Total_Shares_Required_in_CoBorrower_Membership_Details.fill(strtotalshares)
 
 }	
-async user_verify_Co_borrower_Additional_Shares_Required_in_CoBorrower_Membership_Details(){
-await expect(this.txt_Co_borrower_Additional_Shares_Required_in_CoBorrower_Membership_Details).toBeVisible()
+async user_enters_Co_borrower_Additional_Shares_Required_in_CoBorrower_Membership_Details(straddshares:string){
+await this.txt_Co_borrower_Additional_Shares_Required_in_CoBorrower_Membership_Details.fill(straddshares)  
+
 }
 async user_clicks_Save_in_CoBorrower_Membership_Details(){
   await this.btn_Save_in_CoBorrower_Membership_Details.click()
@@ -1038,25 +942,15 @@ async user_clicks_Save_in_CoBorrower_Membership_Details(){
 async user_clicks_verify_in_Co_Borrower_Membership_Details(){
 await this.checkbox_verify_in_Co_Borrower_Membership_Details.click()
 }	
-async user_click_upload_your_file_button(){
-  await this.page.waitForTimeout(3000);
-await this.page.evaluate(() => {
-window.scrollBy(1800,2000); // Scroll down
-});
-await this.page.getByRole('button', { name: 'Upload your File' }).click();
-await this.page.waitForTimeout(3000)
-//await this.page.locator('input[type="file"]').nth(0).setInputFiles('IT_Return_RohitSharma_Fake.pdf');
-await this.page.locator('input[type="file"]').nth(0).setInputFiles('IT_Return_RohitSharma_Fake.pdf');
- 
-}
+
 
 async user_enters_Name_CoBorrower_CreditBureau(strname:string){
 await this.txt_Name_CoBorrower_CreditBureau.fill(strname)
-}	
+}     
 async user_enters_DOB_CoBorrower_CreditBureau(strdob:string){
 await this.txt_DOB_CoBorrower_CreditBureau.fill(strdob)  
 
-}	
+}     
 async user_enters_CTC_CoBorrower_CreditBureau(strctc:string){
 await this.txt_CreditScore_CoBorrower_CreditBureau.fill(strctc)  
 
@@ -1064,7 +958,7 @@ await this.txt_CreditScore_CoBorrower_CreditBureau.fill(strctc)
 async user_enters_CreditScore_CoBorrower_CreditBureau(strcreditscore:string){
 await this.txt_CreditScore_CoBorrower_CreditBureau.fill(strcreditscore)  
 
-}	
+}     
 async user_enters_Branch_Remarks_on_CIBIL_CoBorrower_CreditBureau(strremarks:string){
   await this.txt_Branch_Remarks_on_CIBIL_CoBorrower_CreditBureau.fill(strremarks)
 
@@ -1077,20 +971,20 @@ async user_enters_Personal_Score_CoBorrower_CreditBureau(strpersonalscore:string
   await this.drpdwn_Wilful_Defaulter_CoBorrower_CreditBureau.click()
 await this.drpdwn_Wilful_Defaulter_CoBorrower_CreditBureau.selectOption({label:select})
 }
-async user_enters_Settled_Account_CoBorrower_CreditBureau(select:string){
-await this.drpdwn_Settled_Account_CoBorrower_CreditBureau.selectOption({label:select})
+async user_enters_Settled_Account_CoBorrower_CreditBureau(){
+await this.drpdwn_Wilful_Defaulter_CoBorrower_CreditBureau.selectOption({label:'Yes'})
 }	
-async user_enters_Written_Account_CoBorrower_CreditBureau(select:string){
-await this.drpdwn_Written_Account_CoBorrower_CreditBureau.selectOption({label:select})
+async user_enters_Written_Account_CoBorrower_CreditBureau(){
+await this.drpdwn_Wilful_Defaulter_CoBorrower_CreditBureau.selectOption({label:'Yes'})
 }
 async user_enters_Overdue_Amount_Pending_CoBorrower_CreditBureau(stroverdue:string){
 await this.txt_Overdue_Amount_Pending_CoBorrower_CreditBureau.fill(stroverdue)
 }
-async user_enters_Account_Sold_CoBorrower_CreditBureau(select:string){
-await this.drpdwn_Account_Sold_CoBorrower_CreditBureau.selectOption({label:select})
+async user_enters_Account_Sold_CoBorrower_CreditBureau(){
+await this.drpdwn_Wilful_Defaulter_CoBorrower_CreditBureau.selectOption({label:'No'})
 }	
-async user_enters_Suit_Field_CoBorrower_CreditBureau(select:string){
-await this.drpdwn_Suit_Field_CoBorrower_CreditBureau.selectOption({label:select})
+async user_enters_Suit_Field_CoBorrower_CreditBureau(){
+await this.drpdwn_Wilful_Defaulter_CoBorrower_CreditBureau.selectOption({label:'Yes'})
 }
 async user_enters_Repayment_Track_CoBorrower_CreditBureau(strrepayment:string){
 await this.txt_Repayment_Track_CoBorrower_CreditBureau.fill(strrepayment)
