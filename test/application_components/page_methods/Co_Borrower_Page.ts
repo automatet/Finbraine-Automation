@@ -178,8 +178,8 @@ readonly Coborrower_Computation_Income_Details: Locator;
  readonly TDS_coborrower_p_and_l_statement_details: Locator;
  readonly Save_Button_coborrower_p_and_l_statement_details: Locator;
  readonly verify_coborrower_p_and_l_statement_details: Locator; 
-
-
+readonly Nature_of_income:Locator 
+readonly empid:Locator
 
 
     /**
@@ -255,8 +255,8 @@ this.salary_credited_date_Employmentdetails=this.page.locator('//input[@name="wi
 this.PF_Employmentdetails=this.page.locator('//input[@name="wizard_pf"]')
 this.btn_save_Employmentdetails=this.page.locator('//button[@name="save_coborrower_salary_slip"]')
 this.btn_verify_Employmentdetails=this.page.locator('//div[@name="verify_coborrower_salary_slip_details"]')
-// this.Nature_of_income=this.page.locator("//input[@name='wizard_coborrower_nature_of_salaried']")
-// this.empid=this.page.locator("//input[@name='wizard_employee_id_coborrower']")
+ this.Nature_of_income=this.page.locator("//input[@name='wizard_coborrower_nature_of_salaried']")
+ this.empid=this.page.locator("//input[@name='wizard_employee_id_coborrower']")
 //Co-Borrower Bank Statement Details//
 
 this.btn_Addbutton_Co_Borrower_Bank_Statement_Details=this.page.locator('//button[@name="coborrower_bank_statement_wizard"]')
@@ -523,12 +523,12 @@ async user_selects_Designationin_the_Organisation_coborrower_Employmentdetails()
 async user_selects_Type_of_Organisation_coborrower_Employmentdetails(){
    await this.Type_of_Organisation_coborrower_Employmentdetails.selectOption({label:'Private Ltd. Co.'});
 }
-// async user_enters_nature_of_salaried(salary:string){
-// await this.Nature_of_income.fill(salary)
-// }
-// async user_enters_employeeid(id:string){
-// await this.empid.fill(id)
-// }
+ async user_enters_nature_of_salaried(salary:string){
+ await this.Nature_of_income.fill(salary)
+ }
+ async user_enters_employeeid(id:string){
+ await this.empid.fill(id)
+ }
 async user_enters_JoiningDate_coborrower_Employmentdetails(strdate:string){
 await this.JoiningDate_coborrower_Employmentdetails.fill(strdate)
 }
