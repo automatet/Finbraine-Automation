@@ -60,8 +60,20 @@ readonly txt_loan_schedule_title:Locator;
   readonly txt_additional_comment: Locator;
   readonly btn_approve_button: Locator;
   readonly btn_reject_button: Locator;
-
-
+readonly Borrower_Gross_Deduction: Locator;
+readonly CoBorrowerGross_Deduction: Locator;
+readonly Borrower_Gross_Income	: Locator;
+readonly CoBorrower_Gross_Income	: Locator;
+readonly Borrower_Agricultural_Income: Locator;	
+readonly CoBorrower_Agricultural_Income: Locator;	
+readonly Borrower_Other_Income	: Locator;
+readonly CoBorrower_OtherIncome: Locator;
+readonly Assistant	: Locator;
+readonly Assistant_Manager	: Locator;
+readonly Manager	: Locator;
+readonly AGM : Locator;
+readonly addaaline_in_additional_comment: Locator
+readonly comment:Locator
  /**
    * @param {Page} page
    * @param {TestInfo} testInfo
@@ -124,15 +136,22 @@ this.txt_loan_schedule_title=this.page.locator("//div[normalize-space()='Loan Sc
     this.txt_additional_comment=this.page.locator("//input[@name='additional_comment']")
     this.btn_approve_button=this.page.locator("//button[@name='approve_decision']")
     this.btn_reject_button=this.page.locator("//button[@name='reject_decision']")
- 
-
-
-
-
-
-
-  }
-
+  this.Borrower_Gross_Deduction=this.page.locator('')
+this.CoBorrowerGross_Deduction	=this.page.locator('')
+this.Borrower_Gross_Income	=this.page.locator('')
+this.CoBorrower_Gross_Income=this.page.locator('')	
+this.Borrower_Agricultural_Income=this.page.locator('')	
+this.CoBorrower_Agricultural_Income=this.page.locator('')	
+this.Borrower_Other_Income	=this.page.locator('')
+this.CoBorrower_OtherIncome=this.page.locator('')
+this.Assistant=this.page.locator('')	
+this.Assistant_Manager=this.page.locator('')	
+this.Manager=this.page.locator('')	
+this.AGM=this.page.locator('')
+this.addaaline_in_additional_comment=this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='additional_comment_ids']//*[contains(text(),'Add a line')]")
+this.comment=this.page.locator("//textarea[@name='comment']")
+}
+//Loan eligibility//
 async Verify_Gross_Income_in_loan_eligibility(){
 await expect(this.Gross_Income_in_Loan_eligibility).not.toBeEmpty();
 }
@@ -186,14 +205,35 @@ await expect(this.Growth_Trend_of_Income_networth_in_Loan_eligibility).toBeVisib
 
 async Verify_As_per_Income_Loan_Availability_in_loan_eligibility(){
 await expect(this.As_per_Income_Loan_Availability_in_Loan_eligibility).toBeVisible();
+}
+async Verify_Borrower_Gross_Deduction(){
+await expect(this.Borrower_Gross_Deduction).toBeVisible();
+}
+async Verify_CoBorrowerGross_Deduction(){
+await expect(this.CoBorrowerGross_Deduction).toBeVisible();
 }	
+async Verify_Borrower_Gross_Income(){
+await expect(this.Borrower_Gross_Income).toBeVisible();
+}	
+async Verify_CoBorrower_Gross_Income(){
+await expect(this.CoBorrowerGross_Deduction).toBeVisible();
+}	
+async Verify_Borrower_Agricultural_Income(){
+await expect(this.Borrower_Agricultural_Income).toBeVisible();
+}	
+async Verify_CoBorrower_Agricultural_Income(){
+await expect(this.CoBorrower_Agricultural_Income).toBeVisible();
+}	
+async Verify_Borrower_Other_Income(){
+await expect(this.Borrower_Other_Income).toBeVisible();
+}	
+async Verify_CoBorrower_OtherIncome	(){
+await expect(this.CoBorrower_OtherIncome).toBeVisible();
+}
 async Verify_Remarks_in_loan_eligibility(strremarks:string){
 await this.playwrightFactory.fill(this.txt_Remarks_in_Loan_eligibility,strremarks)
 }
-// async Verify_Remarks_in_loan_eligibility(){ 
-  
-// await expect(this.txt_Remarks_in_Loan_eligibility).not.toBeEmpty()
-// }  
+///Loan schedule methods//
 
 async user_verify_loan_schedule_title(){
   await expect(this.txt_loan_schedule_title).toBeVisible();
@@ -238,12 +278,13 @@ async user_verify_total_interest(){
 async user_verify_loan_schedule_date(){
   await expect(this.txt_loan_schedule_date).toBeVisible();
 }
+//Loan scrutiny///
  
 async user_verify_loan_scrutiny_title(){
   await expect(this.txt_loan_scrutiny_title).toBeVisible();
 }
  
-async user_verify_total_quotation_amount(){
+async user_verify_loan_amount_in_loan_scrutiny(){
   await expect(this.txt_total_quotation_amount).toBeVisible();
 }
  
@@ -255,7 +296,7 @@ async user_verify_scrutiny_loan_amount(){
   await expect(this.txt_scrutiny_loan_amount).toBeVisible();
 }
  
-async user_verify_entire_amount(){
+async user_verify_eligible_amount_for_loan_asper_policy(){
   await expect(this.txt_scrutiny_entire_amount).toBeVisible();
 }
  
@@ -274,6 +315,7 @@ await this.playwrightFactory.fill(this.txt_deviation_comment, strDeductioncommen
 async user_click_deviation_verify_button(){
 await this.playwrightFactory.click(this.btn_deviation_verify_button);
 }
+
  
 async user_enters_additional_comment(strAdditionalcomment: string){
 await this.playwrightFactory.fill(this.txt_additional_comment, strAdditionalcomment);

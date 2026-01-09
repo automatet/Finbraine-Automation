@@ -53,7 +53,7 @@ for (const record of records) {
 
 // Adjust the afterEach hook to account for API tests (which may not have a page)
 test.afterEach('Status check', async ({ page, request }, testInfo: TestInfo) => {
-  let statusCode = 3;
+ let statusCode = 3;
   let comment = "";
   if (testInfo.status === 'passed') {
     comment = testInfo.errors.toString();

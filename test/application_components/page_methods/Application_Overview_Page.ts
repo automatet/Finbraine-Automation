@@ -53,7 +53,7 @@ export class Application_Overview_Page {
     this.Loan_Application_tab=this.page.locator("//a[normalize-space()='Loan Application']");
     this.Credit_Decision_tab=this.page.locator('//a[normalize-space()="Credit Decisioning"]');
     this.Loan_Sanction_tab=this.page.locator('//a[normalize-space()="Loan Sanction"]');
-    this.btn_Edit=this.page.locator('//*[contains(text()," Edit")]')
+    this.btn_Edit=this.page.locator('//*[contains(text(),"Edit")]')
   
 
     this.application_verification_status=this.page.locator("//tr[td[1][normalize-space()='Application Verification']and td[3][normalize-space()='Completed']]")
