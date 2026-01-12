@@ -386,12 +386,6 @@ async user_verify_aadhar_number(){
 }
 
 
-
-
-
-
-
-
 async user_verify_loan_schedule_title(){
   await expect(this.txt_loan_schedule_title).toBeVisible();
 }
