@@ -257,6 +257,7 @@ readonly EMI_for_Loan_in_Loan_eligiblity : Locator;
     this.txt_Advance_type = this.page.locator('//select[@name="advance_type"]')
    
     this.txt_weaker_code = this.page.locator('(//div[@name="weaker_code"])[2]')
+
    
     this.BorrowerCategory = this.page.locator("(//span[@name='borrower_category'])[2]")
     this.Mode_of_Advance = this.page.locator("(//span[@name='mode_of_advance'])[2]")
@@ -478,13 +479,15 @@ async user_click__additional_comment_add_line_btn(){
 await this.playwrightFactory.click(this.txt_additional_comment_add_line_btn);
 }
 async user_enters_additional_comment(strAdditionalcomment: string){
+
   //await this.playwrightFactory.click(this.txt_additional_comment);
 await this.playwrightFactory.fill(this.txt_additional_comment, strAdditionalcomment);
+
 }
 
 async user_click_approve_button(){
-  await this.page.waitForTimeout(500)
-await this.playwrightFactory.click(this.btn_approve_button);
+  await this.page.waitForTimeout(1000)
+  await this.playwrightFactory.click(this.btn_approve_button);
 }
 
 async user_click_reject_button(){
@@ -651,7 +654,7 @@ await this.page.locator("//a[contains(text(),'Weaker Section Small and Marginal 
 
 
 async user_selects_Borrower_Category_in_MIS(){
-await expect(this.BorrowerCategory).toBeVisible()
+await expect(this.BorrowerCategory).toBeVisible();
 }
 async user_selects_Mode_Of_Advance_in_MIS(){
 await expect(this.Mode_of_Advance).toBeVisible();
