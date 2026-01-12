@@ -474,14 +474,14 @@ readonly reupload_docs_btn:Locator;
     this.agriculture_income_save_btn= this.page.locator("//button[@name='save_agricultural_income_wizard']");
     this.agriculture_income_verify_btn= this.page.locator("//*[text()='Agricultural Income Details']/ancestor::h1//*[contains(text(),'Verify')]")
 
-    this.added_other_income_details_add_data_btn= this.page.locator("//button[@name='other_income_wizard']")
+    this.added_other_income_details_add_data_btn= this.page.locator("//button[@name='guarantor1_other_income_wizard']")
     this.added_other_income_details_add_line_btn= this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='other_income_ids']//*[contains(text(),'Add a line')]") 
     this.added_other_income_details_year_fields_btn= this.page.locator("//select[@name='wizard_year']")
     this.added_other_income_details_year= this.page.locator("//select[@name='wizard_year']/option[@value='2025']")
     this.added_other_income_details_amount= this.page.locator("//input[@name='wizard_amount']")
     this.added_other_income_details_save_btn= this.page.locator("//button[@name='save_other_income_wizard']")
     this.verify_other_income_details_data= this.page.locator("//div[@name='other_income_ids']")
-    this.other_income_details_verify_btn= this.page.locator("//*[text()='Other Income Details']/ancestor::h1//*[contains(text(),'Verify')]")
+    this.other_income_details_verify_btn= this.page.locator("//div[@name='verify_guarantor1_other_income_details']")
     this.added_branch_manager_recomendation_remark_comment_field= this.page.locator('(//textarea[@name="branch_manager_recommendation"])[1]')
     this.added_name_in_absence_of_branch_manager= this.page.locator("(//input[@name='loan_officer_name'])[1]")
     this.added_comment_in_absence_of_branch_manager= this.page.locator("(//textarea[@name='loan_officer_comment'])[1]")
@@ -1493,7 +1493,7 @@ await this.page.waitForTimeout(1000)
 
 }
 
-  async user_click_verified_btn(){
+async user_click_verified_btn(){
     await this.page.waitForTimeout(500)
     await this.playwrightFactory.click(this.verified_btn);
 //await this.page.pause();

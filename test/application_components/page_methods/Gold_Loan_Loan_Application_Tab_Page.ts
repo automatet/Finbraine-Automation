@@ -57,15 +57,18 @@ export class Gold_Loan_Loan_Application_Tab_Page {
   readonly btn_add_data_for_Membership_Details:Locator;
   readonly btn_verify_in_membership_Details:Locator;
   readonly txt_Membership_number_in_Membership_Details:Locator;
- readonly txt_Name_of_shares_in_Membership_Details:Locator;
+ readonly txt_Existing_share_amounts_in_Membership_Details:Locator;
  readonly date_Shares_from_in_Membership_Details:Locator;
- readonly txt_Existing_share_amounts_in_Membership_Details:Locator ;
+ //readonly txt_Existing_share_amounts_in_Membership_Details:Locator ;
  readonly txt_total_shares_required_inn_Membership_Details:Locator;
  readonly txt_additional_shares_required_in_Membership_Details:Locator;
  readonly btn_save_in_Membership_Details:Locator;
+
+ //Charge Details
  readonly btn_Add_data_in_Charge_Details: Locator
  readonly txt_Cibil_Charges_in_Charge_Details: Locator;  
  readonly txt_Processing_Fee_in_Charge_Details : Locator;
+ readonly txt_Processing_Fee_Percentage_in_Charge_Details: Locator;
  readonly txt_gold_custody_charges: Locator;
  readonly txt_Fees_Charges_in_Charge_Details : Locator;
  readonly txt_Details_of_Contingent_Charges_in_Charge_Details: Locator; 
@@ -88,6 +91,8 @@ export class Gold_Loan_Loan_Application_Tab_Page {
  readonly txt_relation_with_applicant_in_nominee_information: Locator;
  readonly txt_gender_in_nominee_information: Locator;
  readonly txt_address_in_nominee_information: Locator;
+
+ //Gold Ornaments Details
  readonly txt_gold_ornaments_details_title: Locator;
  readonly txt_add_data_button_in_gold_ornaments_details: Locator;
  readonly txt_gold_valuation_certificate_title: Locator;
@@ -101,11 +106,20 @@ export class Gold_Loan_Loan_Application_Tab_Page {
  readonly txt_net_weight_in_gold_valuation_certificate: Locator;
  readonly txt_rate_per_grams_in_gold_valuation_certificate: Locator;
  readonly txt_valuation_in_rupee_in_gold_valuation_certificate: Locator; 
+
+ readonly txt_stree_dhan_name: Locator;
+ readonly txt_stree_dhan_address: Locator;
+ readonly txt_stree_dhan_age: Locator;
+
+ readonly txt_total_gross_weight_in_gold_ornaments_valuation_details: Locator;
  readonly txt_gold_remark: Locator;
+ readonly txt_gold_net_weight_in_gold_ornaments_valuation_details: Locator;
  readonly txt_date_of_valuation: Locator;
+ readonly txt_total_valuation_amount_in_gold_ornaments_valuation_details: Locator;
  readonly txt_gold_valuer_name: Locator;
  readonly btn_save_button_for_gold_loan: Locator;
  readonly btn_gold_ornaments_details_verify_button: Locator;
+
  readonly txt_branch_manager_recommendation_remark_comment_field:Locator;
  readonly txt_name_in_absence_of_branch_manager:Locator;
  readonly txt_comment_in_absence_of_branch_manager:Locator;
@@ -314,7 +328,7 @@ export class Gold_Loan_Loan_Application_Tab_Page {
     this.adress_proof_name = this.page.locator("//span[@name='customer_first_name_address_document']");
     this.adress_proof_adress= this.page.locator("//span[@name='customer_residence_address_document']");
     this.adrees_proof_dob= this.page.locator("//span[@name='customer_dob_document']");
-    this.adhaar_no= this.page.locator("//span[@name='customer_aadhaar_document']");
+    this.adhaar_no= this.page.locator("(//span[@name='customer_aadhaar_document'])[1]");
     this.adress_proof_verify_btn= this.page.locator("//*[text()='Address Proof Details']/ancestor::h1//*[contains(text(),'Verify')]");
     this.customer_name_borrower_info_field= this.page.locator("//input[@name='customer_name']");
     this.borrower_adress= this.page.locator("//input[@name='customer_borrower_address']");
@@ -322,28 +336,31 @@ export class Gold_Loan_Loan_Application_Tab_Page {
     this.borower_current_adress= this.page.locator("//input[@name='borrower_current_address']");
     this.borrower_residential_type= this.page.locator("//select[@name='residential_type']");
     this.borowers_mobile_no= this.page.locator("//input[@name='customer_mobile_no']");
-    this.borrower_gender= this.page.locator("//select[@name='customer_gender']");
+    this.borrower_gender= this.page.locator("//select[@name='applicant_gender']");
     this.borrowers_age = this.page.locator("//input[@name='customer_borrower_age']");
     this.staff_name= this.page.locator("//input[@name='staff_name']");
     this.staff_id= this.page.locator("//input[@name='agent_id']");
-    this.requested_loan_amount= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='customer_loan_amount']");
+    this.requested_loan_amount= this.page.locator("//div[@name='customer_loan_amount']");
     this.requested_loan_amount_in_words= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='customer_loan_amount_in_words']");
     this.loan_period= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='customer_period_in_months']");
     this.loan_perposed= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='purpose_of_loan']");
-    this.other_income=this.page.locator("//label[normalize-space()='Other Income']")
-    this.agriculture_income=this.page.locator("//label[normalize-space()='Agriculture Income']")
+    this.other_income=this.page.locator("//*[contains(text(),'Margin %')]/ancestor::div[@class='o_group outer-box']//*[@name='other_income']")
+    this.agriculture_income=this.page.locator("//*[contains(text(),'Margin %')]/ancestor::div[@class='o_group outer-box']//*[@name='agriculture_income']")
     this.btn_verify_in_membership_Details= this.page.locator('//div[@name="verify_membership_details"]')
     this.btn_add_data_for_Membership_Details = this.page.locator("//button[@name='membership_details_wizard']//span[contains(text(),'Add Data')]")
     this.txt_Membership_number_in_Membership_Details = this.page.locator("//input[@name='wizard_membership_number']")
-    this.txt_Name_of_shares_in_Membership_Details = this.page.locator("//input[@name='wizard_no_of_shares']")
+    this.txt_Existing_share_amounts_in_Membership_Details = this.page.locator("//input[@name='wizard_existing_share_amt']")
     this.date_Shares_from_in_Membership_Details = this.page.locator('//input[@name="wizard_share_from"]');
-    this.txt_Existing_share_amounts_in_Membership_Details = this.page.locator('//input[@name="wizard_existing_share_amt"]');
+    //this.txt_Existing_share_amounts_in_Membership_Details = this.page.locator('//input[@name="wizard_existing_share_amt"]');
     this.txt_total_shares_required_inn_Membership_Details = this.page.locator('//input[@name="wizard_total_share_req"]');
     this.txt_additional_shares_required_in_Membership_Details= this.page.locator('//input[@name="wizard_additional_share_req"]')
     this.btn_save_in_Membership_Details = this.page.locator('//button[@name="save_membership_details"]')
+
+    //Charge Details
     this.btn_Add_data_in_Charge_Details =this.page.locator('//button[@name="charges_details_wizard"]//span[contains(text(),"Add Data")]')
     this.txt_Cibil_Charges_in_Charge_Details = this.page.locator('//input[@name="wizard_cibil_charges"]')
     this.txt_Processing_Fee_in_Charge_Details = this.page.locator('//input[@name="wizard_processing_fees"]')
+    this.txt_Processing_Fee_Percentage_in_Charge_Details= this.page.locator('//input[@name="wizard_percentage"]')
     this.txt_gold_custody_charges = this.page.locator('//input[@name="wizard_gold_custody_charges"]')
     this.txt_Fees_Charges_in_Charge_Details   = this.page.locator('//input[@name="wizard_fees_charges"]')
     this.txt_Details_of_Contingent_Charges_in_Charge_Details  = this.page.locator('//input[@name="wizard_contingent_charges"]')
@@ -371,7 +388,7 @@ export class Gold_Loan_Loan_Application_Tab_Page {
     this.txt_gold_valuation_certificate_title=this.page.locator("//label[normalize-space()='Gold Valuation Certificate']")
     this.txt_add_a_line_button_for_gold_valuation_certificate=this.page.locator("//*[contains(text(),'Add a line')]/ancestor::div[@name='gold_valuation_details_ids']//*[contains(text(),'Add a line')]")
     this.txt_serial_number_in_gold_valuation_certificate=this.page.locator("//input[@name='wizard_sr_no']")
-    this.txt_particular_description_in_gold_valuation_certificate=this.page.locator("//input[@name='wizard_particular_description']")
+    this.txt_particular_description_in_gold_valuation_certificate=this.page.locator("//div[@name='wizard_particular_description']//div//input[@type='text']")
     this.txt_quantity_in_gold_valuation_certificate=this.page.locator("//input[@name='wizard_quantity']")
     this.txt_gross_weight_in_gold_valuation_certificate=this.page.locator("//input[@name='wizard_gross_weight']")
     this.txt_purity_in_gold_valuation_certificate=this.page.locator("//input[@name='wizard_purity']")
@@ -379,14 +396,23 @@ export class Gold_Loan_Loan_Application_Tab_Page {
     this.txt_net_weight_in_gold_valuation_certificate=this.page.locator("//input[@name='wizard_net_weight_converted_into_22_carat']")
     this.txt_rate_per_grams_in_gold_valuation_certificate=this.page.locator("//input[@name='wizard_rate_of_22_carat']")
     this.txt_valuation_in_rupee_in_gold_valuation_certificate=this.page.locator("//span[@name='wizard_valuation_in_rupees']")
+
+    this.txt_stree_dhan_name=this.page.locator("//input[@name='wizard_gold_name']")
+    this.txt_stree_dhan_address=this.page.locator("//input[@name='wizard_gold_address']")
+    this.txt_stree_dhan_age=this.page.locator("//input[@name='wizard_gold_age']")
+
+    this.txt_total_gross_weight_in_gold_ornaments_valuation_details=this.page.locator("//span[@name='wizard_gold_gross_weight']")
+    this.txt_gold_net_weight_in_gold_ornaments_valuation_details=this.page.locator("//span[@name='wizard_gold_weight_22_carat']")
+    this.txt_total_valuation_amount_in_gold_ornaments_valuation_details=this.page.locator("//span[@name='wizard_total_valuation_amount']")
+    
     this.txt_gold_remark=this.page.locator("//input[@name='wizard_gold_remark']")
     this.txt_date_of_valuation=this.page.locator("//input[@name='wizard_date_of_valuation']")
     this.txt_gold_valuer_name=this.page.locator("//input[@name='wizard_gold_valuer_name']")
     this.btn_save_button_for_gold_loan=this.page.locator("//button[@name='save_gold_valuation_details']")
     this.btn_gold_ornaments_details_verify_button=this.page.locator("//*[text()='Gold Ornaments Details']/ancestor::h1//*[text()='Verify']")
-    this.txt_branch_manager_recommendation_remark_comment_field= this.page.locator("//textarea[@name='branch_manager_recommendation']")
-    this.txt_name_in_absence_of_branch_manager= this.page.locator("//input[@name='loan_officer_name']")
-    this.txt_comment_in_absence_of_branch_manager= this.page.locator("//textarea[@name='loan_officer_comment']")
+    this.txt_branch_manager_recommendation_remark_comment_field= this.page.locator("(//textarea[@name='branch_manager_recommendation'])[1]")
+    this.txt_name_in_absence_of_branch_manager= this.page.locator("(//input[@name='loan_officer_name'])[1]")
+    this.txt_comment_in_absence_of_branch_manager= this.page.locator("(//textarea[@name='loan_officer_comment'])[1]")
     this.btn_verified_button= this.page.locator("//*[contains(text(),'VERIFIED')]")
     this.btn_reupload_docs_button= this.page.locator("//*[contains(text(),'RE-UPLOAD DOCS')]")
 
@@ -540,7 +566,7 @@ export class Gold_Loan_Loan_Application_Tab_Page {
 
     
 
-
+//Loan Application Tab Methods
 
 
  }
@@ -650,8 +676,8 @@ async user_enters_Membership_number_in_Membership_Details(strmembershipnumber:st
   await this.playwrightFactory.fill(this.txt_Membership_number_in_Membership_Details,strmembershipnumber);
 }
  
-async user_enters_Name_of_shares_Membership_Details(strname:string){
-  await this.playwrightFactory.fill(this.txt_Name_of_shares_in_Membership_Details,strname);
+async user_enters_Existing_share_amounts_in_Membership_Details(strname:string){
+  await this.playwrightFactory.fill(this.txt_Existing_share_amounts_in_Membership_Details,strname);
 }
  
 async user_enters_shares_from_in_Membership_Details(strdate:string){
@@ -659,16 +685,16 @@ async user_enters_shares_from_in_Membership_Details(strdate:string){
   await this.playwrightFactory.fill(this.date_Shares_from_in_Membership_Details,strdate);
 }
  
-async user_enters_Existing_share_amounts_in_Membership_Details(stramount: string){
-  await this.playwrightFactory.fill(this.txt_Existing_share_amounts_in_Membership_Details,stramount);
-}
+//async user_enters_Existing_share_amounts_in_Membership_Details(stramount: string){
+  //await this.playwrightFactory.fill(this.txt_Existing_share_amounts_in_Membership_Details,stramount);
+//}
  
 async user_enters_total_shares_required_inn_Membership_Details(strtotal:string){
   await this.playwrightFactory.fill(this.txt_total_shares_required_inn_Membership_Details,strtotal);
 }
 
-async user__additional_shares_required_in_Membership_Details(stradditional: string){
-  await this.playwrightFactory.fill(this.txt_additional_shares_required_in_Membership_Details,stradditional)
+async user_verify_additional_shares_required_in_Membership_Details(){
+  await expect(this.agriculture_income).toBeVisible();
 }
 
 async user_clicks_save_in_Membership_Details(){
@@ -676,7 +702,7 @@ async user_clicks_save_in_Membership_Details(){
 }
 
 
-
+//Charge Details
 async user_click_Add_data_in_Charge_details(){
   await this.playwrightFactory.click( this.btn_Add_data_in_Charge_Details)
 }
@@ -686,6 +712,10 @@ async user_enters_Cibil_Charges_in_Charge_Details(strcibilcharges:string){
 }
 async user_enters_Processing_Fee_in_Charge_Details(strprocessingfee:string){
 await this.playwrightFactory.fill(this.txt_Processing_Fee_in_Charge_Details,strprocessingfee)
+}
+
+async user_enters_Processing_Fee_percentage_in_Charge_Details(strprocessingfeepercentage:string){
+await this.playwrightFactory.fill(this.txt_Processing_Fee_Percentage_in_Charge_Details,strprocessingfeepercentage)
 }
 
 async user_enters_gold_custody_charges(strgoldcustody:string){
@@ -795,9 +825,17 @@ async user_enters_serial_number_in_gold_valuation_certificate(strserialnumber:st
 await this.playwrightFactory.fill(this.txt_serial_number_in_gold_valuation_certificate,strserialnumber)
 }
 
-async user_enters_particular_description_in_gold_valuation_certificate(strparticular:string){
-await this.playwrightFactory.fill(this.txt_particular_description_in_gold_valuation_certificate,strparticular)
+async user_enters_particular_description_in_gold_valuation_certificate(){
+  //await this.playwrightFactory.click(this.txt_particular_description_in_gold_valuation_certificate);
+//await this.txt_particular_description_in_gold_valuation_certificate.selectOption({label:'Bracelet'});
+//await this.page.waitForTimeout(500);
+//await this.page.locator("//div[text()='Bracelet']").click();
+
+await this.txt_particular_description_in_gold_valuation_certificate.click();
+await this.page.keyboard.type('Bali', { delay: 100 });
+await this.page.keyboard.press('Enter');
 }
+
 
 async user_enters_quantity_in_gold_valuation_certificate(strquantity:string){
 await this.playwrightFactory.fill(this.txt_quantity_in_gold_valuation_certificate,strquantity)
@@ -822,6 +860,35 @@ await this.playwrightFactory.fill(this.txt_net_weight_in_gold_valuation_certific
 async user_verify_rate_per_grams_in_gold_valuation_certificate(){
   await expect(this.txt_rate_per_grams_in_gold_valuation_certificate).toBeVisible();
 }
+
+async user_enters_name_in_stree_dhan(strstreedhanname:string){
+await this.playwrightFactory.fill(this.txt_stree_dhan_name,strstreedhanname)
+}
+
+async user_enters_address_in_stree_dhan(strstreedhanaddress:string){
+await this.playwrightFactory.fill(this.txt_stree_dhan_address,strstreedhanaddress)
+}
+
+async user_enters_age_in_stree_dhan(strstreedhanage:string){
+await this.playwrightFactory.fill(this.txt_stree_dhan_age,strstreedhanage)
+}
+
+async user_verify_total_gross_weight_in_gold_ornaments_valuation_details(){
+  await expect(this.txt_total_gross_weight_in_gold_ornaments_valuation_details).not.toBeEmpty();
+}
+
+async user_verify_gold_net_weight_in_gold_ornaments_valuation_details(){
+  await expect(this.txt_gold_net_weight_in_gold_ornaments_valuation_details).not.toBeEmpty();
+}
+
+async user_verify_total_valuation_amount_in_gold_ornaments_valuation_details(){
+  await expect(this.txt_total_valuation_amount_in_gold_ornaments_valuation_details).not.toBeEmpty();
+}
+
+
+
+
+
 
 async user_enters_gold_remark_in_gold_valuation_certificate(strgoldremark:string){
 await this.playwrightFactory.fill(this.txt_gold_remark,strgoldremark)
