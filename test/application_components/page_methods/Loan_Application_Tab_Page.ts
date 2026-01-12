@@ -271,6 +271,98 @@ readonly reupload_docs_btn:Locator;
  readonly emi_interest: Locator;
  readonly emp_id:Locator;
  readonly nature_of_salaried_in_details:Locator;
+ readonly btn_add_data_in_GST_details:Locator
+readonly Legal_Name:Locator	
+readonly Trade_Name	:Locator
+readonly Address_of_Principal_Pace_of_Business	:Locator
+readonly Date_of_Issue_of_Certificate:Locator	
+readonly Period_of_Validity	:Locator
+readonly GST_Registration_Number:Locator	
+readonly Business_Place:Locator
+readonly save_in_GST_certificate_details:Locator
+readonly verify_in_GST_certificate_details:Locator
+readonly verify_in_newhometype:Locator
+readonly add_data_in_Rented_agreement_details:Locator
+readonly Name_of_Owner_in_Rented_agreement_details:Locator	
+readonly Name_of_Tenant_in_Rented_agreement_details	:Locator
+readonly Address_of_Office_in_Rented_agreement_details	:Locator
+readonly Start_Date_in_Rented_agreement_details:Locator	
+readonly End_Date_in_Rented_agreement_details:Locator	
+readonly Aadhar_Number_of_Tenant_in_Rented_agreement_details:Locator	
+readonly PAN_Number_of_Tenant_in_Rented_agreement_details:Locator
+readonly save_in_Rented_agreement_details:Locator
+readonly verify_in_Rented_agreement_details:Locator
+readonly adddata_in_GST_Return_Statement_Details:Locator
+readonly Details_of_Income_in_GST_Return_Statement_Details	:Locator
+readonly GST_No_in_GST_Return_Statement_Details	:Locator
+readonly Type_of_GST_in_GST_Return_Statement_Details:Locator
+readonly save_in_GST_Return_Statement_Details:Locator
+readonly verify_in_GST_Return_Statement_Details:Locator
+readonly adddata_in_Business_Certificate_Details:Locator
+readonly Name_of_the_Firm_Business_Certificate_Details	:Locator
+readonly Shop_Act_Business_Certificate_Details	:Locator	
+readonly Name_of_Owner_Business_Certificate_Details:Locator		
+readonly Type_Of_Business_Business_Certificate_Details	:Locator	
+readonly Udyam_Name_Business_Certificate_Details	:Locator	
+readonly No_of_years_Business_Business_Certificate_Details	:Locator	
+readonly BusinessBusiness_Certificate_Details:Locator
+readonly Save_Business_Certificate_Details:Locator
+readonly verify_Business_Certificate_Details:Locator
+readonly Nature_of_Service_Business:Locator
+readonly Udyam_Number:Locator
+readonly Type_Of_Business_Ownership:Locator
+ readonly business_details_add_data_btn:Locator;
+ readonly business_details_name_of_the_firm_field:Locator;
+ readonly business_details_address_of_firm_field:Locator;
+readonly business_details_type_of_ownership_field:Locator;
+readonly business_details_nature_of_business_in_details:Locator;
+readonly business_details_shop_number_field:Locator;
+readonly business_details_udyam_name_field:Locator;
+readonly business_details_number_of_year_field:Locator;
+readonly business_details_save_btn:Locator;
+readonly business_details_add_line_btn:Locator;
+readonly business_details_month_btn:Locator;
+readonly balance_sheet_year:Locator;
+readonly balance_sheet_networth:Locator;
+readonly balance_sheet_deduction_field:Locator;
+readonly business_details_verify_btn:Locator;
+readonly P_L_statement_add_data_btn:Locator;
+readonly P_L_statement_add_line_btn:Locator;
+readonly P_L_statement_add_month_field:Locator;
+readonly P_L_statement_year_field:Locator;
+readonly P_L_statement_sales_field:Locator;
+readonly P_L_statement_purchase_field:Locator;
+readonly P_L_statement_net_profit_field:Locator;
+readonly P_L_statement_interest_field:Locator;
+readonly P_L_statement_income_tax_field:Locator;
+readonly P_L_statement_other_income_tax_field:Locator;
+readonly P_L_statement_agriculture_income_field:Locator;
+readonly P_L_statement_TDS_field:Locator;
+readonly P_L_statement_save_btn:Locator;
+readonly P_L_statement_verify_btn:Locator;
+readonly P_L_statement_depreciation_field:Locator;
+readonly add_data_btn_of_computation_of_income:Locator;
+readonly add_line_btn_of_computation_of_income:Locator;
+readonly gross_income_of_computation_of_income:Locator;
+readonly less_deduction_of_computation_of_income:Locator;
+readonly net_taxable_amount_of_computation_of_income:Locator;
+readonly save_btn_of_computation_of_income:Locator;
+readonly add_data_btn_ITR_details:Locator;
+readonly verify_btn_of_computation_of_income:Locator;
+readonly add_line_btn_ITR_details:Locator;
+readonly month_btn_ITR_details:Locator;
+readonly year_btn_ITR_details:Locator;
+readonly total_income_btn_ITR_details:Locator;
+readonly total_taxes_interest_fee_btn_ITR_details:Locator;
+readonly taxes_paid_btn_ITR_details:Locator;
+readonly save_btn_ITR_details:Locator;
+readonly verify_btn_ITR_details:Locator;
+readonly btn_add_data_in_newhometype:Locator
+readonly txt_purchase_from: Locator
+readonly txt_Purchase_amount:Locator
+readonly btn_save__in_newhometype: Locator
+
+
  //readonly activeTab:Locator;
 
   /**
@@ -294,13 +386,7 @@ readonly reupload_docs_btn:Locator;
 
     /******************** Page Objects ************************/
 
-    //his.Emp_details_Add_data_btn=this.page.locator("// button[@name='salary_details_wizard']")
-    //this.Address_of_firm=this. page.getByRole('textbox', { name: 'Address Of The Firm' })
-    //this.Designation_in_the_organization=this.page.getByLabel('Designation in the')
-    //this.Type_of_organization=this.page.getByLabel('Type of Organisation')
-    //this.joining_date= this.page.getByRole('textbox', { name: 'Joining (Date)' })
-    // this.select_date=this.page.getByRole('cell', { name: '1', exact: true }).first()
-    // this.Remark=this.page.getByRole('textbox', { name: 'Remarks', exact: true })
+//Employment details
     this.Emp_details_Add_data_btn=this.page.locator('//button[@name="salary_details_wizard"]')
     this.Name_of_firm=this.page.locator("//input[@name='wizard_company_where_employed']");
     this.adress_of_firm= this.page.locator("//input[@name='wizard_address_of_the_firm']");
@@ -309,44 +395,9 @@ readonly reupload_docs_btn:Locator;
     this.joining_date= this.page.locator("//input[@name='wizard_since_date']");
     this.emp_id= this.page.locator('//input[@name="wizard_employee_id_borrower"]')
     this.nature_of_salaried_in_details= this.page.locator('//input[@name="wizard_nature_of_salaried"]')
-
     this.Remark= this.page.locator("//input[@name='wizard_remarks']");
-
-
     this.save_btn=this.page.locator("//button[normalize-space()='Save']")
     this.add_line_btn=this.page.locator('#o_field_input_1192').getByRole('button', { name: 'Add a line' })
-    this.txt_id_proof_details_title=this.page.locator("//span[normalize-space()='ID Proof Details']")
-    this.txt_customer_name=this.page.locator("//span[@name='customer_first_name_id_document']")
-    //this.txt_pan_number_eye_icon=this.page.locator("(//button[@name='toggle_pan_visibility'])[1]")
-
-    this.txt_pan_number_eye_icon = this.page.locator("//button[@name='toggle_pan_visibility' and contains(@class,'btn-link') and not(contains(@class,'o_invisible_modifier'))]");
-
-
-    this.txt_verify=this.page.getByText('Verify').first()
-    this.btn_verify_checkbox=this.page.locator('span:nth-child(4) > .o_field_boolean > .custom-control-label').first()
-    this.adress_proof_name = this.page.locator("//span[@name='customer_first_name_address_document']");
-    this.adress_proof_adress= this.page.locator("//span[@name='customer_residence_address_document']");
-    this.adrees_proof_dob= this.page.locator("//span[@name='customer_dob_document']");
-    this.adhaar_no= this.page.locator("(//span[@name='customer_aadhaar_document'])[1]");
-    this.adress_proof_verify_btn= this.page.locator("//*[text()='Address Proof Details']/ancestor::h1//*[contains(text(),'Verify')]");
-    this.customer_name_borrower_info_field= this.page.locator("//input[@name='customer_name']");
-    this.borrower_adress= this.page.locator("//input[@name='customer_borrower_address']");
-    this.same_as_borrower_adress_checkbox= this.page.locator("//div[@name='is_same_as_borrower_address']");
-    this.borower_current_adress= this.page.locator("//input[@name='borrower_current_address']");
-    this.borrower_residential_type= this.page.locator("//select[@name='residential_type']");
-    this.borowers_mobile_no= this.page.locator("//input[@name='customer_mobile_no']");
-    this.borrower_gender= this.page.locator("//select[@name='applicant_gender']");
-    this.borrowers_age = this.page.locator("//input[@name='customer_borrower_age']");
-    this.staff_name= this.page.locator("//input[@name='staff_name']");
-    this.staff_id= this.page.locator("//input[@name='agent_id']");
-    this.requested_loan_amount= this.page.locator('//div[@name="customer_loan_amount"]');
-    this.requested_loan_amount_in_words= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='customer_loan_amount_in_words']");
-    this.loan_period= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='customer_period_in_months']");
-    this.loan_perposed= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='purpose_of_loan']");
-    this.loan_margin= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='customer_margin']");
-    this.loan_type= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='type_of_loan']");
-    this.type_of_vehical= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='type_of_vehicle']");
-    this.repayment_type= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='repayment_type_loan_requirement']");
     this.salary_details_add_line_btn= this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='salary_details_ids']//*[contains(text(),'Add a line')]")
     this.salary_details_month = this.page.locator("//select[@name='wizard_month']");
     this.salary_details_year= this.page.locator("//select[@name='wizard_year']");
@@ -357,12 +408,46 @@ readonly reupload_docs_btn:Locator;
     this.pf= this.page.locator("//input[@name='wizard_pf']");
     this.salary_slip_save_btn= this.page.locator("//button[@name='save_salary_slip']");
     this.salary_slip_cancel_btn= this.page.locator("//button[@special='cancel']//span");
+    //Id proof details & Address proof details//
+    this.txt_id_proof_details_title=this.page.locator("//span[normalize-space()='ID Proof Details']")
+    this.txt_customer_name=this.page.locator("//span[@name='customer_first_name_id_document']")
+    this.txt_pan_number_eye_icon = this.page.locator("//button[@name='toggle_pan_visibility' and contains(@class,'btn-link') and not(contains(@class,'o_invisible_modifier'))]");
+    this.txt_verify=this.page.getByText('Verify').first()
+    this.btn_verify_checkbox=this.page.locator('span:nth-child(4) > .o_field_boolean > .custom-control-label').first()
+    this.adress_proof_name = this.page.locator("//span[@name='customer_first_name_address_document']");
+    this.adress_proof_adress= this.page.locator("//span[@name='customer_residence_address_document']");
+    this.adrees_proof_dob= this.page.locator("//span[@name='customer_dob_document']");
+    this.adhaar_no= this.page.locator("(//span[@name='customer_aadhaar_document'])[1]");
+    this.adress_proof_verify_btn= this.page.locator("//*[text()='Address Proof Details']/ancestor::h1//*[contains(text(),'Verify')]");
+    //Borrower Information//
+    this.customer_name_borrower_info_field= this.page.locator("//input[@name='customer_name']");
+    this.borrower_adress= this.page.locator("//input[@name='customer_borrower_address']");
+    this.same_as_borrower_adress_checkbox= this.page.locator("//div[@name='is_same_as_borrower_address']");
+    this.borower_current_adress= this.page.locator("//input[@name='borrower_current_address']");
+    this.borrower_residential_type= this.page.locator("//select[@name='residential_type']");
+    this.borowers_mobile_no= this.page.locator("//input[@name='customer_mobile_no']");
+    this.borrower_gender= this.page.locator("//select[@name='applicant_gender']");
+    this.borrowers_age = this.page.locator("//input[@name='customer_borrower_age']");
+    this.staff_name= this.page.locator("//input[@name='staff_name']");
+    this.staff_id= this.page.locator("//input[@name='agent_id']");
+    //Loan requirement//
+    this.requested_loan_amount= this.page.locator('//div[@name="customer_loan_amount"]');
+    this.requested_loan_amount_in_words= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='customer_loan_amount_in_words']");
+    this.loan_period= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='customer_period_in_months']");
+    this.loan_perposed= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='purpose_of_loan']");
+    this.loan_margin= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='customer_margin']");
+    this.loan_type= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='type_of_loan']");
+    this.type_of_vehical= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='type_of_vehicle']");
+    this.repayment_type= this.page.locator("//*[contains(text(),'Requested Loan Amount')]/ancestor::div[@class='o_group outer-box']//*[@name='repayment_type_loan_requirement']");
+    //company ID details//
+    
     this.company_name= this.page.locator("//span[@name='customer_company_where_employed']")
     this.company_adress= this.page.locator("//span[@name='customer_address_of_the_firm']");
     this.Company_Designation= this.page.locator("//span[@name='customer_designation_organisation']");
     this.Organization_type= this.page.locator("//span[@name='type_of_organisation']");
     this.Company_Joining_date= this.page.locator("//span[@name='customer_since_date']");
     this.Comapany_remark= this.page.locator("//span[@name='customer_remarks']");
+    //Salary Credit bank account details// 
     this.salary_detail_table= this.page.locator("//tbody[@class='ui-sortable']/ancestor::div[@name='salary_details_ids']");
     this.employee_details_verify_btn= this.page.locator("//*[text()='Employment Details']/ancestor::h1//*[text()='Verify']");
     this.salary_bank_account_add_btn= this.page.locator("//button[@name='salary_credit_bank_wizard']");
@@ -376,6 +461,7 @@ readonly reupload_docs_btn:Locator;
     this.bank_detail_save_btn= this.page.locator("//button[@name='save_salary_credit']");
     this.salary_credidate_bank_account_table= this.page.locator("//tbody[@class='ui-sortable']/ancestor::div[@name='salary_credit_bank_ids']");
     this.salary_credited_bank_account_verify_btn= this.page.locator("//*[text()='Salary Credit Bank Account']/ancestor::h1//*[text()='Verify']");
+    //Bank staement details//
     this.bank_statement_add_data_btn= this.page.locator("//button[@name='bank_statement_wizard']");
     this.bank_statement_details_add_line_btn= this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='bank_statement_ids']//*[contains(text(),'Add a line')]");
     this.bank_statement_details_name= this.page.locator("//input[@name='wizard_name']");
@@ -386,6 +472,7 @@ readonly reupload_docs_btn:Locator;
     this.bank_statement_save_btn= this.page.locator("//button[@name='save_bank_statement_wizard']");
     this.bank_statement_details_table= this.page.locator("//tbody[@class='ui-sortable']/ancestor::div[@name='bank_statement_details_ids']");
     this.bank_statement_verify_btn= this.page.locator('//div[@name="verify_bank_statement_details"]');
+   //Company ID details//
     this.company_id_add_data_btn= this.page.locator("//button[@name='company_id_details_wizard']")
     this.company_name_in_company_id= this.page.locator("//input[@name='wizard_first_name_company_document']");
     this.company_adress_in_company_id= this.page.locator("//input[@name='wizard_address_details']");
@@ -393,12 +480,14 @@ readonly reupload_docs_btn:Locator;
     this.employee_name_in_company_id= this.page.locator("//input[@name='wizard_employee_name']");
     this.joining_date_in_company_id= this.page.locator("//input[@name='wizard_joining_date']");
     this.company_id_save_btn= this.page.locator("//button[@name='save_companyiddoc_details']");
+
     this.added_company_name_in_company_id= this.page.locator("//span[@name='customer_first_name_company_document']");
     this.added_company_adress_in_company_id= this.page.locator("//span[@name='customer_address_details']");
     this.added_company_id_in_company_id= this.page.locator("//span[@name='customer_employee_id']")
     this.added_employee_name_in_company_id= this.page.locator("//span[@name='customer_employee_name']")
     this.added_joining_date_in_company_id= this.page.locator("//span[@name='customer_joining_date']");
     this.company_id_verify_btn= this.page.locator("//*[text()='Company ID Details']/ancestor::h1//*[text()='Verify']");
+    //Driving licencse details//
     this.driving_licence_add_data_btn= this.page.locator("//button[@name='driving_license_wizard']");
     this.driving_licence_no= this.page.locator("//input[@name='wizard_driving_license_num']");
     this.issue_date= this.page.locator("//input[@name='wizard_issue_date']");
@@ -408,6 +497,7 @@ readonly reupload_docs_btn:Locator;
     this.added_issue_date= this.page.locator("//span[@name='customer_issue_date']");
     this.added_expiry_date= this.page.locator("//span[@name='customer_expiry_date']");
     this.driving_licence_verify_btn= this.page.locator("//*[text()='Driving License']/ancestor::h1//*[text()='Verify']");
+    //Vehicle Quoation details//
     this.vehical_quotation_add_data_btn= this.page.locator("//button[@name='vehicle_quotation_wizard']");
     this.vehical_recipt_no= this.page.locator("//input[@name='wizard_vehicle_receipt_no']");
     this.vehical_branch_name= this.page.locator("//input[@name='wizard_branch_name']");
@@ -467,6 +557,7 @@ readonly reupload_docs_btn:Locator;
     this.added_date_of_verification1= this.page.locator("//span[@name='date_of_verification']")
     this.added_verify_by_signature1= this.page.locator("//span[@name='customer_signature']")
     this.vehical_quotation_verify_btn= this.page.locator("//*[text()='Vehicle Quotation']/ancestor::h1//*[text()='Verify']");
+    //Agriculture income details//
     this.agriculture_income_add_data_btn= this.page.locator("//button[@name='agricultural_income_wizard']");
     this.agriculture_income_add_line_btn= this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='agricultural_income_ids']//*[contains(text(),'Add a line')]");
     this.agriculture_income_year= this.page.locator("//select[@name='wizard_year']");
@@ -487,12 +578,8 @@ readonly reupload_docs_btn:Locator;
     this.added_comment_in_absence_of_branch_manager= this.page.locator("(//textarea[@name='loan_officer_comment'])[1]")
     this.verified_btn= this.page.locator('//button[@name="verify_data"]')
     this.reupload_docs_btn= this.page.locator("//*[contains(text(),'RE-UPLOAD DOCS')]")
-
-
-    
-                        
-
-    this.btn_add_data_for_form_16_details = this.page.locator('//button[@name="itr_salaried_details_wizard"]');
+//Form 16 details
+   this.btn_add_data_for_form_16_details = this.page.locator('//button[@name="itr_salaried_details_wizard"]');
     this.btn_add_a_line_in_form_16_details = this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='itr_salaried_details_table_ids']//*[contains(text(),'Add a line')]")
     this.txt_Employment_details_in_form_16_detils = this.page.locator("//input[@name='wizard_employement_details']")
     this.txt_Name_in_form_16_detils = this.page.locator("//input[@name='wizard_itr_name']")
@@ -500,6 +587,7 @@ readonly reupload_docs_btn:Locator;
     this.txt_PF_in_form_16_detils = this.page.locator("//input[@name='wizard_pf']")
     this.btn_Save_in_form_16_details = this.page.locator("//span[normalize-space()='Save']")
     this.btn_verify_in_Form_16= this.page.locator('//div[@name="verify_form_16_details"]')
+    //Membership details//
     this.btn_verify_in_membership_Details= this.page.locator("//*[text()='Membership Details']/ancestor::h1//*[text()='Verify']")
     this.btn_add_data_for_Membership_Details = this.page.locator("//button[@name='membership_details_wizard']//span[contains(text(),'Add Data')]")
     this.txt_Membership_number_in_Membership_Details = this.page.locator("//input[@name='wizard_membership_number']")
@@ -510,6 +598,7 @@ readonly reupload_docs_btn:Locator;
     this.txt_additional_shares_required_in_Membership_Details= this.page.locator('//span[@name="wizard_additional_share_req"]')
     this.txt_new_checkbox_btn_membershio_details= this.page.locator('//div[@name="wizard_new_membership"]')
     this.btn_save_in_Membership_Details = this.page.locator('//button[@name="save_membership_details"]');
+    //Charges details//
     this.btn_Add_data_in_Charge_Details =this.page.locator('//button[@name="charges_details_wizard"]//span[contains(text(),"Add Data")]')
     this.txt_Cibil_Charges_in_Charge_Details = this.page.locator('//input[@name="wizard_cibil_charges"]')
 this.txt_Processing_Fee_in_Charge_Details = this.page.locator('//input[@name="wizard_processing_fees"]')
@@ -527,7 +616,7 @@ this.txt_Cheque_ECS_Return_SIExecution_Failed_Charges_in_Charge_details=  this.p
 this.txt_Franking_Charges_in_Charge_details=  this.page.locator('//input[@name="wizard_franking_charges"]')
 this.btn_save_in_Charge_Details = this.page.locator("//span[normalize-space()='Save']")
 this.btn_verify_in_Charge_Details = this.page.locator("//*[text()='Charges']/ancestor::h1//*[text()='Verify']")
-
+//Credit Bureau//
 
 this.add_data_btn_credit_bureau=this.page.locator('//button[@name="open_credit_bureau_wizard"]')
 this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bureau')])[2]")
@@ -561,14 +650,114 @@ this.ownership= this.page.locator('//input[@name="ownership"]');
 this.loan_amount= this.page.locator("(//div[contains(@class,'tab-pane') and contains(@class,'active')]//div[@name='loan_amount']//input[@type='text'])");
 this.outstanding_amount= this.page.locator("(//div[contains(@class,'tab-pane') and contains(@class,'active')]//div[@name='outstanding_amount']//input)");
 this.emi_interest= this.page.locator("(//div[contains(@class,'tab-pane') and contains(@class,'active')]//input[@name='emi_interest'])");
+//Business certificate details//
+this.adddata_in_Business_Certificate_Details=this.page.locator("//button[@name='business_certificate_details_wizard']//span[contains(text(),'Add Data')]")
+this.Name_of_the_Firm_Business_Certificate_Details	=this.page.locator('//input[@name="wizard_firm_name"]')
+this.Shop_Act_Business_Certificate_Details	=this.page.locator('//input[@name="wizard_shop_act"]')
+this.Name_of_Owner_Business_Certificate_Details=this.page.locator('//input[@name="wizard_name_of_owner"]')	
+this.Type_Of_Business_Business_Certificate_Details=this.page.locator('//input[@name="wizard_type_of_business"]')	
+this.Udyam_Name_Business_Certificate_Details	=this.page.locator('//input[@name="wizard_udhayam_name"]')
+this.No_of_years_Business_Business_Certificate_Details=this.page.locator('//input[@name="wizard_no_of_year_business"]')	
+this.BusinessBusiness_Certificate_Details=this.page.locator('//input[@name="wizard_business_employee_history"]')
+this.Save_Business_Certificate_Details=this.page.locator('//button[@name="save_businesscertificate_details"]')
+this.verify_Business_Certificate_Details=this.page.locator('//div[@name="verify_business_certificate_details"]') 
 
 
 
-    // this.ownership=this.page.locator("//input[@name='ownership']")
-    // this.loan_amount=this.page.locator("//div[@name='loan_amount']//input[@type='text']")
-    // this.outstanding_amount=this.page.locator("//div[@name='outstanding_amount']")
-    // this.emi_interest=this.page.locator("//input[@name='emi_interest']")
 
+// GST certificate details//
+ this.btn_add_data_in_GST_details=this.page.locator('//button[@name="gst_certificate_details_wizard"]')
+this.Legal_Name=this.page.locator('//input[@name="wizard_legal_name"]')	
+this.Trade_Name=this.page.locator('//input[@name="wizard_trade_name"]')		
+this.Address_of_Principal_Pace_of_Business=this.page.locator('//input[@name="wizard_address_of_principal_pace_of_business"]')		
+this.Date_of_Issue_of_Certificate=this.page.locator('//input[@name="wizard_date_of_issue_of_certificate"]')		
+this.Period_of_Validity=this.page.locator('//input[@name="wizard_period_of_validity"]')		
+this.GST_Registration_Number=this.page.locator('//input[@name="wizard_gst_registration_number"]')		
+this.Business_Place=this.page.locator('//select[@name="wizard_business_place"]')	
+this.verify_in_GST_certificate_details=this.page.locator('//div[@name="verify_gst_certificate_details"]')	
+this.save_in_GST_certificate_details=this.page.locator('//button[@name="save_gstcertificate_details"]')	
+//Home/office rented agrement details//
+this.add_data_in_Rented_agreement_details=this.page.locator('//button[@name="office_rented_agreement_wizard"]')
+this.Name_of_Owner_in_Rented_agreement_details=this.page.locator('//input[@name="wizard_owner_name"]')	
+this.Name_of_Tenant_in_Rented_agreement_details=this.page.locator('//input[@name="wizard_tenant_name"]')	
+this.Address_of_Office_in_Rented_agreement_details=this.page.locator('//input[@name="wizard_address_of_office"]')	
+this.Start_Date_in_Rented_agreement_details=this.page.locator('//input[@name="wizard_start_date"]')	
+this.End_Date_in_Rented_agreement_details=this.page.locator('//input[@name="wizard_end_date"]')	
+this.Aadhar_Number_of_Tenant_in_Rented_agreement_details	=this.page.locator('//input[@name="wizard_aadhar_no_of_tenant"]')
+this.PAN_Number_of_Tenant_in_Rented_agreement_details=this.page.locator('//input[@name="wizard_pan_no_of_tenant"]')
+this.save_in_Rented_agreement_details=this.page.locator('//button[@name="save_officerentedagreement_details"]')
+this.verify_in_Rented_agreement_details=this.page.locator('//div[@name="verify_business_certificate_details"]')
+//GST Return Statement Details//
+this.adddata_in_GST_Return_Statement_Details=this.page.locator('//button[@name="gst_return_statement_wizard"]')
+this.Details_of_Income_in_GST_Return_Statement_Details	=this.page.locator('//input[@name="wizard_details_income_sales_expenses"]')
+this.GST_No_in_GST_Return_Statement_Details	=this.page.locator('//input[@name="wizard_gst_no"]')
+this.Type_of_GST_in_GST_Return_Statement_Details=this.page.locator('//input[@name="wizard_type_of_gst"]')
+this.save_in_GST_Return_Statement_Details=this.page.locator('//button[@name="save_gst_statement_details"]')
+this.verify_in_GST_Return_Statement_Details=this.page.locator('//div[@name="verify_gst_return_statement_details"]')
+//Business details//
+    this.business_details_add_data_btn=this.page.locator('//button[@name="business_details_wizard"]')
+    this.business_details_name_of_the_firm_field=this.page.locator('//input[@name="wizard_business_name"]')
+    this.business_details_address_of_firm_field=this.page.locator('//input[@name="wizard_business_address"]')
+    this.business_details_type_of_ownership_field=this.page.locator('//select[@name="wizard_ownership"]')
+    this.business_details_nature_of_business_in_details=this.page.locator('//input[@name="wizard_nature_of_business"]')
+    this.Nature_of_Service_Business=this.page.locator('//select[@name="wizard_nature_of_service_business"]')
+    this.Udyam_Number=this.page.locator('//input[@name="wizard_customer_udyam_number"]')
+    this.Type_Of_Business_Ownership= this.page.locator('//select[@name="wizard_type_of_business_ownership"]')
+    this.business_details_shop_number_field=this.page.locator('//input[@name="wizard_customer_shop_act"]')
+    this.business_details_udyam_name_field=this.page.locator('//input[@name="wizard_customer_udhayam_name"]')
+    this.business_details_number_of_year_field=this.page.locator('//input[@name="wizard_customer_no_of_year_business"]')
+    this.business_details_save_btn=this.page.locator('//button[@name="save_balance_sheet"]')
+    this.business_details_add_line_btn=this.page.locator("(//*[contains(text(),'Add a line')]/following::div[@name='business_details_ids']//*[contains(text(),'Add a line')])[2]")
+    this.business_details_month_btn=this.page.locator('//select[@name="wizard_month"]')
+    this.balance_sheet_year=this.page.locator('//select[@name="wizard_year"]')
+    this.balance_sheet_networth=this.page.locator('//input[@name="wizard_capital_networth"]')
+    this.balance_sheet_deduction_field=this.page.locator('//input[@name="wizard_deductions"]')
+    this.business_details_verify_btn=this.page.locator("//*[text()='Business Details']/ancestor::h1//*[text()='Verify']")
+    //P&L statement Details///
+   this.P_L_statement_add_data_btn=this.page.locator('//button[@name="income_details_wizard"]')
+   this.P_L_statement_add_line_btn=this.page.locator("(//*[contains(text(),'Add a line')]/following::div[@name='income_details_ids']//*[contains(text(),'Add a line')])[2]")
+    this.P_L_statement_add_month_field=this.page.locator('//select[@name="wizard_month"]')
+    this.P_L_statement_year_field=this.page.locator('//select[@name="wizard_year"]')
+    this.P_L_statement_sales_field=this.page.locator('//input[@name="wizard_sales"]')
+    this.P_L_statement_purchase_field=this.page.locator('//input[@name="wizard_purchases"]')
+    this.P_L_statement_net_profit_field=this.page.locator('//input[@name="wizard_net_profit"]')
+    this.P_L_statement_depreciation_field=this.page.locator('//input[@name="wizard_depreciation"]')
+    this.P_L_statement_interest_field=this.page.locator('//input[@name="wizard_interest"]')                           
+    this.P_L_statement_income_tax_field=this.page.locator('//input[@name="wizard_income_tax"]')
+    this.P_L_statement_other_income_tax_field=this.page.locator('//input[@name="wizard_other_income"]')
+    this.P_L_statement_agriculture_income_field=this.page.locator('//input[@name="wizard_agricultural_income"]')
+    this.P_L_statement_TDS_field=this.page.locator('//input[@name="wizard_tds"]')
+    this.P_L_statement_save_btn=this.page.locator('//button[@name="save_income_details_wizard"]')
+    this.add_data_btn_of_computation_of_income=this.page.locator('//button[@name="computation_income_details_wizard"]')
+    this.P_L_statement_verify_btn=this.page.locator('//div[@name="verify_p_and_l_statement_details"]')
+    //computation Income details//
+    this.add_line_btn_of_computation_of_income=this.page.locator("(//*[contains(text(),'Add a line')]/following::div[@name='computation_income_ids']//*[contains(text(),'Add a line')])[2]")
+    this.gross_income_of_computation_of_income=this.page.locator('//input[@name="wizard_gross_taxable_income"]')
+    this.less_deduction_of_computation_of_income=this.page.locator('//input[@name="wizard_less_deductions"]')
+    this.net_taxable_amount_of_computation_of_income=this.page.locator('//input[@name="wizard_net_taxable_income"]')
+    this.save_btn_of_computation_of_income=this.page.locator('//button[@name="save_computation_income_wizard"]')
+    this.verify_btn_of_computation_of_income=this.page.locator('//div[@name="verify_computation_income_details"]')
+    //ITR details//
+    this.add_data_btn_ITR_details=this.page.locator('//button[@name="itr_business_details_wizard"]')
+    this.add_line_btn_ITR_details=this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='itr_business_details_table_ids']//*[contains(text(),'Add a line')]")
+    this.month_btn_ITR_details=this.page.locator('//select[@name="wizard_month"]')
+    this.year_btn_ITR_details=this.page.locator('//select[@name="wizard_year"]')
+    this.total_income_btn_ITR_details=this.page.locator('//input[@name="wizard_total_income"]')
+    this.total_taxes_interest_fee_btn_ITR_details=this.page.locator('//input[@name="wizard_total_taxes_interest_fee_payable"]')
+    this.taxes_paid_btn_ITR_details=this.page.locator('//input[@name="wizard_taxes_paid"]')
+    this.save_btn_ITR_details=this.page.locator('//button[@name="save_itr_business_details"]')
+    this.verify_btn_ITR_details=this.page.locator('//div[@name="verify_itr_details"]')
+//New home Details//
+   this.btn_add_data_in_newhometype=this.page.locator('//button[@name="open_home_type_new_home_wizard"]')     
+   this.txt_purchase_from=this.page.locator('//input[@name="wizard_purchase_from"]')
+   this.txt_Purchase_amount=this.page.locator('//input[@name="wizard_purchase_amount"]')                                                             
+  this.btn_save__in_newhometype=this.page.locator('//button[@name="save_open_home_type_new_home_wizard"]')
+  this.verify_in_newhometype=this.page.locator('//div[@name="verify_new_home_loan_details"]')
+
+
+
+
+//ID proof Details Methods//
  }
 
 async user_verify_id_proof_details_title(){
@@ -580,9 +769,7 @@ async user_verify_customer_name(){
     await expect(this.txt_customer_name).toBeVisible();
 }
 
-
-
-  async user_verify_and_clicks_on_pan_number_eye_icon() {
+ async user_verify_and_clicks_on_pan_number_eye_icon() {
 
     // Wait for the PAN field to be visible
     await expect(this.txt_customer_name).toBeVisible();
@@ -605,6 +792,7 @@ async user_verify_and_clicks_on_the_checkbox(){
   await expect(this.txt_verify).toBeVisible();
   await this.playwrightFactory.click(this.txt_verify)
 }
+//Address proof details
 async user_verify_name_in_adress_proof_field(){
   await expect(this.adress_proof_name).toBeVisible();
 }
@@ -657,6 +845,7 @@ async user_verify_staff_id(){
   await expect(this.staff_id).not.toBeEmpty();
 
 }
+//Loan Requirement//
 async user_verify_loan_requested_amount(){
     await this.page.evaluate(() => {
 window.scrollBy(2500,3000); // Scroll down
@@ -684,7 +873,7 @@ async user_verify_type_of_vehical(){
 async user_verify_repayment_type(){
   await expect(this.repayment_type).not.toBeEmpty();
 }
-
+//Employment details//
  async user_clicks_emp_details_add_data_btn(){
   await this.playwrightFactory.click(this.Emp_details_Add_data_btn);
 }
@@ -698,12 +887,12 @@ async user_enters_address_of_firm_field(strAdress: string) {
 }
 
 
-async user_select_designation_in_the_organization() {
-  await this.designation.selectOption({label:'Executive'});
+async user_select_designation_in_the_organization(desgination:string) {
+  await this.designation.selectOption({label:desgination});
 }
 
-async user_select_type_of_organization() {
-  await this.type_of_organization.selectOption({label:'Private Ltd. Co.'});
+async user_select_type_of_organization(type:string) {
+  await this.type_of_organization.selectOption({label:type});
 }
 
 async user_selectjoining_date(strJoiningdate: string) {
@@ -752,6 +941,7 @@ async user_clicks_save_btn(){
 async user_click_cancel_btn(){
   await this.playwrightFactory.click(this.salary_slip_cancel_btn);
 }
+//Company ID details// validation
 async user_verify_added_company_name(strCompanyname: string){
   await expect(this.company_name).toContainText(strCompanyname)
 }
@@ -776,6 +966,7 @@ async user_verify_salary_detail_table(){
 async user_click_verify_button_for_employment_details(){
   await this.playwrightFactory.click(this.employee_details_verify_btn);
 }
+//Salary bank Details//
 async user_click_add_btn_for_salary_bank_details(){
   await this.playwrightFactory.click(this.salary_bank_account_add_btn)
 }
@@ -816,6 +1007,7 @@ async user_verify_salary_credited_bank_account_table(){
 async user_click_verify_btn_for_salary_credidate_account(){
   await this.playwrightFactory.click(this.salary_credited_bank_account_verify_btn);
 }
+//Bank Statement Details//
 async user_click_add_data_btn_for_bank_statement(){
   await this.playwrightFactory.click(this.bank_statement_add_data_btn);
 }
@@ -879,6 +1071,7 @@ async user_click_save_btn(){
 async user_verify_added_company_name_in_company_id(strName: string){
   await expect(this.added_company_name_in_company_id).toContainText(strName)
 }
+//Company ID details
 async user_verify_added_adress_in_company_id(strAdress: string){
   await expect(this.added_company_adress_in_company_id).toContainText(strAdress);
 }
@@ -895,6 +1088,7 @@ async user_click_verify_btn_for_company_id(){
   await this.page.waitForTimeout(1000)
   await this.playwrightFactory.click(this.company_id_verify_btn);
 }
+//Vehicle Loan Driving license details//
 async user_click_add_data_btn_for_driving_licence(){
   await this.playwrightFactory.click(this.driving_licence_add_data_btn);
 }
@@ -925,6 +1119,7 @@ async user_click_verify_btn_driving_licence(){
   await this.page.waitForTimeout(1000)
   await this.playwrightFactory.click(this.driving_licence_verify_btn);
 }
+//Vehicle Quotation Details//
 async user_click_add_data_btn_for_vehical_quotation(){
   await this.playwrightFactory.click(this.vehical_quotation_add_data_btn);
 }
@@ -1119,12 +1314,7 @@ async user_verify_added_executive_name(){
 async user_verify_added_vehicle_remark(){
   await expect(this.added_vehical_remark).toBeVisible();
 }
-
-
-
-
-
-
+//Form 16 Details//
 async user_clicks_add_data_for_form_16(){
   await this.playwrightFactory.click(this.btn_add_data_for_form_16_details);
 }
@@ -1151,7 +1341,7 @@ async user_clicks_verify_btn_inForm_16(){
   await this.playwrightFactory.click(this.btn_verify_in_Form_16)
  
 }
- 
+ //Membership details//
 async user_clicks_add_data_for_Membership_Details(){
   await this.playwrightFactory.click(this.btn_add_data_for_Membership_Details);
 }
@@ -1191,6 +1381,7 @@ async user_clicks_verify_btn_in_Membership_Details(){
   await this.playwrightFactory.click(this.btn_verify_in_membership_Details)
  
 }
+//Charge Details//
 async user_click_Add_data_in_Charge_details(){
   await this.playwrightFactory.click( this.btn_Add_data_in_Charge_Details)
 }
@@ -1282,7 +1473,7 @@ async user_click_vehical_quotation_verify_btn(){
   await this.playwrightFactory.click(this.vehical_quotation_verify_btn);
 }
  
- 
+ //Agricultural Income details//
 async user_click_agriculture_income_add_data_btn(){
   await this.playwrightFactory.click(this.agriculture_income_add_data_btn);
 }
@@ -1324,6 +1515,7 @@ async user_verify_agriculture_income_ammount(strammount: string){
 async user_verify_agriculture_income_save_btn(){
   await expect(this.agriculture_income_save_btn).toBeVisible()
 }
+//Other income details//
 async user_click_other_income_details_add_data_btn(){
   await this.playwrightFactory.click(this.added_other_income_details_add_data_btn);
 }
@@ -1349,6 +1541,7 @@ async user_verify_other_income_details_data(){
 async user_clicks_income_details_verify_btn(){
   await this.playwrightFactory.click(this.other_income_details_verify_btn);
 }
+//Branch manager recommendation//
 async user_enter_comment_in_Branch_Manager_Recommendation_and_Remark(strComment: string){
   await this.playwrightFactory.fill(this.added_branch_manager_recomendation_remark_comment_field, strComment);
 }
@@ -1361,14 +1554,25 @@ async user_enter_comment_in_absence_of_branch_manager_field(strComment: string){
   await this.playwrightFactory.fill(this.added_comment_in_absence_of_branch_manager, strComment);
   await this.page.waitForTimeout(1000)
 }
-
+//reupload method
  
 async user_click_reupload_docs_btn(){
   await this.playwrightFactory.click(this.reupload_docs_btn);
 }
 
 
-
+//Credit Bureau
+async user_click_upload_your_file_button(){
+  await this.page.waitForTimeout(3000);
+await this.page.evaluate(() => {
+window.scrollBy(1800,2000); // Scroll down
+});
+await this.page.getByRole('button', { name: 'Upload your File' }).click();
+ await this.page.waitForTimeout(3000)
+ await this.page.locator('input[type="file"]').nth(0).setInputFiles('C:/Users/vaishnavee.dange/Downloads/ABC.pdf');
+await this.page.waitForTimeout(2500)
+ 
+}
 
 async user_click_add_data_btn_credit_bureau(){
   await this.playwrightFactory.click(this.add_data_btn_credit_bureau);
@@ -1457,10 +1661,6 @@ async user_enters_bank_loan_account_details(strloanaccount:string){
 
 }
 
-
-
-
-
 async user_enters_loan_type_in_credit_bureau(strloantype: string){
   await this.playwrightFactory.click(this.loan_type_credit_bureau);
 await this.playwrightFactory.fill(this.loan_type_credit_bureau, strloantype);
@@ -1487,6 +1687,7 @@ async user_enters_emi_interest(stremi: string){
 
 
 }
+//common save button method//
 
 async user_click_common_save_btn(){
 await this.playwrightFactory.click(this.save_btn);
@@ -1509,32 +1710,6 @@ await this.page.waitForTimeout(1000)
 
 
 
-
-// async user_click_upload_your_file_button(){
-//   await this.page.waitForTimeout(3000);
-// await this.page.evaluate(() => {
-// window.scrollBy(1800,2000); // Scroll down
-// });
-// await this.page.getByRole('button', { name: 'Upload your File' }).click();
-// await this.page.waitForTimeout(2500)
-// await this.page.locator('input[type="file"]').nth(0).setInputFiles('ABC.pdf');
-
-
-
-// }
-
-
-async user_click_upload_your_file_button(){
-  await this.page.waitForTimeout(3000);
-await this.page.evaluate(() => {
-window.scrollBy(1800,2000); // Scroll down
-});
-await this.page.getByRole('button', { name: 'Upload your File' }).click();
- await this.page.waitForTimeout(3000)
- await this.page.locator('input[type="file"]').nth(0).setInputFiles('C:/Users/vaishnavee.dange/Downloads/ABC.pdf');
-await this.page.waitForTimeout(2500)
- 
-}
 
 
 

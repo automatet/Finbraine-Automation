@@ -288,10 +288,10 @@ readonly No_of_years_Business_Business_Certificate_Details	:Locator
 readonly BusinessBusiness_Certificate_Details:Locator
 readonly Save_Business_Certificate_Details:Locator
 readonly verify_Business_Certificate_Details:Locator
-readonly Type_Of_Business_Ownership:Locator
-readonly Nature_of_Service_Business:Locator
-readonly Udyam_Name:Locator
 
+readonly Nature_of_Service_Business:Locator
+readonly Udyam_Number:Locator
+readonly Type_Of_Business_Ownership:Locator
 
 
 
@@ -499,10 +499,10 @@ this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bure
     this.business_details_address_of_firm_field=this.page.locator('//input[@name="wizard_business_address"]')
     this.business_details_type_of_ownership_field=this.page.locator('//select[@name="wizard_ownership"]')
     this.business_details_nature_of_business_in_details=this.page.locator('//input[@name="wizard_nature_of_business"]')
-  this.Type_Of_Business_Ownership=this.page.locator('')
-this.Nature_of_Service_Business=this.page.locator('')
- this.Udyam_Name=this.page.locator('')
-
+  
+this.Nature_of_Service_Business=this.page.locator('//select[@name="wizard_nature_of_service_business"]')
+ this.Udyam_Number=this.page.locator('//input[@name="wizard_customer_udyam_number"]')
+this.Type_Of_Business_Ownership= this.page.locator('//select[@name="wizard_type_of_business_ownership"]')
     this.business_details_shop_number_field=this.page.locator('//input[@name="wizard_customer_shop_act"]')
     this.business_details_udyam_name_field=this.page.locator('//input[@name="wizard_customer_udhayam_name"]')
     this.business_details_number_of_year_field=this.page.locator('//input[@name="wizard_customer_no_of_year_business"]')
@@ -590,7 +590,7 @@ this.PAN_Number_of_Tenant_in_Rented_agreement_details=this.page.locator('//input
 this.save_in_Rented_agreement_details=this.page.locator('//button[@name="save_officerentedagreement_details"]')
 this.verify_in_Rented_agreement_details=this.page.locator('//div[@name="verify_business_certificate_details"]')
 //GST Return Statement Details//
-this.adddata_in_GST_Return_Statement_Details=this.page.locator('//button[@name="id_proof_details_wizard"]')
+this.adddata_in_GST_Return_Statement_Details=this.page.locator('//button[@name="gst_return_statement_wizard"]')
 this.Details_of_Income_in_GST_Return_Statement_Details	=this.page.locator('//input[@name="wizard_details_income_sales_expenses"]')
 this.GST_No_in_GST_Return_Statement_Details	=this.page.locator('//input[@name="wizard_gst_no"]')
 this.Type_of_GST_in_GST_Return_Statement_Details=this.page.locator('//input[@name="wizard_type_of_gst"]')
@@ -1287,9 +1287,16 @@ async user_select_business_details_type_of_ownership_field(){
   async user_enters_business_details_udyam_name_field(strname: string){
     await this.playwrightFactory.fill(this.business_details_udyam_name_field, strname);
   }
+async user_enters_udyam_number(number:string){
+  await this.Udyam_Number.fill(number)
+}
+
 
   async user_enters_business_details_number_of_year_field(strname: string){
     await this.playwrightFactory.fill(this.business_details_number_of_year_field, strname);
+  }
+  async user_selects_type_of_service(type:string){
+    await this.Type_Of_Business_Ownership.selectOption({label:type})
   }
 
   async user_click_business_details_save_btn(){

@@ -180,7 +180,7 @@ readonly Coborrower_Computation_Income_Details: Locator;
  readonly verify_coborrower_p_and_l_statement_details: Locator; 
 readonly Nature_of_income:Locator 
 readonly empid:Locator
-
+readonly btn_coborrower1:Locator
 
     /**
    * @param {Page} page
@@ -395,9 +395,12 @@ this.Save_Btn_Computation_Income_Details = this.page.locator('//span[contains(te
   this.Enter_Total_TaxesCoborrower_ITR_Details = this.page.locator('//input[@name="wizard_total_taxes_interest_fee_payable"]');
   this.Enter_Taxes_PaidCoborrower_ITR_Details = this.page.locator('//input[@name="wizard_taxes_paid"]');
   this.Save_BtnCoborrower_ITR_Details = this.page.locator('//span[contains(text(),"Save")]');
-
+this.btn_coborrower1=this.page.locator("//button[@name='action_show_coborrower_1']")
 }
-
+async user_clicks_Co_Borrower1(){
+  await this.btn_coborrower1.click()
+ 
+}
 
 
 
@@ -462,15 +465,15 @@ await this.btn_AddData_in_Co_Borrower_AddressProof_Details.click()
 }
 async user_enters_Name_Co_Borrower_AddressProof_Details(strName:string){
 await this.txt_Name_Co_Borrower_AddressProof_Details.fill(strName)
-}     
+}
 async user_enters_Aadhaar_Number_Co_Borrower_AddressProof_Details(straadharno:string){
   await this.txt_Aadhaar_Number_Co_Borrower_AddressProof_Details.fill(straadharno)
 
-}     
+}
 async user_enters_Residence_Address_Co_Borrower_AddressProof_Details(strresidence:string){
   await this.txt_Residence_Address_Co_Borrower_AddressProof_Details.fill(strresidence)
 
-}     
+}
 async  user_enters_Date_of_Birth_Co_Borrower_AddressProof_Details(strDOB:string){
   await this.txt_Date_of_Birth_Co_Borrower_AddressProof_Details.fill(strDOB)
 
@@ -494,7 +497,7 @@ async user_enters_Driving_License_Number_in_coborrower_driving_license(strdrivin
 }
 async user_enters_Issue_Date_in_coborrower_driving_license(striisuedate:string){
 await this.txt_Issue_Date_in_coborrower_driving_license.fill(striisuedate)
-}     
+}
 async user_enters_Expiry_Date_in_coborrower_driving_license(strexpiry:string){
   await this.txt_Expiry_Date_in_coborrower_driving_license.fill(strexpiry)
 
