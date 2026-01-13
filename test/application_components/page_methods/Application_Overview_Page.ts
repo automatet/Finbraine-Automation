@@ -30,6 +30,11 @@ export class Application_Overview_Page {
   readonly workflow_tab:Locator;
   readonly guarantor_details_tab:Locator;
  readonly co_borrowers_details_tab:Locator;
+ readonly nominee_details_tab: Locator;
+
+
+
+
   /**
    * @param {Page} page
    * @param {TestInfo} testInfo
@@ -53,7 +58,12 @@ export class Application_Overview_Page {
     this.Loan_Application_tab=this.page.locator("//a[normalize-space()='Loan Application']");
     this.Credit_Decision_tab=this.page.locator('//a[normalize-space()="Credit Decisioning"]');
     this.Loan_Sanction_tab=this.page.locator('//a[normalize-space()="Loan Sanction"]');
-    this.btn_Edit=this.page.locator('//*[contains(text(),"Edit")]')
+
+ //   this.btn_Edit=this.page.locator('//*[contains(text(),"Edit")]')
+
+    this.btn_Edit=this.page.locator('//*[contains(text()," Edit")]')
+    this.nominee_details_tab=this.page.locator("//a[normalize-space()='Nominee Details']")
+
   
 
     this.application_verification_status=this.page.locator("//tr[td[1][normalize-space()='Application Verification']and td[3][normalize-space()='Completed']]")
@@ -82,8 +92,14 @@ async user_click_on_Credit_Decision_tab(){
 async user_click_on_Edit_button(){
   await expect(this.btn_Edit).toBeVisible();
   await this.btn_Edit.click();
-  
+}
+
+async user_click_on_nominee_details_tab(){
+  await expect(this.nominee_details_tab).toBeVisible();
+  await this.nominee_details_tab.click();
  }
+
+
  
  async user_verify_application_verification_status(){
   await expect(this.application_verification_status).toBeVisible();

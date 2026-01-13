@@ -53,6 +53,7 @@ export class Login_Page {
 
     /******************** Page Objects ************************/
 
+
   this.namco_community= this.page.locator("//*[contains(text(),'namco_community')]")
   this.EmailID=this.page.locator("// input[@placeholder='Email']")
   this.password=this.page.locator("// input[@placeholder='Password']")
@@ -68,13 +69,16 @@ export class Login_Page {
 
 
 async user_launches_application() {
-let url = process.env.APP_URL || "http://4.240.123.236:8069/web/database/selector"
+let url = process.env.APP_URL || " http://4.240.123.236:8069/web/database/selector"
 await this.playwrightFactory.launchApplication(url);
 }
+
+  
 
 async user_clicks_namco_community_button(){
   await this.playwrightFactory.click(this.namco_community);
   
+
 }
 
 async user_enters_emailid(strUsername: string) {

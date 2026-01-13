@@ -242,8 +242,8 @@ this.btn_adddata_Employmentdetails=this.page.locator('//button[@name="coborrower
 this.NameoftheFirm_coborrower_Employmentdetails=this.page.locator('//input[@name="wizard_coborrower_company_where_employed"]')
 this.Address_Of_The_Firm_coborrower_Employmentdetails=this.page.locator('//input[@name="wizard_coborrower_address_of_the_firm"]')
 this.Designationin_the_Organisation_coborrower_Employmentdetails=this.page.locator('//select[@name="wizard_coborrower_designation"]')
-this.Type_of_Organisation_coborrower_Employmentdetails      =this.page.locator('//select[@name="wizard_coborrower_type_of_organisation"]')
-this.JoiningDate_coborrower_Employmentdetails   =this.page.locator('//input[@name="wizard_coborrower_since_date"]')
+this.Type_of_Organisation_coborrower_Employmentdetails=this.page.locator('//select[@name="wizard_coborrower_type_of_organisation"]')
+this.JoiningDate_coborrower_Employmentdetails=this.page.locator('//input[@name="wizard_coborrower_since_date"]')
 this.Remarks_coborrower_Employmentdetails=this.page.locator('//input[@name="wizard_coborrower_remarks"]')
 this.add_line_Employmentdetails=this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='coborrower_salary_details_ids']//*[contains(text(),'Add a line')]")
 this.month_Employmentdetails=this.page.locator('//select[@name="wizard_coborrower_month"]')
@@ -320,7 +320,11 @@ this.txt_loan_amount_CoBorrower_CreditBureau=this.page.locator('//div[@name="loa
 this.txt_outstanding_amount_CoBorrower_CreditBureau=this.page.locator('//div[@name="outstanding_amount"]')
 this.txt_EMI_CoBorrower_CreditBureau=this.page.locator('//input[@name="emi_interest"]')
 this.add_line_CoBorrower_CreditBureau=this.page.locator("//*[contains(text(),'Add a line')]")
+
 //this.btn_upload=this.page.locator("//button[text()='Upload your file'] ")
+
+//this.btn_upload=this.page.locator("//button[text()='Upload your file'] ")
+//this.btn_verify_credit_bureau=this.page.locator('//div[@name="verify_coborrower_credit_bureau_details"]')
 
 this.btn_verify_form16=this.page.locator("//div[@name='verify_coborrower_form_16_details']")
 
@@ -995,7 +999,9 @@ await this.txt_Repayment_Track_CoBorrower_CreditBureau.fill(strrepayment)
 async user_clicks_add_aline__CoBorrower_CreditBureau(){
   await this.add_line_CoBorrower_CreditBureau.click()
 }
-
+// async user_clicks_verify_btn_CoBorrower_CreditBureau(){
+//   await this.btn_verify_credit_bureau.click()
+// }
 async user_enters_Bank_acount_details_CoBorrower_CreditBureau(strno:string){
     await this.txt_Bank_acount_details_CoBorrower_CreditBureau.click()
 await this.txt_Bank_acount_details_CoBorrower_CreditBureau.fill(strno)

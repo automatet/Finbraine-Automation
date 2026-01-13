@@ -143,6 +143,84 @@ readonly guarantors_2_address_proof_details_residence_address_document_field:Loc
 readonly guarantors_2_address_proof_details_dob_field:Locator;
 readonly save_btn_guarantors_2_address_proof_details:Locator;
 readonly verify_btn_guarantors_2_address_proof_details:Locator;
+
+//2.Guarantor Employment Details
+readonly btn_add_data_button_for_gurantor_2_employment_details: Locator;
+readonly txt_name_of_the_firm_for_gurantor_2_employment_details: Locator;
+readonly txt_address_of_the_firm_in_guarantor_2_salary_details: Locator;
+readonly designation_in_the_organiation_in_guarantor_2_salary_details: Locator;
+readonly type_of_organization_in_guarantor_2_salary_details: Locator;
+readonly joining_date_in_guarantor_2_salary_details:Locator;
+  readonly Remark_in_guarantor_2_salary_details:Locator;
+  readonly salary_details_add_line_btn_in_guarantor_2_salary_slip_details: Locator;
+  readonly salary_details_month_in_guarantor_2_salary_slip_details: Locator;
+  readonly salary_details_year_in_guarantor_2_salary_slip_details: Locator;
+  readonly gross_salary_in_guarantor_2_salary_slip_details: Locator;
+  readonly deduction_in_guarantor_2_salary_slip_details: Locator;
+  readonly net_salary_in_guarantor_2_salary_slip_details: Locator;
+  readonly salary_credited_date_in_guarantor_2_salary_slip_details: Locator;
+  readonly pf_in_guarantor_2_salary_slip_details: Locator;
+  readonly salary_slip_save_btn_in_guarantor_2_salary_slip_details: Locator;
+  readonly btn_verify_button_for_guarantor_2_employment_details: Locator;
+
+
+  //2.Guarantor Company ID Details
+ readonly btn_add_data_button_for_guarantor_2_company_id_details: Locator;
+ readonly txt_company_name_in_guarantor_2_company_id_details: Locator;
+ readonly txt_address_in_guarantor_2_company_id_details: Locator;
+ readonly txt_employee_id_in_guarantor_2_company_id_details: Locator;
+ readonly txt_employee_name_in_guarantor_2_company_id_details: Locator;
+ readonly txt_joining_date_in_guarantor_2_company_id_details: Locator;
+ readonly btn_save_button_for_gurantor_2_company_id_details: Locator;
+ readonly btn_verify_button_for_guarantor_2_company_id_details: Locator;
+
+ //2.Guarantor Bank Statement Details
+ readonly btn_add_data_button_for_guarantor_2_bank_statement_details: Locator;
+ readonly btn_add_a_line_button_for_guarantor_2_bank_statement_details: Locator;
+ readonly txt_name_in_guarantor_2_bank_statement_details: Locator;
+ readonly txt_account_number_in_guarantor_2_bank_statement_details: Locator;
+ readonly txt_bank_balance_in_guarantor_2_bank_statement_details: Locator;
+ readonly txt_average_balance_in_guarantor_2_bank_statement_details: Locator;
+ readonly txt_cb_mbc_ac_ecs_si_in_guarantor_2_bank_statement_details: Locator;
+ readonly btn_save_button_for_gurantor_2_bank_statement_details: Locator;
+ readonly btn_verify_button_for_guarantor_2_bank_statement_details: Locator;
+
+ //Guarantor2 Other Income Details 
+ readonly btn_add_data_button_for_guarantor_2_other_income_details: Locator;
+ readonly btn_add_a_line_button_for_guarantor_2_other_income_details: Locator;
+ readonly txt_month_in_guarantor_2_other_income_details: Locator;
+ readonly txt_amount_in_guarantor_2_other_income_details: Locator;
+ readonly txt_total_amount_in_guarantor_2_other_income_details: Locator;
+ readonly btn_save_button_for_gurantor_2_other_income_details: Locator;
+ readonly btn_verify_button_for_guarantor_2_other_income_details: Locator;
+
+ 
+ //2.Guarantor Salary Credit Bank Account
+ readonly btn_add_data_button_for_guarantor_2_salary_credit_bank_account: Locator;
+ readonly btn_add_a_line_for_guarantor_2_salary_credit_bank_details: Locator;
+ readonly txt_bank_for_guarantor_2_salary_credit_bank_details: Locator;
+ readonly txt_branch_for_guarantor_2_salary_credit_bank_details: Locator;
+ readonly txt_account_number_for_guarantor_2_salary_credit_bank_details: Locator;
+ readonly txt_account_opening_date_for_guarantor_2_salary_credit_bank_details: Locator;
+ readonly txt_type_of_account_for_guarantor_2_salary_credit_bank_details: Locator;
+ readonly txt_salary_credit_account_for_guarantor_2_salary_credit_bank_details: Locator;
+ readonly btn_save_button_for_guarantor_2_salary_credit_bank_details: Locator;
+ readonly btn_verify_button_for_guaranter_2_salary_credit_bank_details: Locator;
+
+ //2.Guarantor Form 16 Details
+ readonly btn_verify_button_for_guarantor_2_form_16_details: Locator;
+
+ //2.Guarantor Membership Details
+ readonly btn_add_data_button_for_guarantor_2_membership_details: Locator;
+ readonly txt_guarantor_membership_number_for_guarantor_2_membership_details: Locator;
+ readonly txt_guarantor_number_of_shares_for_guarantor_2_membership_details: Locator;
+ readonly txt_guarantor_shares_from_guarantor_2_membership_details: Locator;
+ readonly txt_guarantor_existing_shares_amount_from_guarantor_2_membership_details: Locator;
+ readonly txt_guarantor_total_shares_required_from_guarantor_2_membership_details: Locator;
+ readonly txt_guarantor_additional_shares_required_from_guarantor_2_membership_details: Locator;
+ readonly btn_save_button_for_guarantor_2_membership_details: Locator;
+ readonly btn_verify_button_for_guarantor_2_membership_details: Locator;
+
  
 
 
@@ -217,12 +295,6 @@ readonly verify_btn_guarantors_2_address_proof_details:Locator;
  readonly txt_cb_mbc_ac_ecs_si_in_guarantor_bank_statement_details: Locator;
  readonly btn_save_button_for_gurantor_bank_statement_details: Locator;
  readonly btn_verify_button_for_guarantor_bank_statement_details: Locator;
- readonly btn_add_data_button_for_guarantor_2_other_income_details: Locator;
- readonly btn_add_a_line_button_for_guarantor_2_other_income_details: Locator;
- readonly txt_month_in_guarantor_2_other_income_details: Locator;
- readonly txt_amount_in_guarantor_2_other_income_details: Locator;
- readonly txt_total_amount_in_guarantor_2_other_income_details: Locator;
- readonly btn_save_button_for_gurantor_2_other_income_details: Locator;
 
 
 
@@ -297,17 +369,7 @@ readonly verify_btn_guarantors_2_address_proof_details:Locator;
   readonly type_of_vehical:Locator;
   readonly repayment_type: Locator;
   readonly adress_of_firm: Locator;
-  // readonly designation: Locator;
-  // readonly type_of_organization: Locator;
-  // readonly salary_details_add_line_btn: Locator;
-  // readonly salary_details_month: Locator;
-  // readonly salary_details_year: Locator;
-  // readonly gross_salary: Locator;
-  // readonly deduction: Locator;
-  // readonly net_salary: Locator;
-  // readonly salary_credited_date: Locator;
-  // readonly pf: Locator;
-  // readonly salary_slip_save_btn: Locator;
+  
   readonly salary_slip_cancel_btn: Locator;
   readonly company_name: Locator;
   readonly company_adress: Locator;
@@ -523,13 +585,7 @@ readonly reupload_docs_btn:Locator;
 
     /******************** Page Objects ************************/
 
-    //his.Emp_details_Add_data_btn=this.page.locator("// button[@name='salary_details_wizard']")
-    //this.Address_of_firm=this. page.getByRole('textbox', { name: 'Address Of The Firm' })
-    //this.Designation_in_the_organization=this.page.getByLabel('Designation in the')
-    //this.Type_of_organization=this.page.getByLabel('Type of Organisation')
-    //this.joining_date= this.page.getByRole('textbox', { name: 'Joining (Date)' })
-    // this.select_date=this.page.getByRole('cell', { name: '1', exact: true }).first()
-    // this.Remark=this.page.getByRole('textbox', { name: 'Remarks', exact: true })
+    
     this.Emp_details_Add_data_btn=this.page.locator('//button[@name="salary_details_wizard"]')
     this.Name_of_firm=this.page.locator("//input[@name='wizard_company_where_employed']");
     this.adress_of_firm= this.page.locator("//input[@name='wizard_address_of_the_firm']");
@@ -929,13 +985,97 @@ this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bure
     this.verify_btn_guarantors_2_address_proof_details=this.page.locator('//div[@name="verify_guarantor2_address_proof_details"]')
 
 
+    //2. Guarantor Employment Details
+    this.btn_add_data_button_for_gurantor_2_employment_details=this.page.locator("//button[@name='guarantor2_salary_details_wizard']//span[contains(text(),'Add Data')]")
+    this.txt_name_of_the_firm_for_gurantor_2_employment_details=this.page.locator("//input[@name='wizard_guarantor2_company_where_employed']")
+    this.txt_address_of_the_firm_in_guarantor_2_salary_details=this.page.locator("//input[@name='wizard_guarantor2_address_of_the_firm']")
+    this.designation_in_the_organiation_in_guarantor_2_salary_details=this.page.locator("//select[@name='wizard_guarantor2_designation']")
+    this.type_of_organization_in_guarantor_2_salary_details=this.page.locator("//select[@name='wizard_guarantor2_type_of_organisation']")
+    this.joining_date_in_guarantor_2_salary_details=this.page.locator("//input[@name='wizard_guarantor2_since_date']")
+    this.Remark_in_guarantor_2_salary_details=this.page.locator("//input[@name='wizard_guarantor2_remarks']")
+    this.salary_details_add_line_btn_in_guarantor_2_salary_slip_details=this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='guarantor2_salary_details_ids']//*[contains(text(),'Add a line')]")
+    this.salary_details_month_in_guarantor_2_salary_slip_details=this.page.locator("//select[@name='wizard_guarantor2_month']")
+    this.salary_details_year_in_guarantor_2_salary_slip_details=this.page.locator("//select[@name='wizard_guarantor2_year']")
+    this.gross_salary_in_guarantor_2_salary_slip_details=this.page.locator("//input[@name='wizard_guarantor2_gross_salary']")
+    this.deduction_in_guarantor_2_salary_slip_details=this.page.locator("//input[@name='wizard_guarantor2_deductions']")
+    this.net_salary_in_guarantor_2_salary_slip_details=this.page.locator("//span[@name='wizard_guarantor2_net_salary']")
+    this.salary_credited_date_in_guarantor_2_salary_slip_details=this.page.locator("//input[@name='wizard_guarantor2_salary_credited_date']")
+    this.pf_in_guarantor_2_salary_slip_details=this.page.locator("//input[@name='wizard_pf']")
+    this.salary_slip_save_btn_in_guarantor_2_salary_slip_details=this.page.locator("//button[@name='save_guarantor2_salary_slip']")
+    this.btn_verify_button_for_guarantor_2_employment_details=this.page.locator("//*[text()='2. Guarantor Employment Details']/ancestor::h1//*[text()='Verify']")
+
+    //2.Gurantor Company ID Details
+    this.btn_add_data_button_for_guarantor_2_company_id_details=this.page.locator("//button[@name='guarantor2_company_id_details_wizard']//span[contains(text(),'Add Data')]")
+    this.txt_company_name_in_guarantor_2_company_id_details=this.page.locator("//input[@name='wizard_guarantor2_first_name_company_document']")
+    this.txt_address_in_guarantor_2_company_id_details=this.page.locator("//input[@name='wizard_guarantor2_address_details']")
+    this.txt_employee_id_in_guarantor_2_company_id_details=this.page.locator("//input[@name='wizard_guarantor2_employee_id']")
+    this.txt_employee_name_in_guarantor_2_company_id_details=this.page.locator("//input[@name='wizard_guarantor2_employee_name']")
+    this.txt_joining_date_in_guarantor_2_company_id_details=this.page.locator("//input[@name='wizard_guarantor2_joining_date']")
+    this.btn_save_button_for_gurantor_2_company_id_details=this.page.locator("//button[@name='save_guarantor2companyiddoc_details']")
+    this.btn_verify_button_for_guarantor_2_company_id_details=this.page.locator("//*[text()='2. Guarantor Company ID Details']/ancestor::h1//*[text()='Verify']")
+
+    //1.Guarantor Bank Statement Details
+    this.btn_add_data_button_for_guarantor_2_bank_statement_details=this.page.locator("//button[@name='guarantor2_bank_statement_wizard']//span[contains(text(),'Add Data')]")
+    this.btn_add_a_line_button_for_guarantor_2_bank_statement_details=this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='guarantor2_bank_statement_ids']//*[contains(text(),'Add a line')]")
+    this.txt_name_in_guarantor_2_bank_statement_details=this.page.locator("//input[@name='wizard_name']")
+    this.txt_account_number_in_guarantor_2_bank_statement_details=this.page.locator("//input[@name='wizard_ac_no']")
+    this.txt_bank_balance_in_guarantor_2_bank_statement_details=this.page.locator("//input[@name='wizard_bank_balance']")
+    this.txt_average_balance_in_guarantor_2_bank_statement_details=this.page.locator("//input[@name='wizard_avg_balance']")
+    this.txt_cb_mbc_ac_ecs_si_in_guarantor_2_bank_statement_details=this.page.locator("//input[@name='wizard_cb_mbc_ac_ecs_si']")
+    this.btn_save_button_for_gurantor_2_bank_statement_details=this.page.locator("//button[@name='save_guarantor2_bank_statement_wizard']")
+    this.btn_verify_button_for_guarantor_2_bank_statement_details=this.page.locator("//*[text()='2. Guarantor Bank Statement Details']/ancestor::h1//*[text()='Verify']")
+
+
+    
+    //Guarantor2 Other Income Details
+    this.btn_add_data_button_for_guarantor_2_other_income_details=this.page.locator("//button[@name='guarantor2_other_income_wizard']//span[contains(text(),'Add Data')]")
+    this.btn_add_a_line_button_for_guarantor_2_other_income_details=this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='guarantor2_other_income_ids']//*[contains(text(),'Add a line')]")
+    this.txt_month_in_guarantor_2_other_income_details=this.page.locator("//select[@name='wizard_month']")
+    this.txt_amount_in_guarantor_2_other_income_details=this.page.locator("//input[@name='wizard_amount']")
+    this.txt_total_amount_in_guarantor_2_other_income_details=this.page.locator("//span[@name='wizard_guarantor2_other_income_total_amount']")
+    this.btn_save_button_for_gurantor_2_other_income_details=this.page.locator("//button[@name='save_guarantor2_other_income_wizard']")
+    this.btn_verify_button_for_guarantor_2_other_income_details=this.page.locator("//*[text()='Guarantor2 Other Income Details']/ancestor::h1//*[text()='Verify']")
+
+    //2.Guarantor Salary Credit Bank Account
+    this.btn_add_data_button_for_guarantor_2_salary_credit_bank_account=this.page.locator("//button[@name='guarantor2_salary_credit_bank_wizard']//span[contains(text(),'Add Data')]")
+    this.btn_add_a_line_for_guarantor_2_salary_credit_bank_details=this.page.locator("//*[contains(text(),'Add a line')]/following::div[@name='guarantor2_salary_credit_ids']//*[contains(text(),'Add a line')]")
+    this.txt_bank_for_guarantor_2_salary_credit_bank_details=this.page.locator("//input[@name='wizard_bank_name']")
+    this.txt_branch_for_guarantor_2_salary_credit_bank_details=this.page.locator("//input[@name='wizard_branch_name']")
+    this.txt_account_number_for_guarantor_2_salary_credit_bank_details=this.page.locator("//input[@name='wizard_account_number']")
+    this.txt_account_opening_date_for_guarantor_2_salary_credit_bank_details=this.page.locator("//input[@name='wizard_doc_acc_opening_date']")
+    this.txt_type_of_account_for_guarantor_2_salary_credit_bank_details=this.page.locator("//select[@name='wizard_account_type']")
+    this.txt_salary_credit_account_for_guarantor_2_salary_credit_bank_details=this.page.locator("//input[@name='wizard_doc_salary_credit_amt']")
+    this.btn_save_button_for_guarantor_2_salary_credit_bank_details=this.page.locator("//button[@name='save_guarantor1_salary_credit']")
+    this.btn_verify_button_for_guaranter_2_salary_credit_bank_details=this.page.locator("//*[text()='2. Guarantor Salary Credit Bank Account']/ancestor::h1//*[text()='Verify']")
+
+    //2.Guarantor Form 16 Details
+    this.btn_verify_button_for_guarantor_2_form_16_details=this.page.locator("//*[text()='2. Guarantor Form 16 Details']/ancestor::h1//*[text()='Verify']")
+
+    //2.Guarantor Membership Details
+    this.btn_add_data_button_for_guarantor_2_membership_details=this.page.locator("//button[@name='guarantor_membership_details_wizard']//span[contains(text(),'Add Data')]")
+    this.txt_guarantor_membership_number_for_guarantor_2_membership_details=this.page.locator("//input[@name='wizard_guarantor_membership_number']")
+    this.txt_guarantor_number_of_shares_for_guarantor_2_membership_details=this.page.locator("//input[@name='wizard_guarantor_no_of_shares']")
+    this.txt_guarantor_shares_from_guarantor_2_membership_details=this.page.locator("//input[@name='wizard_guarantor_share_from']")
+    this.txt_guarantor_existing_shares_amount_from_guarantor_2_membership_details=this.page.locator("//input[@name='wizard_guarantor_existing_share_amt']")
+    this.txt_guarantor_total_shares_required_from_guarantor_2_membership_details=this.page.locator("//input[@name='wizard_guarantor_total_share_req']")
+    this.txt_guarantor_additional_shares_required_from_guarantor_2_membership_details=this.page.locator("//input[@name='wizard_guarantor_additional_share_req']")
+    this.btn_save_button_for_guarantor_2_membership_details=this.page.locator("//button[@name='save_guarantor_membership_details']")
+    this.btn_verify_button_for_guarantor_2_membership_details=this.page.locator("//*[text()='Guarantor Membership Details']/ancestor::h1//*[text()='Verify']")
+
+
+
+
+
+
+    
+    
+    
+
+
     
 
 
  
-
-
-
 
 
 
@@ -1080,7 +1220,7 @@ async user_enter_guarantor_basic_information_guarantor_address(strname: string) 
   await this.playwrightFactory.fill(this.guarantor_basic_information_guarantor_address, strname)
 }
 async user_enter_guarantor_basic_information_guarantor_profile_type(){
-  await this.guarantor_basic_information_guarantor_profile_type.selectOption({label:'Business'})
+  await this.guarantor_basic_information_guarantor_profile_type.selectOption({label:'Salaried'})
 }
 
 async user_enter_guarantor2_basic_information_mobile_number(strnumber: string) {
@@ -1254,22 +1394,32 @@ async user_clicks_add_a_line_button_for_guarantor_1_bank_statement_details(){
 }
 
 async user_enters_name_in_guarantor_1_bank_statement_details(strnamebankstement: string){
+  await this.txt_name_in_guarantor_1_bank_statement_details.click();
+  await this.page.pause();
   await this.playwrightFactory.fill(this.txt_name_in_guarantor_1_bank_statement_details, strnamebankstement);
 }
 
 async user_enters_account_number_in_guarantor_1_bank_statement_details(straccount: string){
+  await this.txt_account_number_in_guarantor_1_bank_statement_details.click();
+  await this.page.waitForTimeout(500);
   await this.playwrightFactory.fill(this.txt_account_number_in_guarantor_1_bank_statement_details, straccount);
 }
 
 async user_enters_bank_balance_in_guarantor_1_bank_statement_details(strbankbalance: string){
+  await this.txt_bank_balance_in_guarantor_1_bank_statement_details.click();
+  await this.page.waitForTimeout(500);
   await this.playwrightFactory.fill(this.txt_bank_balance_in_guarantor_1_bank_statement_details, strbankbalance);
 }
 
 async user_enters_average_balance_in_guarantor_1_bank_statement_details(straveragebalance: string){
+  await this.txt_average_balance_in_guarantor_1_bank_statement_details.click();
+  await this.page.waitForTimeout(500);
   await this.playwrightFactory.fill(this.txt_average_balance_in_guarantor_1_bank_statement_details, straveragebalance);
 }
 
 async user_enters_cb_mbc_ac_ecs_si_in_guarantor_1_bank_statement_details(strcb: string){
+  await this.txt_cb_mbc_ac_ecs_si_in_guarantor_1_bank_statement_details.click();
+  await this.page.waitForTimeout(500);
   await this.playwrightFactory.fill(this.txt_cb_mbc_ac_ecs_si_in_guarantor_1_bank_statement_details, strcb);
 }
 
@@ -1306,7 +1456,8 @@ await this.playwrightFactory.fill(this.txt_account_opening_date_for_guarantor_1_
 }
 
 async user_selects_type_of_account_in_guarantor_1_salary_credit_bank_details(strtypeofaccount: string) {
-await this.playwrightFactory.fill(this.txt_type_of_account_for_guarantor_1_salary_credit_bank_details, strtypeofaccount)
+//await this.playwrightFactory.fill(this.txt_type_of_account_for_guarantor_1_salary_credit_bank_details, strtypeofaccount)
+await this.txt_type_of_account_for_guarantor_1_salary_credit_bank_details.selectOption({label:strtypeofaccount})
 }
 
 async user_enters_salary_credit_amount_in_guarantor_1_salary_credit_bank_details(strcreditamount: string){
@@ -1413,6 +1564,258 @@ async user_click_save_btn_guarantors_2_address_proof_details(){
 async user_click_verify_btn_guarantors_2_address_proof_details(){
   await this.verify_btn_guarantors_2_address_proof_details.click()
 }
+
+async user_clicks_add_data_button_for_guarantor_2_guarantor_employment_details(){
+  await this.playwrightFactory.click(this.btn_add_data_button_for_gurantor_2_employment_details);
+}
+
+async user_enters_name_of_the_firm_in_guarantor_2_employment_details(strfirmname: string){
+  await this.playwrightFactory.fill(this.txt_name_of_the_firm_for_gurantor_2_employment_details, strfirmname);
+}
+
+async user_enters_address_of_the_firm_in_guarantor_2_salary_details(straddresssalary: string){
+  await this.playwrightFactory.fill(this.txt_address_of_the_firm_in_guarantor_2_salary_details, straddresssalary);
+}
+
+async user_select_designation_in_the_organization_in_guarantor_2_salary_details() {
+  await this.designation_in_the_organiation_in_guarantor_2_salary_details.selectOption({label:'Executive'});
+}
+ 
+async user_select_type_of_organization_in_guarantor_2_salary_details() {
+  await this.type_of_organization_in_guarantor_2_salary_details.selectOption({label:'Private Ltd. Co.'});
+}
+ 
+async user_selectjoining_date_in_guarantor_2_salary_details(strJoiningdate: string) {
+await this.playwrightFactory.fill(this.joining_date_in_guarantor_2_salary_details, strJoiningdate)
+}
+async user_enters_remark_in_guarantor_2_salary_details(strRemark: string) {
+  await this.playwrightFactory.fill(this.Remark_in_guarantor_2_salary_details,strRemark)
+}
+
+async user_click_add_line_for_salary_detail_section_in_guarantor_2_salary_details(){
+  await this.playwrightFactory.click(this.salary_details_add_line_btn_in_guarantor_2_salary_slip_details);
+}
+async user_select_month_in_guarantor_2_salary_details(strMonth: string){
+  await this.salary_details_month_in_guarantor_2_salary_slip_details.selectOption({label:strMonth})
+}
+async user_select_year_in_guarantor_2_salary_details(strYear: string){
+  await this.salary_details_year_in_guarantor_2_salary_slip_details.selectOption({label:strYear})
+}
+async user_enter_gross_salary_in_guarantor_2_salary_details(strSalary: string){
+  await this.playwrightFactory.fill(this.gross_salary_in_guarantor_2_salary_slip_details, strSalary)
+}
+async user_enter_diduction_amount_in_guarantor_2_salary_details(strDeduction: string){
+  await this.playwrightFactory.fill(this.deduction_in_guarantor_2_salary_slip_details, strDeduction)
+}
+async user_verify_net_salary_in_guarantor_2_salary_details(strNetsalary: string){
+  await expect(this.net_salary_in_guarantor_2_salary_slip_details).toContainText(strNetsalary);
+}
+async user_enter_salary_credidate_date_in_guarantor_2_salary_details(strSalarycredidatedate: string){
+  await this.playwrightFactory.fill(this.salary_credited_date_in_guarantor_2_salary_slip_details, strSalarycredidatedate)
+}
+async user_enter_pf_in_guarantor_2_salary_details(strPF: string){
+  await this.playwrightFactory.fill(this.pf_in_guarantor_2_salary_slip_details, strPF)
+}
+ 
+async user_clicks_save_btn_in_guarantor_2_salary_details(){
+  await this.playwrightFactory.click(this.salary_slip_save_btn_in_guarantor_2_salary_slip_details);
+  await this.page.waitForTimeout(10000);
+}
+
+async user_click_verify_button_for_gurantor_2_employment_details(){
+  await this.playwrightFactory.click(this.btn_verify_button_for_guarantor_2_employment_details);
+}
+
+
+async user_clicks_add_data_button_for_guarantor_2_company_id_details(){
+  await this.playwrightFactory.click(this.btn_add_data_button_for_guarantor_2_company_id_details);
+}
+
+async user_enters_company_name_in_details_in_guarantor_2_company_id_details(strcompany: string){
+  await this.playwrightFactory.fill(this.txt_company_name_in_guarantor_2_company_id_details, strcompany);
+}
+
+async user_enters_address_name_in_details_in_guarantor_2_company_id_details(straddresscompanyid: string){
+  await this.playwrightFactory.fill(this.txt_address_in_guarantor_2_company_id_details, straddresscompanyid);
+}
+
+async user_enters_employee_id_in_details_in_guarantor_2_company_id_details(stremployeeid: string){
+  await this.playwrightFactory.fill(this.txt_employee_id_in_guarantor_2_company_id_details, stremployeeid);
+}
+
+async user_enters_employee_name_in_details_in_guarantor_2_company_id_details(stremployeename: string){
+  await this.playwrightFactory.fill(this.txt_employee_name_in_guarantor_2_company_id_details, stremployeename);
+}
+
+async user_selects_joining_date_in_guarantor_2_company_id_details(strjoiningdate: string) {
+await this.playwrightFactory.fill(this.txt_joining_date_in_guarantor_2_company_id_details, strjoiningdate)
+}
+
+async user_clicks_save_button_for_guarantor_2_company_id_details(){
+  await this.playwrightFactory.click(this.btn_save_button_for_gurantor_2_company_id_details);
+}
+
+async user_clicks_verify_button_for_gurantor_2_company_id_details(){
+  await this.playwrightFactory.click(this.btn_verify_button_for_guarantor_2_company_id_details);
+}
+
+
+async user_clicks_add_data_button_for_guarantor_2_bank_statement_details(){
+  await this.playwrightFactory.click(this.btn_add_data_button_for_guarantor_2_bank_statement_details);
+}
+
+async user_clicks_add_a_line_button_for_guarantor_2_bank_statement_details(){
+  await this.playwrightFactory.click(this.btn_add_a_line_button_for_guarantor_2_bank_statement_details);
+}
+
+async user_enters_name_in_guarantor_2_bank_statement_details(strnamebankstement: string){
+  await this.txt_name_in_guarantor_2_bank_statement_details.click();
+  await this.page.waitForTimeout(500);
+  await this.playwrightFactory.fill(this.txt_name_in_guarantor_2_bank_statement_details, strnamebankstement);
+}
+
+async user_enters_account_number_in_guarantor_2_bank_statement_details(straccount: string){
+  await this.txt_account_number_in_guarantor_2_bank_statement_details.click();
+  await this.page.waitForTimeout(500);
+  await this.playwrightFactory.fill(this.txt_account_number_in_guarantor_2_bank_statement_details, straccount);
+}
+
+async user_enters_bank_balance_in_guarantor_2_bank_statement_details(strbankbalance: string){
+  await this.txt_bank_balance_in_guarantor_2_bank_statement_details.click();
+  await this.page.waitForTimeout(500);
+  await this.playwrightFactory.fill(this.txt_bank_balance_in_guarantor_2_bank_statement_details, strbankbalance);
+}
+
+async user_enters_average_balance_in_guarantor_2_bank_statement_details(straveragebalance: string){
+   await this.txt_average_balance_in_guarantor_2_bank_statement_details.click();
+   await this.page.waitForTimeout(500);
+  await this.playwrightFactory.fill(this.txt_average_balance_in_guarantor_2_bank_statement_details, straveragebalance);
+}
+
+async user_enters_cb_mbc_ac_ecs_si_in_guarantor_2_bank_statement_details(strcb: string){
+  await this.txt_cb_mbc_ac_ecs_si_in_guarantor_2_bank_statement_details.click();
+  await this.page.waitForTimeout(500);
+  await this.playwrightFactory.fill(this.txt_cb_mbc_ac_ecs_si_in_guarantor_2_bank_statement_details, strcb);
+}
+
+async user_clicks_save_button_for_guarantor_2_bank_statement_details(){
+  await this.playwrightFactory.click(this.btn_save_button_for_gurantor_2_bank_statement_details);
+}
+
+async user_clicks_verify_button_for_gurantor_2_bank_statement_details(){
+  await this.playwrightFactory.click(this.btn_verify_button_for_guarantor_2_bank_statement_details);
+}
+
+async user_clicks_add_data_button_for_guarantor_2_other_income_details(){
+  await this.playwrightFactory.click(this.btn_add_data_button_for_guarantor_2_other_income_details);
+}
+
+async user_clicks_add_a_line_button_for_guarantor_2_other_income_details(){
+  await this.playwrightFactory.click(this.btn_add_a_line_button_for_guarantor_2_other_income_details);
+}
+
+async user_select_month_in_guarantor_2_other_income_details() {
+  await this.txt_month_in_guarantor_2_other_income_details.selectOption({label:'March'});
+}
+
+async user_enters_amount_in_guarantor_2_other_income_details(stramountguarantor2: string){
+  await this.playwrightFactory.fill(this.txt_amount_in_guarantor_2_other_income_details, stramountguarantor2);
+}
+
+async user_verify_total_amount_in_guarantor_2_other_income_details(){
+  await expect(this.txt_total_amount_in_guarantor_2_other_income_details).not.toBeEmpty();
+}
+
+async user_clicks_save_button_for_guarantor_2_other_income_details(){
+  await this.playwrightFactory.click(this.btn_save_button_for_gurantor_2_other_income_details);
+}
+
+async user_clicks_verify_button_for_gurantor_2_other_income_details(){
+  await this.playwrightFactory.click(this.btn_verify_button_for_guarantor_2_other_income_details);
+}
+
+async user_clicks_add_data_button_for_guarantor_2_salary_credit_bank_account(){
+  await this.playwrightFactory.click(this.btn_add_data_button_for_guarantor_2_salary_credit_bank_account);
+}
+
+async user_click_add_a_line_button_for_guarantor_2_salary_credit_bank_details(){
+  await this.playwrightFactory.click(this.btn_add_a_line_for_guarantor_2_salary_credit_bank_details);
+}
+
+async user_enters_bank_in_guarantor_2_salary_credit_bank_details(strbank: string){
+  await this.playwrightFactory.fill(this.txt_bank_for_guarantor_2_salary_credit_bank_details, strbank);
+}
+
+async user_enters_branch_in_guarantor_2_salary_credit_bank_details(strbranch: string){
+  await this.playwrightFactory.fill(this.txt_branch_for_guarantor_2_salary_credit_bank_details, strbranch);
+}
+
+async user_enters_account_number_in_guarantor_2_salary_credit_bank_details(straccountnumber: string){
+  await this.playwrightFactory.fill(this.txt_account_number_for_guarantor_2_salary_credit_bank_details, straccountnumber);
+}
+
+async user_selects_account_opening_date_in_guarantor_2_salary_credit_bank_details(stropeningdate: string) {
+await this.playwrightFactory.fill(this.txt_account_opening_date_for_guarantor_2_salary_credit_bank_details, stropeningdate)
+}
+
+async user_selects_type_of_account_in_guarantor_2_salary_credit_bank_details(strtypeofaccount: string) {
+await this.playwrightFactory.fill(this.txt_type_of_account_for_guarantor_2_salary_credit_bank_details, strtypeofaccount)
+}
+
+async user_enters_salary_credit_amount_in_guarantor_2_salary_credit_bank_details(strcreditamount: string){
+  await this.playwrightFactory.fill(this.txt_salary_credit_account_for_guarantor_2_salary_credit_bank_details, strcreditamount);
+}
+
+async user_clicks_save_button_for_guarantor_2_salary_credit_bank_details(){
+  await this.playwrightFactory.click(this.btn_save_button_for_guarantor_2_salary_credit_bank_details);
+}
+
+async user_clicks_verify_button_for_guarantor_2_salary_credit_bank_details(){
+  await this.playwrightFactory.click(this.btn_verify_button_for_guaranter_2_salary_credit_bank_details);
+}
+
+async user_clicks_verify_button_for_guarantor_2_form_16_details(){
+  await this.playwrightFactory.click(this.btn_verify_button_for_guarantor_2_form_16_details);
+}
+
+async user_clicks_add_data_button_for_guarantor_2_membership_details(){
+  await this.playwrightFactory.click(this.btn_add_data_button_for_guarantor_2_membership_details);
+}
+
+async user_enters_guaranter_2_membership_number_in_guarantor_membeership_details(strmembership: string){
+  await this.playwrightFactory.fill(this.txt_guarantor_membership_number_for_guarantor_2_membership_details, strmembership);
+}
+
+
+ 
+async user_enters_number_of_shares_in_guarantor_2_membership_details(strnumber1:string){
+  await this.playwrightFactory.fill(this.txt_guarantor_number_of_shares_for_guarantor_2_membership_details,strnumber1);
+}
+ 
+async user_enters_shares_from_in_guarantor_2_membership_details(strdate:string){
+  await this.playwrightFactory.click(this.txt_guarantor_shares_from_guarantor_2_membership_details);
+  await this.playwrightFactory.fill(this.txt_guarantor_shares_from_guarantor_2_membership_details,strdate);
+}
+ 
+async user_enters_existing_shares_amount_in_guarantor_2_membership_details(stramount: string){
+  await this.playwrightFactory.fill(this.txt_guarantor_existing_shares_amount_from_guarantor_2_membership_details,stramount);
+}
+ 
+async user_enters_total_shares_required_in_guarantor_2_membership_details(strtotal:string){
+  await this.playwrightFactory.fill(this.txt_guarantor_total_shares_required_from_guarantor_2_membership_details,strtotal);
+}
+async user_enters_additional_shares_required_in_guarantor_2_membership_details(stradditional: string){
+  await this.playwrightFactory.fill(this.txt_guarantor_additional_shares_required_from_guarantor_2_membership_details,stradditional)
+}
+async user_clicks_save_button_in_guarantor_2_membership_details(){
+  await this.playwrightFactory.click(this.btn_save_button_for_guarantor_2_membership_details);
+ 
+}
+async user_clicks_verify_button_in_guarantor_2_membership_details(){
+  await this.playwrightFactory.click(this.btn_verify_button_for_guarantor_2_membership_details)
+ 
+}
+
 
 
 
@@ -1637,29 +2040,7 @@ async user_clicks_verify_button_for_gurantor_bank_statement_details(){
   await this.playwrightFactory.click(this.btn_verify_button_for_guarantor_bank_statement_details);
 }
 
-async user_clicks_add_data_button_for_guarantor_2_other_income_details(){
-  await this.playwrightFactory.click(this.btn_add_data_button_for_guarantor_2_other_income_details);
-}
 
-async user_clicks_add_a_line_button_for_guarantor_2_other_income_details(){
-  await this.playwrightFactory.click(this.btn_add_a_line_button_for_guarantor_2_other_income_details);
-}
-
-async user_select_month_in_guarantor_2_other_income_details() {
-  await this.txt_month_in_guarantor_2_other_income_details.selectOption({label:'March'});
-}
-
-async user_enters_amount_in_guarantor_2_other_income_details(stramountguarantor2: string){
-  await this.playwrightFactory.fill(this.txt_amount_in_guarantor_2_other_income_details, stramountguarantor2);
-}
-
-async user_verify_total_amount_in_guarantor_2_other_income_details(){
-  await expect(this.txt_total_amount_in_guarantor_2_other_income_details).not.toBeEmpty();
-}
-
-async user_clicks_save_button_for_guarantor_2_other_income_details(){
-  await this.playwrightFactory.click(this.btn_save_button_for_gurantor_2_other_income_details);
-}
 
 
 
