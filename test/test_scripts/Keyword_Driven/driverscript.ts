@@ -53,7 +53,7 @@ export class DriverScript {
     container.register('Loan_Application_Tab_Page', new Loan_Application_Tab_Page(container));
     container.register('Application_Overview_Page', new Application_Overview_Page(container));
     container.register('Credit_Decisioning_Page', new Credit_Decisioning_Page(container));
-    container.register('Loan_Sanction_Page', new Loan_Sanction_Page(container));
+    container.register('Loan_Sanction_Page', new Loan_Sanction_Page (container));
     container.register('Gold_Loan_Loan_Application_Tab_Page', new Gold_Loan_Loan_Application_Tab_Page(container));
     container.register('Gold_Loan_Credit_Decisioning_Page', new Gold_Loan_Credit_Decisioning_Page(container));
     container.register('Gold_Loan_Loan_Sanction_Page', new Gold_Loan_Loan_Sanction_Page(container));
@@ -65,6 +65,7 @@ container.register('Personloan_Loan_Sanction_Page', new Personloan_Loan_Sanction
 
  container.register('Gold_Loan_Nominee_Details_Page', new Gold_Loan_Nominee_Details_Page(container));
  container.register('Guarantor_details_page', new Guarantor_details_page(container));
+ container.register('Home_Loan_Loan_Application_Tab_Page', new Home_Loan_Loan_Application_Tab_Page(container));
 
  container.register('Home_Loan_Loan_Application_Tab_Page', new Home_Loan_Loan_Application_Tab_Page(container));
 
