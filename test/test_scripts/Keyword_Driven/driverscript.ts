@@ -67,7 +67,7 @@ container.register('Personloan_Loan_Sanction_Page', new Personloan_Loan_Sanction
  container.register('Guarantor_details_page', new Guarantor_details_page(container));
  container.register('Home_Loan_Loan_Application_Tab_Page', new Home_Loan_Loan_Application_Tab_Page(container));
 
-
+ container.register('Home_Loan_Loan_Application_Tab_Page', new Home_Loan_Loan_Application_Tab_Page(container));
 
 
 
