@@ -56,46 +56,41 @@ readonly txt_loan_amount: Locator;
     this.Rate_of_Interest=this.page.locator("//div[@class='o_group outer-box']//span[@name='rate_of_interest']");
     this.Tenure=this.page.locator("//div[@class='o_group outer-box']//span[@name='tenure']");
     this.Loan_Sanction_Date = this.page.locator('//div[@class="o_group outer-box"]//span[@name="loan_sanction_date"]');
-    this.Recommendation_and_Remark = this.page.locator("//textarea[@name='recommendation_and_remark_section']");
+    this.Recommendation_and_Remark = this.page.locator('//textarea[@name="recommendation_and_remark_section"]');
     this.btn_CreateAccount = this.page.locator('//button[@name="create_lms_account"]')
  }
  
   
 
 
-  
-
-
- async user_verify_loan_amount_Loan_Sanction_Information(){
-   await expect(this.txt_loan_amount).toBeVisible();
+ async verify_loan_amount_Loan_Sanction_Information(){
+  await expect(this.txt_loan_amount).toBeVisible
   }
    
-  async user_verify_loan_amount_in_words__Loan_Sanction_Information(){
-   await expect(this.Loan_Amount_in_Words).toBeVisible();
+  async verify_loan_amount_in_words__Loan_Sanction_Information(){
+  await expect(this.Loan_Amount_in_Words).toBeVisible
   }
    
-  async user_verify_Account_number__Loan_Sanction_Information(){
-   await expect(this.Account_Number).toBeVisible();
+ 
+   
+  async verify_Rate_of_interest__Loan_Sanction_Information(){
+   await expect(this.Rate_of_Interest).toBeVisible
   }
    
-  async user_verify_Rate_of_interest__Loan_Sanction_Information(){
-   await expect(this.Rate_of_Interest).toBeVisible();
+  async verify_Tenure__Loan_Sanction_Information(){
+   await expect(this.Tenure).toBeVisible
   }
    
-  async user_verify_Tenure__Loan_Sanction_Information(){
-   await expect(this.Tenure).toBeVisible();
-  }
-   
-  async user_verify_loan_sanction_date__Loan_Sanction_Information(){
-   await expect(this.Loan_Amount_in_Words).toBeVisible();
+  async verify_loan_sanction_date__Loan_Sanction_Information(){
+  await expect(this.Loan_Amount_in_Words).toBeVisible
   }
 
-  async user_enter_Recommendation_and_remark_Loan_Sanction_by_HO_Authority(strrecommendation:string){
-   await this.playwrightFactory.fill(this.Recommendation_and_Remark,strrecommendation);
+  async user_enter_Recommendation_and_remark_Loan_Sanction_by_HO_Authority(straccHO:string){
+    await this.Recommendation_and_Remark.fill(straccHO);
   }
  
-  async user_enter_Account_number__Loan_Sanction_Information(straccno:string){
-    await this.playwrightFactory.fill(this.Account_Number,straccno);
+  async user_enter_Account_number_Loan_Sanction_Information(straccno:string){
+    await this.Account_Number.fill(straccno);
   }
      
   async user_clicks_Createaccount_button(){
@@ -103,6 +98,7 @@ readonly txt_loan_amount: Locator;
      
  
     }
+ 
 
   
 
