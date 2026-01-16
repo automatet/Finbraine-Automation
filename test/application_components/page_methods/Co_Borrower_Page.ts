@@ -209,7 +209,6 @@ readonly empid: Locator
 readonly btn_upload: Locator
 readonly btn_verify_credit_bureau:Locator;
 
-
     /**
    * @param {Page} page
    * @param {TestInfo} testInfo
@@ -667,7 +666,7 @@ await this.Type_of_ownership.fill(strname);
 async user_enters_Nature_of_Business_In_Detail(strname:string) {
 await this.Nature_of_Business_In_Detail.fill(strname);
 }
- 
+
 async user_clicks_on_Add_a_Line_in_CoBorrower_Business_details() {
 await this.Add_a_Line.click ();
 }
