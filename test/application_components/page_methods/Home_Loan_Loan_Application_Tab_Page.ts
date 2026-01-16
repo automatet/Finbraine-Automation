@@ -316,9 +316,60 @@ readonly verify_btn_ITR_details:Locator;
 readonly verify_btn_ID_PROOF_details:Locator;
 
 
+readonly btn_add_data_in_newhometype:Locator;
+readonly txt_purchase_from: Locator;
+readonly txt_Purchase_amount:Locator;
+readonly btn_save__in_newhometype: Locator;
+readonly verify_in_newhometype:Locator;
 
-
-
+//readonly txt_purchase_from: Locator
+//readonly txt_Purchase_amount:Locator
+//readonly btn_save__in_newhometype: Locator
+readonly btn_add_data_in_GST_details:Locator
+readonly Legal_Name:Locator
+readonly Trade_Name :Locator
+readonly Address_of_Principal_Pace_of_Business  :Locator
+readonly Date_of_Issue_of_Certificate:Locator
+readonly Period_of_Validity :Locator
+readonly GST_Registration_Number:Locator  
+readonly Business_Place:Locator
+readonly save_in_GST_certificate_details:Locator
+readonly verify_in_GST_certificate_details:Locator
+//readonly verify_in_newhometype:Locator
+readonly add_data_in_Rented_agreement_details:Locator
+readonly Name_of_Owner_in_Rented_agreement_details:Locator  
+readonly Name_of_Tenant_in_Rented_agreement_details :Locator
+readonly Address_of_Office_in_Rented_agreement_details  :Locator
+readonly Start_Date_in_Rented_agreement_details:Locator
+readonly End_Date_in_Rented_agreement_details:Locator
+readonly Aadhar_Number_of_Tenant_in_Rented_agreement_details:Locator  
+readonly PAN_Number_of_Tenant_in_Rented_agreement_details:Locator
+readonly save_in_Rented_agreement_details:Locator
+readonly verify_in_Rented_agreement_details:Locator
+readonly adddata_in_GST_Return_Statement_Details:Locator
+readonly Details_of_Income_in_GST_Return_Statement_Details  :Locator
+readonly GST_No_in_GST_Return_Statement_Details :Locator
+readonly Type_of_GST_in_GST_Return_Statement_Details:Locator
+readonly save_in_GST_Return_Statement_Details:Locator
+readonly verify_in_GST_Return_Statement_Details:Locator
+readonly adddata_in_Business_Certificate_Details:Locator
+readonly Name_of_the_Firm_Business_Certificate_Details  :Locator
+readonly Shop_Act_Business_Certificate_Details  :Locator  
+readonly Name_of_Owner_Business_Certificate_Details:Locator  
+readonly Type_Of_Business_Business_Certificate_Details  :Locator  
+readonly Udyam_Name_Business_Certificate_Details  :Locator  
+readonly No_of_years_Business_Business_Certificate_Details  :Locator  
+readonly BusinessBusiness_Certificate_Details:Locator
+readonly Save_Business_Certificate_Details:Locator
+readonly verify_Business_Certificate_Details:Locator
+ 
+readonly Nature_of_Service_Business:Locator
+readonly Udyam_Number:Locator
+readonly Type_Of_Business_Ownership:Locator
+readonly Nature_of_service_In_Detail:Locator;
+readonly cersai_charges_in_charges_details:Locator;
+readonly registration_amount_in_charges_details:Locator;
+readonly title_report_in_charges_details:Locator;
 
 
 
@@ -635,7 +686,7 @@ this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bure
     this.add_line_btn_of_computation_of_income=this.page.locator("(//*[contains(text(),'Add a line')]/following::div[@name='computation_income_ids']//*[contains(text(),'Add a line')])[2]")
     this.gross_income_of_computation_of_income=this.page.locator('//input[@name="wizard_gross_taxable_income"]')
     this.less_deduction_of_computation_of_income=this.page.locator('//input[@name="wizard_less_deductions"]')
-    this.net_taxable_amount_of_computation_of_income=this.page.locator('//input[@name="wizard_net_taxable_income"]')
+    this.net_taxable_amount_of_computation_of_income=this.page.locator('//span[@name="wizard_net_taxable_income"]')
     this.save_btn_of_computation_of_income=this.page.locator('//button[@name="save_computation_income_wizard"]')
     this.verify_btn_of_computation_of_income=this.page.locator('//div[@name="verify_computation_income_details"]')
     this.add_data_btn_ITR_details=this.page.locator('//button[@name="itr_business_details_wizard"]')
@@ -650,11 +701,66 @@ this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bure
 
     this.verify_btn_ID_PROOF_details=this.page.locator("//*[text()='ID Proof Details']/ancestor::h1//*[text()='Verify']")
      
-
+    this.btn_add_data_in_newhometype=this.page.locator('//button[@name="open_home_type_new_home_wizard"]')    
+    this.txt_purchase_from=this.page.locator('//input[@name="wizard_purchase_from"]')
+    this.txt_Purchase_amount=this.page.locator('//input[@name="wizard_purchase_amount"]')                                                            
+ this.btn_save__in_newhometype=this.page.locator('//button[@name="save_open_home_type_new_home_wizard"]')
+ this.verify_in_newhometype=this.page.locator('//div[@name="verify_new_home_loan_details"]')
                                                                 
 
-
-
+//Business certificate details//
+this.adddata_in_Business_Certificate_Details=this.page.locator("//button[@name='business_certificate_details_wizard']//span[contains(text(),'Add Data')]")
+this.Name_of_the_Firm_Business_Certificate_Details  =this.page.locator('//input[@name="wizard_firm_name"]')
+this.Shop_Act_Business_Certificate_Details  =this.page.locator('//input[@name="wizard_shop_act"]')
+this.Name_of_Owner_Business_Certificate_Details=this.page.locator('//input[@name="wizard_name_of_owner"]')  
+this.Type_Of_Business_Business_Certificate_Details=this.page.locator('//input[@name="wizard_type_of_business"]')  
+this.Udyam_Name_Business_Certificate_Details  =this.page.locator('//input[@name="wizard_udhayam_name"]')
+this.No_of_years_Business_Business_Certificate_Details=this.page.locator('//input[@name="wizard_no_of_year_business"]')
+this.BusinessBusiness_Certificate_Details=this.page.locator('//input[@name="wizard_business_employee_history"]')
+this.Save_Business_Certificate_Details=this.page.locator('//button[@name="save_businesscertificate_details"]')
+this.verify_Business_Certificate_Details=this.page.locator('//div[@name="verify_business_certificate_details"]')
+ 
+ 
+ 
+ 
+// GST certificate details//
+ this.btn_add_data_in_GST_details=this.page.locator('//button[@name="gst_certificate_details_wizard"]')
+this.Legal_Name=this.page.locator('//input[@name="wizard_legal_name"]')
+this.Trade_Name=this.page.locator('//input[@name="wizard_trade_name"]')  
+this.Address_of_Principal_Pace_of_Business=this.page.locator('//input[@name="wizard_address_of_principal_pace_of_business"]')  
+this.Date_of_Issue_of_Certificate=this.page.locator('//input[@name="wizard_date_of_issue_of_certificate"]')  
+this.Period_of_Validity=this.page.locator('//input[@name="wizard_period_of_validity"]')  
+this.GST_Registration_Number=this.page.locator('//input[@name="wizard_gst_registration_number"]')  
+this.Business_Place=this.page.locator('//select[@name="wizard_business_place"]')  
+this.verify_in_GST_certificate_details=this.page.locator('//div[@name="verify_gst_certificate_details"]')
+this.save_in_GST_certificate_details=this.page.locator('//button[@name="save_gstcertificate_details"]')
+//Home/office rented agrement details//
+this.add_data_in_Rented_agreement_details=this.page.locator('//button[@name="office_rented_agreement_wizard"]')
+this.Name_of_Owner_in_Rented_agreement_details=this.page.locator('//input[@name="wizard_owner_name"]')  
+this.Name_of_Tenant_in_Rented_agreement_details=this.page.locator('//input[@name="wizard_tenant_name"]')  
+this.Address_of_Office_in_Rented_agreement_details=this.page.locator('//input[@name="wizard_address_of_office"]')
+this.Start_Date_in_Rented_agreement_details=this.page.locator('//input[@name="wizard_start_date"]')
+this.End_Date_in_Rented_agreement_details=this.page.locator('//input[@name="wizard_end_date"]')
+this.Aadhar_Number_of_Tenant_in_Rented_agreement_details  =this.page.locator('//input[@name="wizard_aadhar_no_of_tenant"]')
+this.PAN_Number_of_Tenant_in_Rented_agreement_details=this.page.locator('//input[@name="wizard_pan_no_of_tenant"]')
+this.save_in_Rented_agreement_details=this.page.locator('//button[@name="save_officerentedagreement_details"]')
+this.verify_in_Rented_agreement_details=this.page.locator('//div[@name="verify_office_rented_agreement_details"]')
+//GST Return Statement Details//
+this.adddata_in_GST_Return_Statement_Details=this.page.locator('//button[@name="gst_return_statement_wizard"]')
+this.Details_of_Income_in_GST_Return_Statement_Details  =this.page.locator('//input[@name="wizard_details_income_sales_expenses"]')
+this.GST_No_in_GST_Return_Statement_Details =this.page.locator('//input[@name="wizard_gst_no"]')
+this.Type_of_GST_in_GST_Return_Statement_Details=this.page.locator('//input[@name="wizard_type_of_gst"]')
+this.save_in_GST_Return_Statement_Details=this.page.locator('//button[@name="save_gst_statement_details"]')
+this.verify_in_GST_Return_Statement_Details=this.page.locator('//div[@name="verify_gst_return_statement_details"]')
+ 
+//this.verify_in_newhometype=this.page.locator('//div[@name="verify_new_home_loan_details"]')
+this.Nature_of_Service_Business=this.page.locator('//select[@name="wizard_nature_of_service_business"]')
+ this.Udyam_Number=this.page.locator('//input[@name="wizard_customer_udyam_number"]')
+this.Type_Of_Business_Ownership= this.page.locator('//select[@name="wizard_type_of_business_ownership"]')
+this. Nature_of_service_In_Detail = this.page.locator('//select[@name="wizard_nature_of_service_business"]')
+this. cersai_charges_in_charges_details = this.page.locator('//input[@name="wizard_cersai_charges"]')
+this. registration_amount_in_charges_details = this.page.locator('//input[@name="wizard_registration_charges"]')
+this. title_report_in_charges_details = this.page.locator('//input[@name="wizard_title_search_paper_notice"]')
 
  }
 
@@ -1678,10 +1784,9 @@ async user_enters_gross_income_tax_field_computation_of_income_field(strname: st
 
   await this.playwrightFactory.fill(this.less_deduction_of_computation_of_income, strname);
   }
-  async user_net_taxable_income_field_computation_of_income_field(strname: string){
-    await this.playwrightFactory.click(this.net_taxable_amount_of_computation_of_income);
+  async user_net_taxable_income_field_computation_of_income_field(){
+    await expect(this.net_taxable_amount_of_computation_of_income).toBeVisible()
 
-    await this.playwrightFactory.fill(this.net_taxable_amount_of_computation_of_income, strname);
   }
   async user_click_computation_of_income_field_statement_save_btn(){
     await this.playwrightFactory.click(this.save_btn_of_computation_of_income);
@@ -1719,5 +1824,191 @@ async user_click_save_btn_ITR_details(){
 async user_click_verify_btn_ITR_details(){
   await this.playwrightFactory.click(this.verify_btn_ITR_details);
 }
+
+
+async user_clicks_add_data_in_New_home_loan(){
+  await this.btn_add_data_in_newhometype.click()
+}
+async user_enters_purchase_from_New_home_loan(Purchase:string){
+  await this.txt_purchase_from.fill(Purchase)
+}
+async user_enters_Purchase_amount_New_home(amount:string){
+await this.txt_Purchase_amount.fill(amount)
+}
+async user_clicks_save_in_New_home_loan(){
+  await this.btn_save__in_newhometype.click()
+}
+async user_verify_in_New_home_loan(){
+  await this.verify_in_newhometype.click()
+}
+
+
+//Business certificate details//
+async user_clicks_adddata_in_Business_Certificate_Details(){
+  await this.adddata_in_Business_Certificate_Details.click()
+  }
+   
+  async user_enters_Name_of_the_Firm_Business_Certificate_Details(name:string){
+  await this.Name_of_the_Firm_Business_Certificate_Details.fill(name)
+  }
+  async user_enters_Shop_Act_Business_Certificate_Details(shopact:string){
+  await this.Shop_Act_Business_Certificate_Details.fill(shopact)
+  }
+  async user_enters_Name_of_Owner_Business_Certificate_Details(name:string){
+  await this.Name_of_Owner_Business_Certificate_Details.fill(name)
+  }
+  async user_enters_Type_Of_Business_Business_Certificate_Details(type:string){
+  await this.Type_Of_Business_Business_Certificate_Details.fill(type)
+  }
+  async user_enters_Udyam_Name_Business_Certificate_Details(name:string){
+  await this.Udyam_Name_Business_Certificate_Details.fill(name)
+  }
+  async user_enters_No_of_years_Business_Business_Certificate_Details(number:string){
+    await this.No_of_years_Business_Business_Certificate_Details.fill(number)
+   
+  }
+  async user_enters_BusinessBusiness_Certificate_Details(name:string){
+  await this.BusinessBusiness_Certificate_Details.fill(name)
+  }
+  async user_clicks_Save_Business_Certificate_Details(){
+  await this.Save_Business_Certificate_Details.click()
+  }
+  async user_clicks_verify_Business_Certificate_Details(){
+  await this.verify_Business_Certificate_Details.click()
+  }
+  //GST certificate details//
+  async user_clicks_add_data_GST_certificate_details(){
+    await this.btn_add_data_in_GST_details.click()
+  }
+  async user_enters_Legal_Name_GST_certificate_details(name:string){
+  await this.Legal_Name.fill(name)
+  }
+  async user_enters_Trade_Name(name:string){
+  await this.Trade_Name.fill(name)
+  }
+  async user_enters_Address_of_Principal_Pace_of_Business(address:string){
+  await this.Address_of_Principal_Pace_of_Business.fill(address)
+  }
+  async user_enters_Date_of_Issue_of_Certificate(date:string){
+    await this.Date_of_Issue_of_Certificate.fill(date)
+  }
+  async user_enters_Period_of_Validity(period:string){
+    await this.Period_of_Validity.fill(period)
+   
+  }
+  async user_enters_GST_Registration_Number(Number:string){
+  await this.GST_Registration_Number.fill(Number)
+  }
+  async user_enters_Business_Place(place:string){
+    await this.Business_Place.selectOption({label:place})
+   
+  }
+  async user_clicks_save_in_GST_certificate_details(){
+    await this.save_in_GST_certificate_details.click()
+   
+  }
+  async user_verify_in_GST_certificate_details(){
+  await this.verify_in_GST_certificate_details.click()
+  }
+  //office/home rented agreement details//
+  async user_clicks_add_data_in_Rented_agreement_details(){
+    await this.add_data_in_Rented_agreement_details.click()
+  }
+  async user_enters_Name_of_Owner_in_Rented_agreement_details(Name:string){
+    await this.Name_of_Owner_in_Rented_agreement_details.fill(Name)
+   
+  }
+  async user_enters_Name_of_Tenant_in_Rented_agreement_details(Name:string){
+  await this.Name_of_Tenant_in_Rented_agreement_details.fill(Name)
+  }
+  async user_enters_Address_of_Office_in_Rented_agreement_details(Address:string){
+    await this.Address_of_Office_in_Rented_agreement_details.fill(Address)
+   
+  }
+  async user_enters_Start_Date_in_Rented_agreement_details(Date:string){
+    await this.Start_Date_in_Rented_agreement_details.fill(Date)
+   
+  }
+  async user_enters_End_Date_in_Rented_agreement_details(Date:string){
+   await this.End_Date_in_Rented_agreement_details.fill(Date)
+  }
+  async user_enters_Aadhar_Number_of_Tenant_in_Rented_agreement_details(Aadhar:string){
+     await this.Aadhar_Number_of_Tenant_in_Rented_agreement_details.fill(Aadhar)
+   
+  }
+   
+  async user_enters_PAN_Number_of_Tenant_in_Rented_agreement_details(PAn:string){
+     await this.PAN_Number_of_Tenant_in_Rented_agreement_details.fill(PAn)
+   
+  }
+  async user_clicks_save_in_Rented_agreement_details(){
+  await this.save_in_Rented_agreement_details.click()
+  }
+  async user_clicks_verify_in_Rented_agreement_details(){
+  await this.verify_in_Rented_agreement_details.click()
+  }
+  //GST certificate details
+  async user_clicks_adddata_in_GST_Return_Statement_Details(){
+  await this.adddata_in_GST_Return_Statement_Details.click()
+  }
+  async user_enters_Details_of_Income_in_GST_Return_Statement_Details(details:string){
+  await this.Details_of_Income_in_GST_Return_Statement_Details.fill(details)
+  }
+  async user_enters_GST_No_in_GST_Return_Statement_Details(number:string){
+  await this.GST_No_in_GST_Return_Statement_Details.fill(number)
+  }
+  async user_enters_Type_of_GST_in_GST_Return_Statement_Details(type:string){
+  await this.Type_of_GST_in_GST_Return_Statement_Details.fill(type)
+  }
+  async user_enters_save_in_GST_Return_Statement_Details(){
+  await this.save_in_GST_Return_Statement_Details.click()
+  }
+  async user_enters_verify_in_GST_Return_Statement_Details(){
+  await this.verify_in_GST_Return_Statement_Details.click()
+  }
+  // async user_click_add_data_btn_in_computation_of_income_field(){
+  //   await this.playwrightFactory.click(this.add_data_btn_of_computation_of_income);
+  // }
+
+  async user_enters_udyam_number(number:string){
+    await this.Udyam_Number.fill(number)
+  }
+   
+   
+  async user_selects_type_of_service(type:string){
+    await this.Type_Of_Business_Ownership.selectOption({label:'Self Owned'})
+  }
+   
+    // async user_enters_business_details_nature_of_business_details_field(strname: string){
+    //   await this.playwrightFactory.fill(this.business_details_nature_of_business_in_details, strname);
+   
+    // }
+
+    // async user_enters_Nature_of_service_In_Detail(strname:string) {
+    //   await this.Nature_of_service_In_Detail.fill(strname);
+    //   }
+      async user_enters_Nature_of_service_In_Detail(type:string){
+        await this.Nature_of_service_In_Detail.selectOption({label:'Service in Government Department'});
+      }
+       
+
+      async user_enters_cersai_charges(strName: string){
+        await this.playwrightFactory.fill(this.cersai_charges_in_charges_details, strName);
+        }
+        async user_enters_registration_amount_charges(strName: string){
+          await this.playwrightFactory.fill(this.registration_amount_in_charges_details, strName);
+          }
+          async user_enters_title_report_amount_charges(strName: string){
+            await this.playwrightFactory.fill(this.title_report_in_charges_details, strName);
+            }
+
+
+
+
+
+
+
+
+
 
 }
