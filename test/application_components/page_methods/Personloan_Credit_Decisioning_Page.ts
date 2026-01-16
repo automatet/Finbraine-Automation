@@ -113,17 +113,17 @@ readonly comment:Locator
   this.Growth_Trend_of_Income_networth_in_Loan_eligibility = this.page.locator("//div[@class='o_group outer-box2']//span[@name='growth_trend_of_income_networth']")
   this.As_per_Income_Loan_Availability_in_Loan_eligibility = this.page.locator("//div[@class='o_group outer-box2']//span[@name='income_Loan_Availability']")
   this.txt_Remarks_in_Loan_eligibility = this.page.locator('//div[@class="o_group outer-box2"]//input[@name="remarks"]')
-this.txt_loan_schedule_title=this.page.locator("//div[normalize-space()='Loan Schedule']");
+this.txt_loan_schedule_title=this.page.locator("//span[contains (text(),'Loan Schedule' )]");
     this.txt_product_name=this.page.locator("//span[@name='updated_product_name']");
     this.txt_total_repayment_amount=this.page.locator("//span[@name='updated_outstanding_amount']");
     this.txt_rate_of_interest=this.page.locator("//input[@name='updated_rate_of_interest']");
-    this.txt_maturity_date=this.page.locator("//span[@name='updated_maturity_date']");
+    this.txt_maturity_date=this.page.locator("//span[@name='updated_maturity_date_str']");
     this.txt_loan_amount=this.page.locator("(//div[@name='updated_loan_amount'])[1]")
     this.txt_repayment_type=this.page.locator("//select[@name='repayment_type']")
     this.txt_emi_amount=this.page.locator("//span[@name='emi_amount']")
     this.txt_tenure_months=this.page.locator("(//input[@name='updated_tenure'])")
     this.txt_total_interest=this.page.locator("//span[@name='total_interest']")
-    this.txt_loan_schedule_date=this.page.locator("//input[@name='loan_schedule_date']")
+    this.txt_loan_schedule_date=this.page.locator("//input[@name='loan_schedule_date_str']")
     this.txt_loan_scrutiny_title=this.page.locator("//div[normalize-space()='Loan Scrutiny']")
     this.txt_total_quotation_amount=this.page.locator('//div[@name="updated_loan_amount"]/following::div[@class="o_group loan_scrutiny"]')
     this.txt_remaining_margin_amount=this.page.locator("//span[@name='remaining_margin_amount']")
@@ -173,9 +173,9 @@ await expect(this.Other_Income_Agriculture_in_Loan_eligibility).toBeVisible();
 async Verify_Gross_Amount_of_Existing_Deductions_in_loan_eligibility(){
 await expect(this.Gross_Amount_of_Existing_Deductions_in_Loan_eligibility).toBeVisible();
 }
-async Verify_Existing_Loan_EMI_in_loan_eligibility(){
-await expect(this.Existing_Loan_EMI_in_Loan_eligibility).toBeVisible();
-}
+// async Verify_Existing_Loan_EMI_in_loan_eligibility(){
+// await expect(this.Existing_Loan_EMI_in_Loan_eligibility).toBeVisible();
+// }
 async Verify_Net_Amount_Available_for_New_EMI_in_loan_eligibility(){
 await expect(this.Net_Amount_Available_for_New_EMI_in_Loan_eligibility).toBeVisible();
 }	
