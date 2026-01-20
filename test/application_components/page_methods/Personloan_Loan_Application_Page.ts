@@ -157,6 +157,21 @@ readonly settled_account: Locator;
  readonly btn_Verified: Locator
 readonly btn_verify_agricultural_income:Locator 
 readonly btn_verify_other_income: Locator
+readonly year_since_joining: Locator
+readonly Employee_id: Locator
+readonly nature_of_salaried:Locator
+readonly avg_gross_salary: Locator
+readonly avg_deduction: Locator
+readonly avg_netsalary: Locator
+ readonly adddata_in_credit_bureau: Locator
+readonly cibil_date:Locator
+readonly Qualification:Locator
+  readonly credit_bureau_save_btn:Locator
+
+
+
+
+
   /**
    * @param {Page} page
    * @param {TestInfo} testInfo
@@ -198,7 +213,7 @@ readonly btn_verify_other_income: Locator
     this.adress_proof_name = this.page.locator("//span[@name='customer_first_name_address_document']");
     this.adress_proof_adress= this.page.locator("//span[@name='customer_residence_address_document']");
     this.adrees_proof_dob= this.page.locator("//span[@name='customer_dob_document']");
-    this.adhaar_no= this.page.locator("//span[@name='customer_aadhaar_document']");
+    this.adhaar_no= this.page.locator("(//span[@name='customer_aadhaar_document'])[1]");
     this.adress_proof_verify_btn= this.page.locator("//*[text()='Address Proof Details']/ancestor::h1//*[contains(text(),'Verify')]");
     this.customer_name_borrower_info_field= this.page.locator("//input[@name='customer_name']");
     this.borrower_adress= this.page.locator("//input[@name='customer_borrower_address']");
@@ -206,7 +221,7 @@ readonly btn_verify_other_income: Locator
     this.borower_current_adress= this.page.locator("//input[@name='borrower_current_address']");
     this.borrower_residential_type= this.page.locator("//select[@name='residential_type']");
     this.borowers_mobile_no= this.page.locator("//input[@name='customer_mobile_no']");
-    this.borrower_gender= this.page.locator("//select[@name='customer_gender']");
+    this.borrower_gender= this.page.locator("//select[@name='applicant_gender']");
     this.borrowers_age = this.page.locator("//input[@name='customer_borrower_age']");
     this.staff_name= this.page.locator("//input[@name='staff_name']");
     this.staff_id= this.page.locator("//input[@name='agent_id']");
@@ -289,39 +304,49 @@ readonly btn_verify_other_income: Locator
     this.date_Shares_from_in_Membership_Details = this.page.locator('//input[@name="wizard_share_from"]');
     this.txt_Existing_share_amounts_in_Membership_Details = this.page.locator('//input[@name="wizard_existing_share_amt"]');
     this.txt_total_shares_required_inn_Membership_Details = this.page.locator('//input[@name="wizard_total_share_req"]');
-    this.txt_additional_shares_required_in_Membership_Details= this.page.locator('//input[@name="wizard_additional_share_req"]')
+    this.txt_additional_shares_required_in_Membership_Details= this.page.locator("//span[@name='wizard_additional_share_req']")
     this.btn_save_in_Membership_Details = this.page.locator('//button[@name="save_membership_details"]');
 this.credit_bureau_title=this.page.locator("(//span[contains(text(),'Credit Bureau')])[2]")
     this.credit_bureau_verify_btn=this.page.locator("//*[text()='Credit Bureau']/ancestor::h1//*[text()='Verify']")
-    this.name_credit_bureau_field=this.page.locator("//input[@name='credit_name']")
-    this.dob_credit_bureau_field=this.page.locator("//input[@name='dob']")
+    this.name_credit_bureau_field=this.page.locator("//input[@name='wizard_credit_name']")
+    this.dob_credit_bureau_field=this.page.locator("//input[@name='wizard_dob']")
     this.upload_your_file_credit_bureau_field=this.page.locator("//*[contains(text(),'Upload your file')]/preceding::input[@name='uploaded_file']")
-    this.settled_account=this.page.locator("//select[@name='settled_account']")
-    this.written_account=this.page.locator("//select[@name='written_account']")
-    this.ctc_credit_bureau_field=this.page.locator("//input[@name='ctc']")
-    this.overdue_amount_pending=this.page.locator("//input[@name='overdue_amount_pending']")
-    this.credit_score=this.page.locator("//input[@name='credit_vision']")
-    this.accound_sold=this.page.locator("//select[@name='account_sold']")
-    this.branch_remarks_on_cibil=this.page.locator("//input[@name='branch_remarks_on_cibil']")
-    this.suit_field=this.page.locator("//select[@name='suit_field']")
-    this.personal_score=this.page.locator("//input[@name='personal']")
-    this.repayment_track=this.page.locator("//input[@name='credit_repayment_track']")
-    this.wilful_defaulter=this.page.locator("//select[@name='wilful_defaulter']")
+    this.settled_account=this.page.locator("//select[@name='wizard_settled_account']")
+    this.written_account=this.page.locator("//select[@name='wizard_written_account']")
+    this.ctc_credit_bureau_field=this.page.locator("//input[@name='wizard_ctc']")
+    this.cibil_date=this.page.locator("//input[@name='wizard_cibil_date']")
+    this.overdue_amount_pending=this.page.locator("//input[@name='wizard_overdue_amount_pending']")
+    this.credit_score=this.page.locator("//input[@name='wizard_credit_vision']")
+    this.accound_sold=this.page.locator("//select[@name='wizard_account_sold']")
+    this.branch_remarks_on_cibil=this.page.locator("//input[@name='wizard_branch_remarks_on_cibil']")
+    this.suit_field=this.page.locator("//select[@name='wizard_suit_field']")
+    this.personal_score=this.page.locator("//input[@name='wizard_personal']")
+    this.repayment_track=this.page.locator("//input[@name='wizard_credit_repayment_track']")
+    this.wilful_defaulter=this.page.locator("//select[@name='wizard_wilful_defaulter']")
     this.add_a_line_credit_bureau_btn=this.page.locator("//*[contains(text(),'Add a line')]/ancestor::div[@name='cibil_score_data_ids']//*[contains(text(),'Add a line')]")
     this.bank_loan_account_details=this.page.locator("//input[@name='bank_loan_accounts_details']")
     this.loan_type_credit_bureau=this.page.locator("//input[@name='loan_type']")
     this.ownership=this.page.locator("//input[@name='ownership']")
     this.loan_amount=this.page.locator("//div[@name='loan_amount']//input[@type='text']")
     this.outstanding_amount=this.page.locator("//div[@name='outstanding_amount']")
-    this.emi_interest=this.page.locator("//input[@name='emi_interest']")
-   this.txt_name_comment=this.page.locator('//textarea[@name="branch_manager_recommendation"]')
+    this.emi_interest=this.page.locator("//div[@name='emi_interest']")
+   this.txt_name_comment=this.page.locator('(//textarea[@name="branch_manager_recommendation"])[1]')
 this.btn_Verified=this.page.locator('//button[@name="verify_data"]') 
 this.btn_verify_agricultural_income=this.page.locator("//div[@name='verify_agricultural_income_details']")
 this.btn_verify_other_income=this.page.locator("//div[@name='verify_other_income_details']")
+this.year_since_joining=this.page.locator('//span[@name="wizard_years_since_joining"]')
+this.Employee_id=this.page.locator("//input[@name='wizard_employee_id_borrower']")
+this.nature_of_salaried=this.page.locator("//input[@name='wizard_nature_of_salaried']")
+this.avg_gross_salary=this.page.locator("//span[@name='wizard_average_gross_salary']")
+this.avg_deduction=this.page.locator("//span[@name='wizard_average_deduction_salary']")
+this.avg_netsalary=this.page.locator("//span[@name='wizard_average_net_salary']")
+this.adddata_in_credit_bureau=this.page.locator("//button[@name='open_credit_bureau_wizard']")
+this.Qualification=this.page.locator('//input[@name="customer_qualification"]')
+this.credit_bureau_save_btn=this.page.locator('//button[@name="save_credit_bureau_wizard"]')
 
 
+}
 
- }
 
 async user_verify_id_proof_details_title(){
     await expect(this.txt_id_proof_details_title).toBeVisible();
@@ -385,13 +410,18 @@ async user_verify_borrower_gender(){
 async user_verify_borrowers_age(){
   await expect(this.borrowers_age).not.toBeEmpty();
 }
-// async user_verify_staff_name(){
-//   await expect(this.staff_name).not.toBeEmpty();
-// }
+ async user_verify_staff_name(name:string){
+   //await expect(this.staff_name).not.toBeEmpty();
+   await this.playwrightFactory.fill(this.staff_name,name)
+ }
 // async user_verify_staff_id(){
 //   await expect(this.staff_id).not.toBeEmpty();
 
 // }
+async user_enters_QUalification(Qualification:string){
+await this.playwrightFactory.fill(this.Qualification,Qualification)
+}
+
 async user_verify_loan_requested_amount(){
      await this.page.evaluate(() => {
   window.scrollBy(2500,3000); // Scroll down
@@ -414,7 +444,7 @@ async user_verify_loan_purpose(){
 async user_enters_loan_Repayment_type(){
   await this.loan_repayment.selectOption({label:'EMI'}); 
 }
-
+///Salaried profile//Employment Details
  async user_clicks_emp_details_add_data_btn(){
   await this.playwrightFactory.click(this.Emp_details_Add_data_btn);
 }
@@ -428,16 +458,25 @@ async user_enters_address_of_firm_field(strAdress: string) {
 }
 
 
-async user_select_designation_in_the_organization() {
-  await this.designation.selectOption({label:'Executive'});
+async user_select_designation_in_the_organization(designation:string) {
+  await this.designation.selectOption({label:designation});
 }
 
-async user_select_type_of_organization() {
-  await this.type_of_organization.selectOption({label:'Private Ltd. Co.'});
+async user_select_type_of_organization(organization:string) {
+  await this.type_of_organization.selectOption({label:organization});
 }
 
 async user_selectjoining_date(strJoiningdate: string) {
 await this.playwrightFactory.fill(this.joining_date, strJoiningdate)
+}
+async user_enters_employeeID_in_employment_details(empID:string){
+  await this.playwrightFactory.fill(this.Employee_id,empID)
+}
+async user_enters_Nature_of_Salaried_in_Detail_employment_details(salary:string){
+  await this.playwrightFactory.fill(this.nature_of_salaried,salary)
+}
+async user_verify_year_sinc_joining(){
+  await expect(this.year_since_joining).toBeVisible()
 }
 async user_enters_remarks(strRemark: string) {
   await this.playwrightFactory.fill(this.Remark,strRemark)
@@ -466,7 +505,19 @@ async user_enter_salary_credidate_date(strSalarycredidatedate: string){
 }
 async user_enter_pf(strPF: string){
   await this.playwrightFactory.fill(this.pf, strPF)
+
 }
+
+async user_verify_average_gross_salary(){
+  await expect(this.avg_gross_salary).toBeVisible()
+}
+async user_verify_average_deductions(){
+  await expect(this.avg_deduction).toBeVisible()
+}
+async user_verify_average_net_salary(){
+  await expect(this.avg_netsalary).toBeVisible()
+}
+
 
 async user_clicks_save_btn(){
   await this.playwrightFactory.click(this.salary_slip_save_btn);
@@ -582,12 +633,15 @@ async user_enter_company_name_in_company_id_details(strName: string){
 }
 async user_enter_adress_in_company_id_details(strAdress: string){
   await this.playwrightFactory.fill(this.company_adress_in_company_id, strAdress);
+
 }
 async user_enter_company_id(strId: string){
   await this.playwrightFactory.fill(this.company_id_in_company_id, strId);
+   
 }
 async user_enter_employee_name_in_company_id(strName: string){
   await this.playwrightFactory.fill(this.employee_name_in_company_id,strName);
+  
 }
 async user_enter_joining_date_in_company_id(strDate: string){
   await this.playwrightFactory.click(this.joining_date_in_company_id);
@@ -652,8 +706,9 @@ async user_clicks_add_data_for_Membership_Details(){
   await this.playwrightFactory.click(this.btn_add_data_for_Membership_Details);
 }
 
-async user_enters_Membership_number_in_Membership_Details(strmembershipnumber:string){
-  await this.playwrightFactory.fill(this.txt_Membership_number_in_Membership_Details,strmembershipnumber);
+async user_enters_Membership_number_in_Membership_Details(){
+ // await this.playwrightFactory.fill(this.txt_Membership_number_in_Membership_Details,strmembershipnumber);
+  await expect(this.txt_Membership_number_in_Membership_Details).toBeVisible()
 }
 
 async user_enters_Name_of_shares_Membership_Details(strname:string){
@@ -673,7 +728,8 @@ async user_enters_total_shares_required_inn_Membership_Details(strtotal:string){
   await this.playwrightFactory.fill(this.txt_total_shares_required_inn_Membership_Details,strtotal);
 }
 async user_additional_shares_required_in_Membership_Details(stradditional: string){
-  await this.playwrightFactory.fill(this.txt_additional_shares_required_in_Membership_Details,stradditional)
+  //await this.playwrightFactory.fill(this.txt_additional_shares_required_in_Membership_Details,stradditional)
+   await expect(this.txt_additional_shares_required_in_Membership_Details).toContainText(stradditional); 
 }
 async user_clicks_save_in_Membership_Details(){
   await this.playwrightFactory.click(this.btn_save_in_Membership_Details);
@@ -705,8 +761,12 @@ await this.page.locator('input[type="file"]').nth(0).setInputFiles('IT_Return_Ro
  
 }
 
+
 async user_verify_credit_bureau_title(){
   await expect(this.credit_bureau_title).toBeVisible();
+}
+async user_clicks_Adddata_in_credit_bureau(){
+  await this.adddata_in_credit_bureau.click()
 }
 
 async user_enters_name_in_credit_bureau_field(strname: string){
@@ -748,6 +808,9 @@ await this.suit_field.selectOption({label:'Yes'});
 async user_enters_repayment_track(strrepayment: string){
 await this.playwrightFactory.fill(this.repayment_track, strrepayment);
 }
+async user_enters_CIBIL_date(date:string){
+  await this.playwrightFactory.fill(this.cibil_date,date)
+}
 async user_click_add_a_line_for_credit_bureau(){
 await this.playwrightFactory.click(this.add_a_line_credit_bureau_btn);
 }
@@ -779,10 +842,14 @@ await expect(this.outstanding_amount).not.toBeEmpty()
 }
  
 async user_enters_emi_interest(stremi: string){
-  await this.emi_interest.click()
-await this.playwrightFactory.fill(this.emi_interest, stremi);
+  //await this.emi_interest.click()
+//await this.playwrightFactory.fill(this.emi_interest, stremi);
+await expect(this.emi_interest).not.toBeEmpty()
 
 }
+async user_click_save_button_for_credit_bureau(){
+  await this.playwrightFactory.click(this.credit_bureau_save_btn);
+  }
 async user_click_verify_button_for_credit_bureau(){
 await this.playwrightFactory.click(this.credit_bureau_verify_btn);
 }
