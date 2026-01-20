@@ -30,7 +30,7 @@ import {Home_Loan_Loan_Application_Tab_Page} from '../../application_components/
 
 import { Gold_Loan_Nominee_Details_Page } from '../../application_components/page_methods/Gold_Loan_Nominee_Details_Page';
 import { Guarantor_details_page } from '../../application_components/page_methods/Guarantor_details_page';
-import { Home_Loan_Loan_Application_Tab_Page } from '../../application_components/page_methods/Home_Loan_Loan_Application_Tab_Page';
+
 
 
 
