@@ -177,10 +177,44 @@ readonly Coborrower_Computation_Income_Details: Locator;
  readonly Agricultural_income_coborrower_p_and_l_statement_details: Locator;
  readonly TDS_coborrower_p_and_l_statement_details: Locator;
  readonly Save_Button_coborrower_p_and_l_statement_details: Locator;
+
  readonly verify_coborrower_p_and_l_statement_details: Locator; 
 readonly Nature_of_income:Locator 
 readonly empid:Locator
 readonly btn_coborrower1:Locator
+
+//  readonly verify_coborrower_p_and_l_statement_details: Locator;
+//  readonly add_data_CoBorrower_Business_Certificate_Details: Locator;
+//  readonly Name_of_the_Firm_CoBorrower_Business_Certificate_Details: Locator;
+//  readonly Shop_Act_Udyam_Number_CoBorrower_Business_Certificate_Details: Locator;
+//  readonly Name_of_Owner_CoBorrower_Business_Certificate_Details: Locator;
+//  readonly Type_Of_Business_CoBorrower_Business_Certificate_Details: Locator;
+//  readonly Udyam_Name_CoBorrower_Business_Certificate_Details: Locator;
+//  readonly UdhyamNumber_CoBorrower_Business_Certificate_Details: Locator;
+//  readonly No_of_years_CoBorrower_Business_Certificate_Details: Locator;
+//  readonly save_CoBorrower_Business_Certificate_Details: Locator;
+//  readonly verify_CoBorrower_Business_Certificate_Details: Locator;
+//   readonly add_data_button_coborrower_document_details: Locator;
+//   readonly modal_header_coborrower_document_details: Locator;
+//   readonly coborrower_name_coborrower_document_details: Locator;
+//   readonly area_of_land_coborrower_document_details: Locator;
+//   readonly type_of_agriculture_land_coborrower_document_details: Locator;
+//   readonly seven_twelve_extract_ownership_coborrower_document_details: Locator;
+//   readonly father_name_coborrower_document_details: Locator;
+//   readonly save_btn_coborrower_document_details: Locator;
+//   readonly verify_checkbox_coborrower_document_details: Locator;
+//   readonly btn_coborrower1:Locator;
+//   readonly btnkyc:Locator
+// readonly Incomedetails:Locator
+// readonly Membershipdetails:Locator
+// readonly Credit_bureau: Locator
+// readonly Title_name: Locator
+// readonly age_in_coborrower_address: Locator
+// readonly Nature_of_income: Locator
+// readonly empid: Locator
+// readonly btn_upload: Locator
+// readonly btn_verify_credit_bureau:Locator;
+
 
     /**
    * @param {Page} page
@@ -596,7 +630,7 @@ await this.Type_of_ownership.fill(strname);
 async user_enters_Nature_of_Business_In_Detail(strname:string) {
 await this.Nature_of_Business_In_Detail.fill(strname);
 }
- 
+
 async user_clicks_on_Add_a_Line_in_CoBorrower_Business_details() {
 await this.Add_a_Line.click ();
 }

@@ -363,6 +363,25 @@ readonly txt_Purchase_amount:Locator
 readonly btn_save__in_newhometype: Locator
 
 
+
+
+
+ //Land Records Details for Profile Farmer and Loan Type Vehicle
+ readonly loan_application_tab:Locator;
+ readonly btn_edit:Locator;
+ readonly txt_land_record_details:Locator;
+ readonly land_record_details_add_button:Locator;
+ readonly fld_Name:Locator;
+ readonly fld_Area_of_land:Locator;
+ readonly fld_type_of_Agriculture_land:Locator;
+ readonly fld_seven_twelve_ownership:Locator;
+ readonly fld_father_name:Locator;
+ readonly fld_Name_and_Nature_of_Business:Locator;
+ readonly fld_Nature_of_service:Locator;
+ readonly fld_Number_of_years:Locator;
+ readonly btn_save:Locator;
+ readonly land_records_details_verify_btn:Locator;
+
  //readonly activeTab:Locator;
 
   /**
@@ -662,7 +681,21 @@ this.BusinessBusiness_Certificate_Details=this.page.locator('//input[@name="wiza
 this.Save_Business_Certificate_Details=this.page.locator('//button[@name="save_businesscertificate_details"]')
 this.verify_Business_Certificate_Details=this.page.locator('//div[@name="verify_business_certificate_details"]') 
 
-
+// Land Records Details for Profile Farmer and Loan Type Vehicle
+this.btn_edit = this.page.locator("//button[normalize-space()='Edit']")
+this.txt_land_record_details = this.page.locator("//span[normalize-space()='Land Record Details']")
+this.land_record_details_add_button = this.page.locator("//button[@name='seven_twelve_wizard']")
+this.fld_Name = this.page.locator("//input[@name='wizard_farmer_name']")
+this.fld_Area_of_land = this.page.locator("//select[@name='wizard_area_of_land']")
+this.fld_type_of_Agriculture_land = this.page.locator("//select[@name='wizard_type_of_agricultural_land']")
+this.fld_seven_twelve_ownership = this.page.locator("//select[@name='wizard_seven_twelve_ownership']")
+this.fld_father_name = this.page.locator("//input[@name='wizard_father_name']")
+this.fld_Name_and_Nature_of_Business = this.page.locator("//input[@name='wizard_name_of_business_service']");
+this.fld_Nature_of_service= this.page.locator("//select[@name='wizard_nature_of_business_service']")
+this.fld_Number_of_years= this.page.locator("//input[@name='wizard_number_of_years_business_service']")
+this.btn_save= this.page.locator("//button[@name='save_seventwelve_details']")
+this.land_records_details_verify_btn = this.page.locator("//*[text()='Land Record Details']/ancestor::h1//*[contains(text(),'Verify')]")
+this.loan_application_tab = this.page.locator("//a[normalize-space()='Loan Application']")
 
 
 // GST certificate details//
@@ -1712,7 +1745,64 @@ async user_click_verified_btn(){
 
 
 
-
+// Land Records Details for Profile Farmer and Loan Type Vehicle
+ 
+async user_click_loan_application_tab(){
+  await this.playwrightFactory.click(this.loan_application_tab);
+}
+ 
+async user_click_edit_btn(){
+await this.playwrightFactory.click(this.btn_edit);
+}
+ 
+async user_verify_txt_land_record_details(){
+await expect(this.txt_land_record_details).toBeVisible();
+}
+async user_click_btn_add_data(){
+  await this.playwrightFactory.click(this.land_record_details_add_button);
+  }
+ 
+  async user_enter_name(strName: string){
+  await this.playwrightFactory.fill(this.fld_Name,strName);
+  }
+ 
+async user_enters_Area_of_land(Landarea: string){
+await this.fld_Area_of_land.selectOption({label: Landarea});
+}
+ 
+async user_enters_Type_of_Agriculture_land(Agricultureland: string){
+await this.fld_type_of_Agriculture_land.selectOption({label: Agricultureland});
+}
+ 
+async user_enters_seven_twelve_ownership(extractownership: string){
+await this.fld_seven_twelve_ownership.selectOption({label: extractownership});
+}
+ 
+async user_enter_father_name(strName: string){
+  await this.playwrightFactory.fill(this.fld_father_name,strName);
+  }
+ 
+  async user_enter_name_and_nature_of_business(strName: string){
+    await this.playwrightFactory.fill(this.fld_Name_and_Nature_of_Business,strName);
+  }
+ 
+  async user_enter_nature_of_business(servicenature: string){
+    await this.fld_Nature_of_service.selectOption({label:servicenature})
+  }
+ 
+  async user_enter_number_of_years(strNumber:string){
+    await this.playwrightFactory.fill(this.fld_Number_of_years,strNumber)
+  }
+ 
+  async user_clk_save_button(){
+    await this.playwrightFactory.click(this.btn_save);
+  }
+ 
+  async user_clk_verify_button(){
+    await this.playwrightFactory.click(this.land_records_details_verify_btn);
+  }
+ 
+ 
 
 
 

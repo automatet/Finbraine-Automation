@@ -126,6 +126,9 @@ export class Gold_Loan_Loan_Application_Tab_Page {
  readonly btn_verified_button:Locator;
  readonly btn_reupload_docs_button:Locator;
 
+ //CIF Details
+ readonly btn_cif_details_button: Locator;
+
 
 
 
@@ -415,6 +418,9 @@ export class Gold_Loan_Loan_Application_Tab_Page {
     this.txt_comment_in_absence_of_branch_manager= this.page.locator("(//textarea[@name='loan_officer_comment'])[1]")
     this.btn_verified_button= this.page.locator("//*[contains(text(),'VERIFIED')]")
     this.btn_reupload_docs_button= this.page.locator("//*[contains(text(),'RE-UPLOAD DOCS')]")
+
+    //CIF
+    this.btn_cif_details_button=this.page.locator("//span[normalize-space()='CIF Details']")
 
     
     
@@ -930,6 +936,11 @@ async user_click_verified_btn(){
  
 async user_click_reupload_docs_btn(){
   await this.playwrightFactory.click(this.btn_reupload_docs_button);
+}
+
+//CIF
+async user_clicks_on_cif_button_in_borrowers_information_tab(){
+  await this.playwrightFactory.click(this.btn_cif_details_button);
 }
 
 
